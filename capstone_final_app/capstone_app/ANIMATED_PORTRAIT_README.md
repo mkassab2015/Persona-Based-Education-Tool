@@ -3,6 +3,7 @@
 ## Overview
 
 This feature adds **living, animated portraits** to the expert avatar circle in the persona call interface. When an expert is selected, their headshot appears with subtle, realistic breathing and idle movements to make the portrait feel alive.
+
 ## How It Works
 
 ### 1. **Portrait Fetching System**
