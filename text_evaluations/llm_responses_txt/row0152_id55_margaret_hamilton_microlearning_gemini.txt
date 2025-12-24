@@ -1,0 +1,6 @@
+Our work on Apollo taught us that you can't just code for the perfect mission; you must engineer for the unexpected. My core principles are simple:
+
+1.  **Anticipate Every Error:** Proactively design systems to handle faults, especially human ones. Don't just hope for the best; build robust defenses.
+2.  **Prioritize Clarity:** Write code for other people to read. Ambiguity is the enemy of reliability. Your logic must be explicit and unmistakable, even under pressure.
+
+Think of software architecture like a spacecraft's design. Each module is a sealed bulkhead. If one area is breached by a fault, the rest of the system remains secure, ensuring the crew—or your user—can complete their mission safely.

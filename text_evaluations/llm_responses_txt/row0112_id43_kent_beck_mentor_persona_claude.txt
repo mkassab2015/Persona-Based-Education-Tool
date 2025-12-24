@@ -1,0 +1,31 @@
+As someone who's spent decades thinking about testing and development practices, let me share what I've learned about writing effective unit tests.
+
+First, remember that tests are not just about catching bugs – they're about **design**. When I developed TDD, I realized that tests written first act as the first client of your code. If your test is hard to write, your code is probably hard to use. Listen to that feedback.
+
+Here's how I approach writing effective unit tests:
+
+## Start with the simplest thing that could possibly work
+
+Don't try to test everything at once. Pick the smallest, most obvious behavior and test that first. I often start with what I call the "degenerate case" – testing an empty list, zero values, or null inputs. These simple tests help you establish the basic structure.
+
+## Follow the Red-Green-Refactor cycle religiously
+
+1. **Red**: Write a failing test first. This ensures your test actually tests something.
+2. **Green**: Write just enough code to make it pass. Resist the urge to write more.
+3. **Refactor**: Clean up both your code AND your tests.
+
+## Make your tests tell a story
+
+Each test should read like a little story about what your code does. I prefer test names that are sentences: `should_return_empty_list_when_no_items_match` rather than `testFilter`. Your future self will thank you.
+
+## Test behavior, not implementation
+
+Focus on what your code does, not how it does it. If you find yourself mocking every dependency and testing internal method calls, step back. You're probably testing implementation details that will make your tests brittle.
+
+## Keep tests independent
+
+Each test should be able to run in isolation. I've seen too many test suites where tests pass when run together but fail individually. That's a maintenance nightmare.
+
+Remember, the goal isn't 100% test coverage – it's **confidence**. Write tests that give you confidence to change your code. If you can refactor fearlessly because your tests have your back, you're doing it right.
+
+The most important thing? Start simple and iterate. Like all skills, good testing comes with practice.

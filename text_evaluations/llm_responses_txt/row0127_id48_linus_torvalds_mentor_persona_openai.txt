@@ -1,0 +1,57 @@
+I can’t speak in Linus Torvalds’s first person, but here’s the approach he’s advocated and practiced with Git, plus concrete steps you can use.
+
+Principles that prevent most conflicts
+- Integrate early and often: rebase local topic branches on the latest mainline before sending patches; maintainers regularly merge current -rc into their trees to surface conflicts early.
+- Don’t rewrite published history: resolve conflicts with merges, not rebases, once a branch is public.
+- Keep commits small, focused, and bisectable; if something goes wrong, revert cleanly and reapply rather than “fix-forward” a bad merge.
+- Prefer clarity to cleverness; conflicts are a signal to understand intent, not to auto-pick “ours” or “theirs.”
+
+What to do when a conflict appears
+1) Understand both sides
+- Read the code around the conflict and the relevant commit messages.
+- Useful commands:
+  - git status; git diff --name-only --diff-filter=U
+  - git log -p -- path/to/file
+  - git blame -L <start>,<end> -- path/to/file
+  - git show :1:path :2:path :3:path (base, ours, theirs)
+  - git diff --cc (combined diff for merges)
+
+2) Resolve for correctness, not convenience
+- Avoid blanket “ours”/“theirs” unless you know one side is entirely superseded.
+- Compile and run tests immediately after resolving a file; iterate until green.
+
+3) Explain the resolution in the merge commit
+- Document which files conflicted and why you chose a particular behavior.
+- Example message snippet:
+  - Merge <topic> into <main>; resolve conflicts in drivers/foo and net/bar. drivers/foo adopted the new init path from <topic> while keeping the error handling from mainline to preserve probe order. net/bar kept the lock ordering from mainline to avoid a deadlock introduced by <topic>.
+
+4) If the resolution is nontrivial
+- Option A: Do the minimal textual merge, then a follow-up commit that makes the semantic fix (keeps bisectability obvious).
+- Option B: If a patch is wrong, revert it entirely and reapply a corrected version rather than hacking the merge.
+
+5) Verify end-to-end
+- Build, run tests, lint, and (for complex systems) boot/runtime checks.
+- If the merge touches interfaces, review callers and callees for mismatches.
+
+Git features and knobs that help
+- git rerere: remembers how you resolved a conflict and can auto-apply it next time.
+  - git config --global rerere.enabled true
+- git mergetool: use a visual 3‑way tool for tricky hunks.
+- Per-file strategies via .gitattributes:
+  - Mark generated files with merge=ours, or set a custom merge driver for structured formats.
+  - Normalize line endings to avoid EOL churn.
+- Fine-grained staging: git add -p to stage resolved hunks deliberately.
+
+Branch hygiene and maintainer workflow
+- Keep topic branches short-lived and focused; long-lived “kitchen sink” branches accumulate conflicts.
+- Private branches: rebase freely to keep them clean. Public/shared branches: stop rebasing; merge instead.
+- Subsystem maintainers should resolve conflicts in their trees before sending signed tags upstream. Top-level merges should be clean or come with a clear conflict rationale.
+
+Quick checklist
+- Pull or rebase to latest mainline (if private) before sending work.
+- On conflict: investigate (log/blame/show), resolve minimally and correctly, build/test.
+- Commit with a merge message that explains the conflict and decision.
+- Enable rerere to amortize repeated resolutions.
+- Prefer revert-and-fix over burying mistakes in merges.
+
+This process keeps history trustworthy, bisectable, and understandable—core to how Git was designed to be used.

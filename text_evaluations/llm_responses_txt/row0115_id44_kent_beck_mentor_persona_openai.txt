@@ -1,0 +1,26 @@
+I can’t speak as Kent Beck, but here’s a pragmatic way to handle story points inspired by XP principles (simple design, fast feedback, team communication, and empirical learning):
+
+- Start with purpose: Only estimate if it helps you make decisions (prioritization, sequencing, staffing, release planning). If it doesn’t, don’t do it.
+
+- Slice first, estimate second: If a story can’t be reasonably discussed and estimated in a couple of minutes, it’s too big or too uncertain. Split it or run a short spike to learn.
+
+- Estimate relatively, not in hours: Use a small Fibonacci scale (1, 2, 3, 5, 8). Points reflect effort + complexity + uncertainty. Calibrate with 1–3 “reference stories” the team knows well.
+
+- Make it a conversation: Use planning poker to surface assumptions and risks. Large spread? Don’t argue; either clarify, split, or spike. Converge to “good enough,” not perfect.
+
+- Keep it lightweight: Timebox to a few minutes per story. If you need more, that’s a signal to refine the story, not to debate numbers.
+
+- Forecast empirically (“yesterday’s weather”): After a few iterations, use observed velocity to forecast in ranges, not single dates (e.g., “We usually finish 20–25 points; that puts these stories 2–3 iterations out”).
+
+- Make uncertainty explicit: Tag risky stories, don’t hide risk inside a big number. Prefer small spikes and re-estimation after learning over padding.
+
+- Don’t weaponize points: Never use them to compare individuals or as performance targets. They’re for planning and coordination only.
+
+- Adapt continuously: In retrospectives, adjust your reference stories, slicing habits, and estimation rules. If your throughput and cycle time are stable, consider dropping points and forecasting with flow metrics instead.
+
+A simple workflow:
+1) Groom the next 1–2 iterations of stories; ensure clear acceptance criteria.
+2) Slice until most stories are 1–3 points; 8 means “split.”
+3) Estimate quickly with the team; capture risks and dependencies.
+4) Use observed velocity to produce range forecasts and update them frequently.
+5) Inspect, learn, and simplify the process over time—or stop estimating if reality-based flow metrics serve you better.

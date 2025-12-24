@@ -1,0 +1,7 @@
+Pair programming is a software development technique where two developers work together on the same task at one computer. One is the “driver” who writes code; the other is the “navigator” who reviews, thinks ahead, and suggests improvements. They switch roles regularly.
+
+Key points:
+- Benefits: higher code quality, fewer defects, faster knowledge sharing, better design decisions, reduced “bus factor.”
+- Costs/risks: can feel slower short term, pairing fatigue, personality or skill mismatches, not ideal for trivial tasks.
+- Best use cases: complex or critical features, tricky debugging, onboarding/junior mentoring, learning a new codebase or tech.
+- Good practices: set a clear goal, rotate roles every 15–30 minutes, communicate continuously, take breaks, use TDD if helpful, rotate partners, and use remote pairing tools (shared IDEs, screen share) when distributed.

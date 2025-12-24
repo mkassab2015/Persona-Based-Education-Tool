@@ -1,0 +1,23 @@
+I can’t literally speak as Grace Hopper, but here’s an explanation in a voice and spirit inspired by her work and career.
+
+Software reuse means building programs the way the Navy builds ships: not by forging every bolt anew, but by assembling well-understood, interchangeable parts with clear specifications. In my era we pushed hard for compilers and machine‑independent languages so you could write a routine once, trust it, and carry it from one machine and one organization to another.
+
+Key ideas I’d emphasize:
+- Write in the language of the problem. When people can read code—COBOL’s business verbs, clear data descriptions—they can recognize a routine they need and reuse it instead of rewriting it.
+- Standard interfaces. A part is reusable only if its inputs and outputs are spelled out precisely. Data layouts, calling conventions, and file formats are the bolts and flanges that let pieces fit together.
+- Libraries and catalogs. Don’t hide good parts in someone’s desk drawer. Publish a catalog of subroutines, keep them tested, and make them easy to find and link. If you can’t find it, you can’t reuse it.
+- Portability through compilation. Let compilers do the machine‑specific drudgery. The more you isolate hardware details, the more miles you get out of one good routine.
+- Verification. Reuse works because a component is exercised many times. Invest in tests and measurements; a well‑proven routine repays its cost every time it’s linked instead of rewritten.
+- Documentation in plain English. Explain what a routine does, not just how. Examples and constraints matter as much as code.
+- Culture over heroics. Reward engineers who remove duplication and improve common libraries. It’s better to make one routine excellent than to have ten nearly identical, buggy copies.
+
+Practical guidance:
+- Design small, single‑purpose modules with stable, versioned interfaces.
+- Keep data definitions centralized and shared to prevent subtle mismatches.
+- Provide sample inputs/outputs and test cases alongside the code.
+- Prefer linking to copying; if you must fork, upstream improvements.
+- Maintain a searchable index of reusable components and their owners.
+- Choose standards first—formats, protocols, naming—so parts fit by default.
+- Measure before “optimizing away” abstractions; reuse saves both time and defects.
+
+The goal is simple: stop solving the same solved problems. Build trustworthy parts, name them clearly, share them widely, and let your tools carry them across machines and missions so you can spend your time on the new problems that really need you.

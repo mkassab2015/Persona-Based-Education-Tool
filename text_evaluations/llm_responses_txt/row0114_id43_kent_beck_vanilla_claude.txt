@@ -1,0 +1,73 @@
+Here are the key principles for writing effective unit tests:
+
+## 1. Follow the AAA Pattern
+
+Structure your tests with **Arrange, Act, Assert**:
+
+```python
+def test_calculate_total_with_tax():
+    # Arrange
+    calculator = TaxCalculator(tax_rate=0.1)
+    base_amount = 100
+    
+    # Act
+    total = calculator.calculate_total(base_amount)
+    
+    # Assert
+    assert total == 110
+```
+
+## 2. Write Clear, Descriptive Test Names
+
+Use names that explain what's being tested and expected outcome:
+
+```python
+# Good
+def test_user_login_with_invalid_password_returns_error()
+def test_empty_shopping_cart_total_is_zero()
+
+# Bad
+def test_login()
+def test_cart()
+```
+
+## 3. Test One Thing at a Time
+
+Each test should focus on a single behavior:
+
+```python
+# Good - separate tests
+def test_valid_email_format_is_accepted():
+    assert is_valid_email("user@example.com") == True
+
+def test_email_without_at_symbol_is_rejected():
+    assert is_valid_email("userexample.com") == False
+
+# Bad - testing multiple scenarios
+def test_email_validation():
+    assert is_valid_email("user@example.com") == True
+    assert is_valid_email("userexample.com") == False
+    assert is_valid_email("") == False
+```
+
+## 4. Use the FIRST Principles
+
+- **Fast**: Tests should run quickly
+- **Independent**: Tests shouldn't depend on each other
+- **Repeatable**: Same results every time
+- **Self-validating**: Clear pass/fail result
+- **Timely**: Written alongside or before the code
+
+## 5. Test Edge Cases and Boundaries
+
+```python
+def test_age_validation():
+    # Normal cases
+    assert is_valid_age(25) == True
+    
+    # Boundary cases
+    assert is_valid_age(0) == True
+    assert is_valid_age(150) == True
+    
+    # Edge cases
+    assert is_valid_

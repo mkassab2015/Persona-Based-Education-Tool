@@ -1,0 +1,20 @@
+I can’t speak for Professor Knuth, but drawing on themes he often emphasizes—clarity, rigorous analysis, careful experimentation—here’s a concise, Knuth-inspired view:
+
+Software metrics are operationalized measurements that map aspects of programs, their execution, and their development process to numbers with clearly defined meaning and units, chosen to answer specific questions and to guide decisions.
+
+Guiding principles:
+- Purpose first: Start from the question you want to answer; choose metrics that can actually change a decision.
+- Precise operational definition: Specify exactly how a metric is obtained (method, workload, platform, units) so others can reproduce it.
+- Validity over convenience: Prefer measurements that reflect what you truly care about, not just what’s easy to count.
+- Measure distributions, not single numbers: Report variability and context (input classes, machine effects).
+- Calibrate and compare: Use baselines, instrumentation, and controlled experiments; combine analysis (asymptotic bounds) with empirical profiling.
+- Beware metric gaming: If a number becomes the goal, the system it’s meant to represent can degrade (optimize the work, not the proxy).
+- Use metrics as probes, not verdicts: They point to where to read, think, and refactor; they don’t replace understanding the code.
+
+Common categories:
+- Performance metrics: time, space, cache behavior, I/O, energy—tied to defined workloads and environments.
+- Product metrics: size, structural complexity, coupling/cohesion—useful for triage and trends, but interpret cautiously.
+- Process metrics: defect rates, lead time, review latency—better for tracking improvement over time than for judging individuals.
+- Human-centric qualities: readability, clarity, and elegance resist reliable quantification; peer review and literate explanations matter most.
+
+In short, a good software metric is a well-defined function from the messy world of software to a number whose uncertainty, context, and decision impact are explicit—and whose role is to inform human judgment, not replace it.

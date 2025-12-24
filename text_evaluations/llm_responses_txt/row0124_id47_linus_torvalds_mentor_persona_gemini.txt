@@ -1,0 +1,58 @@
+*(Adjusts glasses, leans back with a characteristic bluntness)*
+
+Alright. People have this idea that there's some kind of formal, corporate "code review process" for the kernel. There isn't. You're thinking about it all wrong. It’s not a meeting, it's not a checklist, and it’s certainly not about being nice. It's about getting good code into the tree. Full stop.
+
+Here's how it actually works.
+
+### 1. It Doesn't Start With Me. And It Shouldn't.
+
+First, let's be clear: I don't review most of the code that goes into the kernel. If I did, I'd never sleep and we'd release a new kernel once a decade.
+
+The whole system is built on a **pyramid of trust**.
+
+*   **You** write a patch.
+*   You send it to the mailing list for the **subsystem** you're touching (e.g., networking, filesystems, a specific driver).
+*   The **maintainers** of that subsystem, and other developers who care, are the first line of defense. They are the ones who *really* review your code. They know their area better than I do.
+*   If they think your patch is good, they'll give it their `Acked-by` or `Reviewed-by`. They'll eventually pull it into their subsystem tree.
+*   **Then, and only then,** do I see it. It comes to me in a pull request from a lieutenant I trust.
+
+My job isn't to review every line. My job is to review the *pull requests* from my trusted maintainers. I'm the final gatekeeper. I trust them to have done the detailed work.
+
+### 2. The Mailing List is the Arena
+
+There are no private reviews. Everything is done in the open on the public mailing lists. This is non-negotiable.
+
+Why?
+
+*   **It's a technical argument, not a private chat.** Everyone can see the reasoning, the objections, and the final decision. It creates a public record of *why* a change was made.
+*   **Anyone can join in.** Some random person in a different timezone might see a bug in your logic that the maintainer missed. More eyeballs make for better code.
+*   **It forces you to be clear.** You have to defend your patch with technical arguments, not by schmoozing a manager.
+
+Your patch and your explanation are on trial. If they are good, they will survive. If they are crap, they will be torn to shreds. And that's a good thing.
+
+### 3. What I Actually Look For
+
+When a pull request from a maintainer hits my inbox, I'm not usually looking for typos. I'm looking at the bigger picture. My review is about **"taste."**
+
+*   **Is the overall approach sane?** I'm not checking if a loop is off-by-one; I trust the maintainer did that. I'm checking if the entire *idea* of the patch is idiotic. Are you adding a horrible abstraction? Are you making things more complicated for no good reason? Is this just ugly?
+*   **Cleanliness and Simplicity.** Good code is simple. It does one thing well. It's easy to read and understand. I will reject a "clever" and complex patch in a heartbeat if there's a simpler, more straightforward way to do it. Cleverness is the enemy.
+*   **The Commit Message.** This is part of the code. If you can't explain *why* you are making a change in clear, simple English, then you probably don't understand the problem you're trying to solve. The commit message should explain the problem first, then the solution. Not just "fixed a bug." What bug? Why was it a bug? How does this fix it?
+*   **The "Big Picture" Impact.** Does this change affect other parts of the kernel? Does it break user-space? **We do not break user-space. Ever.** That's the number one rule. I'm looking for the subtle, far-reaching consequences of a change that a subsystem maintainer might have missed.
+
+### 4. The Feedback is Direct. Get Over It.
+
+Yes, I can be harsh. So what? We are not here to make friends. We are here to build the best possible operating system kernel.
+
+The feedback is about the **code**, not about you. "This is garbage" means the *code* is garbage. It doesn't mean *you* are garbage. It means you need to go back, think harder, and write better code.
+
+Sugar-coating feedback just wastes time. It leads to ambiguity. Direct, blunt, and purely technical feedback is the most efficient way to communicate. If you can't handle your code being called stupid, you're not going to last long. It's a meritocracy. Your feelings are irrelevant; your technical arguments and the quality of your patch are all that matter.
+
+### In Short:
+
+1.  **Trust your maintainers.** The real review happens at the subsystem level.
+2.  **Do it in public.** The mailing list is where the work gets done.
+3.  **A patch must be a complete story:** Clean code, a good commit message, and a clear purpose.
+4.  **Focus on the big picture and "good taste."** Avoid complexity. Strive for simplicity.
+5.  **Don't take technical criticism personally.** The code is what matters.
+
+It's not a process. It's a culture. A culture of accountability, transparency, and a relentless focus on technical excellence. Now stop asking questions and go write some good code.

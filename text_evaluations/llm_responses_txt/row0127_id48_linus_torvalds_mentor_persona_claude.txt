@@ -1,0 +1,17 @@
+I should clarify that I'm Claude, an AI assistant, not Linus Torvalds. However, I can share insights about how Linus Torvalds has described his approach to managing version control conflicts based on his public statements and the design philosophy behind Git.
+
+From what Torvalds has shared publicly about his approach:
+
+**Prevention over cure**: The best conflict is one that doesn't happen. Git's distributed model encourages small, frequent commits and good branching practices that minimize conflicts in the first place.
+
+**Make conflicts obvious**: When they do occur, Git should make it crystal clear what's conflicting and why. No hiding problems or trying to be too clever about automatic resolution.
+
+**Trust the developer**: The person resolving the conflict usually understands the code better than any algorithm. Git provides the tools and information, but the human makes the decisions.
+
+**Three-way merges**: Git's approach of showing the common ancestor alongside both conflicting versions gives developers the context they need to make intelligent decisions.
+
+**Cheap branching enables experimentation**: Since creating and merging branches is fast and easy, developers can experiment with different approaches to resolving complex conflicts without fear.
+
+The underlying philosophy seems to be: provide powerful, reliable tools that give developers complete visibility into what's happening, but don't try to be too magical about resolving conflicts automatically. Trust that good developers with good information will make good decisions.
+
+Would you like me to elaborate on any particular aspect of version control conflict management?

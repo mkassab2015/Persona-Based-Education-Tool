@@ -1,0 +1,40 @@
+Alright, you want to know how I handle conflicts.
+
+First, let's get one thing straight. People get way too worked up about merge conflicts. They see those `<<<<<<< HEAD` markers and they panic. A conflict isn't a moral failing. It's not a sign that you're a bad programmer. It's just a fact of life in a distributed project with thousands of people working in parallel. It’s just data. Git is simply telling you, "Hey, I'm not smart enough to read minds. Two people changed the same lines, and you need to tell me what the correct result is." That's it.
+
+My approach to conflicts is layered. It all comes down to the fundamental structure of how the kernel—and Git—is designed.
+
+### 1. The Best Conflict is the One That Never Happens
+
+This is the most important rule. My job is made infinitely easier by the people I trust—my subsystem maintainers. Their job is to manage their own trees and send me clean, well-tested work. By the time a pull request hits my inbox, 99% of the potential conflicts should have already been resolved at a lower level.
+
+A developer working on, say, the network stack should be constantly syncing with Dave Miller's `net-next` tree. They should `git pull --rebase` frequently. If they have a long-running patch series, they rebase it on the latest code before submitting it. They resolve their own little conflicts against the subsystem tree.
+
+When the subsystem maintainer then prepares their tree to send to me, they are merging in all this work and resolving any final conflicts *within their subsystem*. They are the first line of defense. If they send me a pull request that has ridiculous, trivial conflicts with my mainline branch, they're going to hear about it. It’s their job to not waste my time.
+
+So, rule number one is structural: **Push the responsibility down the chain.** Don't create conflicts in the first place. Stay up to date. Communicate.
+
+### 2. When I Actually Have to Do It
+
+Of course, conflicts at my level are unavoidable. I might pull from the networking tree, and then pull from the ARM SoC tree, and find that they both touched the same core VFS file to support their new features. This is where I have to step in.
+
+My process here isn't magic. It's just disciplined.
+
+**First, I look at the conflict.** I don't just blindly pick one version. I use `git diff` to see what the hell is going on. I need to understand the *intent* of both sides of the conflict. What was the networking person trying to achieve? What was the ARM person trying to achieve? The conflict markers just show you the text; the real work is understanding the *logic*. Often, the right solution isn't "mine" or "theirs"—it's a combination of both, or a completely new piece of code that satisfies both requirements.
+
+**Second, this is where deep knowledge of the codebase is non-negotiable.** I can often resolve these because I have the big picture in my head. I understand how these disparate parts are supposed to interact. If I don't, I'll go read the commit messages for the merge bases. I'll look at the surrounding code. I'll email the maintainers involved and say, "You two both touched this file. Talk to each other and tell me what the right resolution is." I am the final arbiter, but I rely on the expertise of the people who wrote the code.
+
+**Third, after I've edited the file to resolve the conflict, the job is not done.** This is the step people always forget. You haven't fixed anything until it compiles and works. So I compile it. I run the tests. I make sure that my "fix" didn't just satisfy the text-editor, but that it actually resulted in a kernel that makes sense and, you know, *boots*. The compiler is your best friend when resolving conflicts. It will immediately tell you if you've created a syntactic nightmare.
+
+### 3. History Matters
+
+When I complete a merge that had conflicts, I am very clear about it in the merge commit message. I will explicitly state *what* the conflict was and *how* I resolved it. This is part of the project's history. Someone five years from now might run `git bisect` and land on that merge. They need to understand why the code looks the way it does. The merge commit isn't just a log entry; it's a piece of documentation.
+
+So, to summarize:
+
+*   **Don't make me do it.** The whole point of a distributed system is that conflicts are resolved at the edges, by the people closest to the code. Keep your branches short-lived and rebase often on top of whatever tree you're targeting.
+*   **Understand, don't just choose.** A conflict is a logic puzzle, not a coin toss. You have to understand the intent behind both changes to create the correct solution.
+*   **Test your resolution.** If it doesn't compile and pass basic tests, you're not done. You've just made a bigger mess.
+*   **Document what you did.** Especially for tricky conflicts, explain your reasoning in the merge commit.
+
+Frankly, I think the tooling in Git is excellent for this. It gives you all the information you need. The hard part isn't the tool; it's having the discipline and the understanding of the code to do it right. The problem isn't the conflict markers; the problem is usually a lack of understanding or communication. Fix that, and the conflicts get a lot less scary.

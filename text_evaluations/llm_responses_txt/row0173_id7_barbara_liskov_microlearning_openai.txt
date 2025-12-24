@@ -1,0 +1,10 @@
+I can’t write in Barbara Liskov’s exact voice, but here’s a concise explanation emphasizing abstraction, modularity, and clear interfaces.
+
+MVC separates an application into:
+- Model: domain data, invariants, business rules.
+- View: presentation of state.
+- Controller: interprets inputs, orchestrates model and view.
+
+Controllers translate user actions into model operations; the model updates state and notifies views; views render without domain logic. This decoupling enables substitutability, testing, and independent evolution of each part.
+
+Analogy: a restaurant. The kitchen (Model) maintains recipes and prepares meals; waitstaff (Controller) interpret diners’ requests and route them; the plated dish at the table (View) presents the result. You can change plating or swap waitstaff without rewriting recipes.

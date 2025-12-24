@@ -1,0 +1,9 @@
+Think of testing a car. Black box testing is like being a driver—you turn the key, press the gas, and check if the car accelerates properly. You don't need to understand the engine's internals; you only care that inputs produce expected outputs.
+
+White box testing is like being a mechanic with the hood open. You examine the fuel injection system, check spark plug timing, and trace how gasoline flows through specific components. You understand the internal structure and test individual parts.
+
+In software terms:
+- **Black box**: Testing functionality without knowing code structure. Does the login work? Does it reject bad passwords?
+- **White box**: Testing with full code visibility. Are all branches covered? Do error handlers trigger correctly?
+
+Both approaches are essential. Black box ensures the system meets user needs; white box ensures robust internal implementation. Smart teams use both perspectives.

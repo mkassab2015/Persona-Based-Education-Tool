@@ -1,0 +1,26 @@
+Short answer: you’re changing a living, interdependent system that people rely on, often without full knowledge, under time and risk constraints.
+
+Why it’s hard
+- Complexity and coupling: Hidden dependencies, shared databases, global state, and side effects make local changes ripple unexpectedly.
+- Architectural erosion and technical debt: Quick fixes and aging designs break abstractions, increasing the cost and risk of each change.
+- Loss of context: Original authors leave, docs get stale, tribal knowledge disappears; most effort goes into understanding before editing.
+- Insufficient tests and observability: Low or flaky test coverage and poor logs/metrics/traces make regressions and prod-only bugs hard to catch and diagnose.
+- Environment and dependency churn: OS, language, library, and cloud/API updates introduce incompatibilities, CVEs, and end-of-life pressure.
+- Data and compatibility: Schema evolution, migrations, and multiple client versions require backward/forward-compatible changes and zero-downtime rollouts.
+- Concurrency and distribution: Race conditions, timeouts, retries, clock skew, and partial failures create nondeterministic “heisenbugs.”
+- Operational constraints: High uptime/SLA requirements, change windows, and approvals limit when and how you can alter systems.
+- Evolving, ambiguous requirements: “Is it a bug or a change request?” Prioritization and stakeholder alignment are ongoing challenges.
+- Performance and scale: Real workloads differ from tests; small changes can cause latency or cost regressions.
+- Security and compliance: Continuous patching, secret rotation, audits, and privacy constraints add nonnegotiable work.
+- Tooling and pipeline drift: Flaky CI/CD, non-reproducible builds, and environment drift slow feedback and increase risk.
+- Organizational factors: Underfunded “keep the lights on” work, context switching, unclear ownership, and cross-team coordination overhead.
+
+Types of maintenance (each with different risks): corrective (bug fixes), adaptive (environment/dependency changes), perfective (improvements), and preventive (refactoring, hardening).
+
+What helps (brief)
+- Modular designs, clear boundaries, and stable interfaces; ADRs and up-to-date docs.
+- Strong automated tests (unit/integration/contract), realistic test data, and good observability.
+- Safe rollout practices: feature flags, canaries, blue/green, and rollbacks.
+- Dependency and security hygiene: pinned versions, update bots, regular patch cycles.
+- Deliberate refactoring and debt budgets; strangler patterns for legacy.
+- Clear ownership, on-call/runbooks, and empowered teams aligned to system boundaries.

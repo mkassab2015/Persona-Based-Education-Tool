@@ -1,0 +1,74 @@
+Here's a systematic approach to debug failing tests:
+
+## 1. **Understand the Failure**
+
+### Read the Error Message Carefully
+```bash
+# Example test failure output
+FAIL: test_user_login (tests.test_auth.AuthTestCase)
+AssertionError: Expected 200, got 404
+```
+
+### Check What's Being Tested
+```python
+def test_user_login(self):
+    response = self.client.post('/login', {
+        'username': 'testuser',
+        'password': 'testpass'
+    })
+    self.assertEqual(response.status_code, 200)  # This line failed
+```
+
+## 2. **Reproduce the Issue**
+
+### Run the Specific Test
+```bash
+# Run single test
+pytest tests/test_auth.py::test_user_login -v
+
+# Run with more verbose output
+pytest tests/test_auth.py::test_user_login -v -s
+
+# Run with debugging
+pytest tests/test_auth.py::test_user_login --pdb
+```
+
+### Run Related Tests
+```bash
+# Run the entire test class
+pytest tests/test_auth.py::AuthTestCase -v
+
+# Run all auth-related tests
+pytest tests/ -k "auth" -v
+```
+
+## 3. **Add Debug Information**
+
+### Print Debugging
+```python
+def test_user_login(self):
+    print(f"Testing login for user: testuser")
+    
+    response = self.client.post('/login', {
+        'username': 'testuser',
+        'password': 'testpass'
+    })
+    
+    print(f"Response status: {response.status_code}")
+    print(f"Response content: {response.content}")
+    print(f"Response headers: {dict(response.headers)}")
+    
+    self.assertEqual(response.status_code, 200)
+```
+
+### Use Logging
+```python
+import logging
+logging.basicConfig(level=logging.DEBUG)
+
+def test_user_login(self):
+    logger = logging.getLogger(__name__)
+    logger.debug("Starting login test")
+    
+    # Your test code here
+    logger

@@ -1,0 +1,52 @@
+Here are the key differences between black box and white box testing:
+
+## **Black Box Testing**
+
+**Definition:** Testing based on external behavior without knowledge of internal code structure
+
+**Key Characteristics:**
+- Tester doesn't see the internal code
+- Focuses on input-output relationships
+- Tests functionality against requirements
+- Also called "behavioral testing"
+
+**Advantages:**
+- Simulates real user perspective
+- Unbiased testing (not influenced by code structure)
+- Effective for finding missing functionality
+- Can be done by non-technical testers
+
+**Common Techniques:**
+- Equivalence partitioning
+- Boundary value analysis
+- Decision table testing
+- State transition testing
+
+## **White Box Testing**
+
+**Definition:** Testing based on internal code structure, logic, and implementation
+
+**Key Characteristics:**
+- Tester has full access to source code
+- Tests internal paths, conditions, and loops
+- Focuses on code coverage
+- Also called "structural testing" or "glass box testing"
+
+**Advantages:**
+- Thorough testing of code paths
+- Can find hidden errors and unused code
+- Optimizes test cases based on code structure
+- Helps improve code quality
+
+**Common Techniques:**
+- Statement coverage
+- Branch coverage
+- Path coverage
+- Condition coverage
+
+## **When to Use Each**
+
+- **Black Box:** User acceptance testing, system testing, functional testing
+- **White Box:** Unit testing, integration testing, code review processes
+
+Both approaches are complementary and often used together for comprehensive testing coverage.

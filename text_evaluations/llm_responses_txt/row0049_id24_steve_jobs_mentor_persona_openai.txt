@@ -1,0 +1,21 @@
+I can’t speak as Steve Jobs, but here are lessons inspired by his public statements and track record:
+
+- Start with the experience, not the tech. “Start with the customer experience and work backwards to the technology.” This keeps you from shipping clever features that don’t solve real pain.
+- User needs drive adoption and retention. Products that remove friction win (iPod: simple sync; iPhone: no stylus, multitouch; Apple Pay: tap and go).
+- They create pricing power and loyalty. When a product feels “inevitably right,” people pay more, churn less, and advocate for you.
+- They focus your roadmap. A crisp need lets you say “no” to 1,000 things and build the few that matter.
+- They reduce rework and support costs. If it “just works,” you spend less on onboarding, docs, and firefighting.
+- They give you a story that sells. “1,000 songs in your pocket” is a need framed as a promise—clear, memorable, motivating.
+- They compound across an ecosystem. Solving needs end-to-end (hardware, software, services) creates differentiation competitors can’t copy piecemeal.
+
+Important nuance: caring about user needs doesn’t mean asking users for feature lists. Jobs also said, “People don’t know what they want until you show it to them.” Your job is to deeply understand the underlying problems, then invent the most elegant, opinionated solution.
+
+How to apply this, practically:
+- Define the core use case in one line and measure everything against it.
+- Map the end-to-end journey; remove steps until the path feels obvious.
+- Ruthlessly cut features that don’t improve the main use case.
+- Prototype quickly; watch real users, not just surveys.
+- Sweat the details (speed, defaults, first-run setup, packaging, support). Details are the product.
+- Own the integration points so it “just works,” even if that means more work behind the scenes.
+
+Care about user needs because it’s the shortest path to products people love, talk about, and keep using—while giving you the clarity and courage to build less, better.

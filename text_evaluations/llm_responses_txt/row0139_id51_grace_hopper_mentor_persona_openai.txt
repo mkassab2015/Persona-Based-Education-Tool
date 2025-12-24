@@ -1,0 +1,58 @@
+I’m not Grace Hopper, but here’s practical guidance on writing pseudocode inspired by her principles of clarity, accessibility, and top‑down design.
+
+How to approach pseudocode
+- Write for people first. Your goal is to make the logic obvious to someone who will implement, review, or maintain it. Use plain, precise English and everyday verbs and nouns.
+- Start with the outcome. State the problem, the inputs, the outputs, and the conditions for success before you describe steps.
+- Sketch the flow before the details. A quick outline or flowchart helps you see sequence, decisions, and loops. Then refine step by step.
+- Use top‑down, stepwise refinement. Begin with a few high‑level steps. For each step, break it into smaller steps until each is simple and testable. If a step doesn’t fit on a page, split it into subprocedures.
+- Keep it language‑agnostic. Avoid syntax from any specific programming language. Prefer “IF … THEN … ELSE …”, “FOR EACH …”, “WHILE …” over language keywords and operators.
+- Name things clearly. Choose descriptive names for inputs, outputs, states, and intermediate results. Note units (seconds, bytes, USD) and formats (YYYY‑MM‑DD).
+- Make assumptions explicit. Document constraints, preconditions, postconditions, error cases, and what happens with missing or malformed data.
+- Be consistent in structure. Indent blocks, align cases, and keep a predictable order: validate → compute → update → report.
+- Separate policy from mechanism. Keep business rules (tax brackets, thresholds, permissions) isolated from the control flow so they’re easy to change.
+- Handle edge cases deliberately. Empty inputs, maximum sizes, duplicates, timeouts, rollbacks—decide what to do and say so.
+- Think about resources. Note where you read/write, buffer, sort, or hold data. Call out steps that are costly or that must be atomic.
+- Dry‑run with sample data. Walk through a simple and a tricky case by hand. Revise until the steps are unambiguous.
+- Keep procedures short. If a routine has many branches or more than ~10–15 steps, split it. Clarity beats cleverness.
+- Invite review. If a colleague can implement your pseudocode in a different language than you had in mind, it’s clear enough.
+
+Compact example (batch payroll)
+Purpose: From employee records, produce pay stubs and totals. Inputs: records with employee_id, hours_worked, hourly_rate, tax_status. Outputs: pay_stub per employee; run totals. Assumptions: hours are decimals; currency in USD; negative hours are invalid.
+
+Main routine: ProcessPayroll
+- Initialize run_totals: total_gross = 0, total_tax = 0, total_net = 0
+- For each record in EmployeeRecords:
+  - If employee_id, hours_worked, or hourly_rate is missing:
+    - Log “Incomplete record” with employee_id; continue to next record
+  - If hours_worked < 0 or hourly_rate < 0:
+    - Log “Invalid values” with employee_id; continue
+  - gross_pay = hours_worked × hourly_rate
+  - tax_withheld = ComputeTax(gross_pay, tax_status)
+  - net_pay = gross_pay − tax_withheld
+  - EmitPayStub(employee_id, hours_worked, hourly_rate, gross_pay, tax_withheld, net_pay)
+  - Update run_totals: add gross_pay, tax_withheld, net_pay
+- After all records:
+  - EmitRunTotals(run_totals)
+- End
+
+Subroutine: ComputeTax(gross, tax_status)
+- If tax_status is EXEMPT: return 0
+- Determine bracket for gross
+- tax = sum of bracket portions per current table
+- Return tax
+
+Notes:
+- Tax tables are configured data, not hard‑coded
+- Rounding: round to nearest cent at each pay item
+- On I/O error while emitting stubs: retry once, then log and continue
+
+Quick checklist
+- Problem, inputs, outputs, and success criteria stated?
+- Assumptions, units, formats documented?
+- Control flow clear (sequence, conditionals, loops)?
+- Edge cases and errors covered?
+- Steps broken into small, testable procedures?
+- No language‑specific syntax slipped in?
+- Can a peer implement it without asking you questions?
+
+If you share a specific problem you’re working on, I can draft pseudocode in this style and iterate it with you.

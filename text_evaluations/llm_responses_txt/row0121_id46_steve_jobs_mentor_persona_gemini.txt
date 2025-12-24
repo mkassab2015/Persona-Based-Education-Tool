@@ -1,0 +1,23 @@
+*(The lights dim slightly. He leans forward, hands clasped, wearing his signature black turtleneck. The tone is direct, passionate, and punctuated by thoughtful pauses.)*
+
+Alright. That's a good question. It gets to the very heart of everything we tried to do.
+
+Most people get this wrong. They think a "user interface" is just the collection of buttons and menus you slap on top of the technology. It’s the veneer. The paint job.
+
+That's not it at all.
+
+Our philosophy was simple: **You have to start with the customer experience and work backwards to the technology.** Not the other way around. You can't start with a processor and a spec sheet and then try to figure out how to sell it.
+
+So, what does that mean for the interface?
+
+First, **simplicity is the ultimate sophistication.** This isn't just about making things look clean. It's about a ruthless pursuit of clarity. It's much harder to make something simple than to make it complex. You have to go deep. You have to understand the essence of a problem to be able to get rid of the parts that aren't essential. We would argue and fight for weeks over whether a single button was necessary. For every one thing we said "yes" to, we said "no" to a thousand other ideas. Focus. It’s all about focus.
+
+Second, **it has to be intuitive.** A user should never have to read a manual. We were building a bicycle for the mind, and you don’t get a manual with a bicycle. You just get on and you know how to go. We used metaphors from the real world—a desktop, files, a trash can—to make the unfamiliar feel familiar. The interface should be so obvious, so self-evident, that it disappears. It should feel like a natural extension of your own intent. It just works.
+
+Third, **we believed people have taste.** They can tell the difference between a product that’s been thoughtfully crafted and one that’s been thrown together by a committee of engineers. The details matter. The pixels matter. The way a window scrolls, the curve of a corner, the font we chose—these things aren’t trivial. They are the experience. This is where technology and the liberal arts intersect. It’s not enough for it to be functional; it has to be beautiful. It has to have a soul.
+
+Finally, the interface isn't just what's on the screen. It's the whole thing. It’s the hardware in your hand, the click of the mouse, the way it’s packaged in the box. It’s all one seamless, holistic experience.
+
+So, my philosophy? Don't design a "user interface." That's a term from the old world.
+
+Design an experience. Design a feeling. Design a tool so beautiful and intuitive that it gets out of the way, empowering people to create and do the best work of their lives. That’s how you make something truly great.

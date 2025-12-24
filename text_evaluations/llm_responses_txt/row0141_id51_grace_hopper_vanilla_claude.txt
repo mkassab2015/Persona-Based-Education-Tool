@@ -1,0 +1,97 @@
+Pseudocode is a way to plan and describe algorithms using plain English-like statements before writing actual code. Here's how to write effective pseudocode:
+
+## Basic Principles
+
+1. **Use simple, clear language** - Write as if explaining to another person
+2. **Be specific but not tied to syntax** - Focus on logic, not programming language details
+3. **Use consistent indentation** - Show structure and flow
+4. **Keep it readable** - Anyone should understand your logic
+
+## Common Pseudocode Elements
+
+### Basic Structure
+```
+BEGIN
+    // Your algorithm steps here
+END
+```
+
+### Variables and Assignment
+```
+SET variable_name TO value
+SET count TO 0
+SET name TO "John"
+```
+
+### Input/Output
+```
+INPUT user_age
+OUTPUT "Hello World"
+PRINT result
+```
+
+### Conditional Statements
+```
+IF condition THEN
+    // statements
+ELSE IF another_condition THEN
+    // statements
+ELSE
+    // statements
+END IF
+```
+
+### Loops
+```
+// For loop
+FOR i FROM 1 TO 10 DO
+    // statements
+END FOR
+
+// While loop
+WHILE condition DO
+    // statements
+END WHILE
+
+// Repeat until
+REPEAT
+    // statements
+UNTIL condition
+```
+
+### Functions/Procedures
+```
+FUNCTION function_name(parameters)
+    // statements
+    RETURN value
+END FUNCTION
+```
+
+## Example: Finding the Largest Number
+
+```
+BEGIN
+    INPUT three numbers: a, b, c
+    SET largest TO a
+    
+    IF b > largest THEN
+        SET largest TO b
+    END IF
+    
+    IF c > largest THEN
+        SET largest TO c
+    END IF
+    
+    OUTPUT "The largest number is: " + largest
+END
+```
+
+## Tips for Good Pseudocode
+
+- **Start with the big picture** then add details
+- **Use meaningful variable names**
+- **Include comments** for complex logic
+- **Test your logic** by walking through it step by step
+- **Keep it language-independent** - avoid specific syntax
+
+Pseudocode helps you think through problems clearly before diving into actual programming!

@@ -1,0 +1,32 @@
+Pair programming is a software development practice where two programmers work together at the same computer to write code. Here's how it works:
+
+## The Two Roles
+
+**Driver**: The person actively typing and writing code
+**Navigator**: The person reviewing the code, thinking strategically, and suggesting improvements
+
+The roles switch regularly throughout the session.
+
+## Key Benefits
+
+- **Higher code quality**: Two sets of eyes catch more bugs and design issues
+- **Knowledge sharing**: Team members learn from each other's expertise
+- **Reduced debugging time**: Problems are often caught immediately
+- **Better design decisions**: Real-time discussion leads to more thoughtful solutions
+- **Faster onboarding**: New team members learn the codebase and practices quickly
+
+## Common Approaches
+
+- **Traditional**: Two people at one computer
+- **Remote**: Using screen sharing and collaboration tools
+- **Ping-pong**: One person writes a test, the other makes it pass, then they switch
+
+## When It's Most Effective
+
+- Complex or critical features
+- Knowledge transfer situations
+- Debugging difficult problems
+- Code reviews in real-time
+- When team members have complementary skills
+
+While pair programming can initially seem to slow down development (two people on one task), it often results in higher quality code that requires less debugging and rework later, making it a valuable practice in many development teams.

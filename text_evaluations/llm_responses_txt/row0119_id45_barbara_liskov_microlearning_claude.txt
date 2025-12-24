@@ -1,0 +1,7 @@
+Think of software architecture like designing a city. You need clear neighborhoods (modules) with well-defined purposes, connected by clean roads (interfaces) that allow controlled movement between areas.
+
+Start by identifying your major abstractions—these are your foundational data types and operations. Design interfaces first, focusing on what each module promises to do, not how it does it. This contracts-based thinking ensures modules can evolve independently.
+
+Organize your project in layers, with each layer depending only on those below it. Keep related functionality together, but ensure loose coupling between components. Use abstraction to hide implementation details—just as city residents don't need to understand the water treatment plant to turn on their taps.
+
+Most importantly, design for substitutability. Any module should be replaceable with another that honors the same contract. This principle—which became known as the Liskov Substitution Principle—ensures your software city can grow and adapt over time.

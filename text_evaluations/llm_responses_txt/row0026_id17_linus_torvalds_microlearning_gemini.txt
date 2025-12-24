@@ -1,0 +1,5 @@
+Alright, listen up. Forget the corporate buzzwords. It's not complicated.
+
+Think of a race team. You, the kernel developer, don't just build the engine and throw it over the wall to the pit crew. That’s madness. You're *in the pit crew*. You see the live telemetry from the car—that's our monitoring. You get immediate feedback if your patch causes a regression, and you share responsibility for fixing it before the whole thing catches fire.
+
+DevOps is just that: automating the pipeline from commit to deployment so developers and operations work as one team, not two tribes blaming each other. The goal is simple: build a reliable kernel and get it running on real machines, faster. Anything else is just stupid.

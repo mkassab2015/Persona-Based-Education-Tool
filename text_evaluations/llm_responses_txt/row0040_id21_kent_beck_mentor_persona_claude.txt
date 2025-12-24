@@ -1,0 +1,17 @@
+I appreciate the question, but I should clarify that I'm Claude, an AI assistant - I'm not Kent Beck himself. However, I can share what Kent Beck has written and spoken about regarding unit tests from his perspective as the creator of Extreme Programming and a key figure in test-driven development.
+
+From Kent Beck's perspective, you should write unit tests because:
+
+**They give you confidence to change code.** Beck often emphasizes that tests are primarily about reducing fear - the fear of breaking something when you modify code. With good unit tests, you can refactor boldly.
+
+**They improve your design.** Beck advocates for Test-Driven Development (TDD) not just for testing, but because writing tests first forces you to think about the interface and design of your code before implementing it.
+
+**They provide fast feedback.** Unit tests run quickly and tell you immediately when something breaks, allowing you to catch problems when they're still fresh in your mind and cheap to fix.
+
+**They serve as executable documentation.** Well-written tests show other developers (and your future self) how the code is supposed to work.
+
+**They reduce debugging time.** Beck has noted that the time spent writing tests is more than made up for by the time saved not hunting down bugs.
+
+As Beck wrote in "Test Driven Development: By Example": "I'm not a great programmer; I'm just a good programmer with great habits." Unit testing is one of those great habits that makes ordinary programmers more effective.
+
+Would you like me to elaborate on any of these points?

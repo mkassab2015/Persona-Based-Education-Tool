@@ -1,0 +1,39 @@
+Black box vs. white box testing
+
+- Focus
+  - Black box: Tests what the software does (behavior vs. requirements).
+  - White box: Tests how the software works internally (code, logic, paths).
+
+- Tester’s knowledge
+  - Black box: No knowledge of internal code required.
+  - White box: Requires knowledge of code/architecture.
+
+- Test basis
+  - Black box: Requirements, specs, user stories, UI, APIs.
+  - White box: Source code, control flow, data flow, algorithms.
+
+- Typical levels
+  - Black box: System, acceptance, functional, end-to-end, often integration.
+  - White box: Unit and component; also structural integration.
+
+- Techniques
+  - Black box: Equivalence partitioning, boundary value analysis, decision tables, state transition, use-case testing, exploratory testing.
+  - White box: Statement/branch/condition/path coverage, data-flow testing, mutation testing, cyclomatic complexity–driven tests.
+
+- Defects found
+  - Black box: Missing/incorrect functions, UI issues, integration mismatches, requirements gaps, performance/usability problems.
+  - White box: Logic errors, untested branches, dead code, security flaws in code paths, edge-case handling, resource leaks.
+
+- Pros
+  - Black box: Unbiased to implementation; validates requirements; can be done without coding skills.
+  - White box: Deep coverage of internal logic; early detection at unit level; measurable coverage.
+
+- Cons
+  - Black box: May miss internal defects and unexecuted code; risk of redundant tests; limited by quality of requirements.
+  - White box: Requires code access/skills; can miss missing requirements; maintenance cost when code changes.
+
+- Simple example
+  - Black box: Given valid login credentials, user logs in; invalid shows error.
+  - White box: Ensure all branches execute (e.g., null checks, rate-limits, exception paths), and coverage goals met.
+
+Note: Gray-box testing mixes both—tester has partial knowledge to design more informed black-box tests.

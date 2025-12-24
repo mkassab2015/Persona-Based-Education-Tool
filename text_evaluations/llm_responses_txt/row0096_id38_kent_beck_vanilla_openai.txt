@@ -1,0 +1,27 @@
+Test coverage matters because it directly supports software quality, speed, and risk management.
+
+Key benefits
+- Prevents regressions: Exercising code paths catches defects before release.
+- Enables safe change: Gives confidence to refactor and ship frequently.
+- Documents behavior: Tests act as living examples of expected outcomes.
+- Highlights risky code: Low-coverage hotspots and complex branches signal areas needing attention or refactoring.
+- Supports CI/CD: Coverage gates help maintain a stable main branch.
+- Reduces cost and downtime: Bugs are cheaper to fix earlier; better coverage lowers incident rates and MTTR.
+- Aids compliance: In regulated domains, coverage demonstrates verification of requirements.
+
+Important caveats
+- Coverage ≠ quality: Executing lines is not the same as asserting correct behavior. You can have 100% coverage with weak tests.
+- Metric can be gamed: Focus on meaningful assertions and critical paths, not just the percentage.
+- Different kinds of coverage tell different stories: 
+  - Line/statement: Was a line executed?
+  - Branch/condition: Were all decision outcomes exercised?
+  - Mutation testing: Do tests fail when code is intentionally perturbed (a better proxy for test effectiveness)?
+
+Practical guidance
+- Use risk-based targets: Aim higher on core business logic (e.g., 80–90%), moderate on glue/boilerplate, and near 100% for safety-critical code.
+- Prioritize branch/condition coverage on complex logic and boundaries.
+- Gate on diff coverage (new/changed code), not just overall coverage.
+- Balance the test pyramid: many fast unit tests, fewer integration tests, a handful of E2E.
+- Avoid brittle/flaky tests and trivial tests that don’t assert meaningful behavior.
+
+In short, good coverage provides a safety net that improves reliability and development velocity, but it must be paired with strong, meaningful tests to be truly valuable.

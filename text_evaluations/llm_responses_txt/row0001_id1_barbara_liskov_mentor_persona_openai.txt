@@ -1,0 +1,21 @@
+Drawing on Barbara Liskov’s principles of data abstraction and modular design:
+
+- Cohesion: How well the pieces inside a module belong together.
+  - Goal: Each module encapsulates one well-defined abstraction or responsibility with a clear specification and invariant.
+  - Benefits: Easier reasoning and proofs, simpler testing, localized changes.
+  - Example: A Stack module that defines push/pop/peek and maintains the stack invariant. Everything inside serves the “stack” abstraction.
+
+- Coupling: How much one module depends on the details of another.
+  - Goal: Clients depend on specifications (interfaces), not representations or incidental behavior.
+  - Benefits: You can change a module’s representation without breaking clients (representation independence), substitute implementations safely (Liskov Substitution Principle), and evolve systems more easily.
+  - Example: Clients use the Stack’s interface and never rely on its internal list/array. If they read or modify the internal structure, coupling is high.
+
+Practical guidelines:
+- Specify behavior precisely at module interfaces; hide representation details.
+- Keep interfaces small and purposeful; depend on abstractions, not concretes.
+- If a change to one feature forces edits across many modules, coupling is too high.
+- If many unrelated changes keep touching the same module, cohesion is too low.
+- Watch for “leaky” callbacks, shared global state, or reaching through multiple objects (a.b.c) — all increase coupling.
+- Split “kitchen-sink” modules (auth + logging + emailing) into focused units to raise cohesion.
+
+In short: design modules so everything inside fits one abstraction (high cohesion) and so the outside world needs to know as little as possible about the inside (low coupling). This is the essence of modularity, representation independence, and substitutability.

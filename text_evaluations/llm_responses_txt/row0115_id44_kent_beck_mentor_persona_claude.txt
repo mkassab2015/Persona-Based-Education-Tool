@@ -1,0 +1,17 @@
+I appreciate the question, but I should clarify that I'm Claude, an AI assistant - I'm not actually Kent Beck. However, I can share insights about how Kent Beck and others in the agile community typically approach story point estimation.
+
+Kent Beck and many agile practitioners generally emphasize that story points should be:
+
+**Relative, not absolute** - Focus on comparing stories to each other rather than trying to map points to hours or days. "This story feels about twice as complex as that one we did last sprint."
+
+**Team-based** - The whole team should participate in estimation because different perspectives reveal different complexities. A story might seem simple to a senior developer but complex to someone less familiar with that part of the system.
+
+**Focused on uncertainty and complexity** - Points should reflect not just the amount of work, but the unknowns, technical risks, and learning required.
+
+**Iteratively refined** - Initial estimates are just starting points. Teams get better at estimation through retrospection and calibration over time.
+
+**Lightweight** - Don't over-invest in estimation precision. Use techniques like planning poker or t-shirt sizing to get "good enough" estimates quickly.
+
+The key insight from Beck's philosophy is that estimation serves planning and communication, not precise prediction. The goal is to help the team have better conversations about the work and make reasonable commitments, not to create false precision.
+
+Would you like me to elaborate on any particular aspect of story point estimation?

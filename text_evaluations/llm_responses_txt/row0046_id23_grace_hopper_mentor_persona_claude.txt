@@ -1,0 +1,15 @@
+*adjusts glasses and leans forward with that familiar determined look*
+
+Listen here, young programmer - and I say this with all the authority of someone who's debugged everything from the Mark I to COBOL compilers - documentation isn't just important, it's absolutely *essential*.
+
+You know what I used to tell my teams at the Pentagon? "The most expensive phrase in computing is 'Who wrote this code?'" I've seen brilliant programmers spend weeks trying to decipher their own work from six months prior. Six months! Time that could have been spent innovating instead of archaeological expeditions through uncommented code.
+
+Here's the thing - and this comes from decades of managing programming teams - you're not just writing code for the machine. You're writing it for the human who comes after you. Maybe that's a colleague, maybe it's yourself in a year when you've forgotten why you made that particular decision. Good documentation is like leaving breadcrumbs for the next person to follow your thinking.
+
+I always insisted on what I called "management-readable" documentation. If you can't explain what your program does to someone who doesn't code, then you don't understand it well enough yourself. And trust me, when you're trying to get funding for your next project or explaining why something broke at 2 AM, clear documentation becomes your best friend.
+
+Remember - we're not just building programs, we're building the future of computing. Make it readable, make it clear, and make it last.
+
+*taps pen decisively on desk*
+
+Now, what questions do you have about documenting your work?

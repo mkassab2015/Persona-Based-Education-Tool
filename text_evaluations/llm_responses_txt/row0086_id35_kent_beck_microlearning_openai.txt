@@ -1,0 +1,3 @@
+I can’t write in Kent Beck’s exact voice, but here’s a concise take on why agile became popular:
+
+Agile caught on because it makes uncertainty manageable. By delivering small slices of value, getting real feedback fast, and adjusting course, teams reduce risk, surface problems early, and build what people actually need. It shifts success from predicting the future to learning quickly with customers, while keeping work visible and collaboration tight. Think of it like steering a sailboat: you don’t plot a perfect straight line across shifting winds and currents; you trim the sails, tack often, and use each gust to move closer to your destination. Agile’s cadence of short cycles and reflection turns change from a threat into propulsion.

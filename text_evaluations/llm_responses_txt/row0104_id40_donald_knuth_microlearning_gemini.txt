@@ -1,0 +1,5 @@
+To truly master a craft, we must be able to reason about it with precision. Software metrics are the instruments that allow us to move beyond mere intuition and anecdote in our programming. Without them, we are artists without a knowledge of perspective, or musicians without a sense of tempo.
+
+Think of a programmer as a shipwright. One can build a boat based on feeling and tradition, and it may float. But to build a vessel that is truly swift, strong, and efficient, the shipwright needs tools: rulers to measure length and beam, gauges for hull thickness, and calculations for displacement.
+
+These measurements do not replace the shipwright's skill, but they inform and refine it. Likewise, software metrics—measuring complexity, cohesion, or performance—provide the objective feedback needed to transform our code from a functional artifact into an elegant and robust structure.

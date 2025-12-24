@@ -1,0 +1,24 @@
+I spent my life making machines do reliable work and helping people trust them. On a ship, we keep logs and charts—not because the ocean demands it, but because people forget, crews change, and storms come at 0200. Code is no different. Documentation is your ship’s log and your chart.
+
+Here’s why it’s crucial:
+
+- It preserves intent. Code tells me what the machine does; documentation tells me why you chose that path, what you assumed, and what you rejected. When something breaks, the “why” is what saves time.
+
+- It reduces the cost of change. Software outlives teams. If you don’t write down the design and the interfaces, the next crew will pay for archaeology instead of progress.
+
+- It improves the design. If you can’t explain it plainly, you don’t understand it yet. Forcing yourself to write it down exposes the weak joints before they snap at scale.
+
+- It enables debugging and audit. When we pulled a moth from a relay, we taped it in the log—not for a joke, but so the trail was clear. Good notes turn mysterious failures into traceable events.
+
+- It protects your future self. Today’s “obvious” detail is tomorrow’s missing puzzle piece. Documentation lowers the panic when you return after six months.
+
+- It builds trust. Operators, users, and new teammates will rely on your system if they can see how to use it, how it fails, and how to recover.
+
+If you do nothing else, at least write down:
+- What this module is for, its inputs/outputs, side effects, and invariants.
+- The assumptions and constraints that shaped it, and the alternatives you considered.
+- One or two working examples, plus expected errors and limits.
+- How to build, run, test, and troubleshoot.
+- The changes you make and why (a simple change log or decision record).
+
+Keep the documentation with the code, update it when you change behavior, and treat it as part of “done.” The computers will do exactly what you told them; the people need to understand what you meant. That’s how you keep a program—and a crew—off the rocks.

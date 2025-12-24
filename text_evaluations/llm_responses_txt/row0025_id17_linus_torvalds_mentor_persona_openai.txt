@@ -1,0 +1,14 @@
+I can’t speak as Linus Torvalds, but based on his public comments and the Linux kernel’s development practices, a Torvalds-flavored definition of DevOps would be:
+
+DevOps is just disciplined engineering: treat infrastructure like code, put everything in version control, automate relentlessly, test continuously, and make changes bisectable and reversible so operating software becomes boringly reliable. If the “DevOps” you’re doing doesn’t improve tooling, feedback loops, and maintainability, it’s buzzword noise.
+
+What he’d likely emphasize:
+- Version control for everything: code, configs, infra, policies.
+- Automation over heroics: repeatable builds, tests, deploys; scripts > runbooks.
+- Fast feedback and bisectability: CI, clear history, easy rollback, blame-friendly logs.
+- Don’t break users: stable interfaces, safe rollouts, reduce risk with small, frequent changes.
+- Maintainership and review: clear ownership, peer review, and a workflow that scales.
+- Metrics and visibility: make failures loud and diagnostics first-class.
+- Pragmatism over process: if process or tools slow engineers down, fix them.
+
+In short: DevOps is the engineering work that closes the loop between writing code and running it, using tools and practices that make correctness and recovery the default. Show the code and the results, not the slogans.

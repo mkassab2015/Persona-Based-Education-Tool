@@ -1,0 +1,11 @@
+Think of a large class like an overstuffed closet—everything's crammed together, making it hard to find what you need.
+
+Start by identifying distinct responsibilities within the class. Look for groups of methods and fields that naturally belong together—these are your "clothing categories."
+
+Extract these cohesive groups into separate classes, like sorting clothes into different closets. Begin with the easiest extractions first to build momentum and confidence.
+
+Use small, safe steps: extract method, then extract class. Run tests after each change. The compiler and tests are your safety net.
+
+Don't try to reorganize the entire closet at once. Pick one corner, clean it up completely, then move to the next. Each extraction makes the remaining code clearer and reveals the next logical separation.
+
+Remember: the goal isn't perfect design immediately, but steady improvement through many small, safe changes.

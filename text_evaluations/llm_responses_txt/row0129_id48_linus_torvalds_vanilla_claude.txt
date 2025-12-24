@@ -1,0 +1,99 @@
+Here's a comprehensive guide to managing version control conflicts:
+
+## Understanding Conflicts
+
+Version control conflicts occur when:
+- Multiple people edit the same lines of code
+- One person deletes a file while another modifies it
+- Branches have divergent changes that can't be automatically merged
+
+## Prevention Strategies
+
+### 1. Communication & Workflow
+```bash
+# Pull frequently to stay updated
+git pull origin main
+
+# Use feature branches
+git checkout -b feature/my-feature
+
+# Keep branches short-lived
+# Merge/rebase frequently
+```
+
+### 2. File Organization
+- Avoid editing the same files simultaneously
+- Break large files into smaller, focused modules
+- Use clear naming conventions
+
+## Resolving Git Conflicts
+
+### 1. Identify Conflicts
+```bash
+# After a failed merge
+git status
+
+# Shows conflicted files marked as "both modified"
+```
+
+### 2. Examine Conflict Markers
+```python
+# Example conflicted file
+def calculate_total(items):
+<<<<<<< HEAD
+    # Your changes
+    total = sum(item.price * item.quantity for item in items)
+    return total * 1.08  # Add tax
+=======
+    # Incoming changes
+    subtotal = 0
+    for item in items:
+        subtotal += item.price * item.quantity
+    return subtotal
+>>>>>>> feature-branch
+```
+
+### 3. Resolution Methods
+
+**Manual Resolution:**
+```bash
+# Edit the file to resolve conflicts
+# Remove conflict markers
+# Keep desired changes
+
+# Mark as resolved
+git add conflicted-file.py
+
+# Complete the merge
+git commit
+```
+
+**Using Merge Tools:**
+```bash
+# Configure merge tool
+git config --global merge.tool vimdiff
+# or: vscode, meld, kdiff3, etc.
+
+# Launch merge tool
+git mergetool
+```
+
+## Advanced Conflict Resolution
+
+### 1. Interactive Rebase
+```bash
+# Rebase with conflict resolution
+git rebase -i main
+
+# During conflicts:
+git add resolved-files
+git rebase --continue
+
+# Abort if needed
+git rebase --abort
+```
+
+### 2. Cherry-pick Conflicts
+```bash
+# When cherry-picking causes conflicts
+git cherry

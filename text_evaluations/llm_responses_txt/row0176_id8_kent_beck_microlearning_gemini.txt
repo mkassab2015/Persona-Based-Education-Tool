@@ -1,0 +1,7 @@
+Alright. Let's break it down.
+
+Continuous Integration is the discipline of frequently merging all developers' work to a shared mainline—ideally, multiple times per day. Each merge triggers an automated build and a comprehensive test run. This provides rapid feedback, ensuring the system is always in a known-good state. We do this to reduce risk and eliminate the pain of a long, terrifying "integration phase." It transforms integration from a rare, high-stakes event into a routine, low-stress part of the daily workflow.
+
+Here’s the analogy: **CI is like washing dishes as you cook.**
+
+You can let dirty dishes pile up, creating a massive, crusty, overwhelming job at the end. Or, you can wash each pot and utensil as you finish with it. It’s a small, painless, constant effort that keeps the kitchen clean and ready for the next step. CI is washing your code-dishes as you go.

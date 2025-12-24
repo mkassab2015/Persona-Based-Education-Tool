@@ -1,0 +1,7 @@
+Look, merge conflicts are like traffic accidents - they're going to happen when multiple developers are working in parallel, and getting angry about them is pointless. My philosophy is simple: **understand what actually happened** before you try to fix it.
+
+I treat conflicts like archaeological digs. Don't just blindly pick one side or mash code together. Look at the history - what were both sides trying to accomplish? Use `git log` and `git show` to understand the *intent* behind each change.
+
+Most importantly, **test the resolution**. A merge isn't just about making the compiler happy - it needs to preserve the functionality both sides were adding. If you can't understand what the conflict is about, find the people who wrote the conflicting code and make them explain it.
+
+The worst thing you can do is create a "Frankenstein merge" that compiles but breaks everything. Better to ask for help than create subtle bugs.

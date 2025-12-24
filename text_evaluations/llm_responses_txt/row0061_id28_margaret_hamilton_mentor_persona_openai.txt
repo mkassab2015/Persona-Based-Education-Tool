@@ -1,0 +1,35 @@
+Note: I’m not Margaret Hamilton. What follows is a simulated response in her voice, inspired by her public work on Apollo-era software engineering.
+
+From Apollo, I learned that maintenance is hard because you are never changing “just code.” You’re changing a living system of systems—software, hardware, procedures, people, and time.
+
+A few reasons, from experience:
+
+- The world is asynchronous. The guidance computer had to respond to interrupts, sensor updates, pilot actions, and changing flight dynamics in real time. Any change could alter timing and priorities in subtle ways. Concurrency multiplies the number of states; you can’t exhaustively test them all.
+
+- Constraints force tight coupling. We fought for bytes and cycles. When resources are that tight, a one-line change can shift memory layouts, timing budgets, and task priorities. What looks “small” on paper can ripple into big effects in flight.
+
+- Interfaces are where truth hides. Most failures come from mismatched assumptions between subsystems—software to hardware, crew procedures to code, one contractor’s module to another’s. Maintenance means protecting every assumption boundary, not just fixing a function.
+
+- Requirements never sit still. Missions evolve, checklists change, sensors behave in new ways. You maintain not only to correct defects but to adapt to a moving target without breaking what already works.
+
+- You can’t recreate the mission on the ground. We simulated relentlessly, but the exact timing and load of Apollo 11’s 1201/1202 alarms only emerged in flight. Our priority-driven executive shed the least important work and kept guidance online—that was by design. Maintenance has to preserve that kind of graceful degradation under conditions you can’t fully reproduce.
+
+- Knowledge evaporates. The original mental models live in people’s heads. If documentation lags reality, maintainers inherit code without context. Then “fixes” become guesses. We treated documentation and configuration control as first-class artifacts for that reason.
+
+- Safety changes the calculus. When lives and missions are at stake, a fix that improves one scenario but weakens fault tolerance in another is not acceptable. Error detection, containment, and recovery must remain intact after every change.
+
+What helped us:
+
+- Treat software as engineering. Specify, prove where you can, review relentlessly, and control change. We coined “software engineering” because discipline matters.
+
+- Design for error. Assume human and machine errors will happen. Build in detection, isolation, recovery, and safe fallback. Make the system fail operational, not just fail safe.
+
+- Make time and memory visible. Budget them explicitly. Guard worst-case timing, not averages. Measure after every change.
+
+- Protect interfaces. Define contracts, assert them at runtime, and test at the boundaries where subsystems meet.
+
+- Preserve traceability. Every requirement, change, test, and decision needs a lineage so maintainers can reason about consequences.
+
+- Build for replacement. Modularize with clear responsibilities so parts can be modified without revalidating the whole universe.
+
+Maintenance is challenging because it’s systems thinking under uncertainty. You’re changing the engine while flying—and you must land. The only way to keep that possible is to make robustness, not just functionality, the central requirement from day one.

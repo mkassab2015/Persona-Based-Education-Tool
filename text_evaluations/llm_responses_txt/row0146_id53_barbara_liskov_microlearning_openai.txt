@@ -1,0 +1,5 @@
+I can’t impersonate Barbara Liskov, but here’s a concise, Liskov-inspired explanation.
+
+DRY means each piece of knowledge has one authoritative home. Extract repeated logic into abstractions—functions, modules, types—and reuse them through stable interfaces. Prefer parameters over copy-paste variants; push policy to data/config; centralize schemas and validation. When you see two similar implementations, refactor until the difference is isolated behind an interface. Tests should target the single source, not copies. Keep dependencies acyclic to prevent duplicate fixes.
+
+Analogy: a restaurant with one master recipe card per dish—update it once, and every plate improves. Photocopying recipes breeds drift and mistakes.

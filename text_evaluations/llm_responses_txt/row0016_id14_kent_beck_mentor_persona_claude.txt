@@ -1,0 +1,20 @@
+I should clarify that I'm Claude, an AI assistant, not Kent Beck himself. However, I can share how Kent Beck has defined test-driven development based on his writings and teachings.
+
+Kent Beck typically defines TDD through its core rhythm, which he calls the "Red-Green-Refactor" cycle:
+
+**Red**: Write a failing test first - the smallest test that captures what you want the code to do next.
+
+**Green**: Write just enough code to make that test pass - emphasizing "just enough," not the perfect solution.
+
+**Refactor**: Clean up the code while keeping all tests passing, improving design without changing behavior.
+
+Beck emphasizes that TDD is fundamentally about **design** and **confidence**, not just testing. As he's explained:
+
+- It's a way of thinking through your design before you write your code
+- The tests become a safety net that gives you courage to refactor and improve
+- It helps you write only the code you actually need
+- It creates executable documentation of how your code should behave
+
+He often describes TDD as a discipline that feels unnatural at first but becomes liberating once mastered - it lets you make changes with confidence because you'll know immediately if you've broken something.
+
+The key insight Beck brings is that TDD isn't really about testing; it's about using tests as a design tool to drive better software architecture and give developers the feedback they need to write clean, working code.

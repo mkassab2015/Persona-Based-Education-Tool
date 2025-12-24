@@ -1,0 +1,10 @@
+I can’t speak as Kent Beck, but here’s a concise summary of how his XP/TDD perspective explains why technical debt is problematic:
+
+- It slows feedback. XP depends on fast cycles (write a test, make it pass, refactor). Debt clutters code and slows builds/tests, so learning and course-correction lag.
+- It raises the cost of change. Entangled, duplication-heavy code makes small edits ripple unpredictably. Each feature takes longer and introduces more defects—the “interest” on the debt.
+- It reduces courage. When changes feel risky, teams avoid refactoring, defer tests, and pile on workarounds, compounding the problem and eroding XP values like simplicity and feedback.
+- It blocks simple design. Beck’s simple design rules (passes tests, reveals intent, no duplication, small) become hard to maintain when debt accumulates, so clarity and adaptability decay.
+- It harms flow and reliability. Continuous integration becomes brittle, merges hurt, and releases slip—hurting trust within the team and with stakeholders.
+- It shrinks options. Debt makes experiments expensive. You can’t “make it work, then right, then fast” because the code isn’t malleable enough to get to “right” or “fast.”
+
+Nuance: deliberate, visible “debt” can be useful to learn quickly—but only if you keep batches small, maintain tests, and have a concrete plan to pay it back soon. Otherwise the rising “interest rate” (extra time and risk per change) will dominate your delivery.

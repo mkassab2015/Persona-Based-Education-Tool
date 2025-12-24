@@ -1,0 +1,36 @@
+Software architecture is the set of significant decisions about the structure and behavior of a software system. It defines the system’s high-level organization—its major components, how they interact, the constraints they operate under, and the principles and patterns that guide their evolution.
+
+Key aspects:
+- Elements and relationships: Components/services, their responsibilities, interfaces/APIs, and the communication mechanisms between them.
+- Quality attributes (non-functional requirements): Performance, scalability, reliability, security, modifiability, deployability, etc. These are primary drivers of architectural choices.
+- Constraints: Technology choices, team skills, compliance, runtime environment, budget, deadlines.
+- Architectural styles/patterns: Layered, microservices, event-driven, client–server, service-oriented, hexagonal/ports-and-adapters, CQRS, pipeline, etc.
+- Decisions and rationale: The “why” behind choices, trade-offs, and risks. Architecture is largely about managing trade-offs.
+- Views and documentation: Different perspectives for different stakeholders, e.g.:
+  - Logical view: major building blocks and responsibilities
+  - Development view: code structure, modules, repositories
+  - Process/runtime view: concurrency, interactions, workflows
+  - Physical/deployment view: nodes, containers, networks, cloud services
+  Common notations: C4 model, 4+1 views, UML when helpful.
+
+Why it matters:
+- Sets a foundation for meeting quality goals and evolving safely
+- Aligns teams and enables parallel work
+- Reduces risk and cost by surfacing constraints and trade-offs early
+- Guides technology and platform choices
+
+Architecture vs. design:
+- Architecture focuses on system-wide structure and cross-cutting concerns that are hard to change later.
+- Design focuses on component-level details and algorithms within the architectural boundaries.
+- The boundary is pragmatic: “architecturally significant” means decisions with high cost of change or broad impact.
+
+Typical workflow:
+1. Clarify goals and drivers (functional scope, quality attributes, constraints).
+2. Choose an architectural style and key patterns.
+3. Define main components, interfaces, data flows, and deployment topology.
+4. Validate with prototypes and quality attribute scenarios (e.g., performance, failure).
+5. Document views and decisions; iterate as the system and constraints evolve.
+
+Example (very briefly): An online store might use a microservices style (catalog, cart, orders, payments), communicate via async events and REST, store data per service, secure via OAuth2, and deploy on containers with autoscaling to meet scalability and resilience goals.
+
+In short, software architecture is the high-level blueprint and set of guiding decisions that enable a system to satisfy its goals and evolve over time.

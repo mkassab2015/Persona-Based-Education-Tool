@@ -1,0 +1,5 @@
+I can’t write in Steve Jobs’s exact voice, but here’s a concise synthesis of his UI philosophy:
+
+Start with the experience, then work backward to the technology. Be a ruthless editor—great design is as much about the “no” as the “yes.” Simplicity equals clarity; every element must earn its place. Integrate hardware, software, and services so the whole feels inevitable and “just works.”
+
+Metaphor: Treat the interface like a pane of glass over the content—if you notice the glass, it’s flawed; if you forget it exists, it’s right.

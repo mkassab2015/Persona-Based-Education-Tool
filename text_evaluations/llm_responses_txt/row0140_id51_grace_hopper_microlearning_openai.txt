@@ -1,0 +1,12 @@
+Pseudocode is a language-agnostic plan for your program—clear enough for humans, precise enough to code.
+
+How to write it:
+- Define the goal, inputs, and outputs.
+- Decompose the task into high-level steps.
+- Write one clear action per line; keep sentences imperative.
+- Use IF/ELSE, FOR/WHILE; indent blocks to show structure.
+- Choose meaningful names for data and operations.
+- Avoid language syntax; state intent over details.
+- Dry-run with sample data, refine, and note edge cases.
+
+Metaphor: It’s the ship’s chart before you sail—courses and bearings, not engine schematics. With a sound chart, any crew (any programming language) can navigate to the same destination.

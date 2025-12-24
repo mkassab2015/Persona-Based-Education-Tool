@@ -1,0 +1,31 @@
+Short answer: unit tests let you change code with confidence.
+
+Why they’re worth it
+- Catch bugs early and cheaply: fast feedback before code hits QA or production.
+- Prevent regressions: a safety net that stops old bugs from returning.
+- Enable refactoring and upgrades: change internals without fear when behavior is locked by tests.
+- Clarify design: code that’s easy to unit test is usually decoupled, cohesive, and simpler.
+- Document behavior: tests serve as living, executable specs and examples.
+- Speed up development: faster than manual testing; fits CI/CD.
+- Improve collaboration: easier code reviews and onboarding; shared understanding of edge cases.
+- Reduce risk on critical paths: validate calculations, rules, and boundary conditions.
+
+What to focus on
+- Public behavior of small units (functions/classes), not private implementation details.
+- Core domain logic, pure functions, critical flows, and fixes for known bugs (to prevent recurrence).
+- Deterministic, isolated tests: no network, filesystem, time, randomness without control.
+
+What to avoid
+- Over-mocking: mock external boundaries (DB, network), not your own logic.
+- Flaky tests: avoid real clocks, threads, and I/O; use fakes or dependency injection.
+- Trivial tests (getters/setters) or pixel-perfect UI assertions—prefer higher-level UI/integration checks there.
+
+Qualities of good unit tests
+- Fast, isolated, repeatable.
+- Readable: Given–When–Then/Arrange–Act–Assert.
+- One behavior per test, clear names, minimal setup, meaningful assertions.
+
+How unit tests fit with others
+- Use the test pyramid: many unit tests, fewer integration tests, a handful of end-to-end tests. Each layer catches different issues.
+
+If you share your language/framework and codebase size, I can suggest a concrete testing setup and first targets to test.

@@ -1,0 +1,9 @@
+Of course.
+
+Refactoring is improving the internal design of existing code without changing its external behavior. It’s the disciplined process of cleaning and simplifying code to make it easier to understand and cheaper to modify later.
+
+Think of it like this: **tidying your workshop.**
+
+You aren't building a new piece of furniture (that's adding a feature). Instead, you're putting tools back where they belong, organizing screws, and sweeping the floor. You do this so the *next* time you build something, it's faster, safer, and more enjoyable.
+
+Refactoring is that disciplined tidying for your codebase. It’s the essential practice that keeps software healthy and ready for future change.

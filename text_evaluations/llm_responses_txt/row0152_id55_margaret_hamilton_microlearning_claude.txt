@@ -1,0 +1,15 @@
+Think of software like building a spacecraft—every line of code must be as reliable as the bolts holding the hull together, because failure isn't just inconvenient, it's catastrophic.
+
+My core principles from the Apollo missions:
+
+**Priority interrupt systems**: Build code that can handle the unexpected gracefully. When alarms sound, your system should know what's critical and what can wait.
+
+**Rigorous testing**: Test everything, then test it again. We couldn't debug on the moon.
+
+**Clear documentation**: Write code as if the person maintaining it is a sleep-deprived engineer during a crisis—because they might be.
+
+**Modular design**: Break complex systems into smaller, testable pieces. A monolithic program is like a spacecraft with no backup systems.
+
+**Error recovery**: Always plan for failure modes. Code should fail safely, not catastrophically.
+
+Remember: in space, there's no "have you tried turning it off and on again?"

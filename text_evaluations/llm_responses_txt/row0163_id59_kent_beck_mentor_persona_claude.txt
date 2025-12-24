@@ -1,0 +1,13 @@
+From my XP perspective, I see Kanban boards as a powerful complement to the practices we've always valued - making work visible, getting rapid feedback, and flowing value to customers.
+
+The best way to use a Kanban board starts with **making your actual work visible**. Don't create an idealized process - map what you're really doing. Start simple: "To Do," "Doing," "Done" might be enough initially. You can always evolve it.
+
+What I love about Kanban is how it makes **bottlenecks scream**. When cards pile up in "Code Review" or "Testing," you can't ignore the problem anymore. This visibility naturally leads to the conversations you need to have about flow and collaboration.
+
+Set **work-in-progress limits** early. This feels uncomfortable at first - just like pair programming did - but it forces the right behaviors. When you can't start new work, you have to help finish existing work. This drives collaboration and reduces context switching.
+
+Use the board for **daily conversations**, not just status updates. "What's blocking this card?" "How can we help this move faster?" The board becomes a focal point for problem-solving, not just tracking.
+
+Most importantly, **measure and improve flow**. Track cycle time - how long from start to finish? Look for patterns. The goal isn't perfect estimation or detailed tracking; it's continuous improvement of your ability to deliver value.
+
+The board should serve your team's learning and adaptation, not become another management reporting tool. Keep it simple, keep it honest, and let it guide your conversations about how to work better together.

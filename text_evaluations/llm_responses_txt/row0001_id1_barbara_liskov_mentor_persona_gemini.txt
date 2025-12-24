@@ -1,0 +1,48 @@
+Of course. It's a pleasure to address this. The distinction between cohesion and coupling is not merely academic; it strikes at the very heart of how we build robust, maintainable, and understandable software systems. When my colleagues and I were formalizing the principles of data abstraction and modularity in the 1970s, these two concepts were the opposing forces we were constantly trying to balance.
+
+Let me explain them as I see them.
+
+### Cohesion: The Strength Within
+
+Think of cohesion as a measure of a module's **internal integrity**. It asks the question: **"How well do the parts of this module belong together?"**
+
+A module with **high cohesion** is one where all its elements—its data, its functions, its responsibilities—are tightly related and focused on a single, well-defined purpose. It does one thing and does it well.
+
+This was the entire motivation behind our work on **abstract data types (ADTs)**, which we implemented in the CLU programming language. An abstract data type, like a `Set` or a `Stack`, is the epitome of high cohesion. The data structure (how the set is stored) and the operations on that data (`add`, `remove`, `is_member?`) are all encapsulated within a single unit. You wouldn't find a function for calculating currency exchange rates inside a `Stack` module. Why? Because it doesn't belong. It would violate the module's conceptual integrity; it would lower its cohesion.
+
+A module with **low cohesion**, on the other hand, is a "junk drawer." It's a collection of unrelated functions and data thrown together simply because a programmer needed a place to put them. This kind of module is difficult to understand, hard to reuse, and a nightmare to maintain, because its purpose is scattered and ill-defined.
+
+**So, cohesion is an internal, intramodule principle. Your goal is always to maximize it.**
+
+---
+
+### Coupling: The Dependency Between
+
+Now, if cohesion looks inward, coupling looks **outward**. It is a measure of the **interdependence between modules**. It asks the question: **"How much does this module know about or rely on another module?"**
+
+A system with **low coupling** is one where modules are largely independent. They interact through stable, well-defined interfaces or contracts. A module doesn't need to know the internal implementation details of another module to use it. It only needs to know about its public specification.
+
+Think of an electrical outlet. You can plug any compliant appliance—a lamp, a computer, a toaster—into it without the appliance needing to know how the power grid is wired. The outlet is a stable, simple interface. That is low coupling. High coupling would be soldering the lamp's wires directly to the house's electrical wiring. It works, but changing the lamp becomes a major, dangerous operation.
+
+A system with **high coupling** is a tangled web. A change in one module can cause a cascade of unexpected failures in other modules. These systems are brittle, difficult to test in isolation, and nearly impossible to refactor because everything is tied to everything else. When Module A needs to know about the internal data structure of Module B to do its job, you have a severe coupling problem.
+
+**Therefore, coupling is an external, intermodule principle. Your goal is always to minimize it.**
+
+---
+
+### The Crucial Interplay
+
+The two concepts are not independent; they are two sides of the same coin in the pursuit of good modular design.
+
+> **We strive for High Cohesion and Low Coupling.**
+
+This isn't just a catchy phrase; it's a guiding principle. When you design a module to be highly cohesive—focused on a single responsibility—you naturally reduce its need to meddle in the affairs of other modules. A `TextParser` module that does only text parsing will need to know very little about the `NetworkCommunicator` module. It might take a string from it and return a data structure, but it doesn't need to know about sockets, ports, or protocols.
+
+This principle of relying on stable interfaces, not concrete implementations, is a thread that runs through much of my work, including what later became known as the **Liskov Substitution Principle**. If you can't substitute one object for another of the same subtype without the client knowing the difference, it's often a sign of tight coupling between the client and a specific implementation.
+
+In summary:
+
+*   **Cohesion** is about making a single module make sense.
+*   **Coupling** is about preventing a change in one module from breaking others.
+
+Building software that lasts requires discipline. You must have the discipline to create focused, sensible building blocks (high cohesion) and the discipline to connect them with care and precision through well-defined contracts (low coupling). Master this, and you are well on your way to mastering software design.

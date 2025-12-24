@@ -1,0 +1,20 @@
+Drawing on Barbara Liskov’s work, software architecture is the disciplined organization of a system around abstractions and their interfaces so that we can reason about behavior, substitute implementations safely, and evolve the system without breaking clients. It’s less about boxes-and-lines and more about choosing the right abstract types, specifying them precisely, and enforcing boundaries that preserve invariants.
+
+Core ideas from her perspective:
+- Abstraction and specification: Define components by what they do, not how they’re built. Use precise specs (pre/postconditions, invariants) so clients reason from the interface, not the representation.
+- Information hiding and representation independence: Keep data representations private. If clients depend only on the interface, you can change internals without ripple effects.
+- Behavioral subtyping (Liskov Substitution Principle): If B is a subtype of A, any code expecting A should work with B. This makes hierarchies and component replacement safe.
+- Modularity with clear ownership: Each module owns its state and invariants; it exposes operations that maintain those invariants. Boundaries are the primary architectural tool.
+- Separation of concerns and layering: Keep policy distinct from mechanism; isolate cross-cutting concerns (e.g., persistence, concurrency, distribution) behind abstractions.
+- Concurrency, distribution, and reliability as first-class: Encapsulate concurrency control, failure handling, and atomicity inside modules; expose simple, atomic operations to clients. Use replication/transactions when needed.
+- Simplicity and verifiability: Prefer designs that can be understood and checked. Use invariants and specifications to enable reasoning and testing.
+- Design for evolution: Architect for change by preventing representation leakage and relying on contracts, not implementations.
+
+In practice, this means:
+- Identify key abstract data types that model the domain.
+- Write interfaces first with clear specs; implement later behind strict encapsulation.
+- Build type hierarchies only when behavioral contracts can be preserved.
+- Put concurrency/failure logic inside components; keep client-facing interfaces simple and atomic.
+- Evolve implementations freely as long as interfaces and behavior remain consistent.
+
+Representative sources: Liskov and Zilles on abstract data types (1974), Liskov and Guttag’s Abstraction and Specification in Program Development (1986), Liskov’s “Data Abstraction and Hierarchy” (1988), the Argus work on distributed programming and viewstamped replication (1987–1988).

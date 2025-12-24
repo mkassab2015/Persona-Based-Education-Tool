@@ -1,0 +1,81 @@
+Short version:
+- Own it quickly.
+- Give a clear new plan and date.
+- Offer options to reduce impact.
+- Communicate proactively until it’s done.
+- Fix the root cause so it doesn’t repeat.
+
+Practical playbook
+
+1) Triage first (60–90 minutes)
+- Clarify the target: What exactly is due? What is “must have” vs “nice to have”?
+- Measure the gap: What’s done, what remains, blockers, dependencies.
+- Re-estimate honestly: Remaining hours ÷ realistic focus hours/day. Add 20–30% buffer.
+- Identify options to reduce impact:
+  - Deliver a usable partial now.
+  - De-scope to a minimum viable version, phase the rest.
+  - Get help or swap priorities with your manager.
+  - Run work in parallel where safe.
+
+2) Communicate early and clearly
+- Choose channel by impact/urgency: call or quick meeting for high-stakes; otherwise Slack/email. Don’t wait.
+- Message components:
+  - Acknowledge the miss (or near miss).
+  - Own it without excuses.
+  - State current status and impact.
+  - Present a recovery plan with a specific new date and milestones.
+  - Offer options/trade-offs.
+  - Ask for what you need (time, help, decisions).
+  - Commit to checkpoints.
+
+Template you can adapt (email/Slack)
+- Subject: Revised plan for [deliverable] — new target [date]
+- Message:
+  Hi [Name],
+  I missed the [original date] deadline for [deliverable]. Current status: [what’s done], remaining: [what’s left]. The impact is [brief impact].
+  Recovery plan:
+  - Milestone 1: [what] by [date/time]
+  - Milestone 2: [what] by [date/time]
+  - Final delivery: [date]
+  Options to reduce impact:
+  - Option A: Deliver [partial] today so [benefit].
+  - Option B: De-scope [items] now; deliver them by [follow-up date].
+  I take responsibility for the miss. To hit the new date, I need: [help/resources/decision]. I’ll provide updates [cadence] and flag risk immediately.
+  Does Option A or B work best? If neither, I’m open to alternatives.
+  Thanks, [You]
+
+One-minute call script
+- “I want to flag I’ve missed/will miss the [date] deadline on [deliverable]. Here’s where it stands: [status]. I estimate completion by [new date] with these milestones: [list]. To reduce impact, we could [option A] or [option B]. I own the miss and will send daily updates. Which option do you prefer, or would you like to adjust scope differently?”
+
+3) Execute the recovery plan
+- Start with any partial handoff that unblocks others.
+- Give short daily updates: done, next, risks, help needed.
+- If risk increases, re-negotiate immediately—don’t “hope it works out.”
+
+4) After it’s delivered: prevent repeat misses
+- Do a brief retro:
+  - Estimation error? Unclear requirements? Hidden dependencies? Over-commitment? Distractions?
+- Fix the system:
+  - Add 20–30% buffer on complex tasks; use three-point estimates (best/likely/worst).
+  - Break work into smaller milestones with interim check-ins or demos.
+  - Surface dependencies early; keep a simple risk list.
+  - Time-block deep work and protect it; reduce task switching.
+  - Agree on status cadence (e.g., twice-weekly progress note).
+  - Align priorities with your manager to prevent overload; ask for explicit trade-offs.
+
+What not to do
+- Don’t go silent or hope to “make it up” without telling anyone.
+- Don’t blame others; state facts and where you need help.
+- Don’t give a new date without a plan and buffers.
+- Don’t backdate or misrepresent progress.
+
+If you’re about to miss vs. already missed
+- About to miss: communicate as soon as you see risk, even 24–48 hours ahead. You’ll have more options (scope cut, help, sequence change).
+- Already missed with no prior warning: apologize for the lack of early notice, explain briefly why you didn’t flag it, and state the new process to avoid silence going forward.
+
+Special contexts
+- Client-facing: pair the plan with options; if impact is significant, consider a goodwill gesture (small discount/extra support), clear boundaries, and a formal revised SOW if scope changes.
+- Academic: email the professor/TA ASAP, acknowledge the miss, request an extension with a specific date, offer partial submission now, and provide documentation if relevant.
+- Regulatory/legal deadlines: escalate to leadership and legal immediately; implement a documented interim control or workaround while you execute the recovery plan.
+
+If you want, tell me the situation (what the deliverable is, who the stakeholder is, what’s left, and your earliest realistic date), and I’ll draft a tailored message and recovery plan.

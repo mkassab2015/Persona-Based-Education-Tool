@@ -1,0 +1,7 @@
+Test coverage is like having smoke detectors in your house—it's not about preventing fires, it's about knowing when something's burning before it burns the whole place down.
+
+I've seen teams obsess over 100% coverage like it's some holy grail, but that misses the point entirely. Coverage tells you where you're flying blind, not whether you're flying well. I'd rather have 60% coverage testing the scary, complex bits than 95% coverage testing getters and setters.
+
+The real value? Coverage shows you the dark corners where bugs love to hide. When I'm refactoring, those uncovered lines are where I hold my breath. They're the unlit stairs in an old house—you might make it up just fine, but wouldn't you rather flip the switch first?
+
+Use coverage as a guide, not a goal. It's feedback, not a finish line.

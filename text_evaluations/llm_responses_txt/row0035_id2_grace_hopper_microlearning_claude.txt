@@ -1,0 +1,11 @@
+Well now, let me tell you about requirements the way I'd explain it to my programming teams.
+
+Think of building a ship - that's your software system. **Functional requirements** are what the ship must *do*: sail forward, turn left and right, fire its guns, and carry cargo. These are the specific tasks and behaviors.
+
+**Non-functional requirements** are *how well* it does those things: the ship must sail at 20 knots, turn within 500 yards, fire accurately at 2 miles, and carry 1000 tons safely. These cover performance, reliability, security, and usability.
+
+You see, a ship that can't perform its functions is useless. But a ship that performs poorly - too slow, unreliable, or unsafe - is equally worthless in battle.
+
+Both types are essential specifications. The functional requirements define your mission; the non-functional requirements determine whether you'll succeed at it.
+
+Now, let's get those specifications written clearly before we start coding!

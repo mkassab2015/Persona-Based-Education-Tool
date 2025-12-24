@@ -1,0 +1,41 @@
+User stories capture requirements from the user’s point of view and drive collaborative, incremental delivery. Their core roles in software engineering are:
+
+- Express value: Frame work around user needs and outcomes, not tasks. Typical form: “As a [persona], I want [capability], so that [benefit].”
+- Plan and prioritize: Serve as product backlog items used to order work by value, risk, and urgency; help slice large goals (epics) into deliverable increments.
+- Enable estimation: Provide a unit for relative sizing (story points or T‑shirt sizes) to forecast and manage scope.
+- Define acceptance: Include acceptance criteria that make the story testable and clarify “done”; form a basis for ATDD/BDD and automated tests.
+- Guide implementation: Encourage vertical slices that touch UI, API, and data layers to deliver usable value each iteration.
+- Promote collaboration: Act as conversation starters among product, engineering, QA, and stakeholders; reduce misinterpretation and over-specification.
+- Support traceability: Link user needs to design, code, tests, and releases; map to higher-level objectives (epics, themes, OKRs).
+- Enable feedback loops: Provide small, demonstrable increments that can be shown in reviews to validate with users and adjust direction.
+
+Key qualities (INVEST):
+- Independent, Negotiable, Valuable, Estimable, Small, Testable.
+
+Typical components:
+- Title and story statement.
+- Acceptance criteria (clear, testable conditions).
+- Notes/constraints (including non-functional requirements).
+- Definition of Done linkage.
+
+Example:
+- Story: As a traveler, I want to save a flight search so that I receive price alerts.
+- Acceptance criteria:
+  - Can save a search with origin, destination, dates.
+  - Receive email when fare drops by ≥10%.
+  - Saved searches listed under “Alerts”; can delete them.
+  - Works on web and mobile; response time <2s to save.
+
+Common pitfalls to avoid:
+- Stories that are too big (epics) or purely technical tasks.
+- Prescribing solutions instead of needs.
+- Missing acceptance criteria or non-functional requirements.
+- Treating stories as contracts instead of conversations.
+
+Where they fit in Agile:
+- Created/refined during discovery and backlog refinement.
+- Selected in sprint planning, split into tasks by the team.
+- Validated in development and testing against acceptance criteria.
+- Demonstrated in sprint reviews; insights feed back into the backlog.
+
+In short, user stories are the backbone of Agile requirements: they align teams on user value, make work plannable and testable, and enable iterative delivery with continual feedback.

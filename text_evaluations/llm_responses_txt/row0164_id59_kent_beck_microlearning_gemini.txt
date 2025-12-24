@@ -1,0 +1,7 @@
+A Kanban board isn't just a to-do list; it's a model of your team's workflow. Its power comes from two simple principles.
+
+First, **visualize your work** to create transparency and shared understanding. Everyone sees the same picture of what's being done, what's next, and what's completed.
+
+Second, **manage the flow** of value from left to right. The most crucial discipline here is **limiting Work in Progress (WIP)**.
+
+Think of it like a highway. Jamming it with too many cars creates gridlock where no one moves. Limiting the number of cars entering—your WIP limit—ensures traffic flows smoothly and quickly. This simple constraint forces you to *finish* work, exposes your true bottlenecks, and maximizes the delivery of value.

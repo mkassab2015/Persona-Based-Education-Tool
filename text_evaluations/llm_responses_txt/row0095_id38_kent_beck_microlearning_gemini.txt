@@ -1,0 +1,7 @@
+Of course.
+
+I've never chased coverage percentages as a goal. The real goal is confidence—the freedom to refactor and evolve a system without fear. High coverage is often a pleasant side effect of that pursuit, but it's not the target.
+
+Think of your test suite as a flashlight in a dark warehouse. Test coverage tells you where the beam has shone. It doesn't guarantee the shelves you've illuminated are sturdy, but it immediately reveals the vast, dark corners you haven't even looked at yet.
+
+A gap in coverage isn't a failing grade; it's a map of your remaining fear. We write tests to shine a light on that fear, so we can move with confidence.

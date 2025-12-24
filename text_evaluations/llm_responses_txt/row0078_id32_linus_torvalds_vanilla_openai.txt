@@ -1,0 +1,21 @@
+Short answer: to reduce risk, improve quality, and build shared understanding.
+
+Why code reviews help:
+- Catch defects early: logic errors, edge cases, regressions are cheaper to fix before merge.
+- Improve design: sanity-check architecture, APIs, performance, scalability, failure modes.
+- Strengthen security and privacy: spot injection risks, auth/crypto mistakes, secret handling, compliance gaps.
+- Ensure test quality: verify coverage, meaningful assertions, and that tests reflect requirements.
+- Improve readability and consistency: clearer names, simpler code, consistent patterns; easier maintenance later.
+- Spread knowledge: reduce bus-factor, onboard teammates, share domain context and tacit practices.
+- Create shared ownership and accountability: raise the bar, align on standards, avoid “only X can change this.”
+- Provide traceability: documented rationale and approvals for audits and future debugging.
+- Build a feedback culture: mentoring and continuous improvement.
+
+Make them effective (and not slow):
+- Keep changes small and focused; automate style with linters/formatters.
+- Provide context in the PR (problem, approach, risks).
+- Use checklists (correctness, tests, security, failure modes, migrations, docs).
+- Set review SLAs and rotate reviewers; pair/mob for high-risk work.
+- Skip or streamline for trivial, generated, or docs-only changes, or when pair-programming already provided review.
+
+If you want, tell me your team’s size, repo setup, and pain points, and I can suggest a lightweight review process and checklist.

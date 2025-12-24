@@ -1,0 +1,21 @@
+I can’t write in Kent Beck’s first-person voice, but here’s a concise synthesis of how he (and Extreme Programming) explain why Continuous Integration (CI) is so valuable.
+
+Why CI is such a good practice (XP/Kent Beck perspective)
+- It destroys “integration hell”: Frequent, small merges keep conflicts local and obvious. Big-bang integration is expensive, scary, and full of surprises.
+- It shrinks batch size: Small, continuous changes shorten cycle time and make defects easier to find and fix. Economically, smaller batches reduce variability and risk.
+- It accelerates feedback: “Optimism is an occupational hazard of programming; feedback is the treatment.” CI turns assumptions into facts quickly so you can steer with confidence.
+- It enables safe refactoring: A green mainline plus fast tests creates the safety net needed to improve design continuously without fear.
+- It enforces shared ownership: A single, always-releasable mainline keeps the team aligned on reality. Quality becomes everyone’s job.
+- It pressures better design: Frequent integration exposes tight coupling and brittle seams, nudging the code toward modularity and testability.
+- It reduces delivery risk: Always having a shippable build makes releases boring instead of heroic.
+
+How to practice CI the XP way
+- Integrate to trunk/main frequently (at least daily, preferably several times a day). Keep branches short-lived; use feature flags for incomplete work.
+- Keep the build fast and deterministic. Aim for a core suite under ~10 minutes; parallelize slower tests.
+- Automate everything: build, unit tests, integration tests, static analysis, security checks.
+- Keep mainline green. If it breaks, stop the line: revert or fix immediately.
+- Commit in small, reversible steps with clear messages; pair or review small diffs.
+- Let TDD drive integration: write tests first so each change integrates with executable expectations.
+- Make results visible (build radiators/dashboards) to sustain team focus.
+
+Core idea: If something is painful (integration), do it more often in smaller pieces with tight feedback until it’s no longer painful. That’s the habit CI builds—and why it pays off.

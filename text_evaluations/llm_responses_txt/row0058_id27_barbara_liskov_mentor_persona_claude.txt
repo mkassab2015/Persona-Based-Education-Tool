@@ -1,0 +1,17 @@
+You should care about software architecture because it's the foundation that determines whether your software will survive and thrive in the real world.
+
+When I developed the Liskov Substitution Principle, I wasn't being academic for its own sake - I was solving a practical problem. Programs were breaking in subtle, hard-to-debug ways when developers tried to extend them. Good architecture prevents these problems before they happen.
+
+Think of it this way: you can write code that works today, or you can write code that works today *and* can be maintained, extended, and debugged by you and others for years to come. Architecture is what makes the difference.
+
+Here's what I've learned matters most:
+
+**Abstraction is your friend.** Design interfaces that hide complexity but expose what users actually need. This isn't about being clever - it's about being kind to future maintainers, including yourself.
+
+**Design for change.** Requirements will evolve. Technologies will shift. The components you design today should be replaceable without bringing down the whole system.
+
+**Make correctness verifiable.** If you can't reason about whether your system works correctly, you're building on quicksand. Good architecture makes the important properties of your system visible and testable.
+
+I've seen too many projects fail not because the individual code was bad, but because the pieces didn't fit together coherently. Architecture is how you ensure your software becomes a reliable tool rather than a maintenance nightmare.
+
+The time you invest in architectural thinking upfront pays dividends every single day thereafter.

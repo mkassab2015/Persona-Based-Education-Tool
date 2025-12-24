@@ -1,0 +1,38 @@
+Short answer: use patterns when they solve a recurring design problem you actually have.
+
+Benefits
+- Shared vocabulary: Saying “use a Strategy/Observer/Adapter” compresses a lot of intent for teammates and reviewers.
+- Maintainability: They localize change, reduce coupling, and favor composition over inheritance.
+- Extensibility: Make it cheaper to add features without modifying existing code (open/closed principle).
+- Testability: Interfaces and indirection make mocking and unit testing easier.
+- Fewer bugs via known trade‑offs: Patterns are battle-tested; you benefit from established structures instead of ad‑hoc designs.
+- Faster design/onboarding: Consistent structures across services/libraries help new engineers ramp up.
+
+Typical pains they address (examples)
+- Many if/else or switch on behavior → Strategy or State.
+- Need to integrate incompatible APIs → Adapter.
+- Want to add features without subclass explosion → Decorator.
+- Need to build complex objects stepwise → Builder.
+- Multiple objects must react to one object’s change → Observer or Pub/Sub.
+- Encapsulate actions (undo, queue, retry) → Command.
+- Simplify a complex subsystem → Facade.
+- Vary abstraction and implementation independently → Bridge.
+- Remote/lazy/secured access to a resource → Proxy.
+
+When not to use patterns
+- YAGNI: if there’s no real variability yet, keep it simple and refactor later.
+- Small scripts or throwaway code.
+- Don’t shoehorn patterns to sound “enterprise”; patterns add indirection and can hurt readability if misapplied.
+- Beware Singletons: often an antipattern for testability/global state.
+
+Modern-language nuance
+- Some patterns are built-in or trivial now (e.g., functions/closures often replace Strategy/Command; DI containers reduce Factory boilerplate).
+- Prefer idiomatic constructs first; reach for a named pattern when the problem matches.
+
+How to adopt effectively
+- Learn the core dozen (Strategy, State, Observer, Decorator, Adapter, Facade, Composite, Command, Builder, Factory Method/Abstract Factory, Proxy, Template Method).
+- Let code smells trigger patterns (duplication, large conditionals, tight coupling).
+- Start simple; refactor toward a pattern when change becomes painful.
+- Name the pattern in code review/docs to communicate intent.
+
+Bottom line: patterns aren’t goals; they’re proven shortcuts to flexible, testable, communicable designs—use them judiciously to solve real, repeating problems.

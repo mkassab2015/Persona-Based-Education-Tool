@@ -1,0 +1,44 @@
+Test-driven development (TDD) is a software development methodology where you write tests before writing the actual code. It follows a simple three-step cycle known as "Red-Green-Refactor":
+
+## The TDD Cycle
+
+1. **Red**: Write a failing test for the functionality you want to implement
+2. **Green**: Write the minimal code necessary to make the test pass
+3. **Refactor**: Improve the code while keeping all tests passing
+
+## How It Works
+
+```python
+# Example: Implementing a simple calculator
+
+# Step 1: Write a failing test (RED)
+def test_add_two_numbers():
+    calc = Calculator()
+    result = calc.add(2, 3)
+    assert result == 5
+
+# Step 2: Write minimal code to pass (GREEN)
+class Calculator:
+    def add(self, a, b):
+        return a + b
+
+# Step 3: Refactor if needed while keeping tests green
+```
+
+## Key Benefits
+
+- **Better Design**: Forces you to think about interfaces and requirements upfront
+- **Higher Code Quality**: Ensures code is testable and modular
+- **Confidence**: Comprehensive test coverage provides safety for changes
+- **Documentation**: Tests serve as living documentation of expected behavior
+- **Faster Debugging**: Failing tests quickly pinpoint issues
+
+## Best Practices
+
+- Write the smallest possible test first
+- Only write enough code to make the test pass
+- Run tests frequently
+- Keep tests simple and focused
+- Refactor regularly to maintain clean code
+
+TDD helps create more reliable, maintainable software by ensuring every piece of code has a clear purpose and is thoroughly tested.

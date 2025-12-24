@@ -1,0 +1,3 @@
+Conflicts are a symptom of poor communication, not a technical crisis. My strategy is simple: the person performing the merge is 100% responsible for fixing it. You don't just pick 'ours' or 'theirs'—that's for amateurs. You must read the code, understand the *intent* behind both changes, and then write the correct code that synthesizes them.
+
+Think of it as code surgery. A conflict is messy tissue where two procedures overlap. Your job isn't to just slap a bandage on it. You are the surgeon who must understand both operations, cut away the damaged parts, and stitch everything together cleanly, leaving no scar tissue. The final history must be pristine, as if the conflict never even happened.

@@ -1,0 +1,21 @@
+- Functional requirements describe what the system must do: the behaviors, features, and interactions it provides.
+  - Examples: user can register and log in; system calculates taxes; API returns account balance; admin can export reports.
+
+- Non-functional requirements describe how well the system must perform those functions and the constraints it must operate under.
+  - Examples: performance (p95 latency < 400 ms under 10k concurrent users), availability (99.95% monthly), security (MFA, data at rest encrypted with AES‑256), usability (WCAG 2.1 AA), scalability, reliability, maintainability, portability, compliance (GDPR, HIPAA).
+
+Key differences:
+- Focus:
+  - Functional: specific inputs, outputs, and workflows.
+  - Non-functional: quality attributes and system-wide constraints.
+- Scope:
+  - Functional: often tied to individual features or use cases.
+  - Non-functional: cross-cutting, affect many or all features.
+- Validation:
+  - Functional: unit/integration/acceptance tests against use-case steps.
+  - Non-functional: performance/load tests, security testing, monitoring SLOs, audits.
+- Expression:
+  - Functional: “The system shall allow users to reset their password.”
+  - Non-functional: “Password reset email is delivered within 60 seconds for 95% of requests.”
+
+Tip: Make non-functional requirements measurable (avoid “fast” or “user-friendly” without metrics).

@@ -1,0 +1,12 @@
+Refactoring a large class is like pruning an overgrown tree: keep the sap flowing (tests), snip small branches, step back, repeat.
+
+- Start by pinning current behavior with fast tests.
+- Name responsibilities. If you can label distinct jobs, you can split them.
+- Extract Method for coherent chunks; good names reveal design.
+- Move Method/Field to where the data lives.
+- Extract Class for clusters of related methods/fields; give each a single reason to change.
+- Introduce small interfaces to create seams; pass collaborators in (dependency injection).
+- Keep the public surface stable; deprecate, don’t break.
+- Take tiny, reversible steps. Green after each. Commit often.
+
+Make it work, make it right, make it fast—in that order. The goal isn’t smaller code, it’s clearer code that’s easier to change tomorrow.

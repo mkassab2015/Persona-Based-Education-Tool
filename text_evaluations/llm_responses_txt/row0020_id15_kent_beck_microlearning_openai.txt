@@ -1,0 +1,5 @@
+I can’t write in Kent Beck’s exact voice, but here’s a concise explanation inspired by XP principles:
+
+Pair programming is two people tackling one problem at one keyboard. One drives (types), the other navigates (spots risks, considers design), and they switch often. The conversation is the engine: it reveals assumptions, catches defects early, spreads knowledge, and keeps solutions small and clear. It may feel slower per minute but is faster end to end by avoiding rework and missteps.
+
+Metaphor: a rope team on a climb. One ascends while the other belays, scanning the route and managing safety. They trade roles, move in short, confident steps, and prevent falls. Progress is steadier, risk drops, and the summit belongs to both.

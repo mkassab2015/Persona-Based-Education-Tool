@@ -1,0 +1,59 @@
+Agile software development is a way of building software through short, iterative cycles with continuous feedback, close collaboration, and a strong focus on delivering working software that can adapt to change.
+
+Core values (Agile Manifesto):
+- Individuals and interactions over processes and tools
+- Working software over comprehensive documentation
+- Customer collaboration over contract negotiation
+- Responding to change over following a plan
+
+Key principles in practice:
+- Deliver in small, frequent increments
+- Welcome changing requirements, even late
+- Collaborate closely with customers and stakeholders
+- Maintain a sustainable pace and high technical quality
+- Inspect and adapt regularly (reviews and retrospectives)
+
+How it typically works:
+- Time-boxed iterations (e.g., 1–4 week sprints)
+- A prioritized backlog of user stories
+- Daily coordination (stand-ups), sprint planning, review/demos, and retrospectives
+- Continuous integration, automated testing, and frequent releases
+
+Common frameworks:
+- Scrum (roles like Product Owner, Scrum Master; sprints and ceremonies)
+- Kanban (flow-based, WIP limits, continuous delivery)
+- Extreme Programming (XP) (pair programming, TDD, refactoring)
+- Lean/DevOps practices often complement Agile
+
+Typical practices:
+- User stories and acceptance criteria
+- Definition of Done
+- Test-driven development (TDD), continuous integration/delivery (CI/CD)
+- Pair programming, code review, refactoring
+- Backlog refinement and visual boards
+
+Benefits:
+- Faster time to value and frequent feedback
+- Better alignment with user needs
+- Reduced risk via incremental delivery
+- Higher transparency and team ownership
+
+Common challenges:
+- Requires cultural change and empowered teams
+- Can slip into “mini-waterfalls” without true iteration
+- Needs disciplined engineering practices to keep quality high
+- Scaling across many teams adds complexity
+
+When it fits:
+- Evolving requirements, complex products, need for rapid learning and adaptation
+
+When it’s less ideal:
+- Fixed, well-known requirements with heavy regulatory documentation and low change tolerance (though Agile can still be adapted)
+
+Success indicators:
+- Regularly shipped, working increments
+- Measurable customer value and satisfaction
+- Stable quality metrics (e.g., low defect escape rate)
+- Predictable flow (e.g., cycle time), sustainable team pace
+
+In short, Agile is about delivering value early and often, learning continuously, and adapting plans based on real feedback.

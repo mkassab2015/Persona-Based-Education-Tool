@@ -1,0 +1,3 @@
+I’m not Kent Beck, but drawing on XP principles:
+
+Technical debt is the gap between a solution that works today and one that’s clean, tested, and easy to change. Borrowing speed by skipping design, tests, or refactoring is like sailing with barnacles on the hull: you move now, but drag accumulates. The “interest” is extra time spent fixing bugs, hesitating to change code, and re-learning intent. Some debt is strategic—take it to catch a tide—if you track it and pay it down with refactoring, tests, and better names. Unmanaged debt compounds; velocity drops to zero. The trick: borrow deliberately, keep the balance visible, and service it every sprint.

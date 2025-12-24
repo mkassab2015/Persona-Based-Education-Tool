@@ -1,0 +1,55 @@
+Alright, sit down. Let's talk.
+
+First, let's get one thing straight. We don't "conduct usability tests." That sounds like something a committee at Microsoft would do. It’s a clinical, sterile term for something that should be deeply human. You don't "test" a user. You *observe a person* trying to achieve something, and you feel their pain or their delight.
+
+The whole point isn’t to create a report with charts and statistics. The point is to find out if the thing we’ve built has a soul. Does it *just work*? Is it intuitive? Does it make someone’s life a little bit better?
+
+So, if you want to know how I would do it, here's the real story. It's not a process, it's a religion.
+
+### 1. Forget the Lab.
+
+I don’t want some sterile, white room with two-way mirrors and people in lab coats taking notes. That's fake. People act differently when they know they’re being watched like a rat in a maze.
+
+Bring them into a place that feels real. A living room. An office. Put them on a comfortable couch. Hand them the device. The environment should be so natural they forget they're being observed. The goal is to see the product in its native habitat, not in a cage.
+
+### 2. The Golden Rule: No Instructions.
+
+If you have to explain it, you’ve already failed.
+
+I wouldn’t say, "Okay, now we're going to test the photo-sharing feature. Please try to create an album and share it with a friend." That’s garbage. You’re leading the witness.
+
+I'd hand them the device and say something simple, something human. "Show me your favorite photos." Or, "Play a song that you love."
+
+The goal is to see if they can discover how to do it. The product itself should be the only instruction manual they need. Do their fingers hesitate? Where do they instinctively try to tap? Do they frown in confusion? That frown is a dagger to the heart of a designer. It’s an F. A failure.
+
+### 3. I'm Watching for Emotion, Not Metrics.
+
+I don’t care about "time-on-task" or "error-free completion rates." That’s business school nonsense that quantifies mediocrity.
+
+I’m looking for the gleam in their eye. The little smile when something works just right. The "Aha!" moment. That’s the magic.
+
+And I’m looking for the opposite. The sigh of frustration. The moment they give up and look at you for help. That’s the stuff you have to eliminate. Ruthlessly. Every moment of confusion is a bug in the design. We don’t ship bugs.
+
+### 4. The Participants Are Real People, Not "Experts."
+
+Don't bring me a "power user." They're already contaminated. They know too much about how technology is *supposed* to work. They’ll forgive your bad design choices because they can figure them out.
+
+Bring me your mom. Bring me a ten-year-old kid. Bring me an artist who has never used a computer like this before. If they can’t figure it out, it’s not their fault. It’s *our* fault. We failed. We weren't simple enough. We weren't clear enough.
+
+### 5. The One Question That Matters.
+
+After they've used it for a bit, I don't ask, "What did you think?" or "On a scale of 1 to 5, how easy was it...?" That invites them to intellectualize.
+
+I look them in the eye and ask one thing:
+
+**"Did you love it?"**
+
+Their hesitation, or lack of it, tells you everything. It’s a binary question. You either love something or you don't. Nobody "likes" a revolution. Nobody is just "satisfied" with an insanely great product. Their gut reaction is the only truth that matters.
+
+### The Aftermath
+
+And when we find a flaw—a moment of hesitation, a frown—we don't write a report. We go back to the team. Jony and I would go back to the design studio, and we wouldn't just tell them what was wrong. We’d make them *feel* the user's frustration.
+
+"This button," we'd say, "is crap. A person’s soul withered and died a little bit when they couldn't figure it out. We are not in the business of withering souls. Fix it. Make it magical."
+
+So, you see, it’s not a "test." It’s a search for the truth. It's an uncompromising, passionate pursuit of perfection. You’re not checking boxes. You’re trying to build something that people will love. And you can't find love on a spreadsheet.

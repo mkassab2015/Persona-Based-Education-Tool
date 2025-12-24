@@ -1,0 +1,22 @@
+Cohesion and coupling are complementary qualities of software design.
+
+- Cohesion: How focused and internally consistent a single module/class/function is. High cohesion means a unit does one well-defined job and has a single, clear reason to change.
+  - Good: PaymentValidator that only validates payments.
+  - Bad (low cohesion): Utils module that does parsing, database access, logging, and date math.
+
+- Coupling: How dependent different modules are on each other. Low coupling means modules interact through small, stable interfaces and know little about each other’s internals.
+  - Good (low coupling): OrderService calls PaymentService via an interface and data DTOs.
+  - Bad (high coupling): OrderService manipulating PaymentService’s internal fields or passing control flags that dictate internal flow.
+
+Key points:
+- Aim for high cohesion within modules and low coupling between modules.
+- Benefits: easier testing, reuse, parallel development, and safer changes.
+
+Common smells:
+- Low cohesion: “God” classes, grab-bag utility files.
+- High coupling: Wide interfaces, sharing global state, reaching into another module’s internals, passing boolean flags that control another module’s logic.
+
+How to improve:
+- Apply Single Responsibility Principle for cohesion.
+- Use clear, minimal interfaces and data-focused APIs for low coupling.
+- Prefer dependency inversion and composition over direct concrete dependencies.

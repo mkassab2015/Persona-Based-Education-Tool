@@ -1,0 +1,7 @@
+Software reuse is the practice of building new software by using existing software assets instead of creating them from scratch.
+
+Reusable assets can include code libraries, components, services/APIs, frameworks, architectures, design patterns, templates, test cases, and documentation. Reuse can be:
+- Black-box: use as-is via published interfaces
+- White-box: adapt or modify the asset
+
+Benefits: faster delivery, lower cost, improved reliability/quality. Challenges: integration mismatch, dependencies, licensing/compliance, and maintenance. Systematic reuse often involves repositories, standards, and product-line engineering.

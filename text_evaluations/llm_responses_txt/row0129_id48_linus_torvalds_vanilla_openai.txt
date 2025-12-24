@@ -1,0 +1,64 @@
+Here’s a practical, Git‑focused playbook you can use any time you hit version control conflicts.
+
+Quick resolution workflow
+- Make sure your work is saved. If you have uncommitted changes you don’t want involved yet: git stash -u
+- Update your refs: git fetch
+- Start the operation that triggered the conflict (merge, rebase, cherry-pick, etc.). Example: git rebase origin/main
+- See what’s conflicted: git status and git diff
+- Open each conflicted file and resolve the hunks marked by <<<<<<<, =======, >>>>>>>
+  - Prefer a merge tool if you like a UI: git mergetool (configure one via your IDE or git config)
+  - To take one side wholesale for a file:
+    - Keep your branch’s version: git checkout --ours path/to/file
+    - Keep incoming version: git checkout --theirs path/to/file
+- Test and build locally
+- Mark resolved files and continue:
+  - git add <files>
+  - If merging: git commit (or git merge --continue)
+  - If rebasing: git rebase --continue
+- If you need to back out and try again:
+  - Merge: git merge --abort
+  - Rebase: git rebase --abort
+- Push your result:
+  - Normal: git push
+  - After rebase: git push --force-with-lease
+
+Handling common conflict types
+- Same lines edited (text conflict): Manually combine the intended logic; consider enabling base context to help: git config merge.conflictStyle diff3
+- Rename/rename: Pick the final path; use git mv to that name; git add both paths; continue
+- Modify/delete: Decide to keep deletion (git rm <file>) or restore and keep changes (git checkout --theirs/--ours <file>)
+- Binary files: You can’t auto-merge. Choose one side (ours/theirs) or regenerate the asset. For teams, lock with Git LFS to prevent concurrent edits.
+- Dependency lockfiles (package-lock.json, yarn.lock, Podfile.lock): Choose one side, then reinstall to regenerate consistently; run tests after.
+- Submodules: Enter the submodule, checkout the correct commit, then git add the submodule path in the superproject.
+
+Prevention and workflow tips
+- Pull or rebase from main frequently to keep divergence small
+- Keep PRs small and focused; avoid long‑lived branches
+- Adopt a consistent auto-formatter (Prettier, Black, gofmt) to cut “format-only” conflicts
+- Coordinate ownership of high‑churn files (configs, lockfiles, project files)
+- For large/binary assets, use Git LFS with file locking
+- Communicate. If you’re unsure which change is correct, ask the teammate who made the other change
+
+Helpful configuration and tools
+- Use a merge tool you like:
+  - VS Code: git config --global merge.tool vscode
+  - Or run: git mergetool
+- Show base in conflicts for context: git config --global merge.conflictStyle diff3
+- Reuse past resolutions (great for recurring conflicts): git config --global rerere.enabled true
+- Attribute-based merge behavior in .gitattributes:
+  - Append-only files (CHANGELOG): *.md merge=union (built-in “union” driver concatenates)
+  - Choose “ours” for files you never want auto-merged (e.g., generated files):
+    - git config --global merge.ours.driver true
+    - In .gitattributes: path/to/file merge=ours
+- Strategy options for merges:
+  - Prefer current branch on conflicts: git merge -X ours branch
+  - Prefer incoming branch on conflicts: git merge -X theirs branch
+  - Use sparingly and review results
+
+Minimal example: keep a feature branch up to date
+- git fetch origin
+- git rebase origin/main
+- Resolve conflicts, git add …
+- git rebase --continue (repeat as needed)
+- git push --force-with-lease
+
+If you tell me your exact VCS (Git, Mercurial, SVN), your IDE, and the conflict type you’re seeing, I can tailor the commands and steps precisely.

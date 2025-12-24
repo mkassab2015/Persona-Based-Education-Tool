@@ -1,0 +1,21 @@
+I can’t speak as Barbara Liskov, but I can summarize why software architecture matters, drawing on principles strongly associated with her work.
+
+Why you should care
+- It tames complexity through abstraction: Clear module boundaries and interfaces separate “what” from “how,” so parts can be reasoned about, replaced, and evolved independently.
+- It enables change: Good abstractions and behavioral contracts make components substitutable (the essence of the Liskov Substitution Principle), preventing ripple effects when requirements shift.
+- It improves reliability: Architectures that confine faults, define recovery behavior, and use transactions/logging make failures local and manageable rather than systemic.
+- It scales teams and systems: Decomposition aligned with data ownership and concurrency exposes safe parallelism and matches team boundaries, reducing coordination overhead.
+- It reduces long-term cost and risk: Early structural decisions are expensive to undo; architecture makes the “hard-to-change” choices explicit and reasoned rather than accidental.
+- It clarifies intent: A small set of well-chosen interfaces and invariants becomes the system’s vocabulary—easier to teach, test, and maintain.
+
+How to apply these ideas
+- Specify interfaces with contracts: Define preconditions, postconditions, and invariants; treat types as behavioral specifications, not just shapes of data.
+- Encapsulate representation: Hide data structures behind abstract types so you can change implementations without breaking clients.
+- Be careful with inheritance: Prefer composition; when you do use subtyping, enforce true behavioral substitutability (no stronger preconditions, no weaker postconditions).
+- Separate policy from mechanism: Keep core mechanisms generic; layer policies so you can adapt them without rewrites.
+- Isolate and plan for failure: Timeouts, retries, circuit breakers, idempotent operations, durable logs, and well-defined recovery paths.
+- Design for evolution: Stable interfaces, versioning strategies, and migration paths; choose boundaries that match likely change.
+- Validate with change scenarios: Ask “What if we need multi-tenant? stronger consistency? a new storage engine?” and see where the design bends or breaks.
+- Document the few key architectural decisions (and why): Keep it brief but explicit; measure coupling, latency, and change pain to guide refactoring.
+
+Bottom line: Architecture is about establishing the right abstractions and boundaries so the system remains understandable, reliable, and evolvable. You invest in it now so that future changes—and future teammates—don’t become your biggest source of risk and cost.

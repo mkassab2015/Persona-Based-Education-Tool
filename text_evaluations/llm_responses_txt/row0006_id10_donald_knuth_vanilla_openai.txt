@@ -1,0 +1,33 @@
+Software metrics are quantitative measures used to assess, monitor, and improve aspects of software products, processes, and projects. They turn engineering and delivery work into data that supports decisions about quality, cost, schedule, risk, and performance.
+
+Key points:
+- Measure vs metric vs indicator:
+  - Measure: a single raw count (e.g., number of defects).
+  - Metric: a computed value, often a ratio or rate (e.g., defects per KLOC).
+  - Indicator: a metric interpreted against goals or thresholds to guide action.
+
+Common categories and examples:
+- Product quality metrics (what you build)
+  - Size/complexity: lines of code (LOC), function points, cyclomatic complexity, coupling/cohesion, code duplication.
+  - Reliability/defects: defect density, mean time between failures (MTBF), escape rate.
+  - Test quality: coverage, mutation score, flaky test rate.
+  - Performance: latency, throughput, memory/CPU usage.
+  - Security: vulnerabilities found, severity mix, time-to-remediate.
+- Process/operations metrics (how you build and run it)
+  - Flow/DORA: lead time for changes, deployment frequency, change failure rate, mean time to recovery (MTTR).
+  - Review/build: code review turnaround, build success rate, code churn.
+  - Defect removal efficiency, escaped defects.
+- Project/delivery metrics (planning and control)
+  - Effort and velocity, cycle time, WIP, throughput.
+  - Schedule and cost variance, SPI/CPI (earned value).
+  - Requirements volatility, risk exposure.
+- User/business impact
+  - CSAT/NPS, DAU/MAU, retention/churn, task success rate, error rate, conversion.
+
+How to use them well:
+- Start from goals (e.g., GQM: Goal–Question–Metric); pick a few SMART metrics.
+- Prefer trends and comparisons over single absolute numbers; normalize where needed.
+- Combine leading and lagging indicators; triangulate multiple metrics.
+- Beware Goodhart’s law—don’t tie incentives to a single metric; avoid vanity metrics.
+
+Standards and models often referenced: ISO/IEC 25010 (product quality), ISO/IEC 15939 (measurement process), DORA metrics for delivery performance.

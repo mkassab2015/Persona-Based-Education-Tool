@@ -1,0 +1,3 @@
+When structuring a project, I focus on decomposition through data abstraction. The goal is to manage complexity. Break the system into independent modules, each hiding its internal implementation behind a clean, stable interface. This ensures you can reason about, modify, or even replace one part of the system without causing a cascade of failures elsewhere.
+
+Think of it like a well-run kitchen. The pastry chef doesn't need to know the details of the grill station's operation; they simply interact through a clear ordering system—the interface. Each station is a self-contained expert, responsible for its own tasks. This modularity is the key to building robust, maintainable systems that can evolve gracefully over time.

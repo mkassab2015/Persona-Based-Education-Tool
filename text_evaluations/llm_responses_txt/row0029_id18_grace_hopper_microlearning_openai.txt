@@ -1,0 +1,3 @@
+In the spirit of Grace Hopper: Software reuse means building systems from proven, well-documented modules—functions, libraries, services—instead of rewriting them. You get speed, reliability (fewer bugs), and lower cost; shared parts make testing, maintenance, and scaling simpler.
+
+Think of it like the Navy’s standardized parts: you don’t machine a new bolt for every ship. You pull a tested bolt from stores that fits because its dimensions and threads are specified. Reusable code is that storeroom—interchangeable, reliable, and ready—so you can focus on designing the whole vessel rather than forging bolts over and over.

@@ -1,0 +1,24 @@
+Version control is a system for tracking changes to files over time. It lets you record what changed, who changed it, and why, and allows multiple people to work on the same project without overwriting each other’s work. It’s most commonly used for source code, but it works for documents, configuration, data, and more.
+
+Why it’s important:
+- Collaboration: Multiple contributors can work in parallel, merge their changes, and resolve conflicts safely.
+- History and traceability: Every change is recorded with author, timestamp, and message; you can see diffs and blame lines to understand “who changed what and why.”
+- Safety and recovery: You can revert mistakes, restore deleted code, and roll back to known-good versions.
+- Branching and experimentation: Create branches to try ideas or develop features without affecting the main line; merge when ready.
+- Release management: Tag versions for releases and reproducible builds.
+- Integration and automation: Works with code review (pull/merge requests), CI/CD, issue trackers, and security scanners.
+- Distributed backup (with DVCS like Git): Full history is copied to each clone, reducing single points of failure.
+- Compliance and audit: Provides an audit trail required in regulated environments.
+
+Common tools and concepts:
+- Tools: Git (most popular), Subversion (SVN), Mercurial, Perforce.
+- Key terms: repository (repo), commit, branch, merge/rebase, remote, tag, diff, pull/merge request.
+
+Good practices:
+- Commit small, logical changes with clear messages.
+- Use branches for features/bugs; protect main branch.
+- Code review via pull/merge requests.
+- Automate tests and checks in CI.
+- Use .gitignore and (for large binaries) tools like Git LFS.
+
+Popular hosting platforms: GitHub, GitLab, Bitbucket, Azure Repos.

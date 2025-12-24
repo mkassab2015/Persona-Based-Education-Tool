@@ -1,0 +1,33 @@
+*(Adjusts glasses, leans forward, steeples fingers. The room is quiet.)*
+
+Listen. You're asking the wrong question.
+
+You're asking it like it's a checkbox on a business plan. "Item 7: Address User Needs." That's how you get beige boxes. That's how you get crap.
+
+It's not about "caring about user needs." That's what market research groups do. They ask people what they want, and people say "a faster horse." If I had listened to "user needs," you'd have a slightly better version of the junk you were already using.
+
+You have to go deeper. It's not about what they *say* they need. It’s about what they *will* need. It’s about their lives.
+
+**It's about starting with the experience, not the technology.**
+
+We never started with, "Let's build a phone with a 3.5-inch capacitive touchscreen." We started with, "What if you could hold the internet in your hand? What would that *feel* like? How could we make it magical? How could we make it so simple a child could use it?"
+
+You start there—with the person, with the emotion, with the experience—and you work backwards to the technology. Not the other way around. Most people get that backwards, and that's why they fail.
+
+**It's about having taste.**
+
+People don't have time to figure out what's good. They're busy. They're living their lives. It's our job to have a point of view. It's our job to be the curators. We have to pick the best materials, the right fonts, the most intuitive gestures. We have to make a thousand "no's" for every "yes." We're not just building a product; we're expressing a value system. We're saying, "This is the way it should be. It's simpler. It's more beautiful. It just works."
+
+That's not arrogance. That's having a deep, profound respect for the person who is going to use your creation. You're respecting their time, their intelligence, their desire for beauty in their lives.
+
+**It's about craftsmanship.**
+
+You know the story about the carpenter? A great carpenter isn't going to use a cheap piece of plywood for the back of a cabinet, even though no one will ever see it. He knows it's there. For him to be able to sleep at night, the aesthetic, the quality, has to be carried all the way through.
+
+That's how you have to think about your user. They may not be able to articulate why your product feels better, why it has a soul, but they can *feel* it. They feel it in the way the scroll bounces. They feel it in the satisfying click of a button. They feel the care you put into every pixel, every corner, every hidden part.
+
+So, why should you care?
+
+You shouldn't care about "user needs" as a line item. You should be utterly, passionately, and obsessively devoted to the person you're building for. You should want to give them a tool that's an extension of themselves. A bicycle for the mind. Something that empowers them, delights them, and gets the hell out of their way.
+
+If you don't feel that in your bones, if you're not doing it to create something insanely great for people... then honestly, go do something else. Because you'll only end up making another beige box.

@@ -1,0 +1,40 @@
+User stories play a crucial role in software engineering as a lightweight, user-centered approach to capturing and communicating requirements. Here's their key role:
+
+## Primary Purpose
+User stories translate business requirements into simple, understandable descriptions of features from the end user's perspective, typically following the format: "As a [user type], I want [functionality] so that [benefit/value]."
+
+## Key Roles in Software Development
+
+### 1. **Requirements Gathering**
+- Capture functional requirements in plain language
+- Focus on user needs rather than technical specifications
+- Provide a shared understanding between stakeholders
+
+### 2. **Communication Bridge**
+- Connect business stakeholders with development teams
+- Reduce miscommunication through clear, concise descriptions
+- Enable non-technical stakeholders to participate in planning
+
+### 3. **Planning and Prioritization**
+- Break down large features into manageable chunks
+- Help prioritize development based on user value
+- Support sprint planning and backlog management
+
+### 4. **Development Guidance**
+- Provide context for developers about why features are needed
+- Include acceptance criteria to define "done"
+- Guide implementation decisions
+
+### 5. **Testing Foundation**
+- Acceptance criteria become the basis for testing
+- Support behavior-driven development (BDD)
+- Enable early validation of requirements
+
+## Benefits
+- **User-focused**: Keeps development centered on user needs
+- **Flexible**: Easy to modify as requirements evolve
+- **Collaborative**: Encourages discussion and clarification
+- **Testable**: Clear criteria for validation
+- **Scalable**: Works for projects of various sizes
+
+User stories are particularly valuable in Agile methodologies, where they serve as the primary unit of work and help maintain focus on delivering user value throughout the development process.

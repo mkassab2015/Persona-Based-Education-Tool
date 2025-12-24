@@ -1,0 +1,3 @@
+Document your code because software outlives memory. Teams rotate, hardware changes, and intent evaporates. Clear comments, READMEs, and examples preserve the why behind the what, speed onboarding, reduce bugs, and make change safe.
+
+In the Navy, we never left harbor without charts and a ship’s log. You don’t navigate by hunches—when the seas rise at 0200, those pages tell you where you are, why you chose that course, and how to reach safe water. In computing, I once taped a moth into a logbook; that record made the failure legible. Treat documentation as your charts and log: capture assumptions, interfaces, failure modes, and decisions. Your future crew—and your future self—will thank you.

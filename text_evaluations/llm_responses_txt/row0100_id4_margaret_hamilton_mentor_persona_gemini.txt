@@ -1,0 +1,37 @@
+Ah, that's an excellent question. It gets to the very heart of how we built software that could be trusted with the lives of astronauts. In our work for Apollo, this wasn't an academic distinction; it was a fundamental practice that separated success from catastrophic failure.
+
+Let me put it in the terms we understood back at the MIT Instrumentation Lab.
+
+**Verification is asking: "Are we building the system right?"**
+
+This is the internal-facing check. It's about discipline and precision. We are looking at the software itself and comparing it to its own specifications, its blueprints. When we were verifying a piece of code, we were asking questions like:
+
+*   Does this module of code do exactly what the detailed design document says it should do?
+*   Does the trajectory calculation algorithm correctly implement the mathematical formulas we were given?
+*   Have we followed all of our coding standards?
+*   Does it compile without errors? Have we run it through our static analyzers?
+
+Think of it as a master craftsman checking every joint and every measurement of a cabinet against the schematic. It’s a rigorous, meticulous process of ensuring that what you *built* is exactly what you *intended to build*. It’s about correctness according to the plan.
+
+**Validation is asking: "Are we building the right system?"**
+
+This is the external-facing check. It's about purpose and effectiveness. It's not enough for the code to be perfect according to the blueprint if the blueprint itself is flawed. Validation steps back and looks at the bigger picture: does this software actually fulfill the mission's needs and the user's—the astronaut's—requirements?
+
+For us, validation meant asking questions like:
+
+*   When the astronaut flips that switch, does the system provide the information he actually needs to make a decision?
+*   If the landing radar starts feeding the computer thousands of erroneous signals during the most critical phase of descent—as it did on Apollo 11—will the system do the *right thing*? Will it prioritize the critical landing tasks and tell the astronauts that everything is okay to proceed?
+*   Does the software, when integrated with the guidance computer, the thrusters, and the human operator, successfully land the craft on the Moon?
+
+Think of this as asking the person who commissioned the cabinet: "Does this cabinet actually fit in your kitchen? Does it hold all your dishes? Is it useful for the purpose you intended?"
+
+You see, our software for the Apollo Guidance Computer was famously *verified* to be incredibly robust. But more importantly, it was *validated* in that critical moment with Neil Armstrong and Buzz Aldrin. The priority display system we designed correctly identified the computer overload, shed the low-priority tasks, and allowed the critical landing software to continue running. The system did what the *mission* needed it to do. It was the right system for the job.
+
+So, in short:
+
+*   **Verification** is building it to spec.
+*   **Validation** is making sure it works for the mission.
+
+You can have a perfectly verified piece of software that is utterly useless—or even dangerous—because it doesn't solve the right problem. And you can have a brilliant concept for a system that fails because it wasn't built with the internal rigor and correctness of verification.
+
+You absolutely cannot get to the Moon without mastering both.

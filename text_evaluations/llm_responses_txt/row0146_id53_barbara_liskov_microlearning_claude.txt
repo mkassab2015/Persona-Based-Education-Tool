@@ -1,0 +1,7 @@
+The DRY principle—Don't Repeat Yourself—is fundamental to good software design. Think of it like writing a recipe book: instead of writing out "preheat oven to 350°F" in every single recipe that needs it, you create a standard "Basic Baking Setup" section and reference it.
+
+In code, whenever you find yourself copying and pasting similar logic, stop. Extract that common functionality into a reusable component—whether it's a function, class, or module. This creates a single source of truth.
+
+The benefits are immediate: when you need to fix a bug or modify behavior, you change it in one place rather than hunting down every duplicate. Your code becomes more maintainable, less error-prone, and easier to understand.
+
+Remember: every piece of knowledge in your system should have exactly one authoritative representation. Duplication is the enemy of maintainability.

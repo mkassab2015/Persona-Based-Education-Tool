@@ -1,0 +1,59 @@
+I’m not Linus Torvalds, but here’s how he and the Linux kernel project run code reviews in practice.
+
+Philosophy
+- Reviews are decentralized: subsystem maintainers and peers do most reviews; Linus reviews and integrates signed pull requests during merge windows.
+- Small, incremental, bisectable changes with clear rationale. Regressions are fixed or reverted quickly.
+- Email-first workflow; public discussion; evidence-driven, direct feedback.
+
+How patches are submitted and reviewed
+- Send via email to the right mailing lists and maintainers (found via MAINTAINERS and scripts/get_maintainer.pl), using git send-email, plain text.
+- Patch series are split into logical steps that each build and pass tests. No giant “everything at once” drops.
+- Commit message must explain why, not just what; include context, links to prior discussions, Fixes: tags, and any user-visible impact.
+- Include trailers:
+  - Signed-off-by: (DCO)
+  - Reviewed-by:/Acked-by:/Tested-by:/Reported-by:
+  - Cc: stable@vger.kernel.org when appropriate
+  - Link: to mailing list discussion (lore.kernel.org)
+- Review happens in public email threads with inline comments. Style issues are mostly left to tools; reviewers focus on correctness, ABI, locking, lifetime, error paths, performance, maintainability, and security.
+- Automation helps:
+  - kbuild/0day bot, KernelCI, syzbot fuzzing
+  - Static analysis: sparse, smatch, Coccinelle
+  - scripts/checkpatch.pl for basic style
+- Subsystem maintainers collect reviewed patches into their trees (often for-next), test, and send Linus signed pull requests during the merge window. Integration testing happens in linux-next before mainline.
+
+Integration and release cadence
+- 2-week merge window after each release: Linus pulls signed PRs from trusted maintainers, reviews diffs and justifications, and may push back.
+- Then ~7–8 weeks of -rc releases focused on fixes. Only targeted fixes are accepted outside the merge window.
+- Regressions are top priority: if a fix isn’t ready quickly, revert first, reapply later.
+
+Expectations and norms
+- Keep patches self-contained and bisectable; don’t break the build or tests.
+- Avoid gratuitous churn (e.g., mass reformatting).
+- Don’t use GitHub PRs; use email. Don’t send attachments; use inline patches.
+- Be direct and technical in discussion; justify changes with data and clear reasoning.
+
+If you want to emulate this model in your org
+- Enforce small, self-contained patches with strong commit messages.
+- Use a public review channel (email or a review tool) and require Reviewed-by/Tested-by tags.
+- Establish maintainers per area; they queue changes and own quality.
+- Run broad CI (build matrix, static analysis, fuzzing) and make regressions a “revert-first” policy.
+- Timebox integration (e.g., merge windows) and keep a staging/integration branch for early conflict testing.
+
+Minimal examples
+- Patch email subject: [PATCH v3 2/5] net: foo: fix race in bar_tx()
+- Trailers:
+  Signed-off-by: Your Name <you@example.com>
+  Fixes: 1a2b3c4d5e6f ("net: foo: add bar")
+  Reviewed-by: Reviewer Name <rev@example.org>
+  Link: https://lore.kernel.org/r/<message-id>
+  Cc: stable@vger.kernel.org
+
+- Pull request email summary:
+  Please pull the following foo subsystem updates for v6.x-rc1
+  - 12 commits, all reviewed and in linux-next for two weeks
+  - Highlights: bug fixes in bar_tx, new selftests
+  - No known regressions; build/0day clean
+  The following changes since commit <base> are available at:
+    git://… signed tag foo-for-v6.x-1
+
+That’s the essence of how Linus and the kernel community run code reviews at scale.

@@ -1,0 +1,42 @@
+I can’t speak as Barbara Liskov, but drawing on her work on data abstraction, modularity, and substitutability, here’s why design patterns are worth using—and how to use them well.
+
+Why use design patterns
+- Shared vocabulary: Patterns name recurring solutions, making intent clear and team discussions faster.
+- Managing change: They localize variation (e.g., algorithms, object creation, communication) so systems evolve with fewer ripples.
+- Abstraction barriers: Patterns help enforce information hiding—clients depend on behavior, not representation.
+- Substitutability (LSP): Well-chosen patterns encourage interfaces whose implementations can be swapped without breaking clients.
+- Reasoning and testing: Patterns naturally align with specifications, invariants, and contracts, making behavior easier to reason about and verify.
+- Decoupling and composability: Many patterns reduce direct dependencies, enabling parallel work and simpler reuse.
+- Institutional memory: They capture proven trade-offs and failure modes, so teams don’t relearn hard lessons.
+
+How to apply them in the spirit of Liskov’s principles
+- Specify before you pattern: Write down what the module must do (pre/postconditions, invariants) before picking a pattern.
+- Prefer composition over inheritance: It better preserves substitutability and keeps hierarchies shallow.
+- Keep interfaces small and behavioral: Define what must hold, not how it’s implemented.
+- Check the Liskov Substitution Principle: Subtypes shouldn’t require more (no stronger preconditions) or promise less (no weaker postconditions) than the supertype.
+- Let hotspots drive selection: Use patterns where variation or growth is expected; avoid sprinkling them everywhere.
+- Respect language features: Modern languages make some patterns redundant (e.g., Iterator, Singleton, sometimes Factory). Use the simplest construct that preserves the spec.
+- Evolve into patterns: Start simple; refactor to a pattern when pressure (duplicate code, tangled dependencies) makes the benefit clear.
+- Document forces and invariants: For each pattern use, record intent, constraints, and known trade-offs.
+
+Examples of good fit
+- Strategy: When you have interchangeable algorithms (e.g., pricing rules). Define a clear behavioral contract so any strategy remains substitutable.
+- Observer: When many dependents need notification without tight coupling. Specify ordering, threading, and re-entrancy rules to avoid subtle bugs.
+- Factory/Builder: When construction is complex or policy-driven; otherwise prefer straightforward constructors.
+- State or explicit state machines: When behavior changes with state and new states are expected; encode legal transitions as part of the spec.
+- Adapter/Facade: When isolating third-party APIs to protect your core abstractions.
+
+Common pitfalls
+- Patternitis: Adding layers “because pattern” increases indirection and cost without clear benefit.
+- Fragile inheritance and LSP violations: Deep hierarchies and leaky contracts lead to subtle breakage.
+- Singleton as global state: Hard to test and reason about; prefer dependency injection and clear ownership.
+- Ignoring language idioms: Re-implementing what your language or standard library already provides.
+
+Quick checklist before adopting a pattern
+- What variability or change are you isolating?
+- What are the preconditions, postconditions, and invariants?
+- How will you test substitutability?
+- Is there a simpler construct given your language?
+- What new dependencies or indirections does this introduce, and are they worth it?
+
+Used this way, patterns are not ceremony; they’re a disciplined way to preserve clean abstractions, make modules substitutable, and keep systems adaptable over time—core goals in Liskov’s approach to software design.

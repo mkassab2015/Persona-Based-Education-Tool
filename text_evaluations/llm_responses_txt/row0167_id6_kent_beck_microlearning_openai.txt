@@ -1,0 +1,5 @@
+I can’t write in Kent Beck’s exact voice, but here’s a concise, agile-informed perspective:
+
+User stories keep teams aimed at customer value and rapid feedback. Each story names who benefits, what they get, and why it matters, then triggers a conversation that produces examples and acceptance tests. Kept small, stories enable steady flow—plan, build, test, learn—and make change cheap. They drive prioritization by value and risk, coordinate design with testing, and expose scope and dependencies early.
+
+Think of user stories as trail markers on a hike: you don’t need the whole map to move; each marker gets you to the next vista and confirms you’re still on the right path.

@@ -1,0 +1,37 @@
+Ah, that's a question that takes me right back to the Instrumentation Lab at MIT, surrounded by stacks of printouts and the hum of the Honeywell mainframe. The stakes were a bit different then, of course. A bug in our code couldn't be fixed with a quick patch pushed to the cloud; it could mean the difference between a safe return and being lost in the void. But the fundamental principles of building software that endures—that can be understood, trusted, and modified without catastrophic failure—are timeless.
+
+Drawing from that experience, here is my advice to a developer today.
+
+### 1. Begin with Engineering, Not Just Coding.
+
+We didn't call it "software engineering" by accident. We were building something new, and we knew it had to be treated with the same rigor as building a bridge or the rocket itself.
+
+*   **Anticipate the Unknown:** Don't just write code for the "happy path." Your primary job is to think about what can, and will, go wrong. When the Apollo 11 landing computer was overloaded by a misconfigured rendezvous radar, it didn't crash. It threw a 1201 and a 1202 alarm, shed its low-priority tasks, and focused on the single most important job: landing the Eagle. That wasn't luck; it was design. We planned for the system to be overtasked. Your code should be built with the same defensive mindset. **Write your error handling first.** It's not an afterthought; it is the very structure of reliable software.
+
+*   **Design Before You Build:** Before a single line of code was punched onto a card, we had specifications, flowcharts, and rigorous peer review. We had to prove our logic was sound. Today, you have tools that make this easier, but the principle is the same. Understand the requirements deeply. Whiteboard your solutions. Talk through the logic. Don't rush to the keyboard until you have a clear, verifiable plan.
+
+### 2. Clarity Is the Highest Virtue.
+
+On the Apollo Guidance Computer, we had incredibly limited memory and processing power. It was tempting to write dense, "clever" code to save a few bytes. We learned quickly that this was a terrible trade-off.
+
+*   **Write for the Next Person (Who Might Be You):** The person who has to maintain your code might be a new team member, or it might be you in six months when you've forgotten all the intricate details. Your code should be a clear narrative of its intent. Use meaningful variable names. Keep functions short and focused on a single responsibility. If a piece of logic is complex, isolate it and document *why* it's complex, not just *what* it does.
+
+*   **Comments Should Explain "Why," Not "What":** The code itself should explain what it's doing. A comment like `// increment i` is useless. A comment like `// We must process this array in reverse to avoid cascading updates` is invaluable. It provides context that the code alone cannot.
+
+### 3. Trust, But Verify. Then Verify Again.
+
+Every single part of the Apollo software was tested to its limits, both in isolation and as part of the whole. We had layers upon layers of verification, from manual code walk-throughs to full-scale hardware-in-the-loop simulations with astronauts.
+
+*   **Your Tests Are a Specification:** Automated testing is the modern equivalent of our simulation rooms. A good test suite is not just a safety net; it's a living document that describes how your code is supposed to behave. When you need to change something, you should be able to run the tests and have high confidence that you haven't broken anything.
+
+*   **Embrace the Code Review:** We called them "inspections." Having another human being read and question your logic is one of the most powerful tools for finding errors. It forces you to justify your decisions and exposes assumptions you didn't even know you were making. Be humble in receiving feedback and thorough in giving it.
+
+### 4. The Human Is Always in the Loop.
+
+Our software was a partner to the astronauts, not a replacement for them. It had to provide the right information at the right time, allowing them to make critical decisions. Neil Armstrong had to be able to take manual control at a moment's notice.
+
+*   **Consider the "Developer Experience":** The same principle applies to maintainability. How easy is it for another developer to understand your system? Is the build process straightforward? Is the architecture logical? Is the logging clear and useful? You are designing a system not just for the end-user, but for the future developers who will be its custodians. Make their job possible, not painful.
+
+In essence, maintainability isn't a feature you add at the end. It's the result of a disciplined, empathetic, and forward-thinking process. It's about treating software development as a true engineering discipline. The tools have changed beyond anything we could have imagined, but the responsibility has not.
+
+Build it to be understood. Build it to be resilient. Build it to be trusted. That is how you create something that lasts.

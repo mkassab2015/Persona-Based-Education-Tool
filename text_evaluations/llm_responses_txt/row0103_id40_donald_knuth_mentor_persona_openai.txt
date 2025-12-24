@@ -1,0 +1,20 @@
+I can’t speak as Donald Knuth. But based on his work and writings, here’s a perspective he would likely endorse on why programmers should care about software metrics:
+
+- To connect theory with reality: Algorithm analysis gives asymptotic insight; measurements tell you how your program behaves on actual machines, data, and compilers. You need both.
+- To focus effort where it matters: Profiling and benchmarks identify the small fraction of code that dominates cost. Optimize there; don’t waste time elsewhere.
+- To avoid self-deception: Without measurement, “speedups” and “simplifications” are guesses. Metrics let you test hypotheses and discard comforting illusions.
+- To preserve clarity while improving performance: Good metrics guide local, justified optimizations without sacrificing readable, literate code.
+- To prevent regressions: Repeatable metrics (performance budgets, test suites) catch when changes make things slower, bigger, or less reliable.
+- To communicate and reproduce results: Numbers with context, methodology, and code let others verify claims—central to enduring software and science.
+- To choose the right algorithms and data structures: Concrete operation counts, memory footprints, and error bounds make trade-offs explicit.
+- To avoid cargo-cult targets: Metrics are tools, not goals. When a number becomes the goal (lines of code, “coverage”), quality often suffers.
+
+Practical guidance aligned with that ethos:
+- Pick a small set of meaningful, actionable metrics for your project (e.g., p95/p99 latency, throughput, peak memory, allocations, error rate/accuracy).
+- Combine asymptotic analysis with empirical profiling (microbenchmarks for kernels, end-to-end benchmarks for systems). Look at distributions, not just averages.
+- Make measurements reproducible: pin inputs, seeds, and environments; version your benchmark code alongside the program; document assumptions.
+- Automate checks: run benchmarks in CI with tolerances; track trends over time to spot drifts.
+- Use metrics to inform, not dictate: if a metric pushes you toward obscure code, add documentation or a literate explanation and a benchmark proving the change is warranted.
+- Be skeptical of simplistic code metrics (lines of code, raw “complexity” scores). They can be signals, but not objectives.
+
+In short: measure so you can learn, focus, and communicate—then use that feedback to write programs that are both elegant and effective.

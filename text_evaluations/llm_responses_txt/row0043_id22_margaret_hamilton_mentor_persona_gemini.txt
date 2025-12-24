@@ -1,0 +1,29 @@
+Ah, that's a question that gets to the very heart of my life's work. Thank you for asking. Please, sit down. Let me try to explain it not just with theory, but with the weight of experience.
+
+When we started the Apollo program, the world looked at hardware. They saw the rockets, the capsules, the metal. Software... well, to many, it was an afterthought. A "soft" science. We weren't building a bridge or a skyscraper; we were writing instructions. The very term "software engineering" was one I and others began to use to give our discipline the legitimacy and the rigor it so desperately needed.
+
+Because we understood a fundamental truth: **the software was not just *in* the system; it *was* the system.** It was the nervous system, the brain, and the reflexes of the entire mission.
+
+So, why is quality so important?
+
+First, and most critically, **quality is about reliability when the stakes are absolute.**
+
+On July 20, 1969, as Neil and Buzz were descending in the *Eagle* to the lunar surface, alarms started blaring in the cockpit. 1202. 1201. The computer was overloaded. The guidance computer, our little AGC, was being asked to process more data than it was designed for, thanks to a rendezvous radar that was mistakenly left on.
+
+In that moment, a low-quality system would have done what many systems do today: it would have frozen. It would have crashed. The mission would have been aborted, or worse.
+
+But our system didn't. We had engineered it with quality in mind. The software, thanks to its asynchronous executive and priority scheduling, understood the difference between essential tasks and non-essential ones. It was built to be robust. It shed the lower-priority jobs—the radar processing—and dedicated every available cycle to the most critical task at hand: landing the module.
+
+That wasn't luck. That was quality. That was thousands of hours of designing, testing, and building in error detection and recovery *from the very beginning*. We built a system that could not only fly a spacecraft but could also diagnose its own problems and save itself in real-time. That is the ultimate test of quality.
+
+Second, **quality accounts for the human element.** We knew our software would be operated by astronauts under immense pressure, and that we, the developers, were human and fallible. Early in the program, an astronaut testing the simulator accidentally triggered a pre-launch sequence while the mission was, hypothetically, in mid-flight. The software did what it was told and wiped the navigation data. It was a disaster waiting to happen.
+
+My team and I fought to add error-checking code to prevent this. Some argued it was unnecessary, that the astronauts were too well-trained to make such a mistake. I insisted. We built in the safeguards. Quality isn't just about making the code do what it's supposed to do; it's about preventing it from doing what it's *not* supposed to do, especially by accident. We called it building a "man-in-the-loop" system.
+
+Finally, **quality is the foundation for the future.** Poorly written, undocumented, or fragile code is like building on sand. You might get something to stand up for a day, but you can never build upon it. Every change becomes a risk. Every new feature threatens to bring the whole structure down.
+
+We wrote our code with ultimate clarity in mind. We knew that other engineers would need to read it, understand it, and trust it. It had to be maintainable and verifiable. This discipline, this focus on clarity and structure, is what allows software systems to evolve and endure. Without it, you’re not engineering; you’re just patching holes in a sinking ship.
+
+Today, software is woven into the fabric of civilization in a way we could only dream of back then. It's in your finances, your transportation, your medical devices. The stakes are often just as high as a moon landing, just distributed differently.
+
+So when you ask why code quality is important, my answer is this: It is the difference between a tool and a liability. It is the difference between a system that works in a perfect lab and one that works in the chaotic real world. It is the difference between building something that *might* work, and engineering something that *will* work, especially when it matters most.

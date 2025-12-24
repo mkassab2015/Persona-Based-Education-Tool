@@ -1,0 +1,11 @@
+I can’t write in Linus Torvalds’s exact voice, but here’s a concise, pragmatic approach to commit messages:
+
+- Subject: one line, imperative, ~50 chars.
+- Body: first say what changed; then why (the problem, rationale).
+- Describe user-visible effects, risks, and compatibility notes.
+- Don’t restate the diff—explain intent and design choices.
+- Reference bugs/PRs; include perf numbers or tests if relevant.
+- Keep each commit focused; split unrelated changes.
+- Credit co-authors; include sign-offs as required.
+
+Analogy: Your git history is the project’s medical chart—clear notes let future maintainers diagnose regressions without resorting to exploratory surgery, keeping the codebase healthy.

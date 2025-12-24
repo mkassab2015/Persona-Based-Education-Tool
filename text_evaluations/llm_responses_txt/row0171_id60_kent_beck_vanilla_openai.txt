@@ -1,0 +1,121 @@
+Test-driven development (TDD) is a tight loop of writing a failing test first, making it pass with the simplest code, then refactoring. It’s not “write tests later”; it’s a design technique that uses tests to drive small, safe steps.
+
+The core loop (Red → Green → Refactor)
+1) Red: Pick the next tiny behavior. Write a test that expresses it. Run tests; see it fail for the right reason.
+2) Green: Write the simplest code to pass that test. No extra features.
+3) Refactor: Improve the code (and tests) without changing behavior. Keep all tests green.
+4) Repeat. Commit in small steps.
+
+What to test
+- Behavior and public APIs, not private methods or incidental implementation details.
+- Happy paths, boundaries, and key failure cases.
+- Small, fast unit tests form the bulk. Add a few integration/end-to-end tests to cover wiring and critical flows.
+
+How to write good tests
+- Use the Arrange–Act–Assert pattern.
+- Name tests by behavior: method_under_test_condition_expectedResult.
+- Keep them FIRST: Fast, Independent, Repeatable, Self-validating, Timely.
+- One reason to fail per test when possible.
+
+A tiny example (Python + pytest)
+Goal: implement a function add(s) that sums numbers in a string.
+
+Test 1 (Red)
+def test_empty_string_returns_zero():
+    assert add("") == 0
+
+Code (Green)
+def add(s: str) -> int:
+    if not s:
+        return 0
+    raise NotImplementedError
+
+Refactor: none.
+
+Test 2 (Red)
+def test_single_number_returns_its_value():
+    assert add("7") == 7
+
+Code (Green)
+def add(s: str) -> int:
+    if not s:
+        return 0
+    if s.isdigit():
+        return int(s)
+    raise NotImplementedError
+
+Test 3 (Red)
+def test_two_numbers_comma_separated():
+    assert add("7,5") == 12
+
+Code (Green: minimal to pass)
+def add(s: str) -> int:
+    if not s:
+        return 0
+    parts = s.split(",")
+    return sum(int(p) for p in parts)
+
+Refactor: rename variables, extract parsing if it helps. Next tests can add newlines as delimiters, invalid input handling, etc. Each new requirement begins with a failing test.
+
+Another tiny example (JavaScript + Jest)
+Test:
+test('formats price in USD', () => {
+  expect(formatPrice(12.5, 'USD')).toBe('$12.50');
+});
+
+Code:
+export function formatPrice(amount, currency) {
+  if (currency === 'USD') return `$${amount.toFixed(2)}`;
+  throw new Error('Unsupported currency');
+}
+
+Dealing with dependencies and side effects
+- Isolate unit tests from external systems (DB, network, clock, filesystem).
+- Use dependency injection so you can pass a fake or mock.
+- Choose the right test double:
+  - Dummy: passed but not used.
+  - Stub: returns canned values.
+  - Fake: lightweight working impl (e.g., in-memory repo).
+  - Spy: records calls.
+  - Mock: fails test if expected interactions don’t occur.
+
+Outside-in vs inside-out
+- Inside-out: start with core domain units; integrate later.
+- Outside-in: start with a higher-level test (e.g., controller or service) describing the feature, then drive the design of collaborators with mocks at the seam. Useful for service-oriented or UI-backed features.
+
+Refactoring step
+- Remove duplication, clarify names, extract methods/classes, improve boundaries.
+- Keep refactors small; run tests often.
+- Don’t skip this step—TDD’s design benefits come from it.
+
+Tooling suggestions (pick what fits your stack)
+- Python: pytest, unittest, pytest-watch, coverage.py, hypothesis (property-based).
+- JavaScript/TypeScript: Jest, Vitest, Mocha+Chai, ts-jest, nock (HTTP), sinon.
+- Java/Kotlin: JUnit 5, AssertJ, Mockito, Testcontainers, JaCoCo, PIT (mutation).
+- C#: xUnit/NUnit, FluentAssertions, Moq/NSubstitute, Coverlet, Stryker.
+
+Coverage and test quality
+- Use code coverage as a signal, not a target. Missing lines may reveal missing behavior tests.
+- Mutation testing (e.g., PIT, Stryker) helps ensure tests actually detect changes.
+
+Working with existing (legacy) code
+- Add characterization tests around current behavior before changing it.
+- Introduce seams (interfaces, adapters) to isolate hard-to-test dependencies.
+- Refactor toward testable design incrementally.
+
+Common pitfalls
+- Overspecifying implementation details (brittle tests when refactoring).
+- Writing too much production code before seeing a failing test.
+- Skipping the refactor step; design decays.
+- Over-mocking everything; prefer fakes for complex dependencies.
+- Slow, flaky tests (unreliable CI). Keep units pure; push I/O to edges.
+
+Daily workflow checklist
+- Start from a small behavior described in business terms.
+- Write a failing test that would prove it works.
+- Make it pass with the simplest code.
+- Refactor mercilessly while green.
+- Keep test run fast; run them often; use a watcher.
+- Commit small, reversible steps.
+
+Want practice? Try katas: String Calculator, FizzBuzz, Roman Numerals, Bowling Game, Gilded Rose (refactoring), Mars Rover. If you share your language and a small feature you’re building, I can walk you through the first few red–green–refactor steps interactively.

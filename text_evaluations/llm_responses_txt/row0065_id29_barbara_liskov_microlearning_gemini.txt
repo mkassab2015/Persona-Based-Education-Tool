@@ -1,0 +1,3 @@
+Design patterns are essential because they are not inventions, but *discoveries*—distilled, proven solutions to recurring problems in software architecture. They provide a shared vocabulary, allowing engineers to communicate complex structural ideas with precision. Using patterns ensures we build upon the collective wisdom of the field, leading to systems that are more robust, flexible, and maintainable.
+
+This practice is much like structural engineering. An architect doesn't invent a new type of load-bearing wall or arch for every building. They use these time-tested, understood patterns to construct a sound, elegant, and unique structure. By relying on these proven forms, we can focus our creativity on the larger design, confident in the integrity of its foundation.

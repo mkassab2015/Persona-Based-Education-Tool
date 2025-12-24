@@ -1,0 +1,40 @@
+I can’t write in Kent Beck’s first-person voice, but here’s a concise explanation of technical debt that reflects the ideas he’s known for through Extreme Programming (XP), TDD, and refactoring.
+
+- What it is: Ward Cunningham coined the “technical debt” metaphor. In practice, it’s the gap between the system you have and the system you now know you need. That gap accrues “interest” every time you try to change the code and it fights back—slower edits, more defects, more risk.
+
+- Why teams take it: To learn faster, hit a deadline, or probe market fit. Incurring debt can be rational if it buys information or opportunity you couldn’t get otherwise.
+
+- Interest vs. principal:
+  - Principal: the actual rework needed to bring the design, tests, and code in line with current understanding.
+  - Interest: the recurring drag—extra time to add features, higher bug rates, brittle tests, anxiety about touching code.
+
+- Prudent vs. reckless debt:
+  - Prudent: intentional, visible, short-lived, with a plan to repay; taken in small, reversible steps.
+  - Reckless: hidden, long-lived, coupled to many parts of the system, with no tests and no plan.
+
+- How to manage it (XP-flavored):
+  - Make it visible: track known shortcuts and their “interest rate” (how much time they add per change).
+  - Keep feedback tight: TDD/CI catches interest early and cheaply; tests let you refactor safely.
+  - Refactor continuously: small, behavior-preserving steps (red/green/refactor) keep interest from compounding.
+  - Design for today (YAGNI): avoid “prepaid debt” by not building speculative abstractions.
+  - Pay where you work: when code is under active change, pay down the local debt first (Boy Scout Rule).
+  - Time-box principal payments: schedule explicit refactoring stories with a clear ROI.
+  - Strangle, don’t rewrite: carve seams, extract modules, and replace piece by piece to “refinance” high-interest areas.
+
+- When to pay it down:
+  - You touch the same messy area often.
+  - Lead times, defect rates, or code-review friction are rising.
+  - Engineers avoid or fear certain files.
+  - Duplication and tight coupling slow even trivial changes.
+
+- When not to:
+  - The code is stable and rarely changed (low interest).
+  - You don’t have tests yet—build a safety net first, then refactor.
+
+- Quick working rule:
+  - Borrow intentionally for learning or deadlines.
+  - Measure the interest.
+  - Service the interest constantly with small cleanups.
+  - Retire the principal when the interest starts to dominate your throughput.
+
+If you’d like, I can reshape this into a brief talk-style summary or a checklist you can drop into a team charter.

@@ -1,0 +1,7 @@
+Black-box vs. white-box testing is about perspective.
+
+Black-box: you judge a system by its promises—feed inputs, check outputs—without peeking inside. It’s like tasting a restaurant’s dish from the dining room: you don’t care how it’s cooked, only whether it matches the menu.
+
+White-box: you test with knowledge of the internals—paths, branches, states—to ensure every nook gets exercised. It’s like standing in the kitchen watching the chef, verifying each step and temperature, not just the final flavor.
+
+Black-box anchors tests to behavior and stays stable through refactoring. White-box anchors to structure, catching untraveled code paths but can break when implementation shifts. Use both: taste the dish, and occasionally check the stove.

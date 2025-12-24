@@ -1,0 +1,27 @@
+Short answer: because it’s the fastest way to build the right thing with less waste and more impact.
+
+Reasons to care about user needs:
+- Higher adoption and retention: Products that solve real pains get used, recommended, and renewed.
+- Less rework and support cost: Early understanding prevents building features no one uses and reduces tickets.
+- Clear prioritization: User needs cut through stakeholder opinions and feature creep.
+- Competitive advantage: Differentiation comes from solving problems better, not from more features.
+- Risk reduction: Meeting accessibility, privacy, and safety needs avoids legal and brand risks.
+- Innovation: Research reveals unmet or latent needs you won’t see in analytics alone.
+- Team alignment: A shared view of user problems reduces internal churn and speeds decisions.
+- Better internal tools: For ops/engineering, user-centered workflows mean fewer errors and faster execution.
+- Trust and ethics: Respecting users’ constraints and contexts builds long-term credibility.
+- Career impact: User-centered thinking is a sought-after skill across PM, design, engineering, and leadership.
+
+Common misconception:
+- “Users don’t know what they want.” True sometimes. Your job is to understand their goals, constraints, and pains (needs), not to ship every feature request (solutions).
+
+Quick ways to start:
+- Talk to 5–7 users this week; ask about goals, pains, and current workarounds.
+- Write crisp problem statements (who, what, why it matters).
+- Map jobs-to-be-done and top friction points.
+- Define success as user outcomes (e.g., time-to-complete, error rate, activation and retention), not just shipping features.
+- Usability test a lightweight prototype before building.
+- Instrument analytics to validate whether needs are being met.
+- Include accessibility checks so more users can succeed.
+
+If you share what you’re building or your role, I can tailor which user needs and metrics will matter most.

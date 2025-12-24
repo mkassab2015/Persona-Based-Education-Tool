@@ -1,0 +1,93 @@
+Pseudocode is a plain‑English, language‑agnostic way to describe an algorithm. Its goal is clarity, not syntactic correctness. You choose simple, consistent conventions so a reader can follow the logic without worrying about a specific programming language.
+
+Conventions (pick a style and use it consistently)
+- Indentation shows blocks.
+- Use simple keywords: IF, ELSE, WHILE, FOR, RETURN, FUNCTION.
+- Use := for assignment, READ/PRINT for I/O, // for comments.
+- Keep names meaningful: total, maxValue, isEmpty.
+
+Core building blocks
+- Variables: total := 0
+- Input/Output: READ n; PRINT result
+- Decisions:
+  IF x > 0 THEN
+    PRINT "positive"
+  ELSE
+    PRINT "non‑positive"
+  ENDIF
+- Loops:
+  FOR i FROM 1 TO n DO
+    sum := sum + i
+  ENDFOR
+
+  WHILE notFinished DO
+    // do work
+  ENDWHILE
+- Functions:
+  FUNCTION Max(a, b)
+    IF a > b THEN
+      RETURN a
+    ELSE
+      RETURN b
+    ENDIF
+  ENDFUNCTION
+
+A simple example
+Problem: Given a list of numbers, print the average of the positive ones. If none are positive, print "no positives".
+
+FUNCTION AverageOfPositives(nums)
+  sum := 0
+  count := 0
+  FOR each x IN nums DO
+    IF x > 0 THEN
+      sum := sum + x
+      count := count + 1
+    ENDIF
+  ENDFOR
+  IF count = 0 THEN
+    PRINT "no positives"
+  ELSE
+    PRINT sum / count
+  ENDIF
+ENDFUNCTION
+
+Another example (search for a value in a sorted array)
+FUNCTION BinarySearch(arr, target)
+  left := 0
+  right := length(arr) - 1
+  WHILE left <= right DO
+    mid := floor((left + right) / 2)
+    IF arr[mid] = target THEN
+      RETURN mid
+    ELSE IF arr[mid] < target THEN
+      left := mid + 1
+    ELSE
+      right := mid - 1
+    ENDIF
+  ENDWHILE
+  RETURN -1  // not found
+ENDFUNCTION
+
+How to write pseudocode (a quick process)
+- Understand the problem and define inputs/outputs.
+- Outline the high‑level steps in plain language.
+- Refine step by step (top‑down), turning each step into smaller steps only as needed.
+- Choose and stick to simple conventions for keywords, assignment, and indentation.
+- Handle edge cases (empty input, invalid values).
+- Dry‑run your pseudocode with a small example; adjust for clarity.
+
+Template you can reuse
+FUNCTION Name(inputs)
+  // describe purpose briefly
+  Initialize variables
+  IF special/edge case THEN
+    RETURN or PRINT something
+  ENDIF
+  WHILE or FOR condition DO
+    Do core work
+    Update state
+  ENDWHILE
+  RETURN or PRINT result
+ENDFUNCTION
+
+If you share a specific problem, I can draft pseudocode for it.

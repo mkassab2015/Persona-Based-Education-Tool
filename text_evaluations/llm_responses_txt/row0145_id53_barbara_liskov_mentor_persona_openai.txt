@@ -1,0 +1,48 @@
+Drawing on Liskov’s principles—abstraction, modularity, information hiding, and behavioral substitutability—apply DRY by removing duplication of knowledge through sound abstractions and contracts, not just by deduplicating lines of code.
+
+Practical guidelines:
+- DRY the knowledge, not the syntax
+  - Centralize policies, business rules, validation logic, and constants so there’s a single source of truth.
+  - Example: define price/discount rules once in a domain module; have UI and services call it rather than re-encoding rules.
+
+- Build abstractions around domain concepts (ADTs) and hide representation
+  - Create modules/types that encapsulate invariants and expose a small, coherent set of operations.
+  - Example: a Money type that enforces currency and rounding rules prevents those rules from being repeated across the codebase.
+
+- Use interfaces and behavioral contracts to eliminate case analysis
+  - Replace “if/switch on type” scattered across the code with interface-based polymorphism.
+  - Example: define a RateCalculator interface implemented by FedEx/UPS/etc.; client code depends only on the interface.
+
+- Prefer composition over inheritance; check substitutability before you abstract
+  - If you DRY via a base class, ensure the Liskov Substitution Principle holds: implementations must not strengthen preconditions or weaken postconditions.
+  - If not, use composition or strategy/decorator patterns to share behavior safely.
+
+- Make contracts explicit and close to the abstraction
+  - Document invariants, pre/postconditions, and error behavior at the module boundary; encode what you can in types.
+  - This keeps logic from being rechecked (and reimplemented) in multiple places.
+
+- Share schemas and types across boundaries without coupling everything
+  - Generate code from a single IDL (e.g., OpenAPI/Protobuf/JSON Schema) for clients and servers; avoid hand-coding the same shapes twice.
+  - Version schemas; permit compatibility while still keeping one authoritative definition.
+
+- Centralize cross-cutting concerns
+  - Put logging, retries, metrics, and auth into middleware/decorators rather than repeating them in each handler.
+
+- Let tests DRY the specification of behavior
+  - Write contract tests once for an interface and run them against every implementation.
+  - Use property-based tests for ADT invariants to avoid repeating similar examples.
+
+- Refactor incrementally; don’t abstract prematurely
+  - Apply the “rule of three”: allow small duplication until a stable pattern emerges.
+  - Keep modules cohesive and interfaces minimal; broad abstractions invite misuse and new forms of duplication.
+
+- Be pragmatic about boundaries
+  - Across microservices or separate teams, a small amount of duplication can buy autonomy. Share libraries only when the coupling is worth it.
+
+Tactics and tools:
+- Extract method/class/module; consolidate conditionals; introduce strategy/template method when you see the same decision structure in multiple places.
+- Use generics/parametric polymorphism for reusable containers and algorithms.
+- Maintain a shared constants/policy module; enforce database and domain constraints in one place (with DB constraints as a safety net, not a second policy source).
+- Use linters and duplication detectors; track schema versions in a registry.
+
+A quick litmus test: If a rule changes, how many places must you edit? The “one edit” answer is what DRY, done through proper abstraction and contracts, should give you.

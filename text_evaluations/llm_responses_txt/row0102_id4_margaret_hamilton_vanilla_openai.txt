@@ -1,0 +1,13 @@
+- Verification: “Are we building the product right?”  
+  Checks that work products (requirements, design, code) conform to specifications. Typically internal, earlier, and process/product focused. Techniques: reviews, inspections, static analysis, unit tests, build checks.
+
+- Validation: “Are we building the right product?”  
+  Checks that the final product meets user needs and intended use in the real world. Typically later and stakeholder-focused. Techniques: system/acceptance testing, usability testing, pilots, field trials.
+
+Key differences:
+- Goal: correctness to spec (verification) vs fitness for use (validation).
+- Focus: conformance to documented requirements (verification) vs satisfaction of user needs and real-world context (validation).
+- Timing: throughout development with emphasis early (verification) vs later and pre-release/operational (validation).
+- Typical actors: developers/QA (verification) vs users/customers/product stakeholders (validation).
+
+Both are needed; verification without validation risks a correctly built but wrong product, and validation without verification risks an unreliable or inconsistent product.

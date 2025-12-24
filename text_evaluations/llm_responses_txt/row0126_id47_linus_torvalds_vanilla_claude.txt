@@ -1,0 +1,69 @@
+Here's a comprehensive guide to running effective code reviews:
+
+## Setting Up Code Reviews
+
+### 1. Choose Your Tools
+- **GitHub/GitLab/Bitbucket**: Built-in pull/merge request reviews
+- **Azure DevOps**: Pull request reviews
+- **Crucible, Review Board**: Dedicated review tools
+- **IDE plugins**: For lightweight reviews
+
+### 2. Establish Review Policies
+```yaml
+# Example branch protection rules
+- Require pull request reviews before merging
+- Require at least 2 reviewers
+- Dismiss stale reviews when new commits are pushed
+- Require review from code owners
+- Require status checks to pass
+```
+
+## Review Process
+
+### 1. Pre-Review Checklist (Author)
+- [ ] Code compiles and tests pass
+- [ ] Self-review completed
+- [ ] Clear, descriptive commit messages
+- [ ] Pull request description explains changes
+- [ ] Relevant documentation updated
+
+### 2. Review Guidelines
+
+**What to Look For:**
+- **Functionality**: Does the code do what it's supposed to do?
+- **Logic errors**: Edge cases, null checks, boundary conditions
+- **Performance**: Inefficient algorithms, memory leaks
+- **Security**: Input validation, authentication, authorization
+- **Style**: Consistent with team standards
+- **Maintainability**: Clear, readable, well-structured code
+- **Testing**: Adequate test coverage
+
+**Review Priorities (in order):**
+1. Correctness and security issues
+2. Design and architecture concerns
+3. Performance problems
+4. Code style and formatting
+
+### 3. Providing Feedback
+
+**Good Review Comments:**
+```
+// ✅ Specific and actionable
+"Consider using a Set instead of Array here for O(1) lookup 
+instead of O(n) - this could impact performance with large datasets"
+
+// ✅ Explains the why
+"This function is doing too many things. Consider splitting 
+the validation logic into a separate function for better testability"
+
+// ✅ Suggests alternatives
+"Instead of nested if statements, consider using early returns 
+to reduce complexity"
+```
+
+**Avoid:**
+```
+// ❌ Vague
+"This looks wrong"
+
+// ❌ Personal preference

@@ -1,0 +1,3 @@
+Refactoring is essential because design decays as features pile on. Without reshaping, complexity hardens: every change gets slower, riskier, and buggier. Refactoring changes structure, not behavior, to clarify intent, isolate responsibilities, and expose seams for tests. With a strong test net, you can make small, safe improvements that reduce defects and the cost of future changes.
+
+Think of your codebase as a garden. If you only harvest features and never prune, weeds and vines soon choke every path. Regular pruning—renaming to reveal purpose, extracting to remove duplication, moving code where it belongs—keeps the paths clear. Then new features grow faster, healthier, and with far less pain.

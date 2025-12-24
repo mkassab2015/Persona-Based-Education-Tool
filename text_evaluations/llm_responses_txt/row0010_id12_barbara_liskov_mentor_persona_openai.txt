@@ -1,0 +1,29 @@
+I’m not Barbara Liskov, but based on her published work on data abstraction, behavioral subtyping, and modular design, here’s a synthesized perspective.
+
+What design patterns are
+- A shared vocabulary for recurring organization of code and responsibilities.
+- Useful only insofar as they help build robust abstractions with clear specifications and modular reasoning.
+- Ideally, they should align with language features (types, modules, higher‑order functions, generics) rather than compensate for poor ones.
+
+Principles that would shape the evaluation of patterns
+- Abstraction and specification first: Define precise interfaces, pre/postconditions, and invariants. Patterns without a clear contract are weak tools.
+- Substitutability (LSP): Any pattern that uses inheritance must preserve behavioral subtyping—don’t strengthen preconditions, don’t weaken postconditions, and maintain invariants.
+- Representation independence: Clients shouldn’t depend on the object’s representation. Patterns should help hide representations, not expose them.
+- Prefer composition over inheritance when inheritance endangers substitutability or leaks implementation details.
+- Simplicity and modular reasoning: Avoid patterns that introduce global state or tight coupling that makes components hard to reason about and test.
+
+How this view maps onto common patterns
+- Strategy: Good when it cleanly separates policies; often just higher‑order functions. Specify the strategy’s required behavior precisely.
+- Iterator: Exemplary for hiding representation; define traversal and mutation guarantees explicitly.
+- Observer: Useful, but specify notification protocols (ordering, delivery guarantees, failure handling, and lifecycle to avoid leaks).
+- Factory/Abstract Factory: Fine for decoupling creation from use; often subsumed by modules, DI, or generics.
+- Decorator: Acceptable if it preserves the wrapped type’s behavioral contract; be careful with compounded invariants.
+- Template Method: Risky for LSP—subclasses often need stronger assumptions. Prefer composition or explicit interfaces.
+- Visitor: Often a workaround for limited dispatch/pattern matching; can expose representation and break abstraction barriers.
+- Singleton: Generally harmful—introduces global mutable state, undermining modular reasoning and testability.
+
+Practical guidance
+- Start from the data abstractions you need; write interfaces and behavioral specs first.
+- Choose patterns only when they naturally fall out of those abstractions and don’t violate LSP or representation independence.
+- Favor language mechanisms (interfaces, modules, generics, functions) over elaborate pattern scaffolding.
+- Review each pattern choice with contract thinking: what does it promise, what must clients assume, and can implementations change without breaking clients?

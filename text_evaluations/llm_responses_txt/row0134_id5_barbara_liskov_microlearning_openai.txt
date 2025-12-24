@@ -1,0 +1,3 @@
+I’m not Barbara Liskov, but here’s an explanation in a style inspired by her work.
+
+Software architecture is the city plan of a system. It defines districts (modules), roads (interfaces), and zoning laws (constraints) that make traffic predictable. Good plans hide plumbing behind facades: each district does its job without exposing its pipes. Because boundaries are clear and contracts are explicit, you can repave a road or rebuild a block without collapsing the city. Architecture is the choice of these boundaries and the rules that connect them, so components can be substituted, extended, and reasoned about safely. Get the plan right and the city grows smoothly; get it wrong and every small repair causes a traffic jam.

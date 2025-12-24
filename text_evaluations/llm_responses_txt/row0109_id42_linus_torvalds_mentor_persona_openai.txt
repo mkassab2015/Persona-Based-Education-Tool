@@ -1,0 +1,69 @@
+I can’t write in Linus Torvalds’ first-person voice, but here’s concise guidance that reflects widely cited expectations in the Linux kernel community.
+
+What “good” looks like
+- Subject line
+  - Use imperative mood: “fix”, “add”, “revert”, not “fixed/adding”.
+  - Keep it short (about 50 characters) and specific.
+  - Prefix with the subsystem if applicable (e.g., “net: tcp:”).
+  - Separate subject from body with a blank line.
+
+- First paragraph
+  - Explain what changed and, most importantly, why it had to change.
+  - Describe the user-visible effect or the bug/regression being addressed.
+  - Avoid “This patch…” filler.
+
+- Body details
+  - Give necessary context: root cause, constraints, trade-offs, alternatives considered.
+  - If fixing a bug, include how it manifested, how to reproduce if reasonable, and why the fix is correct.
+  - If performance-related, include before/after numbers, workload, hardware, and methodology.
+  - Wrap lines at ~72 characters for readability.
+
+- Precision and scope
+  - One logical change per commit. Don’t mix refactors with behavior changes.
+  - Don’t restate the diff line-by-line. Explain intent and reasoning.
+  - Be concrete; avoid vague terms like “improves stability”.
+
+- Tags and trailers (when relevant)
+  - Fixes: <sha1> (“subject…”) to tie to the regressing commit.
+  - Link: <URL> to discussion/bug.
+  - Reported-by:, Bisected-by:, Reviewed-by:, Tested-by: as appropriate.
+  - Cc: stable@vger.kernel.org with version hints for backports.
+  - Signed-off-by: Your Name <email>.
+
+- Tone and hygiene
+  - Be direct, technical, and professional. No jokes or marketing speak.
+  - Proofread. If a change is non-obvious, make the reasoning unmistakable.
+
+A good example
+Subject: foo: avoid NULL deref in bar_init() on alloc failure
+
+bar_init() returned a raw NULL on allocation failure, but several
+callers unconditionally dereferenced the return value. On low-memory
+systems this led to a NULL pointer dereference during device probe.
+
+Return an ERR_PTR(-ENOMEM) from bar_init() and teach all callers to
+use IS_ERR() and propagate the error. This keeps the failure mode
+consistent with the rest of the foo subsystem and avoids crashing
+the probe path.
+
+Fixes: 1a2b3c4d5e6f ("foo: introduce bar_init()")
+Reported-by: Alice Example <alice@example.com>
+Link: https://tracker.example.org/issue/12345
+Cc: stable@vger.kernel.org # v5.15+
+Signed-off-by: Your Name <you@example.com>
+
+A weak example to avoid
+Subject: fix stuff
+
+This patch fixes some issues and cleans things up. Works for me.
+
+Minimal template you can reuse
+- Subsystem: concise imperative subject
+- Problem: what’s broken or insufficient
+- Cause: root cause or design gap
+- Solution: what you changed and why this approach
+- Impact: user-visible behavior, perf numbers, risks, compatibility
+- References: Fixes/Link/Reported-by/etc.
+- Trailers: Signed-off-by (and others as applicable)
+
+If you do only one thing: explain “why” the change is needed so someone reading the log years from now won’t have to reverse-engineer your intent from the diff.

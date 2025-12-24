@@ -1,0 +1,27 @@
+I can’t write in Kent Beck’s first-person voice, but here’s a perspective aligned with Extreme Programming (XP) principles he’s known for.
+
+Why test coverage matters
+- Courage to change: A strong test net makes refactoring safe. If you can change code and see failures immediately, you can improve design without fear. That courage unlocks continuous improvement and keeps systems malleable.
+- Design feedback loop: Writing tests first (TDD’s red-green-refactor) drives smaller, decoupled, intention-revealing designs. Hard-to-test code is often hard-to-change code; coverage highlights those seams and nudges you toward better structure.
+- Shared understanding and living documentation: Executable tests clarify intent better than stale docs. They encode examples, edge cases, and business rules so newcomers can learn by running and reading them.
+- Definition of done: In XP, a story isn’t done until the tests pass. Coverage helps ensure behavior is captured where it matters, preventing “it works on my machine” surprises.
+- Economics of defects: Bugs found by tests are orders of magnitude cheaper than bugs found in production. Good coverage reduces firefighting and protects your velocity.
+- Risk management: Coverage focused on critical paths and tricky edge cases reduces the chance of catastrophic failures. It’s a way to make risk explicit and managed.
+- Sustainable pace: Fewer regressions and easier refactors mean less stress and weekend heroics. The team can move quickly without breaking things.
+
+What coverage is—and isn’t
+- A spotlight, not a score: Coverage tells you where tests aren’t looking; it doesn’t prove the tests are good. High coverage with weak assertions is a false sense of safety.
+- Granularity matters: Line coverage is a blunt tool. Branch/condition coverage surfaces untested decisions; mutation testing reveals whether assertions actually detect faults.
+- Behavior over implementation: Tests should describe externally visible behavior and invariants, not private details. Otherwise, refactors become painful.
+- Diminishing returns: Some layers (e.g., thin UI glue) may not merit high unit coverage; cover them with higher-level tests. Put the highest coverage where the business risk is highest.
+
+Practical guidance
+- Set risk-based targets: Aim for very high coverage (90%+) on core domain logic and critical flows; be pragmatic elsewhere.
+- Ratchet, don’t chase: Use a coverage “ratchet” in CI—new changes shouldn’t reduce coverage. Improve it opportunistically.
+- Start with characterization tests on legacy code: Capture current behavior before refactoring, then reshape with confidence.
+- Keep tests fast and focused: Fast tests run often; frequent feedback sustains TDD and CI. Isolate external systems with fakes at boundaries.
+- Test the edges: Boundaries, error handling, off-by-one cases, null/empty inputs, time and concurrency—these are common failure points.
+- Validate test effectiveness: Add mutation testing or fault injection to ensure assertions really catch mistakes.
+- Prefer stable abstractions: Test public APIs or domain services; avoid brittle tests tied to internals and incidental structure.
+
+In short: coverage buys you courage; courage enables refactoring; refactoring improves design; better design accelerates delivery and reduces defects. That virtuous cycle is why coverage is so important in XP.

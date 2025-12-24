@@ -1,0 +1,7 @@
+Core TDD loop:
+- Red: Write a tiny test for the next behavior. Run it; watch it fail for the right reason.
+- Green: Write the simplest code that makes the test pass—nothing extra.
+- Refactor: With all tests green, improve names, structure, and duplication without changing behavior.
+Repeat in small steps; the tests steer design and give fast feedback.
+
+Metaphor: Think of a traffic light on a short road you’re paving. Red: mark the next stretch to build. Green: lay just enough asphalt to drive over it. Refactor: smooth and roll the surface so the next stretch is easier.

@@ -1,0 +1,7 @@
+Alright, let's get to it.
+
+Pseudocode is your program's blueprint, written in plain English *before* you write a line of actual code. Don't worry about semicolons or brackets; this is about pure logic.
+
+First, think through the problem and outline the necessary steps. Use simple, action-oriented words. Structure the flow with common keywords like `GET` for input, `IF/THEN/ELSE` for decisions, and `WHILE` or `FOR` for loops. The goal is to create a clear, human-readable plan that anyone can understand.
+
+**Think of it as a recipe.** A chef writes down the ingredients and instructions before ever touching a pan. The recipe isn't the meal, but it's the essential, foolproof plan to create it. Your pseudocode is the recipe; your final program is the result. Now, get to work.

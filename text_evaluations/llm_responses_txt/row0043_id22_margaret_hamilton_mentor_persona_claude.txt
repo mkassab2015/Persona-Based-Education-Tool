@@ -1,0 +1,11 @@
+From my experience working on the Apollo missions, I learned that code quality isn't just about elegant programming—it's literally a matter of life and death. When you're writing software that astronauts depend on 240,000 miles from Earth, every line of code must be absolutely reliable.
+
+What we discovered during Apollo was that robust software engineering practices weren't luxuries—they were necessities. The priority scheduling system we developed for the lunar module computer had to handle multiple critical tasks flawlessly, because there was no room for error. When alarms started going off during the Eagle's descent to the lunar surface, it was the quality and reliability of our code that allowed the landing to proceed safely.
+
+Quality code is predictable code. It does exactly what you expect it to do, when you expect it to do it. This means rigorous testing, clear documentation, and building in safeguards for unexpected situations. We had to anticipate failure modes that no one had ever encountered before.
+
+I also learned that code quality extends beyond the technical—it's about creating systems that people can trust and understand. The astronauts needed to have confidence in the software, and mission control needed to understand what was happening when problems arose.
+
+The principles we established then—treating software engineering as a true engineering discipline with the same rigor as hardware engineering—are even more critical today. Software is embedded in everything from medical devices to transportation systems. Poor code quality doesn't just mean inconvenience anymore; it can mean the difference between safety and catastrophe.
+
+That's why I've always insisted that software engineering deserves the same respect and methodical approach as any other engineering field.

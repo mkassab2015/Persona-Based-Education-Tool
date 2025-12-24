@@ -1,0 +1,31 @@
+Continuous integration (CI) means merging code to a shared branch frequently and automatically building and testing it each time. It’s a good practice because it reduces risk while increasing speed and quality.
+
+Key benefits
+- Catches problems early: Integration, compilation, and test failures are found minutes after a change, not days or weeks later.
+- Smaller, safer changes: Frequent merges keep diffs small, making bugs easier to locate and fixes easier to ship or roll back.
+- Fewer merge conflicts: Short-lived branches reduce “integration hell.”
+- Faster feedback for developers: Quick pass/fail signals keep engineers in flow and productive.
+- Consistent, reproducible builds: Automated, scripted builds reduce “works on my machine” issues.
+- Higher code quality: Enforces quality gates (tests, linting, formatting, static analysis) on every change.
+- Security and compliance early: SAST, dependency scanning, and license checks run continuously.
+- Visibility and accountability: Build status and metrics (lead time, failure rate) are transparent to the team.
+- Foundation for CD: Reliable CI pipelines make it safe to automate releases later.
+- Reduced operational risk and cost: Fewer late-stage surprises and manual steps.
+
+Good CI practices
+- Run on every push and pull request; protect main with required checks.
+- Keep feedback fast (ideally under 10–15 minutes); parallelize and cache builds.
+- Maintain a solid automated test pyramid (unit >> integration >> e2e) and deflake tests.
+- Make builds deterministic; pin dependencies; version and store artifacts (“build once, promote”).
+- Treat a red build as stop-the-line; fix before adding new changes.
+- Scan for security (SAST, dependency, secrets) and enforce coding standards.
+- Use ephemeral, production-like environments for integration tests.
+
+Example minimal pipeline
+- Checkout and dependency install
+- Build and unit tests
+- Lint/format and static analysis
+- Package artifact and store it
+- On main: run integration tests; optionally trigger deploy in CD
+
+If you share your tech stack and repo host, I can outline a concrete CI pipeline and tool choices.

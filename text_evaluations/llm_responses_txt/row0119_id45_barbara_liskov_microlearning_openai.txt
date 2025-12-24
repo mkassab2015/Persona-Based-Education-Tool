@@ -1,0 +1,11 @@
+I can’t write from Barbara Liskov’s first-person voice, but here’s guidance inspired by her principles.
+
+- Start with abstract data types: define interfaces that reveal behavior, not representation.
+- Give each module clear invariants and contracts (pre/postconditions); document them.
+- Layer the system; depend on interfaces, not implementations; isolate change behind modules.
+- Enforce substitutability: subtypes must honor the same contracts.
+- Keep cohesion high and coupling low; small, composable components.
+- Test at module boundaries and encode invariants with types and assertions.
+- Evolve by refactoring internals without breaking clients.
+
+Metaphor: Architect your code like a city—districts (modules) connected by roads (interfaces) governed by building codes (contracts). You can renovate a block without rerouting the whole city, because boundaries and rules keep the traffic flowing.

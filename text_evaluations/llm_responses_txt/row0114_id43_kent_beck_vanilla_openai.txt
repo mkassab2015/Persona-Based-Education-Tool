@@ -1,0 +1,92 @@
+Great unit tests are small, fast checks that prove a unit’s behavior and fail only when that behavior breaks. Here’s a practical guide you can apply in any stack.
+
+What makes a good unit test
+- Fast: milliseconds. No network, disk, DB, or sleep.
+- Isolated: test one unit; replace external collaborators with fakes/mocks.
+- Deterministic: same result every run (control time, randomness, environment).
+- Behavior-focused: assert observable outcomes/contract, not implementation details.
+- Readable: clear Arrange–Act–Assert (AAA) structure and descriptive names.
+- Minimal: each test covers one behavior; add tests for edge cases.
+
+How to write them
+- Use AAA:
+  - Arrange: set inputs and dependencies.
+  - Act: call the unit under test.
+  - Assert: verify behavior and side effects.
+- Name tests clearly:
+  - methodOrFeature_shouldExpectedOutcome_whenCondition
+  - Example: withdraw_shouldThrow_whenBalanceInsufficient
+- Test public surface/contract; avoid private/internal details unless they expose a bug you can only catch there (then consider refactoring).
+- Prefer realistic data with minimal noise. Extract helpers/builders for fixtures to keep tests focused.
+
+What (and how much) to test
+- Target behaviors that can break or matter:
+  - Core business rules, branching logic, error handling, boundary conditions.
+- Edge cases to consider:
+  - Empty/none/zero, min/max, duplicates, ordering, locale/encoding, time zones, leap years, overflow, concurrency reentrancy.
+- Coverage: use line/branch coverage to find gaps, but optimize for risk. Mutation testing is a stronger quality signal if available.
+
+Using doubles (mocks/stubs/fakes)
+- Stub return values for pure queries. Fake simple external services (in-memory repo/queue).
+- Mock only at boundaries (network/email/time/fs/clock/random). Avoid mocking value objects or the unit’s own data.
+- Verify interactions only when behavior depends on them (e.g., “must send email once if threshold exceeded”).
+
+Keep tests deterministic
+- Freeze time (inject a clock).
+- Seed randomness or inject RNG.
+- Use fixed locale/time zone.
+- Avoid thread scheduling assumptions; use synchronization primitives for concurrency tests.
+
+Organizing tests
+- Mirror production code structure. Tests live next to or in a parallel tree.
+- One test file/suite per unit. Group by behavior.
+- Keep one logical behavior per test. Multiple asserts are fine if they verify the same behavior.
+- Use parameterized tests for many input/output pairs.
+- Use property-based tests for pure, algorithmic code (e.g., sorting preserves length and elements).
+
+Tooling suggestions (pick for your stack)
+- Python: pytest + pytest-mock/freezegun/hypothesis.
+- Java: JUnit 5 + Mockito + AssertJ + jqwik.
+- JavaScript/TypeScript: Vitest or Jest + Testing Library + ts-mockito.
+- C#: xUnit/NUnit + Moq/NSubstitute + AutoFixture + FsCheck.
+- Go: testing + testify + gofakeit.
+- Rust: built-in test + proptest + assert2.
+
+CI and maintenance
+- Run unit tests on every commit/PR; keep suite < 1–2 minutes.
+- Parallelize, cache deps, and tag/mark slower tests to run separately.
+- Quarantine flaky tests immediately; fix root causes (usually time, async, or shared state).
+- Review tests like production code. Refactor when brittle; remove redundant tests.
+
+Example (Python with pytest)
+- Code:
+  def apply_discount(total, pct):
+      if pct < 0 or pct > 1:
+          raise ValueError("pct must be between 0 and 1")
+      return round(total * (1 - pct), 2)
+
+- Tests:
+  import pytest
+
+  def test_apply_discount_rounds_to_cents():
+      # Arrange
+      total, pct = 100.0, 0.155
+      # Act
+      result = apply_discount(total, pct)
+      # Assert
+      assert result == 84.5  # 100 * (1 - 0.155) = 84.5
+
+  @pytest.mark.parametrize("pct,err", [(-0.01, ValueError), (1.01, ValueError)])
+  def test_apply_discount_rejects_out_of_range(pct, err):
+      with pytest.raises(err):
+          apply_discount(50, pct)
+
+Quick checklist
+- Is the test fast, isolated, deterministic?
+- Does the name describe behavior and condition?
+- Is Arrange–Act–Assert clear and minimal?
+- Are edge cases covered?
+- Are doubles only used at boundaries?
+- Would a failure message be obvious to a newcomer?
+
+If you share your language/framework and a small example of what you’re testing, I can tailor patterns, libraries, and sample tests to your stack.

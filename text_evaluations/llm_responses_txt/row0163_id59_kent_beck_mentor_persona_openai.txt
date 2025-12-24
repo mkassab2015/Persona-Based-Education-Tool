@@ -1,0 +1,80 @@
+I’m not Kent Beck, but here’s a practical way to use a Kanban board that’s faithful to Extreme Programming’s values: communication, simplicity, feedback, courage, and respect.
+
+Why the board exists
+- Make problems visible so you can fix them.
+- Optimize flow of value, not local efficiency.
+- Encourage small, safe steps and rapid feedback.
+
+Design the board around reality, not wishful thinking
+- Columns reflect how work really moves today. Start simple: Options (triage) → Ready → Implementing (pair/mob) → Validating (ATs, exploratory) → Deploying → Done.
+- If testing is part of development (XP), don’t create a big “throw over the wall” QA column. Validation is about acceptance and exploration, not compensating for low code quality.
+- Add explicit policies under each column (entry/exit rules, who pulls, quality checks).
+- Show Blocked with a bright tag, not a separate column (blocked work still counts against WIP).
+- Add an Expedite lane with a strict rule: at most 1 item; the team swarms; run a postmortem afterward.
+
+Set real WIP limits (and honor them)
+- Total WIP across “in-progress” columns should match team capacity. As a rule of thumb, WIP = number of pairs (or pairs + 1).
+- When a limit is hit, you finish or swarm; you don’t start something new.
+- Track work item age (e.g., a dot per day). Aging items trigger swarming.
+
+Make work small and independently valuable
+- Slice stories so most finish in about a day. Vertical slices; real user outcomes.
+- Definition of Ready: clear example(s) of behavior, observable outcome, no hidden dependencies. Keep the Ready queue small (just a few days of work).
+
+Run it with simple cadences
+- Daily flow review at the board (10–15 minutes):
+  - What is blocked or aging?
+  - Where are WIP limits broken?
+  - Who will swarm to finish?
+  - Is the build green? If not, stop the line.
+- Replenishment 1–2 times/week:
+  - Choose the next small items based on cost of delay.
+  - Confirm DoR and acceptance examples.
+- Delivery: integrate and deploy continuously. Decouple deploy from release if needed.
+- Retrospective weekly or biweekly: one experiment to improve flow, not a laundry list.
+
+Build quality in with XP practices
+- Pair or mob program to eliminate big-batch code review.
+- TDD and merciless refactoring keep changes small and safe.
+- Trunk-based development and a green mainline are non-negotiable.
+- Definition of Done: integrated, tested (unit + acceptance), observable in a staging/prod-like environment, releasable.
+
+Measure to learn, not to game
+- Track:
+  - Cycle time (start to done): look at median and 85th percentile.
+  - Throughput per week.
+  - Work item age (for items in progress).
+  - WIP.
+- Use these to set a service-level expectation: e.g., “85% of items complete within 4 days.”
+- A cumulative flow diagram helps spot bottlenecks and starvation.
+- Drop story points; forecast with historical throughput.
+
+Use slack deliberately
+- Keep a bit of capacity for improving tests, build, observability, and deployment. Slack isn’t waste; it’s what keeps flow smooth and change cheap.
+
+Make policies explicit and visible
+- Start finishing before starting.
+- Stop the line when the build breaks.
+- Pairing policy (who pairs, how often to rotate).
+- Expedite policy and aftercare.
+- How defects are handled (treat like any other item; prioritize based on impact).
+
+Adapt by context (3X lens)
+- Explore: maximize learning with very small experiments; expect higher variability; protect quality.
+- Expand: raise throughput; watch WIP and reduce handoffs.
+- Extract: simplify, pay down debt, tighten WIP for predictability.
+
+Antipatterns to avoid
+- Too many columns and handoffs; the board becomes a museum.
+- Ignoring WIP limits or having limits so high they’re meaningless.
+- A permanent testing/QA queue as a quality crutch.
+- Overusing Expedite.
+- Letting the board lag reality; if it’s not updated in real time, it’s theater.
+
+A simple starter recipe
+- Columns: Ready (WIP 3–5), Implementing (WIP = number of pairs), Validating (WIP 1–2), Deploying (WIP 1), Done.
+- Blocked tag; aging dots daily.
+- One-week experiment: cut WIP by 1 and slice stories smaller. Measure cycle time and discuss the impact.
+- After two weeks, introduce SLE (“85% ≤ X days”) and use it for stakeholder conversations.
+
+The spirit is continuous improvement: expose constraints, change one thing at a time, watch the data, and keep the technical practices strong so small, safe steps remain possible.

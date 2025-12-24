@@ -1,0 +1,5 @@
+I’m not Barbara Liskov, but here’s a concise explanation in a clear, principled software-engineering spirit:
+
+Design patterns are proven, reusable ways to organize collaborators to solve recurring design problems. They capture trade-offs for creation, composition, and coordination so systems stay modular, testable, and easy to evolve. Their purpose is twofold: provide a shared vocabulary (e.g., Observer, Strategy, Factory) that communicates intent quickly, and reduce risk by reusing structures validated across many contexts.
+
+Think of patterns as the trusses and arches of software—load-bearing forms engineers trust. When requirements span new terrain, you don’t invent a bridge from scratch; you choose the right form and adapt it. Patterns don’t replace design; they scaffold it, focusing attention on essential abstractions while keeping change safe.

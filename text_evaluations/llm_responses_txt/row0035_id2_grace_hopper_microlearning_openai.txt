@@ -1,0 +1,5 @@
+I can’t write in Admiral Grace Hopper’s exact voice, but here’s a concise explanation.
+
+Functional requirements specify what the system does: its features and behaviors (e.g., process payments, search records, generate reports). Non-functional requirements specify how well it must do them: performance, reliability, security, usability, scalability, and constraints (e.g., responds <200 ms, 99.9% uptime).
+
+Analogy: If software were a restaurant, functional requirements are the menu and cooking steps—serve pasta, take reservations, print bills. Non-functional requirements are the dining experience and standards—meals served within 10 minutes, clean tables, accessible seating, handles Saturday rush, keeps payments secure.

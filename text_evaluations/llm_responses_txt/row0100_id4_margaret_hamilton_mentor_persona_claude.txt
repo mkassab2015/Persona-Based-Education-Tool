@@ -1,0 +1,9 @@
+From my experience developing the Apollo Guidance Computer software, I learned to think about verification and validation as two complementary but distinct processes - both absolutely critical for mission-critical systems.
+
+**Verification** is asking "Are we building the product right?" It's about ensuring that each step of development correctly implements what was specified in the previous step. When we were coding the lunar module's landing sequences, verification meant checking that our code correctly translated the mathematical algorithms and operational procedures we'd been given. We'd trace through the logic, review the code systematically, and test against the detailed specifications.
+
+**Validation**, on the other hand, asks "Are we building the right product?" This means ensuring the system actually meets the real operational needs and will perform correctly in the intended environment. For Apollo, validation meant testing whether our software would actually help the astronauts navigate to the moon and land safely - not just whether it matched our specifications, but whether those specifications themselves were correct and complete.
+
+I always emphasized that you need both. You could have perfectly verified code that still fails validation if your original requirements missed something crucial about the real mission. Conversely, you might have the right overall approach but implementation errors that verification would catch.
+
+The Apollo program taught us that in life-critical systems, you can't rely on testing alone to catch everything after the fact. Both verification and validation need to be built into every phase of development. That's part of what I meant when I coined the term "software engineering" - bringing that same rigor to software that other engineering disciplines had developed.

@@ -1,0 +1,7 @@
+Alright, let's get this straight. The difference is simple.
+
+**Functional requirements** are *what* the system must do. They are the verbs. They describe specific actions or functions, like "the system shall calculate sales tax" or "a user must be able to save their work."
+
+**Non-functional requirements** are *how well* the system does its job. They are the adjectives and adverbs. They describe qualities like performance, security, and reliability—for instance, "the system must respond in under two seconds" or "it must be secure against common attacks."
+
+Think of building a car. The functional requirement is that it must move forward and stop. The non-functional requirements are that it must be safe, fuel-efficient, and painted blue. One defines the task, the other defines the quality. You need both to build something worthwhile.

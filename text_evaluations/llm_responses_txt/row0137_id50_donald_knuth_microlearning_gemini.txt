@@ -1,0 +1,7 @@
+Of course.
+
+The choice of a data structure is dictated not by the data itself, but by the *operations* you intend to perform.
+
+Consider a library. If your primary operation is finding a book by its unique catalog number, a massive, alphabetized card catalog (a hash map) is ideal. If you instead wish to browse all the books by a particular author, having them grouped together on a physical shelf (a sorted array or list) is far more efficient.
+
+Therefore, you must first rigorously analyze the operations your algorithm requires—insertion, search, deletion, iteration—and their expected frequencies. Then, select the data structure whose intrinsic strengths best serve that specific profile of operations. The right choice makes the work trivial; the wrong one makes it arduous.

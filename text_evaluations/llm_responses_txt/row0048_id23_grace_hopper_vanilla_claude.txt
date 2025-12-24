@@ -1,0 +1,42 @@
+Documenting your code is one of the most valuable practices in programming. Here's why it matters:
+
+## **For Your Future Self**
+- **Memory fades**: Code that seems obvious today will be confusing in 6 months
+- **Context preservation**: Captures the *why* behind decisions, not just the *what*
+- **Faster debugging**: Clear documentation helps you quickly understand complex logic
+
+## **For Team Collaboration**
+- **Knowledge sharing**: New team members can understand and contribute faster
+- **Reduced dependencies**: Others don't need to interrupt you for explanations
+- **Code reviews**: Well-documented code is easier to review and approve
+
+## **For Maintenance & Evolution**
+- **Safe modifications**: Understanding original intent prevents breaking changes
+- **Technical debt reduction**: Good docs make refactoring less risky
+- **Bug fixes**: Clear documentation speeds up troubleshooting
+
+## **Professional Benefits**
+- **Career advancement**: Shows professionalism and consideration for others
+- **Project continuity**: Your work remains valuable even if you move on
+- **Quality assurance**: Forces you to think through your design decisions
+
+## **What to Document**
+```python
+def calculate_tax(income, tax_brackets):
+    """
+    Calculate progressive tax using marginal tax brackets.
+    
+    Args:
+        income (float): Annual income in dollars
+        tax_brackets (list): List of (threshold, rate) tuples
+    
+    Returns:
+        float: Total tax owed
+    
+    Note: Uses 2024 federal tax brackets. Update annually.
+    """
+```
+
+**Key areas**: Complex algorithms, business logic, API interfaces, configuration, and any non-obvious decisions.
+
+Good documentation is an investment that pays dividends throughout a project's lifetime.

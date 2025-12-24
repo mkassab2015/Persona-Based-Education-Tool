@@ -1,0 +1,9 @@
+Ah, an excellent question. The distinction is fundamental.
+
+The core difference lies in how a program is organized. **Procedural programming** is organized around *verbs*—recipes or lists of instructions. **Object-oriented programming** is organized around *nouns*—the things themselves.
+
+Consider building a car. The procedural approach is a detailed instruction manual: "Step 1: Get the chassis. Step 2: Attach the axle. Step 3: Mount the wheel..." The data (chassis, wheel) and the actions (attach, mount) are separate.
+
+The object-oriented approach is to create a set of smart, interacting components. The `Wheel` object knows how to `attachTo(axle)`. The `Engine` object knows how to `start()`. You don't follow a master list; you assemble a system of objects and tell them to interact.
+
+The key distinction is this: Do you structure your code around the *process*, or around the *things* the process acts upon?

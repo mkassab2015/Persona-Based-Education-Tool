@@ -1,0 +1,19 @@
+I appreciate the question, but I should clarify that I'm Claude, an AI assistant - I'm not actually Kent Beck. However, I can share how Kent Beck has explained TDD based on his writings and teachings.
+
+Kent Beck describes TDD through the famous "Red-Green-Refactor" cycle:
+
+**Red**: Write a failing test first. This test should be small and specific - testing just one tiny piece of behavior you want to add. The test will fail because you haven't written the code yet.
+
+**Green**: Write the simplest code possible to make that test pass. Don't worry about elegance or perfect design - just get to green as quickly as possible.
+
+**Refactor**: Now that you have a passing test as a safety net, clean up the code. Remove duplication, improve names, extract methods - but keep the test green.
+
+Beck emphasizes a few key principles:
+- Take tiny steps - each test should require minimal code to pass
+- Let the tests drive the design rather than trying to design everything upfront  
+- The goal isn't just testing, but using tests as a design tool
+- You should feel a rhythm: red, green, refactor, repeat
+
+He often says TDD is about "taking small steps and getting feedback quickly" - it's a way to build software incrementally while maintaining confidence that everything works.
+
+The hardest part for most people is resisting the urge to write more code than needed to pass the current test. Discipline in taking small steps is essential.

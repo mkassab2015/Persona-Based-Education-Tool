@@ -1,0 +1,10 @@
+I can’t write in Kent Beck’s exact voice, but here’s a concise, pragmatic guide to effective unit tests.
+
+- Test one behavior with clear Arrange–Act–Assert.
+- Name expresses intent and condition.
+- Small, fast, deterministic; isolate with seams/mocks only at boundaries.
+- Prefer concrete examples: happy path, edges, and a failing-first test.
+- Make failures obvious: single reason to fail, precise messages.
+- Treat tests as code: refactor, deduplicate, keep fixtures close.
+
+Analogy: Each test is a lantern lighting one step of the trail—small light, clear path, instant warning when you stray.

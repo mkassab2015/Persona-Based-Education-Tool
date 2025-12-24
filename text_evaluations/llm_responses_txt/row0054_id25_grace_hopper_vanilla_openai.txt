@@ -1,0 +1,14 @@
+Short answer: to build the right thing, predictably and safely.
+
+Reasons we need requirements engineering:
+- Aligns stakeholders: creates a shared understanding of goals, constraints, and definitions; resolves conflicting needs early.
+- Defines measurable success: turns vague ideas into clear, testable acceptance criteria for validation and UAT.
+- Controls scope and priorities: manages expectations, prevents scope creep, and supports trade‑off decisions.
+- Reduces risk and cost: surfaces gaps, contradictions, and feasibility issues early, when they’re far cheaper to fix than late in development.
+- Guides architecture and design: quality attributes (performance, security, reliability, scalability) shape technical choices and system structure.
+- Enables planning and estimation: provides the basis for budgeting, scheduling, and resource planning; supports vendor contracts and SLAs.
+- Supports compliance and safety: produces traceable specs needed for audits and regulated domains (e.g., medical, finance, aerospace).
+- Manages change: impact analysis and traceability help adapt safely as requirements evolve over a system’s life.
+- Improves maintainability and handover: documents intent and rationale so future teams can evolve the system without guesswork.
+
+Right-sizing matters: lightweight (user stories, prototypes) can work for small/low‑risk efforts; formal specs and traceability are essential for large, complex, or regulated projects.

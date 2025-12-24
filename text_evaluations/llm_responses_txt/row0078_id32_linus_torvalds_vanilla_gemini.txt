@@ -1,0 +1,56 @@
+Of course. This is a fundamental question in software development, and the answer goes far beyond just "finding bugs."
+
+At its core, **code review is a systematic examination of source code by one or more people who are not the original author.** It's a collaborative process designed to improve the quality of the software and the skills of the developers.
+
+Here are the primary reasons why we do code reviews, broken down into key categories.
+
+---
+
+### 1. To Improve Code Quality and Reduce Defects
+
+This is the most obvious reason. A second pair of eyes can spot issues the author missed because they are too close to the code.
+
+*   **Bug Detection:** Catching logical errors, off-by-one errors, race conditions, and other subtle bugs before they ever reach production. It's exponentially cheaper to fix a bug at this stage than after it's been deployed.
+*   **Security Vulnerabilities:** A reviewer might spot common vulnerabilities like SQL injection, cross-site scripting (XSS), or improper handling of sensitive data that the author overlooked.
+*   **Performance Issues:** A reviewer may notice inefficient algorithms (e.g., a loop inside a loop that could be a single lookup), unnecessary database queries, or memory leaks.
+*   **Edge Case Handling:** The author might have coded for the "happy path," but a reviewer can ask, "What happens if this value is null? Or negative? Or an empty string?"
+
+### 2. To Foster Knowledge Sharing and Team Cohesion
+
+This is arguably the most important long-term benefit of code reviews.
+
+*   **Spreading Knowledge:** When you review someone's code, you learn about a part of the system you didn't know before. This distributes knowledge across the team, reducing information silos.
+*   **Reducing the "Bus Factor":** The "bus factor" is the number of team members who could be hit by a bus before the project is in trouble. By sharing knowledge, code reviews ensure that more than one person understands critical parts of the codebase.
+*   **Mentoring and Learning:** It's one of the best ways for junior developers to learn from seniors. They get direct, contextual feedback on their work. Conversely, senior developers can learn about new language features or libraries from more junior team members.
+*   **Discovering Better Solutions:** A reviewer might suggest a simpler, more elegant, or more idiomatic way to solve a problem. This isn't about "right vs. wrong" but about collaborative problem-solving.
+
+### 3. To Ensure Maintainability and Consistency
+
+Code is read far more often than it is written. Reviews help ensure that future developers (including the author) can understand and work with the code.
+
+*   **Enforcing Coding Standards:** Reviews ensure the code adheres to the team's agreed-upon style guide (e.g., naming conventions, formatting). This makes the entire codebase look and feel consistent, making it easier to read and navigate. While automated tools (linters) should handle the basics, reviews enforce higher-level standards.
+*   **Improving Readability:** A key question in a review is, "Can I understand this?" If a reviewer struggles to follow the logic, it's a sign the code needs to be simplified, refactored, or better commented.
+*   **Architectural Cohesion:** A reviewer with a broader view of the system can ensure that new code fits well with the existing architecture and doesn't introduce redundant or conflicting patterns.
+
+### 4. To Build a Better Engineering Culture
+
+The *process* of code review itself has profound cultural benefits.
+
+*   **Collective Code Ownership:** Reviews shift the mentality from "my code" and "your code" to **"our code."** The entire team becomes responsible for the quality of the codebase, not just the individual who wrote it.
+*   **Psychological Safety and Collaboration:** A healthy review culture teaches developers how to give and receive constructive criticism gracefully. It builds a foundation of trust and respect, where feedback is seen as a way to improve, not as a personal attack.
+*   **Accountability:** Knowing that a teammate will be reviewing your code encourages you to write your best, cleanest code from the start.
+
+---
+
+### A Simple Analogy
+
+Think of it like **peer-reviewing a scientific paper or editing a book.** The goal isn't to criticize the author but to collaborate to make the final product clearer, more accurate, and more impactful for its audience. The same principle applies to code.
+
+### What a Code Review is NOT:
+
+*   **A personal attack:** Feedback should always be about the code, not the person.
+*   **A chance to show off:** The goal is to help, not to prove you're smarter.
+*   **A gatekeeping exercise:** Reviews should be a collaborative effort to get quality code merged, not a barrier to progress.
+*   **A replacement for automated tools:** Don't waste time on formatting that a linter can fix automatically. Focus on logic, design, and readability.
+
+In summary, we do code reviews not just to find mistakes, but to build a shared understanding, improve our skills, and create a resilient, maintainable, and high-quality product as a team.

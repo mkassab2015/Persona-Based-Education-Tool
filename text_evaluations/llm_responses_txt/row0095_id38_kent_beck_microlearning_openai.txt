@@ -1,0 +1,5 @@
+In the spirit of Kent Beck:
+
+Test coverage is a map, not a trophy. I don’t chase 100%; I chase confidence. Coverage shows me where the light hasn’t reached—shadowy corridors where bugs hide. High coverage doesn’t prove correctness, but low coverage guarantees surprise.
+
+I use it to steer: when I touch code with no tests, I add them; when coverage drops after a change, I ask what behavior I’ve orphaned. Good coverage makes change feel like walking a well-lit path instead of tiptoeing in a cave. The payoff is speed with safety: faster refactoring, clearer designs, calmer releases. Measure coverage to learn, not to brag.

@@ -1,0 +1,99 @@
+Great UIs come from a clear process. Here’s a concise, practical path you can follow, from zero to shipped.
+
+1) Understand the problem and users
+- Define goals and constraints: what success looks like, platform, timeline, tech limits.
+- Identify users and top tasks (3–5). Capture scenarios or jobs-to-be-done.
+- Prioritize features (e.g., MoSCoW: must/should/could/won’t).
+
+2) Structure the information
+- Inventory content and actions.
+- Create a sitemap and navigation model.
+- Map task flows for the top tasks (start → end, happy path + edge cases).
+
+3) Sketch and wireframe
+- Start low-fidelity on paper or in Figma. Focus on layout and hierarchy, not visuals.
+- Design key screens and states: default, loading, empty, error, success.
+- Plan responsiveness: mobile-first; consider breakpoints like 360, 768, 1024, 1440.
+
+4) Choose patterns and a design system
+- Leverage platform guidelines: Material 3 (Android/web), Apple HIG (iOS), Fluent (Windows).
+- Define design tokens: color roles, type scale, spacing, elevation, radii.
+- Build core components early: buttons, inputs, lists/cards, modals, navigation, toasts.
+
+5) Visual design and hierarchy
+- Typography: aim for minimum 16 px body, 1.5 line height; set a clear type scale.
+- Color: 1–2 accent colors, robust neutrals; define semantic colors (success, warning, error).
+- States matter: hover/pressed/focus/disabled/error with clear feedback.
+- Use spacing systematically (e.g., 8-pt grid: 4, 8, 16, 24, 32).
+
+6) Prototype key interactions
+- Clickable prototypes in Figma; cover top tasks end to end.
+- Add microcopy that is clear and specific; confirm actions and show progress.
+- Use motion sparingly; respect “reduce motion” preferences.
+
+7) Test quickly, iterate often
+- Run 5–8 usability tests on core tasks; think-aloud is enough.
+- Measure task success, time on task, errors; collect a quick SUS score if possible.
+- Fix the biggest blockers first; retest.
+
+8) Accessibility must-dos (WCAG 2.2 AA)
+- Contrast: 4.5:1 for body text; 3:1 for large text/icons.
+- Keyboard support and visible focus states on all interactive elements.
+- Clear labels for form fields; associate errors with inputs; helpful error text.
+- Tap targets: at least 44x44 px (iOS), 48x48 dp (Android).
+- Provide alt text, ARIA where needed; respect prefers-reduced-motion.
+
+9) Handoff and implementation
+- Provide specs via Figma Inspect, tokens, redlines, and component documentation.
+- Document responsive behavior, empty/loading/error states, and content limits.
+- Pair with developers on tricky interactions; agree on analytics events.
+
+10) Measure and improve
+- Instrument funnels and key events; create dashboards for KPIs.
+- Use heatmaps/session replays for clues; A/B test high-impact changes.
+- Iterate on real-world data.
+
+Core UI principles to guide decisions
+- Clarity and hierarchy: one primary action per screen; strong visual contrast for what’s important.
+- Consistency: repeat patterns; users shouldn’t relearn controls on each screen.
+- Recognition over recall: show options rather than making users remember.
+- Progressive disclosure: show essentials first; reveal complexity as needed.
+- Feedback and forgiveness: immediate UI feedback; prevent errors and make recovery easy.
+- Reduce cognitive load: fewer choices (Hick’s law); larger, closer targets (Fitts’s law).
+
+Practical sizing cheatsheet
+- Body text 16 px, line-height ~1.5.
+- Headings: e.g., 20, 24, 32, 40 (adjust to your typeface).
+- Spacing: multiples of 8 px.
+- Tap targets: 44–48 px; minimum 8 px spacing between targets.
+
+Deliverables checklist
+- Problem brief and success metrics.
+- Personas/top tasks and scenarios.
+- Sitemap and task flows.
+- Wireframes for key screens + states.
+- Visual spec and component library.
+- Clickable prototype.
+- Accessibility review.
+- Usability test plan + findings.
+- Handoff specs + analytics plan.
+
+Helpful tools
+- Design: Figma (+FigJam), Sketch, Adobe XD.
+- Flows: Whimsical, Miro.
+- Testing: UserTesting, Maze, Lookback.
+- Analytics: GA4, Mixpanel, Hotjar.
+
+If you need speed
+- Start from a mature UI kit (Material, iOS, Radix, Bootstrap).
+- Keep to a single accent color and a simple type pair.
+- Ship a small, coherent set of components and states, then expand.
+
+Common pitfalls
+- Designing visuals before understanding tasks.
+- Inconsistent spacing/typography and missing interaction states.
+- Ignoring empty/loading/error states.
+- Low contrast and poor keyboard support.
+- Too many choices on a single screen.
+
+If you share what you’re building (web/mobile/desktop), target users, and your timeline, I can outline a tailored plan and sketch your initial wireframes or component set.

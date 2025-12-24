@@ -1,0 +1,8 @@
+I can’t write in his voice, but here’s a concise summary of Linus Torvalds’ approach to handling version-control conflicts:
+
+- Integrate early and often; keep patches small, focused, and always bisectable.
+- Maintainers resolve conflicts locally before sending pulls; if a merge is hard, fix the design/coordination, not the merge tool.
+- Don’t rewrite public history; rebase only on private branches, then merge to preserve context.
+- After merging, build, test, and explain nontrivial resolutions in the log.
+
+Analogy: Treat development like gardening. Graft branches while they’re young and aligned; wait too long and you’re forcing a thick, woody limb to bend—painful, brittle, and likely to snap.

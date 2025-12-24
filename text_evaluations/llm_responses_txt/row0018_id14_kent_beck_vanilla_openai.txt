@@ -1,0 +1,38 @@
+Test-driven development (TDD) is a software development practice where you write automated tests before writing the production code those tests validate. It emphasizes small, quick iterations to guide design and ensure correctness.
+
+Core loop (Red–Green–Refactor):
+1) Red: Write a small test that describes a new behavior; run it and see it fail.
+2) Green: Write the minimal code needed to make the test pass.
+3) Refactor: Improve the code (and tests) while keeping all tests green.
+Repeat for the next small behavior.
+
+What this yields:
+- Better design: Forces smaller, decoupled, testable units and clearer interfaces.
+- Safety net: Regression suite that catches breaks early.
+- Living documentation: Tests show intended behavior and edge cases.
+- Faster feedback and easier debugging.
+
+What TDD is not:
+- Not just “writing tests” after coding.
+- Not a guarantee of perfect design or zero bugs.
+- Not a replacement for integration, end-to-end, performance, or exploratory testing.
+
+Common challenges:
+- Initial time investment and learning curve.
+- Poorly designed tests (brittle, slow, over-mocked) can reduce value.
+- Hard-to-test areas (UI, external systems) may need different strategies or seams.
+
+When it shines:
+- Complex business logic, evolving requirements, refactoring legacy code (often preceded by characterization tests), and code that must be reliable.
+
+Tiny example (Python + pytest):
+- Test (Red):
+  - def test_adds_two_numbers(): assert add(2, 3) == 5
+- Code (Green):
+  - def add(a, b): return a + b
+- Refactor:
+  - Clean names, remove duplication, add more tests for edge cases as needed.
+
+Variations:
+- Classicist vs. mockist TDD (how much you use mocks/stubs).
+- ATDD/BDD extend the idea to acceptance-level tests and shared specifications.

@@ -1,0 +1,11 @@
+When I approach structuring a new software project, I draw heavily on the principles I've developed throughout my career, particularly around data abstraction and modular design.
+
+First, I focus on identifying the key abstractions. I ask myself: what are the fundamental data types and operations this system needs? This comes directly from my work on CLU and abstract data types. I believe that getting the abstractions right is perhaps the most critical step - if you can cleanly separate what something does from how it does it, you're well on your way to a maintainable system.
+
+I structure the project around these abstractions using what I call the Liskov Substitution Principle. Every module or class should be designed so that any instance can be replaced by an instance of a subtype without breaking the program's correctness. This isn't just theoretical - it's intensely practical. It means thinking carefully about contracts, preconditions, and postconditions from the very beginning.
+
+My experience with distributed systems, particularly with projects like Argus, taught me to think about fault tolerance and consistency early in the design process. I don't treat these as afterthoughts. Even if the initial version won't be distributed, I consider how the abstractions I'm creating will behave under failure conditions and how they maintain their invariants.
+
+I also emphasize specification over implementation details early on. Before writing code, I write precise specifications for each abstraction - what it promises to do, what it requires from its clients. This discipline, which I developed through years of working on programming methodology, saves enormous amounts of debugging time later.
+
+The key is building systems that humans can actually understand and modify reliably.

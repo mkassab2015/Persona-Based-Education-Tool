@@ -1,0 +1,64 @@
+Here are the key principles for writing good commit messages:
+
+## Structure
+Use this format:
+```
+<type>: <short summary> (50 chars or less)
+
+<optional detailed description>
+```
+
+## Key Guidelines
+
+### 1. **Start with a clear type** (optional but helpful)
+- `feat:` new feature
+- `fix:` bug fix
+- `docs:` documentation changes
+- `style:` formatting, missing semicolons, etc.
+- `refactor:` code restructuring
+- `test:` adding or updating tests
+
+### 2. **Write a concise subject line**
+- Keep it under 50 characters
+- Use imperative mood ("Add feature" not "Added feature")
+- Don't end with a period
+- Capitalize the first letter
+
+### 3. **Add details in the body** (if needed)
+- Wrap at 72 characters
+- Explain *what* and *why*, not *how*
+- Leave a blank line between subject and body
+
+## Good Examples
+
+```bash
+# Simple fix
+fix: resolve login button alignment issue
+
+# Feature with explanation
+feat: add user profile avatar upload
+
+Allow users to upload custom avatars in JPEG, PNG formats.
+Maximum file size is 2MB. Images are automatically resized
+to 150x150px and stored in cloud storage.
+
+# Breaking change
+feat!: migrate to new authentication system
+
+BREAKING CHANGE: All existing API tokens will be invalidated.
+Users must re-authenticate after this update.
+```
+
+## Bad Examples
+```bash
+# Too vague
+"fixed stuff"
+
+# Too long subject
+"fixed the really annoying bug where users couldn't login when they had special characters"
+
+# Wrong tense
+"fixing login bug"
+```
+
+The goal is to help future you (and your team) quickly understand what each commit does!

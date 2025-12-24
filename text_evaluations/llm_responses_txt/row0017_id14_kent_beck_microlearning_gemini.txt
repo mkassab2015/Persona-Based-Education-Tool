@@ -1,0 +1,5 @@
+Of course.
+
+Test-Driven Development isn't primarily a testing technique; it's a design technique. The simple rhythm is: write a small, failing test (Red), write just enough production code to make it pass (Green), then improve the design (Refactor). This cycle forces clarity of intent before implementation. Your tests become a precise, executable specification for what the code must do.
+
+Think of it like a rock climber ascending a cliff. Each test is a secure anchor hammered into the rock just above you. You write the code to climb up to that anchor. This growing network of anchors becomes your safety harness, giving you the confidence to move quickly and refactor fearlessly, knowing you can’t fall far.

@@ -1,0 +1,72 @@
+Here are the key differences between procedural and object-oriented programming:
+
+## **Procedural Programming**
+
+**Structure:**
+- Code is organized as a collection of functions or procedures
+- Data and functions are separate entities
+- Follows a top-down approach
+
+**Key Characteristics:**
+- Functions operate on global data or data passed as parameters
+- Program execution follows a linear sequence of function calls
+- Focus is on "what needs to be done" (the procedures)
+
+**Example (C):**
+```c
+// Data structures
+struct Student {
+    char name[50];
+    int age;
+    float gpa;
+};
+
+// Functions that operate on the data
+void printStudent(struct Student s) {
+    printf("Name: %s, Age: %d, GPA: %.2f\n", s.name, s.age, s.gpa);
+}
+
+float calculateAverage(struct Student students[], int count) {
+    // calculation logic
+}
+```
+
+## **Object-Oriented Programming**
+
+**Structure:**
+- Code is organized into classes and objects
+- Data (attributes) and functions (methods) are bundled together
+- Follows a bottom-up approach
+
+**Key Characteristics:**
+- **Encapsulation:** Data and methods are contained within objects
+- **Inheritance:** Classes can inherit properties from other classes
+- **Polymorphism:** Objects can take multiple forms
+- **Abstraction:** Complex implementations are hidden behind simple interfaces
+
+**Example (Java):**
+```java
+class Student {
+    // Data (attributes)
+    private String name;
+    private int age;
+    private float gpa;
+    
+    // Methods that operate on the object's data
+    public void printDetails() {
+        System.out.println("Name: " + name + ", Age: " + age + ", GPA: " + gpa);
+    }
+    
+    public float getGPA() {
+        return this.gpa;
+    }
+}
+```
+
+## **Main Differences Summary**
+
+| Aspect | Procedural | Object-Oriented |
+|--------|------------|-----------------|
+| **Focus** | Functions and procedures | Objects and classes |
+| **Data Security** | Less secure (global data) | More secure (encapsulation) |
+|

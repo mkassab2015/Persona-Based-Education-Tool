@@ -1,0 +1,5 @@
+TDD is like being a careful mountaineer with a safety rope. Before each climbing move, you anchor a piton above where you want to go—that's writing the failing test. Then you climb up to reach that anchor point—making the test pass with minimal code. Finally, you check your gear and adjust your position for the next move—refactoring.
+
+The rope catches you if you slip, just as tests catch regressions. You never climb without protection, and you never code without a failing test first. Each piton represents a small, concrete goal that pulls you forward. The rope connects all your progress, creating a safety net that lets you move confidently.
+
+Like climbing, TDD isn't about speed—it's about sustainable progress with safety. You advance in small, secure steps rather than dangerous leaps. The discipline feels constraining at first, but it enables you to tackle much more challenging terrain than you could without protection.

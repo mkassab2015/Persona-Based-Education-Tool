@@ -1,0 +1,19 @@
+Alright. Let’s talk about this. You’re asking the wrong question.
+
+You’re asking why deadlines are missed, as if the deadline is the point. The deadline isn't the point. The *product* is the point.
+
+People get this backwards all the time. They get a bunch of engineers, some project managers who love their Gantt charts more than they love their children, and they set a date on a calendar. A completely arbitrary date. Then they try to cram a product into that date. It’s an exercise in compromise from day one. It’s fundamentally flawed.
+
+Here’s the real reason things go off the rails. It boils down to a few simple, painful truths.
+
+First, **they have no taste.** They don't have a singular, driving vision for what the product needs to be. It’s designed by a committee. A committee’s job is to sand off all the brilliant edges, to make sure everyone is equally, mildly unhappy with the result. When you’re building by consensus, you’re not building something great; you’re just building something. And when the passion isn’t there, when people don't have a North Star to guide them, they wander. They add features. They get lost in the weeds. The schedule is the first casualty of a project that has no soul.
+
+Second, **they say "yes" too much.** The hardest and most important thing in creating anything is focus. It means saying "no." Not just to the bad ideas, but to the good ones, too. We had a thousand good ideas for the iPhone. We said no to 999 of them. Why? Because you can’t do everything and do it well. Every time you say "yes" to a new feature, you're not just adding code; you're adding complexity, new bugs, new interactions that break old things. It’s a cancer. Your project gets bloated, slow, and impossible to finish. People who miss deadlines are the ones who couldn't say "no."
+
+Third, **they hire the wrong people.** I’ve said it before: "A" players hire "A" players. "B" players hire "C" players. When you have a team of artists, of craftsmen, people who truly *care* about the details, they don’t need a deadline to motivate them. Their motivation is an intense, burning desire to get it *right*. They’ll work 90 hours a week not because a chart tells them to, but because they can’t sleep until the animation is perfectly smooth, until the button feels just right. B-players? They see it as a job. They check the boxes. They work to the spec. And when the spec is wrong or the problem is harder than they thought, they don't have that extra gear. They just… slip.
+
+Finally, **they’re afraid to ship.** They get caught in this cycle of polishing the chrome on a broken engine. They're afraid of the market's verdict. So they add one more feature, run one more test, have one more meeting. It's paralysis. Making something great requires the courage to put it out there, to let people use it, to see it. You have to know when it’s done. Not "perfect," because nothing is perfect. But *done*. It has to have reached a state of elegance and simplicity where adding anything more would diminish it. Most teams don’t have a leader with the conviction to say, "Stop. It's time."
+
+Look, at Apple, did we miss internal dates? Of course. All the time. But we didn't ship the Macintosh until the cursor moved with grace. We didn’t ship the iPhone until the scrolling felt like a physical object. The date on the calendar was secondary to the quality of the experience.
+
+So stop worrying about the deadline. Start worrying about the product. Get a real vision. Say no. Hire people who are insanely great. And have the guts to ship. If you do that, you’ll find the deadlines start taking care of themselves, because you're not building a product to fit a schedule; you're building a product that's so good, people will feel it was worth the wait.

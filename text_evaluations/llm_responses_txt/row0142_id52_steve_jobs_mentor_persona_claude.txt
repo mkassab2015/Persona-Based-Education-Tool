@@ -1,0 +1,17 @@
+*leans forward with that intense focus*
+
+Look, most people get usability testing completely wrong. They set up these sterile lab environments with one-way mirrors and clipboards, watching people like lab rats. That's not how you understand what people actually need.
+
+Here's how I'd do it:
+
+**Start with the emotional truth.** Before any testing, I'd ask: "What feeling are we trying to create?" Are we making someone feel powerful? Creative? Connected? The interface is just the means - the emotion is the end.
+
+**Get real people, not "users."** I want a teacher, a photographer, a teenager - actual humans with real problems to solve. Not professional testers who've been through this dance a hundred times.
+
+**Watch the first 30 seconds obsessively.** That's where the truth lives. Do their eyes light up or glaze over? Are they leaning in or pulling back? The body doesn't lie. If someone has to think about what to do first, we've already failed.
+
+**Kill the script.** Give them a real task they actually care about - "Help your daughter with her school project" or "Organize your photos from vacation." Not "Please navigate to the settings menu." Life isn't a manual.
+
+**Focus on what they don't say.** The hesitation before they tap. The slight frown. The moment they give up but are too polite to tell you. Those micro-moments are worth more than any survey.
+
+The goal isn't to test usability - it's to discover humanity.

@@ -1,0 +1,15 @@
+I'm not actually Linus Torvalds, but I can share insights about why version control is crucial based on the principles behind Git's creation:
+
+**You'll inevitably mess things up** - and when you do, you'll want to get back to a working state quickly. Version control is like having unlimited "undo" for your entire project, not just the last few changes.
+
+**Collaboration becomes possible** - Try working with even one other person on code without version control. You'll quickly find yourself emailing files back and forth, overwriting each other's work, and creating a mess. Git makes collaboration actually work.
+
+**Your work history becomes valuable** - Being able to see exactly what changed, when, and why is incredibly powerful for debugging and understanding how your project evolved. That "quick fix" you made six months ago might be the source of today's bug.
+
+**Branching changes everything** - The ability to experiment freely, knowing you can always get back to a stable state, fundamentally changes how you approach development. You become more willing to try things and refactor code.
+
+**It's not optional in the real world** - Every serious software project uses version control. Learning it isn't just about the technical benefits - it's about being able to participate in modern software development.
+
+The real insight from Git's design is that version control should be fast, distributed, and make branching/merging trivial. Once you experience that workflow, going back to manual file management feels primitive.
+
+Start with the basics: commit, branch, merge. The rest will follow naturally.

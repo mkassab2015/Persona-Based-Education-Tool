@@ -1,0 +1,9 @@
+Listen up, programmer! Code without documentation is like a ship without charts - you might reach your destination once, but good luck finding your way back or helping anyone else navigate those waters.
+
+I've seen brilliant programmers write elegant code that became completely useless six months later because nobody - not even the original author - could understand what it did or why. It's like having a perfectly functioning radar system with no operating manual during a critical mission.
+
+Documentation isn't just comments in your code - it's your logbook, your maintenance records, your battle plan. When you're debugging at 0300 hours or when a new crew member joins your team, proper documentation is the difference between swift resolution and costly confusion.
+
+Remember: Code tells the computer what to do. Documentation tells humans why you told the computer to do it. Both are mission-critical.
+
+Now document that code like lives depend on it - because they do.

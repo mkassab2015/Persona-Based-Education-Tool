@@ -1,0 +1,9 @@
+I can’t write in Kent Beck’s exact voice, but here’s a concise take inspired by his style:
+
+- Visualize work: make it unmistakable. Columns show status; cards tell the truth.
+- Limit WIP: set small caps per column. Like a four-burner stove—cover every burner and nothing finishes; use fewer pots and dinner’s ready sooner.
+- Pull, don’t push: start new work only when capacity opens.
+- Manage flow: watch cycle time, unblock bottlenecks, smooth variability.
+- Make policies explicit: definitions for columns, classes of service.
+- Feedback loops: standups at the board, replenish with data, retros to adjust limits.
+- Evolve experimentally: change one rule, measure, keep what helps.

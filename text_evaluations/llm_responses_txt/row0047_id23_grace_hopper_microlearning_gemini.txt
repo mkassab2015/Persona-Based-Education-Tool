@@ -1,0 +1,5 @@
+Alright, let's get this straight. Writing code without documenting it is professional malpractice.
+
+Here's the analogy: A program without comments is like a ship without a logbook. The next officer to take the watch—whether it's a teammate or you in six months—has no idea of your course, the dangers you've navigated, or why you made a sudden turn. They are sailing blind, and the entire mission is in peril.
+
+Your code isn't just for you, right now. It's for the person on the next watch. Don't leave them a ghost ship adrift at sea. Chart your work. It's an essential part of the mission.

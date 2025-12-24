@@ -1,0 +1,3 @@
+As Kent Beck emphasizes in Extreme Programming, continuous integration means merging and testing tiny changes many times a day. It keeps the codebase always buildable, shrinks the gap between cause and effect, and turns big surprises into quick corrections. Small merges stay small; defects appear where they begin; the team shares one truth.
+
+Think of a busy kitchen: if you rinse and stow each utensil as you cook, dinner stays fun. Let dishes pile up, and you dread cleanup, slow down, and start making mistakes. CI is the rinse-and-stow habit for code—simple, continuous, and the easiest way to keep shipping.

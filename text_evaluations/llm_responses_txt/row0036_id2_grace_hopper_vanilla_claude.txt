@@ -1,0 +1,40 @@
+The key difference between functional and non-functional requirements lies in **what** they describe:
+
+## Functional Requirements
+**Define WHAT the system should do** - the specific behaviors, features, and functions.
+
+**Examples:**
+- User can log in with username and password
+- System generates monthly sales reports
+- Users can search products by category
+- System sends email notifications for orders
+- Calculate tax based on customer location
+
+**Characteristics:**
+- Describe specific system behaviors
+- Usually testable with clear pass/fail criteria
+- Define business logic and user interactions
+- Answer "What should the system do?"
+
+## Non-Functional Requirements
+**Define HOW WELL the system should perform** - the quality attributes and constraints.
+
+**Examples:**
+- System must respond within 2 seconds (Performance)
+- Support 1000 concurrent users (Scalability)
+- 99.9% uptime availability (Reliability)
+- Data must be encrypted (Security)
+- Interface must be mobile-friendly (Usability)
+- Code must follow specific standards (Maintainability)
+
+**Characteristics:**
+- Describe system qualities and constraints
+- Often measurable but harder to test
+- Define technical and operational requirements
+- Answer "How well should the system work?"
+
+## Quick Summary
+- **Functional** = Features and capabilities (the "what")
+- **Non-functional** = Quality attributes and performance criteria (the "how well")
+
+Both types are essential for successful system development, as functional requirements ensure the system does what users need, while non-functional requirements ensure it does so effectively and reliably.

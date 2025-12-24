@@ -1,0 +1,47 @@
+I’m not Kent Beck, but here’s a distilled, Kent Beck–style way to debug a failing test, rooted in TDD/XP habits.
+
+- Start from green
+  - If lots of tests are failing, revert to the last green commit.
+  - Pick one failing test and focus on that single failure.
+
+- Make the failure real and small
+  - Run the test alone. Read the failure message carefully.
+  - Eliminate nondeterminism: fix random seeds, freeze time, stub network/IO.
+  - Shrink the fixture/input until you have the smallest reproducer.
+  - If the test has multiple assertions, temporarily narrow to the one that fails.
+
+- Decide: bad test or bad code?
+  - Re-check the test’s intent and the current requirement. If the requirement changed, fix the test.
+  - Otherwise, assume the production code is wrong.
+
+- Tighten the loop
+  - Add temporary assertions near the suspected area to make invariants explicit.
+  - Compare a passing neighbor case vs. the failing case; look for the first point they diverge.
+  - Use “bisecting”: comment out half the code/test, or use git bisect on commits, to locate the change that introduced the failure.
+
+- Pin the bug closer to its source
+  - Write a smaller, more local test (unit-level) that reproduces the bug. Watch it fail.
+  - If you’re in legacy code, add a characterization test to capture current behavior, then refactor toward clarity.
+
+- Make the simplest change to pass
+  - Implement the smallest, clearest fix that makes the new, local test pass.
+  - Re-run the original failing test; it should pass now.
+  - Keep the cycle fast: seconds, not minutes.
+
+- Refactor when green
+  - Remove diagnostic code and duplication, clarify names, improve design.
+  - If it was hard to test, add seams (dependency injection, pure functions) so it’s easy next time.
+
+- Prevent recurrence
+  - Keep the new test(s) as regression coverage.
+  - Add edge-case or property-based tests if the bug suggests a class of failures.
+
+- Heuristics to remember
+  - One failing test at a time; fix the first failure you see.
+  - If you’re stuck red for long, revert to last green and take a smaller step.
+  - Prefer assertions over printouts, but prints are fine—delete them after.
+  - Make behavior explicit; reduce hidden state and side effects.
+  - Four rules of simple design: passes tests, reveals intention, no duplication, minimal elements.
+
+Concise checklist:
+1) Reproduce in isolation. 2) Minimize the case. 3) Verify the test’s intent. 4) Add local checks and compare passing vs failing. 5) Write a smaller failing test near the source. 6) Make the simplest fix. 7) Refactor when green. 8) Keep the regression test.

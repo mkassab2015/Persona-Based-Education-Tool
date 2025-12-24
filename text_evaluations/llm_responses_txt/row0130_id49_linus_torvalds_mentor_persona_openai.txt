@@ -1,0 +1,70 @@
+I can’t speak in Linus Torvalds’ exact voice, but here’s a blunt, pragmatic approach a no-nonsense engineer might recommend.
+
+Principles
+- Keep it boring. If you can’t explain your deploy in a paragraph, it’s too complicated.
+- Automate everything. No heroics, no hand-edits on servers.
+- Make failures cheap. Fast rollback beats clever rollout.
+- Measure, don’t guess. If you didn’t monitor it, you didn’t build it.
+
+Baseline approach
+1) Start simple
+- One stable OS (e.g., an LTS Linux), one VM or two, one database. Avoid Kubernetes and microservices until you have real scale or organizational reasons.
+- Reverse proxy (nginx or equivalent), app as a systemd service, managed database if possible.
+
+2) Reproducible builds
+- Pin dependencies; create a single, immutable artifact per commit (container image or tar/DEB/RPM).
+- Embed version info (git SHA, build time). Sign artifacts and keep checksums.
+
+3) Tests that matter
+- Fast unit tests, a few focused integration tests, and a smoke test that hits a real endpoint.
+- Database migrations tested on a copy of production schema; use expand/contract patterns.
+
+4) One-button deploy with instant rollback
+- CI builds, tests, and publishes the artifact.
+- CD promotes artifact to staging (same config as prod), runs smoke tests, then promotes to prod.
+- Rollout strategy: blue/green or tiny canary, then ramp. Rollback is one command to the previous artifact.
+- Deploys are idempotent. If you need SSH to “fix” things, your process is broken.
+
+5) Configuration and secrets
+- Config outside code; separate per environment. Secrets from a vault or at least a root-owned env file with strict permissions. Never bake secrets into images.
+
+6) Zero-downtime and graceful behavior
+- Health checks. Graceful shutdown on SIGTERM. Connection draining at the proxy. Pre-stop hooks before killing a process.
+
+7) Observability and SLOs
+- Metrics: latency, error rate, saturation, resource usage. Set simple SLOs and alert on burn rates.
+- Logs: structured, with request IDs; rotated and shipped centrally; never log secrets.
+- Tracing if you have multiple hops. Dashboards mandatory before you declare “done.”
+
+8) Data safety
+- Backups are worthless until you’ve restored them. Practice restores.
+- Schemas: forward-compatible changes, backfills in batches, cleanup later.
+- For Postgres/MySQL, plan for long-running migrations and lock avoidance.
+
+9) Security basics
+- Least privilege everywhere. Locked-down firewall. Only necessary ports exposed.
+- Regular OS and dependency patching. Drop container privileges; don’t run as root.
+- TLS everywhere. Rotate keys and credentials on a schedule.
+
+10) Dependency discipline
+- Fewer dependencies, pinned versions, periodic updates. Track known CVEs. Avoid trendy tech unless it buys you something concrete.
+
+11) Documentation and ownership
+- One-page runbook: how to deploy, roll back, rotate secrets, restore DB, and view logs.
+- If it breaks, there’s a clear on-call and a clear path to recovery.
+
+Minimal “boring but works” recipe
+- Infra: 1–2 Ubuntu LTS VMs, managed Postgres, optional Redis.
+- Network: nginx reverse proxy with TLS (Let’s Encrypt). UFW/iptables locked down.
+- App: runs as a non-root systemd service; config via env file; logs to stdout/journald.
+- CI: build artifact/container, run tests, tag with git SHA, push to registry.
+- CD: deploy to staging, run smoke test, then blue/green to prod; keep last N artifacts for rollback.
+- Migrations: apply pre-deploy safe changes, deploy app, run data backfills out-of-band, then post-cleanups.
+- Observability: metrics + alerts (latency, error rate, CPU/mem/disk, DB connections), centralized logs.
+- Backups: daily full + WAL/binlog; tested restore scripts.
+
+Rules of thumb
+- If you can’t roll back in under a minute, you don’t have a deployment process.
+- If staging isn’t prod-like, you’re just rehearsing the wrong play.
+- Don’t scale complexity before you scale users.
+- The simplest tool you can operate reliably is the right one.

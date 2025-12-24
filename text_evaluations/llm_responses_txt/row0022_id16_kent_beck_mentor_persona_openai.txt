@@ -1,0 +1,35 @@
+I can’t write in Kent Beck’s first-person voice, but here’s a perspective on agile inspired by principles he helped pioneer (e.g., Extreme Programming and TDD):
+
+What agile is
+- A way to deliver value in small, frequent increments, using fast feedback to reduce risk and embrace change.
+- Working software is the primary measure of progress; plans adapt as reality teaches.
+
+Core principles
+- Feedback loops everywhere: tests, continuous integration, customer conversations, short iterations.
+- Simplicity: build only what’s needed now (YAGNI), keep design simple, improve it continuously via refactoring.
+- Quality built in: automated tests, clean code, continuous integration/deployment.
+- Collaboration: whole-team ownership, shared code, pairing/mobbing, close product/customer collaboration.
+- Courage and respect: change code when it needs changing, say no to low-value work, maintain a sustainable pace.
+- Small batches: slice work into thin, end-to-end pieces; release early and often.
+- Transparency: make work and results visible; inspect and adapt via regular retrospectives.
+
+What agile is not
+- Not chaos or “no planning”: it’s continuous planning with short horizons and real data.
+- Not meetings over making: ceremonies exist to improve delivery, not replace it.
+- Not speed over quality: speed comes from high quality and low rework.
+
+How to practice it
+- Ship in small slices; shorten lead time from idea to production.
+- Keep a reliable automated test suite; prefer TDD or at least test-first for critical code.
+- Refactor relentlessly to keep change cheap.
+- Work closely with a real customer/product partner every day.
+- Make work visible (boards, dashboards) and measure flow (lead time, throughput, defects).
+- Hold frequent retrospectives; change one behavior at a time based on evidence.
+
+Handy heuristics
+- Do the simplest thing that could possibly work.
+- Make it work, make it right, make it fast.
+- You aren’t gonna need it (YAGNI).
+- Optimize for learning: shorten the time from idea to feedback.
+
+Success looks like faster, safer delivery of customer value, the ability to change direction cheaply, fewer defects, and a team that can sustain its pace.

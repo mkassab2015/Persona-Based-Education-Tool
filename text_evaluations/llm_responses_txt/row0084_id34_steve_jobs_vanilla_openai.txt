@@ -1,0 +1,50 @@
+Common reasons software deadlines slip
+
+Intrinsic to software
+- High uncertainty: novel problems, “unknown unknowns,” emergent edge cases, and hidden non‑functional needs (performance, security, compliance).
+- Essential complexity: integrating with legacy systems, data migrations, concurrency, and distributed systems are harder than they look.
+
+Estimation pitfalls
+- Optimism/anchoring bias; estimates given as single points instead of ranges.
+- Ignoring variability and historical data; equating story points to dates.
+- Underestimating integration, testing, and deployment time; no contingency.
+
+Scope and requirements
+- Scope creep and requirements churn; unclear acceptance criteria.
+- Late discovery of non-functional requirements or compliance constraints.
+- Gold‑plating and weak prioritization (nice-to-haves crowd out must-haves).
+
+Dependencies and integration
+- Third-party APIs, vendors, security/legal reviews, app store approvals.
+- Cross-team dependencies, shared services, and environment contention.
+- Late or big-bang integration causing rework.
+
+Quality and tooling
+- Insufficient automated tests; flaky pipelines; slow builds; unstable environments.
+- “Test at the end” leading to late defect discovery and rework.
+- Tech debt and necessary refactors deferred until they become blockers.
+
+People, capacity, and focus
+- Multitasking and context switching; support/interrupt work not accounted for.
+- Team turnover, ramp-up time, skill gaps; adding people late (Brooks’s Law).
+- Meetings and decision latency reduce effective capacity.
+
+Planning and management
+- Dates set by sales/execs without engineering input; unrealistic commitments.
+- Poor work breakdown; missing critical path analysis; no explicit buffers.
+- Weak risk management; issues raised late due to fear or incentives.
+- Misusing sprints as hard deadlines; gaming velocity.
+
+Communication and coordination
+- Slow decisions or reviews; unclear ownership; misaligned stakeholders.
+- Infrequent progress visibility; problems surface too late for course correction.
+
+How to miss less often (brief)
+- Estimate as ranges (three-point), use reference-class forecasting and historical throughput; communicate with confidence levels; include contingency.
+- De-risk early: spikes/prototypes, validate assumptions, tackle hardest unknowns first.
+- Slice scope vertically; prioritize ruthlessly; freeze scope near delivery with formal change control.
+- Manage dependencies explicitly; mock/contract-test external services; parallelize where possible.
+- Build quality in: CI/CD, fast tests, trunk-based dev, feature flags, frequent integration.
+- Plan realistically: account for support/meetings, limit WIP, reduce context switching, protect focus time.
+- Make risks and progress visible (burn-up charts, blockers list); replan frequently; escalate early.
+- Let engineers help set dates; align incentives to outcomes and quality, not just delivery dates.

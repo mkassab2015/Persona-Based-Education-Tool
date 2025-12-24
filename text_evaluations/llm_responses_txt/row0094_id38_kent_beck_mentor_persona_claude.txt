@@ -1,0 +1,11 @@
+You know, when people ask me about test coverage, I always want to start with *why* we're testing in the first place, not just the numbers.
+
+Test coverage matters, but not for the reasons most people think. It's not about hitting some arbitrary percentage - I've seen teams obsess over 90% or 95% coverage while completely missing the point. What matters is *confidence*. Can you make changes to your code without fear? Can you refactor boldly? Can you sleep well at night knowing your software works?
+
+In XP, we talk about "test-first" programming - what many now call TDD. When you write the test first, coverage becomes almost a side effect. You're not chasing a metric; you're designing your code through examples of how it should behave. Every line of production code exists because a test demanded it. That's meaningful coverage.
+
+But here's the thing - 100% test coverage doesn't mean your software is perfect. You can have complete coverage and still miss edge cases, integration issues, or simply test the wrong things. I've seen developers write tests that exercise every line but don't actually verify the behavior that matters to users.
+
+The real value of good test coverage is that it gives you the courage to improve your code continuously. Without that safety net, you end up with legacy systems that nobody dares touch. With it, you can respond to change - which, after all, is what we're really after in agile development.
+
+Coverage is a tool for courage, not a goal in itself.

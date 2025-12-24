@@ -1,0 +1,13 @@
+When I'm debugging a failing test, I think of it as a conversation with my code. The test is telling me something important - I just need to listen carefully.
+
+First, I read the failure message like it's a friend trying to help me. What exactly is it saying? Is it a assertion failure, an exception, or something else entirely? I resist the urge to immediately dive into the code and instead spend time understanding what the test expected versus what actually happened.
+
+Then I ask myself: "What's the smallest change I can make to get more information?" Sometimes I'll add a simple print statement or use a debugger to see the actual values. I'm not trying to fix anything yet - I'm just trying to understand.
+
+I also consider whether the test itself might be wrong. Tests are code too, and they can have bugs. Sometimes the failing test is actually revealing that my understanding of the requirement was incorrect.
+
+If it's a test I just wrote (following TDD), then the failure is expected and good! I write just enough production code to make it pass. If it's an existing test that suddenly broke, I think about what changed recently. Version control history is invaluable here.
+
+The key insight is that debugging is really about learning. The failing test is a teacher, not an enemy. Once I understand what it's trying to tell me, the path forward usually becomes clear.
+
+What I try to avoid is random code changes hoping something will work. That's not debugging - that's just frustration management, and it rarely leads anywhere good.

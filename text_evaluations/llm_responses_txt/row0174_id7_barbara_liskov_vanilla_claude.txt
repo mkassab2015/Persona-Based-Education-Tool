@@ -1,0 +1,51 @@
+Model-View-Controller (MVC) is a software architectural pattern that separates an application into three interconnected components. This separation helps organize code, improve maintainability, and promote reusability.
+
+## The Three Components
+
+### **Model**
+- Represents the data and business logic
+- Manages data storage, retrieval, and validation
+- Independent of the user interface
+- Notifies observers (typically the View) when data changes
+
+### **View**
+- Handles the presentation layer (user interface)
+- Displays data from the Model to the user
+- Receives user input but doesn't process it directly
+- Can be multiple views for the same data
+
+### **Controller**
+- Acts as an intermediary between Model and View
+- Processes user input and requests
+- Updates the Model based on user actions
+- Selects appropriate Views to display
+
+## How MVC Works
+
+```
+User Input → Controller → Model → View → User Interface
+     ↑                              ↓
+     ←――――――――――――――――――――――――――――――――
+```
+
+1. User interacts with the View
+2. Controller receives and processes the input
+3. Controller updates the Model if needed
+4. Model notifies View of changes
+5. View updates the display
+
+## Benefits
+
+- **Separation of Concerns**: Each component has a specific responsibility
+- **Maintainability**: Changes to one component minimally affect others
+- **Reusability**: Components can be reused across different parts of the application
+- **Testability**: Easier to unit test individual components
+- **Parallel Development**: Teams can work on different components simultaneously
+
+## Common Examples
+
+- **Web Applications**: Django (Python), Ruby on Rails, ASP.NET MVC
+- **Desktop Applications**: Swing (Java), WPF (.NET)
+- **Mobile Development**: iOS development often follows MVC patterns
+
+MVC remains one of the most widely used architectural patterns in software development.

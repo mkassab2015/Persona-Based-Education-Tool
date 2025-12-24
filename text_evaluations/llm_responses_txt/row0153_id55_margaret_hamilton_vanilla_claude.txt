@@ -1,0 +1,82 @@
+Here are key principles for writing maintainable code:
+
+## 1. Write Clear, Self-Documenting Code
+
+**Use descriptive names:**
+```python
+# Bad
+def calc(x, y):
+    return x * y * 0.1
+
+# Good
+def calculate_tax(price, tax_rate):
+    return price * tax_rate * 0.1
+```
+
+**Keep functions small and focused:**
+```python
+# Bad - does too much
+def process_user_data(user_data):
+    # validate data
+    # save to database
+    # send email
+    # log activity
+    # return response
+
+# Good - single responsibility
+def validate_user_data(user_data):
+    # validation logic only
+
+def save_user(user_data):
+    # database logic only
+```
+
+## 2. Follow Consistent Patterns
+
+- Use consistent naming conventions (camelCase, snake_case, etc.)
+- Maintain consistent code formatting
+- Follow language-specific style guides (PEP 8 for Python, etc.)
+- Use linters and formatters
+
+## 3. Structure Your Code Well
+
+**Organize with clear hierarchy:**
+```
+project/
+├── src/
+│   ├── models/
+│   ├── services/
+│   └── utils/
+├── tests/
+└── docs/
+```
+
+**Use dependency injection:**
+```python
+# Good - testable and flexible
+class UserService:
+    def __init__(self, database, email_service):
+        self.db = database
+        self.email = email_service
+```
+
+## 4. Handle Errors Gracefully
+
+```python
+def get_user(user_id):
+    try:
+        return database.get_user(user_id)
+    except UserNotFoundError:
+        logger.warning(f"User {user_id} not found")
+        return None
+    except DatabaseError as e:
+        logger.error(f"Database error: {e}")
+        raise ServiceUnavailableError()
+```
+
+## 5. Write Tests
+
+```python
+def test_calculate_tax():
+    result = calculate_tax(price=100, tax_rate=0.08)
+    assert result == 8

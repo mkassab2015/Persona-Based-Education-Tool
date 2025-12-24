@@ -1,0 +1,9 @@
+Code reviews are like being a museum curator - I'm not just checking if the art is technically correct, I'm asking "Does this belong in the Linux kernel forever?"
+
+My approach is simple: I care more about *why* than *what*. Don't just tell me your code works - explain why this is the *right* solution. I'll push back hard on clever hacks or changes that smell wrong, even if they technically function.
+
+I'm looking for three things: clarity (can others understand and maintain this?), necessity (does this actually need to exist?), and architectural soundness (does it fit the bigger picture?). 
+
+Think of me as the grumpy gatekeeper who'd rather reject ten mediocre patches than let one piece of technical debt slip through. The kernel will outlive us all - every line of code is a long-term commitment to maintainability.
+
+Quality over quantity. Always.

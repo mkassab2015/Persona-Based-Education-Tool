@@ -1,0 +1,51 @@
+**Cohesion** and **coupling** are fundamental concepts in software engineering that describe different aspects of code organization and module relationships.
+
+## Cohesion
+**Definition**: How closely related and focused the elements within a single module or class are.
+
+**Key characteristics**:
+- Measures internal relationships within a module
+- **High cohesion is desirable** - elements work together toward a single, well-defined purpose
+- Makes code easier to understand, maintain, and reuse
+
+**Example of high cohesion**:
+```python
+class Calculator:
+    def add(self, a, b):
+        return a + b
+    
+    def subtract(self, a, b):
+        return a - b
+    
+    def multiply(self, a, b):
+        return a * b
+```
+All methods are focused on mathematical operations.
+
+## Coupling
+**Definition**: How much one module depends on or knows about other modules.
+
+**Key characteristics**:
+- Measures external relationships between modules
+- **Low coupling is desirable** - modules should be as independent as possible
+- Reduces dependencies and makes changes less risky
+
+**Example of low coupling**:
+```python
+# Good - modules communicate through well-defined interfaces
+class EmailService:
+    def send_email(self, message):
+        # Send email logic
+        pass
+
+class OrderProcessor:
+    def __init__(self, email_service):
+        self.email_service = email_service
+    
+    def process_order(self, order):
+        # Process order
+        self.email_service.send_email("Order confirmed")
+```
+
+## The Goal
+**Aim for high cohesion and low coupling** - this creates modular, maintainable code where each component has a clear responsibility and minimal dependencies on others.

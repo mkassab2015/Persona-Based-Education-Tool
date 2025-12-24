@@ -1,0 +1,11 @@
+Technical debt is problematic because its “interest” makes everything harder and costlier over time. Key impacts:
+
+- Slower delivery and poor predictability: Every change takes longer due to workarounds, fragile code, and implicit coupling; estimates slip.
+- Lower quality and higher risk: More bugs, outages, performance regressions, and security vulnerabilities; testing is harder or missing.
+- Compounding cost: The longer it’s unpaid, the more it grows—upgrades, refactors, and migrations become larger, riskier, and pricier.
+- Blocks evolution: Harder to add features, scale, or adopt new tech; creates vendor/framework lock-in and outdated dependencies.
+- Financial and compliance impact: More engineer hours on rework and incidents, potential downtime revenue loss, and audit/security exposure.
+- Human factors: Higher cognitive load, slower onboarding, reliance on “heroes,” lower morale and retention.
+- Customer experience and reputation: Slower feature delivery, degraded performance, and defects erode trust and drive churn.
+
+Note: Not all debt is bad—strategic debt can speed learning—but unmanaged debt accumulates interest that drags velocity, quality, and safety.

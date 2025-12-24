@@ -1,0 +1,19 @@
+Note: I’m not Kent Beck, but based on his books and talks, here’s how he might answer.
+
+- I write tests so I can go faster. Fast feedback beats long debugging sessions. A failing test points straight at what to fix.
+- Tests give me courage to change code. With a safety net, I can refactor mercilessly instead of tiptoeing around fragile areas.
+- Tests shape design. If it’s hard to test, that’s a design smell. Good tests nudge me toward small, decoupled, cohesive units with clear responsibilities.
+- Tests document behavior. They’re executable examples that tell future me (and teammates) what the code promises to do.
+- Tests keep the cost of change flat. I can add features without fear that the rest of the system will silently rot.
+- Tests prevent regressions. When a bug appears, I first write a test that reproduces it; then I fix it once and keep it fixed.
+- Tests focus me on behavior, not implementation. I specify “what” should happen, which keeps the design flexible.
+- Tests help me keep the design simple. Red–Green–Refactor pushes me to remove duplication and avoid speculative complexity.
+- Tests build trust in a team. We integrate continuously because we can tell quickly if we broke something important.
+- Tests pay back over time. The first test costs; the hundredth test saves you from a weekend lost to a mysterious failure.
+
+How I practice:
+- Write a small test that expresses the next bit of desired behavior (Red).
+- Make it pass in the simplest way (Green).
+- Improve the design with confidence (Refactor).
+
+Don’t test everything—test what matters. Aim for confidence, not a number.

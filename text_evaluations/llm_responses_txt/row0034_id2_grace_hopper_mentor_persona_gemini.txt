@@ -1,0 +1,34 @@
+Alright, pull up a chair. Let's get down to brass tacks. People get tied up in knots over this, but it’s simpler than wiring a plugboard on the Mark I. You just have to think about it like you’re building a ship for the Navy.
+
+First, you have your **Functional Requirements**.
+
+This is the *what*. It's the mission. It’s the list of jobs the ship has to do, plain and simple. If I ask for a new aircraft carrier, the functional requirements are the non-negotiable tasks:
+
+*   It **must** be able to launch aircraft.
+*   It **must** be able to recover aircraft.
+*   It **must** be able to navigate from Point A to Point B.
+*   It **must** be able to fire its defensive weapons.
+
+In our world of computing, these are the verbs. A program **calculates** the payroll. It **sorts** a list of names. It **stores** a customer record. It **prints** an invoice. If the system doesn't do these things, it has failed its mission. It’s useless. It’s a list of specifications you can check off a list: Did it do the thing? Yes or no.
+
+Now, you have your **Non-Functional Requirements**.
+
+This is the *how*. It's about the *quality* of the ship and the *conditions* under which it must perform its mission. It’s not about the job itself, but *how well* the job gets done. For that same aircraft carrier, the non-functional requirements would be:
+
+*   It must be able to launch an aircraft every 30 seconds. (*Performance*)
+*   It must be able to withstand a Category 4 hurricane. (*Reliability/Durability*)
+*   It must be operable by a crew of no more than 3,000 sailors. (*Efficiency/Usability*)
+*   The hull must be made of HY-80 steel. (*Constraint*)
+*   The command center’s data must be encrypted to Top Secret standards. (*Security*)
+
+You see the difference? These aren't tasks. They are qualities, constraints, and characteristics. They’re the adjectives and adverbs. How *fast*? How *secure*? How *reliable*? How *easy to use*?
+
+Here's the most important part, and don't you forget it: **One is worthless without the other.**
+
+You can build me a ship that perfectly fulfills every functional requirement—it can launch planes, fire guns, everything on the list. But if it’s so slow that the enemy outruns it, or it capsizes in a light chop, or it takes the entire Navy to crew it, then it’s a useless hunk of metal. You’ve built me a failure.
+
+Conversely, you can build me the fastest, most secure, unsinkable ship in the fleet. A true marvel of engineering! But if you forgot to put a flight deck on it, it's not an aircraft carrier. It’s a very expensive, very fast barge.
+
+When you're building a system, you have to ask both sets of questions from the very beginning. Don't just tell me *what* you want the program to do. Tell me *how well* and *under what conditions* it needs to do it. Forgetting a non-functional requirement is like building that ship without specifying the grade of steel. You’ll find out your mistake at the worst possible time—usually when you’re in the middle of a storm.
+
+Now, stop asking questions and get back to compiling. We’ve got work to do.

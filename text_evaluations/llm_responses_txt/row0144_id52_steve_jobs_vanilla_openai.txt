@@ -1,0 +1,123 @@
+Here’s a practical, end‑to‑end guide you can follow for a solid usability test, whether you’re testing a sketchy prototype or a live product.
+
+1) Clarify purpose and scope
+- Research questions: What do you need to learn? (e.g., “Can new users find and compare plans?”)
+- Success metrics: Task success, time on task, errors, first-click success, post-task ease (SEQ), overall usability (SUS), satisfaction.
+- Level and timing: Formative (find issues early) vs summative/benchmark (measure performance against a baseline).
+
+2) Choose study type and logistics
+- Moderated vs unmoderated:
+  - Moderated (live facilitation) is best for exploring why issues happen.
+  - Unmoderated is best for scale and benchmarks.
+- Remote vs in-person:
+  - Remote is faster and cheaper; in-person allows deeper observation and device setups.
+- Prototype vs live product:
+  - Low/medium-fidelity for early concept direction.
+  - High-fidelity or live for flow-level and benchmark testing.
+- Sample sizes:
+  - Formative: 5–8 participants per key audience segment often surfaces most high-severity issues.
+  - Summative/benchmark: 20–30+ per variant for stable metrics.
+
+3) Define users and recruit
+- Target segments: Write clear inclusion/exclusion criteria (e.g., “Purchased online in the last 6 months,” exclude professional testers).
+- Screener survey: Use behavior-based questions; avoid leading (“How often do you do X?” with balanced options).
+- Incentives: Pay fairly for time and expertise.
+- Logistics: Scheduling tool, calendar holds, reminder emails/SMS, tech checks, backup participants.
+- Ethics: Informed consent, privacy/GDPR/PII handling, NDAs if needed. Accommodations for accessibility participants.
+
+4) Write realistic tasks and success criteria
+- Use goal-driven scenarios that avoid telling users which UI to use:
+  - Example: “You just moved to Denver and need a home internet plan for streaming and work. Find the plan you’d choose and explain why.”
+- For each task, predefine:
+  - Success definition (what counts as completion)
+  - Failure/abandon criteria
+  - Allowable assistance (if any) and when to intervene
+  - Metrics to capture (time, errors, clicks, SEQ)
+- Keep tasks independent; randomize order to reduce learning effects. Plan 5–7 core tasks per 45–60 min session.
+
+5) Prepare materials and tools
+- Moderator guide/script: Intro, consent, think-aloud prompt, tasks, probes, wrap-up.
+- Pre/post surveys: Demographics, experience level; post-task SEQ (1–7), post-test SUS or SUPR-Q.
+- Prototype setup: Unique links, reset states, test data; disable production emails.
+- Recording: Screen + audio (and camera if allowed). Have backup tools.
+- Note-taking: Use a “rainbow spreadsheet” or template with rows per participant and columns per task/issue.
+- Observer setup: Private backchannel for team notes; observers silent.
+
+6) Pilot the test (always)
+- Run 1–2 dry runs with teammates or a friendly user.
+- Check task clarity, timing, prototype stability, metric capture, and recording.
+- Tweak wording and fix any blockers before real sessions.
+
+7) Run sessions (moderated best practices)
+- Opening:
+  - Confirm consent, recording, and anonymity.
+  - Set the stage: “We’re testing the product, not you. Please think aloud. There are no right or wrong answers.”
+  - Tech check and warm-up question.
+- During tasks:
+  - Stay neutral; don’t teach. Use non-leading prompts (“What do you expect would happen?” “What makes you say that?”).
+  - Note first clicks, hesitations, navigation patterns, errors.
+  - Time tasks; mark success/failure per your criteria.
+  - After each task, ask SEQ: “Overall, how easy or difficult was this task?” (1–7).
+  - If stuck, apply your predefined help rule and note it.
+- Wrap-up:
+  - Short debrief: likes, dislikes, moments of confusion, overall SUS.
+  - Thank and pay promptly.
+
+8) Analyze and synthesize
+- Quant: Compute completion rate, time on task (median), error rate, first-click success, SEQ means; SUS score if used.
+- Qual: Affinity cluster observations into themes; map issues to tasks and UI areas.
+- Severity rating: Consider frequency (how many users), impact (blocks task or just slows), and persistence. Example scale:
+  - Critical (blocks task), Major, Moderate, Minor/Nice-to-have.
+- Root causes: Identify design, content, IA, or interaction issues causing the symptoms.
+- Triangulate: Where quant and qual align, you’ve got strong evidence.
+
+9) Report and drive action
+- Keep it tight and actionable:
+  - Executive summary: 5–10 key findings, 5–10 prioritized recommendations.
+  - Evidence: Short clips, screenshots, quotes with context.
+  - Metrics snapshot: Baseline numbers and targets.
+  - Prioritization: Impact vs effort; owners; proposed next steps.
+- Create tickets directly from findings; include acceptance criteria tied to the usability problem.
+- Share a short highlight reel (5–8 minutes) to align stakeholders.
+
+10) Iterate and validate
+- Address high-severity issues first; update designs.
+- Quick re-test on fixes (even 3–5 users) to confirm.
+- For benchmarks, rerun with comparable samples to measure improvement.
+
+Useful variations (pick as needed)
+- Information architecture: Card sorting (to propose), tree testing (to validate).
+- Navigation confidence: First-click tests.
+- Accessibility: Include users of assistive tech (screen readers, switch devices). Test with WCAG heuristics and real tasks.
+- Mobile specifics: Test on real devices; consider one-handed use, touch targets, and network variability.
+- Longitudinal: Diary studies or intercepts for multi-day flows.
+- Comparative/A-B: Counterbalance order; larger N for statistical power.
+
+Common pitfalls to avoid
+- Leading tasks (“Use the filter to find…”) or leading probes (“Was that confusing?”).
+- Too many tasks or too little time; participant fatigue.
+- Skipping the pilot.
+- Recruiting the wrong users (or colleagues/friends).
+- Stakeholders talking in the session.
+- Not defining success criteria upfront.
+- Not resetting prototypes between sessions.
+- Collecting data you won’t analyze.
+
+Lightweight templates you can copy
+- Intro script:
+  - “Thanks for joining. With your permission, I’ll record screen and audio to analyze later; your data stays confidential. We’re testing the product, not you. Please think aloud as you work. If you get stuck, that’s helpful for us to see. You can stop at any time. Ok to begin?”
+- SEQ (post-task): “Overall, how easy or difficult was this task?” 1 Very difficult – 7 Very easy.
+- SUS (post-test): 10-item standard questionnaire; score 0–100.
+- Rainbow spreadsheet columns:
+  - Participant, Segment, Task, Outcome (S/F/A), Time, Errors, First click, SEQ, Issue observed, Severity, Notes/quotes, Clip link.
+
+Tool examples (use what you have)
+- Remote moderated: Zoom/Meet + Lookback or Microsoft Teams.
+- Unmoderated: UserTesting, UserZoom, Maze, Useberry.
+- IA testing: Optimal Workshop (Card Sort, Treejack).
+- Prototyping: Figma, Axure, InVision.
+- Recording/backup: QuickTime/OBS.
+- Surveys: Google Forms, Typeform.
+- Scheduling/consent: Calendly + e-sign.
+
+If you share your product, audience, and goals, I can help draft your screener, tasks, moderator guide, and a data sheet tailored to your study.

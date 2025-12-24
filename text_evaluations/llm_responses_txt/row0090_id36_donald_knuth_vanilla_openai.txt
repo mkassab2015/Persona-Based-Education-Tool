@@ -1,0 +1,17 @@
+Short answer: because complex systems built by humans run in messy real-world conditions.
+
+In software, common causes include:
+- Ambiguous or changing requirements: builders and stakeholders imagine different things.
+- Human limits: oversight, assumptions, copy/paste errors, off-by-one mistakes.
+- Complexity and interactions: components work alone but fail in combination.
+- Time and state: concurrency, race conditions, deadlocks, ordering and timing bugs.
+- Edge cases and inputs: nulls, overflows, Unicode, time zones, leap seconds/days, huge data.
+- Language/tool pitfalls: undefined behavior, memory safety issues, floating-point precision.
+- Environment drift: OS/hardware differences, config, dependency/version mismatches.
+- Change and regression: new code breaks old assumptions.
+- Non-determinism: flaky tests, distributed systems, eventual consistency.
+- Rare hardware faults: bit flips, device quirks.
+
+Mitigation (never perfect): clear specs, simpler designs, code reviews, strong typing, static analysis, property-based tests, fuzzing, comprehensive test suites, observability, canary releases, and fast rollback.
+
+If by “bugs” you meant insects or germs rather than software defects, say so and I’ll tailor the answer.

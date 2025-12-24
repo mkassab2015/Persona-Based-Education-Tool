@@ -1,0 +1,33 @@
+DevOps is a culture and set of practices that unify software development and IT operations to deliver software faster, more reliably, and more securely.
+
+Key ideas:
+- Culture of collaboration and shared ownership across dev, ops, security, and product
+- Automation of the software lifecycle: build, test, release, deploy, operate
+- Continuous Integration and Continuous Delivery (CI/CD)
+- Small, frequent changes; fast feedback; “shift-left” testing and security
+- Infrastructure as Code (IaC) and immutable, repeatable environments
+- Observability, monitoring, and blameless incident response
+- Data-driven improvement using metrics (e.g., DORA: lead time, deploy frequency, change failure rate, MTTR)
+
+Common practices and tools:
+- Version control everything (Git)
+- CI/CD pipelines (GitHub Actions, GitLab CI, Jenkins, CircleCI)
+- Automated testing and code quality gates
+- IaC and config management (Terraform, CloudFormation, Ansible)
+- Containers and orchestration (Docker, Kubernetes)
+- Security integrated into pipelines (DevSecOps), secrets management (Vault)
+- Monitoring, logging, tracing (Prometheus, Grafana, ELK, OpenTelemetry, Datadog)
+
+Relationship to other disciplines:
+- Complements Agile (team/product delivery practices)
+- Overlaps with SRE, which emphasizes reliability with SLOs and error budgets
+
+Common pitfalls:
+- Treating DevOps as just tools or a separate siloed “DevOps team”
+- Large, risky releases instead of small, frequent changes
+
+How to start:
+- Pick one service, map the delivery flow, remove manual bottlenecks
+- Implement CI, automated tests, and a basic CD pipeline
+- Manage infrastructure with code; use feature flags for safe releases
+- Add monitoring and run blameless postmortems to learn and improve

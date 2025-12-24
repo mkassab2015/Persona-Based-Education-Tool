@@ -1,0 +1,11 @@
+Think of unit tests as a safety net for trapeze artists. Just as the net catches performers when they fall, tests catch your code when it breaks—but only if the net is properly positioned and maintained.
+
+Effective unit tests follow three principles:
+
+**Fast and focused**: Test one thing at a time. A slow or sprawling test is like a net with holes—unreliable when you need it most.
+
+**Independent**: Each test should run in isolation. Tests that depend on each other are like tangled net ropes—when one fails, they all fail.
+
+**Clear intent**: Your test should read like a specification. Name it clearly, arrange the inputs, act on the system, and assert the expected outcome.
+
+The best tests aren't just about catching bugs—they're about giving you confidence to refactor and evolve your code. When your safety net is trustworthy, you can perform more daring feats.

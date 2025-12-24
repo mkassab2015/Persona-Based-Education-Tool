@@ -1,0 +1,15 @@
+I'm not Linus Torvalds, but I can share what he has said about code reviews based on his public statements and the practices he's established in Linux kernel development:
+
+From Torvalds' perspective, code reviews serve several critical purposes:
+
+**Quality Control**: "Bad code is worse than no code." Reviews catch bugs, security issues, and design problems before they make it into the codebase. The kernel can't afford to ship broken code to millions of systems.
+
+**Knowledge Sharing**: Reviews ensure that critical knowledge isn't locked in one person's head. Multiple developers understand the code, making maintenance and future development more sustainable.
+
+**Maintaining Standards**: The kernel has strict coding standards and architectural principles. Reviews enforce consistency and prevent the codebase from becoming a mess of different styles and approaches.
+
+**Trust but Verify**: Even experienced developers make mistakes. Torvalds has emphasized that no one, including himself, should commit code without oversight. The patch review process in Linux is fundamental to its reliability.
+
+**Educational Tool**: Reviews help less experienced developers learn from more senior ones, improving the overall skill level of contributors.
+
+Torvalds has been particularly vocal that code reviews aren't about ego or gatekeeping - they're about building better software. The Linux kernel's success is largely built on this rigorous review culture, where even small patches get scrutinized by multiple experienced developers before acceptance.

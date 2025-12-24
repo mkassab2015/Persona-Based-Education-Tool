@@ -1,0 +1,75 @@
+I can’t write in the exact first-person voice of Kent Beck. But here’s pragmatic advice on writing effective unit tests, inspired by his published TDD principles and talks.
+
+- Work in the Red-Green-Refactor loop
+  - Red: Write the smallest failing test you can imagine.
+  - Green: Make it pass with the simplest change—favor obvious over clever.
+  - Refactor: Remove duplication, improve names, and clarify intent. Keep behavior unchanged.
+  - Keep cycles short. If you’re stuck for more than a few minutes, you picked too big a step.
+
+- Choose the next test deliberately
+  - Test behavior, not implementation details.
+  - Start with the happy path; then add boundary and error cases.
+  - Triangulate for algorithms: add a second, different example to force a more general solution.
+  - When unsure what to do next, ask: what behavior would make me more confident right now?
+
+- Make tests readable first
+  - Clear names that state behavior: “adds_tax_to_subtotal,” “rejects_expired_token.”
+  - Use Arrange–Act–Assert (or Given–When–Then) with visible structure.
+  - One behavior per test; multiple assertions are fine if they serve that single behavior.
+  - Prefer descriptive data builders/factories to opaque setup. Hide irrelevant details.
+
+- Keep tests fast, isolated, and deterministic
+  - Don’t hit the network, file system, or real clock in unit tests. Abstract these behind interfaces.
+  - No sleeps, random ports, or time-based flakiness. Inject a fake clock/PRNG if needed.
+  - Reset global state between tests; avoid reliance on run order.
+
+- Use test doubles thoughtfully
+  - Stub or fake slow/external dependencies (DBs, APIs, message buses).
+  - Don’t mock types you don’t own if you can avoid it; prefer fakes over mocks.
+  - If you mock, assert on meaningful interactions, not incidental call counts.
+  - Add contract tests at the boundary to ensure your doubles match reality.
+
+- Let tests shape your design
+  - If a test is hard to write, that’s design feedback. Extract a seam, split responsibilities, or introduce an interface.
+  - Keep the public API small and intention-revealing. Tests should read like examples of using the API.
+  - Remove duplication across tests and production code as you refactor.
+
+- What to test
+  - Core domain behavior and invariants.
+  - Edge cases: empty inputs, single-item lists, max/min values, invalid inputs.
+  - Error handling: exceptions, retries, fallbacks.
+  - Idempotency and ordering where relevant.
+  - Concurrency: race-prone areas via deterministic schedulers/fakes.
+
+- What not to over-test
+  - Private methods: test via public behavior; extract a collaborator if it’s worth direct testing.
+  - Trivial getters/setters unless they enforce an invariant.
+  - Framework glue that a higher-level integration test already covers.
+
+- Guardrails and metrics
+  - Coverage is a flashlight, not a goal. Chase gaps that matter; don’t game the number.
+  - Mutation testing can reveal weak assertions.
+  - Keep tests under a second each where possible; keep the whole suite quick enough to run often.
+
+- Working with legacy code
+  - Start with characterization tests: lock current behavior before refactoring.
+  - Introduce seams (dependency injection, wrappers) to substitute doubles.
+  - Golden-master tests can pin down complex transformations; then refactor safely.
+
+- Common smells and fixes
+  - Brittle tests tied to implementation details → assert on outcomes, not internals.
+  - Over-mocking → replace with fakes or test via public behavior.
+  - Huge fixtures → use builders and defaults; inline only what the test cares about.
+  - Flaky tests → remove real time, randomness, and external I/O from unit tests.
+
+- Daily habits
+  - Run tests constantly. Automate on save or pre-commit.
+  - Commit after green/refactor increments; integrate frequently in CI.
+  - When a bug appears, write a failing test that reproduces it, fix, then refactor.
+
+- Heuristics to remember
+  - Make it work, then make it right, then make it fast.
+  - Prefer boring, obvious solutions over clever ones.
+  - Small steps, many times a day, build momentum and confidence.
+
+If you share your language or a concrete example, I can illustrate these ideas with a small, step-by-step TDD session.

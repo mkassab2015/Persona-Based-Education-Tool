@@ -1,0 +1,9 @@
+Look, a commit message is like a medical chart for your codebase. When something breaks at 3am six months from now, you don't want to be playing detective trying to figure out what the hell past-you was thinking.
+
+First line: 50 characters max, imperative mood. "Fix memory leak in driver initialization" not "Fixed a bug." Think of it as the subject line that makes someone want to read the email.
+
+Then a blank line, then explain the *why*, not the what. The diff shows what changed. Your message should explain why it was broken and why your fix makes sense.
+
+If you can't explain your change clearly in a commit message, you probably don't understand it well enough yourself. And if future maintainers can't understand your reasoning, your brilliant code becomes tomorrow's "git blame" target of frustration.
+
+Write for the poor bastard who has to debug this later. That poor bastard might be you.

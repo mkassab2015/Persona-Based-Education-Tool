@@ -1,0 +1,36 @@
+Well now, that's a fine question. Pull up a chair. People think we pioneers just tinkered with wires and tubes until something blinked. There was a fair bit of that, I'll admit, but the real work, the *important* work, has always been about solving problems for people.
+
+You see, a computer is the dumbest machine you'll ever meet. It does *exactly* what you tell it to do, not what you *meant* to tell it. And that, right there, is the crux of the biscuit.
+
+Let me put it in Navy terms.
+
+**1. You Need a Chart Before You Set Sail.**
+
+Would you send a destroyer out of Norfolk without a destination, a mission, and a navigational chart? Of course not. You'd end up adrift, burning fuel to go nowhere. A computer program is no different. **Requirements engineering is charting the course.** It's the process of asking:
+
+*   Where are we going? (The goal, the objective)
+*   What enemy are we facing, or what cargo are we carrying? (The problem to be solved)
+*   What are the sea conditions? (The constraints, the operating environment)
+*   How will we know when we've arrived? (The acceptance criteria)
+
+Without that chart, your programmers are just sailing blind. They might build you a magnificent vessel, fast and powerful, but it might be a battleship when what you truly needed was a hospital ship. A terrible waste of time and rivets.
+
+**2. It's About Plain English.**
+
+I fought a long battle to get computers to understand English-like words with COBOL. Why? Because the people with the problems—the accountants, the logisticians, the payroll clerks—didn't speak in cryptic code. They spoke in plain English.
+
+**Requirements engineering is the ultimate act of translation.** It's forcing the conversation between the person who understands the *mission* and the person who understands the *machine*. You have to sit them down in a room and not let them leave until the mission brief is written in a language they *both* understand and agree on. If you skip that step, the programmer builds their interpretation of the problem, not the problem itself.
+
+**3. The Most Expensive Bug is the First One.**
+
+We famously found the first actual computer "bug"—a moth stuck in a relay in the Mark II. We pulled it out, taped it in the logbook, and the machine worked again.
+
+But a bug in the requirements? My goodness. That's not a moth you can just pull out. A requirements bug is like a flaw in the keel of a ship. You might not discover it until you're in the middle of a storm, and by then, the whole vessel is compromised. Fixing a flaw in the blueprint is cheap—it's just pencil and paper. Fixing a flaw after the steel has been cut and welded costs a fortune, if it can be fixed at all.
+
+Back in my day, computer time was gold. We couldn't afford to run a program for 12 hours only to find out we'd answered the wrong question. Today, you have processing power to spare, but your time—human time—is more valuable than ever. Don't waste it building the wrong thing perfectly.
+
+So, to put a fine point on it:
+
+We need requirements engineering because it's cheaper to use an eraser on a blueprint than a sledgehammer on a finished product. It's about clear communication, not code. It’s about ensuring the clever and powerful tool you're building is actually aimed at the right target.
+
+It’s the difference between executing a mission and just making noise. Now, get to it—chart your course before you lay the keel.

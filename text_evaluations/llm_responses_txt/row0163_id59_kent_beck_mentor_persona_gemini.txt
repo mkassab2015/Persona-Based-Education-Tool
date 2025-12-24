@@ -1,0 +1,51 @@
+Ah, an excellent question. It's easy to see a Kanban board as just a set of columns with sticky notes—a to-do list on steroids. But that misses the heart of it. From my perspective, rooted in the values of Extreme Programming, a Kanban board isn't a project management tool. It's a *feedback mechanism*. It's a mirror you hold up to your team's process.
+
+The best way to use it is to listen to what it's telling you.
+
+Here are the principles I'd focus on, filtering Kanban through the lens of XP.
+
+### 1. Make the Invisible, Visible
+
+Your first goal is to model your actual workflow, not the one you wish you had. Be honest. If work sits in a "waiting for review" state for days, you need a "Code Review" column. If it gets stuck in testing, you need a "Testing" column.
+
+*   **Why?** In XP, we value **communication** and **feedback**. You can't talk about a problem you can't see. The board makes the flow of value—and more importantly, the *impediments* to that flow—visible to everyone, all the time. It's not a report for a manager; it's a real-time information radiator for the team.
+
+### 2. The Magic is in the WIP Limits (Work-in-Progress)
+
+This is the single most important and most frequently ignored practice. If you are not limiting the amount of work in each "in-progress" column, you don't have a Kanban system. You have a to-do list.
+
+Set a limit on how many cards can be in a column at any one time. For example, the "In Development" column might have a WIP limit of 3. Once there are three cards in it, no one is allowed to pull a new card from the "To Do" column.
+
+*   **Why?** This is where courage and focus come in.
+    *   **It forces completion.** Instead of starting new work, a developer who frees up must ask, "How can I help get one of these other three cards to 'Done'?" This naturally encourages **pair programming** and swarming on problems.
+    *   **It creates a pull system.** You don't push work onto people. They pull it when they have the capacity. This is fundamental to maintaining a **sustainable pace**.
+    *   **It exposes bottlenecks immediately.** If your "Testing" column is always full and hitting its WIP limit, you don't have a development problem; you have a testing problem. The board is screaming at you, "Fix this part of the system!"
+
+### 3. Focus on Flow, Not Just Activity
+
+The goal isn't to keep everyone busy. The goal is to move valuable work from "Idea" to "Done" as smoothly and quickly as possible. We call this optimizing the "cycle time."
+
+*   **How?** Stand up around the board every day. But change the question. Don't ask, "What did you do yesterday?" Ask, "What can we do to move this card to the next column? What's blocking it?" Walk the board from right to left (from closest to "Done" backwards). The highest priority is always to unblock work that is furthest along.
+
+*   **Why?** This aligns perfectly with the XP value of delivering small, valuable increments. A feature sitting in "Code Review" for a week has zero value to the customer. A smaller feature that flows through the whole system in a day has real value. Shortening the feedback loop is everything.
+
+### 4. The Board is a Tool for Learning, Not a Mandate
+
+Your board is not sacred. It is a hypothesis about how you work. It will—and it should—change.
+
+*   **How?** Use it as the primary artifact in your retrospectives.
+    *   "See this card? It sat in the 'Deploy' column for four days. Why?"
+    *   "We keep having cards go backwards from 'Testing' to 'Dev'. Should we add a 'Desk Check' column before review to catch these things earlier?"
+    *   "Is our WIP limit too high? We're all working on different things and not pairing."
+
+*   **Why?** This is the heart of empiricism and the XP value of **courage**. The courage to admit your process is flawed and the courage to change it. The board gives you the data to have that conversation constructively.
+
+### A Simple Way to Start
+
+1.  **Map Your Flow:** Grab a whiteboard and some stickies. Start with the simplest columns: `To Do`, `Doing`, `Done`. Immediately, you'll realize "Doing" is too vague. Break it down into the actual steps: `Dev`, `Code Review`, `Test`, `Deploy`. Be honest.
+2.  **Set Initial WIP Limits:** Don't overthink it. A good starting point is the number of pairs you have, or maybe just `(Number of people / 2) + 1`. The initial number isn't as important as the *discipline* of respecting it. You will feel pain. The pain is the point. It's telling you where to improve.
+3.  **Define Your Policies:** What does "Done" mean for each column? For a card to move from `Dev` to `Code Review`, does it need to have all its unit tests passing? Write these "policies" at the top of the columns. Make the implicit, explicit.
+
+So, the best way to use a Kanban board?
+
+Treat it as a living system, not a static chart. Use it to foster conversations about bottlenecks and flow. Have the courage to limit your work-in-progress to force collaboration. And most importantly, see it as a mirror that reflects the health of your team and your process, then use that reflection to get a little bit better, every single day. It's not about managing the work; it's about managing the *system* of work.

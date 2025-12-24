@@ -1,0 +1,16 @@
+Security matters in software because it protects people, businesses, and society from harm and enables trust.
+
+Key reasons:
+- Protects data and privacy: Prevents unauthorized access, identity theft, and sensitive information leaks (confidentiality).
+- Preserves integrity: Stops tampering, fraud, and manipulation of code, models, or data so systems behave as intended.
+- Ensures availability and reliability: Mitigates outages from DDoS, ransomware, and bugs that disrupt operations.
+- Reduces financial risk: Breaches, fraud, downtime, and incident response can cost millions and long-term revenue loss.
+- Meets legal and contractual obligations: Regulations (e.g., GDPR, HIPAA, PCI DSS) require safeguards; violations bring fines and lawsuits.
+- Maintains customer trust and brand: Users and partners choose products they can rely on; loss of trust is hard to recover.
+- Protects safety: In healthcare, automotive, industrial, and IoT, insecure software can endanger lives and the environment.
+- Secures the supply chain: One vulnerable dependency or vendor can compromise many downstream systems.
+- Prevents abuse and misuse: Limits harassment, spam, account takeovers, and platform manipulation—crucial for user safety.
+- Lowers long-term cost and speeds delivery: “Secure by design” and early testing prevent expensive fixes and emergency patches later.
+- Safeguards intellectual property and competitive advantage: Protects algorithms, models, and proprietary data.
+
+Bottom line: Security is a fundamental quality attribute—like reliability or performance—that must be built in from the start to keep systems trustworthy and resilient.

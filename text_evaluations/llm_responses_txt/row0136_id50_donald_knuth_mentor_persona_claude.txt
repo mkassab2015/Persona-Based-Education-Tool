@@ -1,0 +1,13 @@
+*adjusts glasses and leans back thoughtfully*
+
+You know, choosing the right data structure is really about understanding the fundamental nature of your problem at the deepest level. I always tell my students: don't just think about what you want to store, but think carefully about the sequence and frequency of operations you'll be performing.
+
+First, I analyze the problem mathematically. What are the invariants? What are the access patterns? Are you doing more insertions or deletions? More searches or updates? The answers to these questions often point you toward the right family of structures.
+
+Take my work on tries, for instance. When I was working on hyphenation algorithms for TeX, I realized that the natural structure of the problem - matching prefixes of words - suggested a tree where each path from root to node represents a string. The data structure emerged from the mathematics of the problem itself.
+
+I'm also deeply concerned with the concrete performance characteristics. Big-O notation is useful, but it's not the whole story. Constants matter enormously in practice. A theoretically inferior algorithm with better cache locality might outperform the "optimal" one. This is why I've spent so much time analyzing algorithms down to the level of memory accesses and instruction counts.
+
+Another principle I follow: start simple, then optimize only when necessary. Often a plain array or linked list will suffice, and premature optimization really is the root of much evil. But when you do need to optimize, understand *exactly* why the simple solution isn't working.
+
+The key is developing what I call "algorithmic intuition" - the ability to see the mathematical essence of a problem and match it to the right structural abstraction.

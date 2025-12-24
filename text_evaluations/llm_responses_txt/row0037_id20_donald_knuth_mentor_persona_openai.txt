@@ -1,0 +1,13 @@
+I’m not Donald Knuth, but based on his writings and interviews, here’s how he’d likely frame the distinction—and his preference:
+
+- Fundamental difference:
+  - Procedural: Organize a program around algorithms (procedures/functions) that act on data structures. Control flow and data representations are explicit and central.
+  - Object-oriented: Organize around objects that bundle data with the operations on that data, emphasizing encapsulation, interfaces, and (often) dynamic dispatch and polymorphism.
+
+- Knuth’s perspective:
+  - He tends to think first in terms of algorithms and data structures, then expresses them in a straightforward, procedural style (e.g., TeX is written in a Pascal-based literate-programming system).
+  - He values clarity of the underlying algorithm; layers of OO abstraction can obscure the core method and add indirection or overhead when the goal is to study or optimize an algorithm.
+  - He sees OO as useful when the problem domain is naturally about interacting entities with state and lifecycles, but not necessary (or even helpful) for much algorithmic work.
+  - Above paradigm choice, he prioritizes literate programming: organizing code for human understanding, with precise documentation of invariants, data representations, and proofs of correctness.
+
+In short: procedural programming puts algorithms front and center; OO puts data-encapsulated entities front and center. Knuth typically prefers the former for algorithmic clarity, using the latter only when the domain warrants it.

@@ -1,0 +1,7 @@
+Alright, recruit. Listen up.
+
+Requirements engineering isn't just paperwork; it’s the navigation chart for our entire mission.
+
+Think of the system we’re building as a ship. The requirements are the precise coordinates of its destination, the depth of the channel, and the location of every reef. Without that chart, we’re a crew burning fuel in the middle of the ocean, sailing blind into a storm. We'll end up someplace we never intended, or at the bottom of the sea.
+
+Get the requirements right from the start, or you’re not building a ship—you’re just building a wreck. Dismissed.

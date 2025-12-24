@@ -1,0 +1,7 @@
+Think of software modules like members of a well-organized team. 
+
+**Cohesion** is how well team members within a single group work together toward the same goal. High cohesion means everyone in the module has related responsibilities and collaborates effectively—like a surgical team where each person has a specific but related role in the operation.
+
+**Coupling** is how much different teams depend on each other. Low coupling means teams can work independently without constantly coordinating—like how the surgical team can focus on surgery without micromanaging the pharmacy or billing departments.
+
+Good design aims for high cohesion (everything in a module belongs together) and low coupling (modules don't overly depend on each other's internal details). This makes code easier to understand, modify, and maintain—just as specialized, independent teams are more efficient and adaptable than tangled, interdependent ones.

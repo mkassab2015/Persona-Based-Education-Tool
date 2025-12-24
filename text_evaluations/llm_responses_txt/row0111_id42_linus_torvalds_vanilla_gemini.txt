@@ -1,0 +1,172 @@
+Of course! Writing a good commit message is a crucial skill for any developer. It's a form of communication with your team and your future self. A well-crafted commit history is a valuable project asset.
+
+Here's a comprehensive guide on how to write a good commit message, from the basic rules to modern conventions.
+
+---
+
+### Why Bother? The Payoff of Good Commits
+
+Before we get to the *how*, let's understand the *why*. Good commit messages:
+
+*   **Speed up code reviews:** Reviewers can quickly understand the context and intent of your changes.
+*   **Improve project history:** `git log` becomes a readable, useful changelog of the project.
+*   **Help with debugging:** When a bug is introduced, `git bisect` and `git blame` are infinitely more useful with clear messages.
+*   **Automate release notes:** Modern conventions can automatically generate changelogs for new releases.
+*   **Help "Future You":** Six months from now, you won't remember why you made a specific change. Your commit message will be your guide.
+
+---
+
+### The Anatomy of a Perfect Commit Message
+
+A commit message has three main parts: a **subject**, a **body**, and a **footer**.
+
+```
+<type>(<scope>): <subject>
+<-- BLANK LINE -->
+<body>
+<-- BLANK LINE -->
+<footer>
+```
+
+### The 7 Rules of a Great Commit Message
+
+These are the foundational, universally-accepted rules for writing clean commit messages.
+
+1.  **Separate subject from body with a blank line.**
+    *   **Why?** Tools like `git log --oneline` only show the subject line. The blank line is essential for parsers to distinguish between the two.
+
+2.  **Limit the subject line to 50 characters.**
+    *   **Why?** It keeps messages concise and readable in various Git tools (like `git log`, GitHub UI). It forces you to think about the single most important change.
+
+3.  **Capitalize the subject line.**
+    *   **Why?** It's a stylistic convention that reads like a title or headline. "Add user authentication endpoint" is better than "add user authentication endpoint".
+
+4.  **Do not end the subject line with a period.**
+    *   **Why?** It's a stylistic choice for brevity, as the subject line is a title, not a sentence.
+
+5.  **Use the imperative mood in the subject line.**
+    *   **Why?** This is the most important rule. Write your subject line as if you're giving a command.
+    *   **Good:** `Refactor user model`, `Add login page`, `Fix memory leak`
+    *   **Bad:** `Refactored user model`, `Added login page`, `Fixed memory leak`
+    *   **A simple trick:** A proper imperative subject line should always be able to complete the sentence: "If applied, this commit will... **`your subject line here`**."
+        *   "If applied, this commit will... **`Refactor user model`**" (✓ Correct)
+        *   "If applied, this commit will... **`Refactored user model`**" (✗ Incorrect)
+
+6.  **Wrap the body at 72 characters.**
+    *   **Why?** It keeps the message readable in terminals without forcing awkward line wraps. It’s a long-standing convention that still holds up.
+
+7.  **Use the body to explain *what* and *why* vs. *how*.**
+    *   **Why?** The code itself shows the *how*. The commit message is for the context that you can't get from the code. What was the problem? Why was this the best solution? Were there other options? What are the side effects?
+
+---
+
+### A Modern Standard: Conventional Commits
+
+For many teams, **Conventional Commits** is the go-to standard. It's a lightweight convention built on top of the 7 rules that provides a simple structure for creating an explicit commit history. It also allows for automation.
+
+**Format:** `type(scope): subject`
+
+#### Common `type`s:
+*   `feat`: A new feature for the user.
+*   `fix`: A bug fix for the user.
+*   `docs`: Changes to documentation only.
+*   `style`: Code style changes that don't affect meaning (whitespace, formatting, etc.).
+*   `refactor`: A code change that neither fixes a bug nor adds a feature.
+*   `test`: Adding missing tests or correcting existing tests.
+*   `chore`: Changes to the build process, auxiliary tools, or libraries.
+*   `perf`: A code change that improves performance.
+
+**`scope` (optional):** A noun describing a section of the codebase (e.g., `api`, `auth`, `ui`).
+
+**`!` (optional):** Adding a `!` after the type/scope (e.g., `feat(api)!:`) or adding a `BREAKING CHANGE:` footer indicates a breaking change.
+
+---
+
+### Examples: Good vs. Bad
+
+Let's put it all together.
+
+#### Bad Commit Messages 👎
+
+*   `git commit -m "fix"` (What did it fix?)
+*   `git commit -m "updated code"` (How was it updated? Why?)
+*   `git commit -m "did some stuff on the user page and fixed a bug with the login button not working after the last update"` (Too long, not imperative, no structure).
+
+#### Good Commit Message (Simple Bug Fix) 👍
+
+```
+fix: Correct user name display on profile page
+
+The last name was being omitted due to an incorrect API response key.
+This commit updates the client-side code to use the correct `lastName`
+key instead of the legacy `surname` key.
+
+Fixes #123
+```
+
+#### Good Commit Message (New Feature) 👍
+
+```
+feat(auth): Add support for OAuth2 Google login
+
+Implement the server-side flow for Google OAuth2, allowing users to
+sign up and log in with their Google accounts.
+
+- Adds a new `/auth/google` endpoint for the initial redirect.
+- Adds a `/auth/google/callback` endpoint for handling the response.
+- User profile information from Google is used to pre-fill the
+  new user's profile.
+
+Closes #88
+```
+
+#### Good Commit Message (Refactor with Breaking Change) 👍
+
+```
+refactor(api)!: Standardize API error response format
+
+The error response format across the API was inconsistent. Some endpoints
+returned a `{ "error": "message" }` object, while others returned a
+simple text string.
+
+This refactors the error handling middleware to ensure all 4xx and 5xx
+responses return a standardized JSON object:
+{
+  "status": "error",
+  "statusCode": 401,
+  "message": "Authentication failed."
+}
+
+BREAKING CHANGE: All API clients that parse error responses must be
+updated to handle the new standardized format.
+```
+
+---
+
+### Tips and a Final Template
+
+1.  **Commit Atomically:** Each commit should represent a single, complete, logical change. Don't mix a bug fix, a new feature, and a refactor into one commit.
+2.  **Use `git commit`:** Don't always use the `-m` flag. Running `git commit` without it will open your default text editor, encouraging you to write a more detailed body.
+3.  **Check Your Project's Style:** If you're joining a project, run `git log` to see the existing commit style and follow it.
+
+#### A Go-To Template to Copy
+
+```
+<type>(<scope>): <Your concise, imperative subject line (max 50 chars)>
+
+(Optional) More detailed explanatory text, if necessary. Wrap it to
+about 72 characters. In some contexts, the first line is treated as
+the subject of an email and the rest of the text as the body. The
+blank line separating the summary from the body is critical.
+
+(Optional) Further paragraphs come after blank lines.
+
+- Bullet points are okay, too
+- Typically a hyphen or asterisk is used for the bullet, preceded by a
+  single space, with blank lines in between, but conventions vary.
+
+(Optional) Footer:
+Resolves: #123
+See also: #456, #789
+BREAKING CHANGE: <description of the breaking change>
+```

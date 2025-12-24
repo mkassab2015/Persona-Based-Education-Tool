@@ -1,0 +1,147 @@
+Great question. The “right” organization depends on language, app vs. library, and size, but there are solid defaults that work well for most projects.
+
+Start with these universal principles
+- Use version control (git). Keep build artifacts and secrets out of the repo.
+- Make the root of the repo predictable: code in src, tests in tests, docs in docs, scripts in scripts, config in config or at the root.
+- Prefer shallow, logical folder hierarchies. Avoid deep nesting and one-file mega-folders.
+- Mirror your src structure in your tests.
+- Separate generated files (gen or build/dist) and ignore them.
+- Keep environment-specific configuration separate from code; commit only safe defaults (e.g., .env.example).
+
+Standard top-level layout
+- README.md and LICENSE
+- .gitignore and .editorconfig
+- docs/ (architecture notes, ADRs, diagrams)
+- src/ (all implementation code)
+- tests/ (unit, integration, e2e; mirroring src)
+- scripts/ (dev tools, migrations, codegen)
+- config/ (YAML/JSON/TOML; include .env.example)
+- dist/ or build/ (gitignored outputs)
+- .github/workflows/ or ci/ (CI config)
+- CONTRIBUTING.md and CODE_OF_CONDUCT.md (for shared repos)
+- CHANGELOG.md (for libraries or releases)
+
+How to organize src
+Two common strategies:
+- Layer-based (good for small apps and teams):
+  - src/controllers or routes
+  - src/services or use_cases
+  - src/repositories or data
+  - src/models or domain/entities
+  - src/lib or common/util
+- Feature-based (better as complexity grows):
+  - src/users, src/billing, src/notifications (one folder per feature/domain)
+  - Inside each: api or routes, service, repository, model, ui (if applicable)
+Rules of thumb:
+- Pick one approach and be consistent. You can start layer-based and move to feature-based.
+- Keep feature folders independent; avoid cross-feature imports except through clear public APIs.
+- Extract common code to src/shared or src/common.
+
+Tests
+- Mirror src structure: tests/users/service.test.ts matching src/users/service.ts (or co-locate tests next to code, e.g., service.test.ts).
+- Separate by type if needed:
+  - tests/unit/…
+  - tests/integration/…
+  - tests/e2e/…
+- Keep fixtures/testdata in tests/fixtures or tests/data.
+
+Config and environments
+- config/default.(yml|json), config/development…, config/production…
+- .env.example with placeholders; never commit real secrets.
+- Twelve-factor style: configuration via environment variables, not hard-coded.
+
+Common language-specific layouts
+
+JavaScript/TypeScript (app or service)
+- package.json, tsconfig.json, .eslintrc
+- src/ (controllers, services, repositories, domain, shared)
+- tests/ or __tests__/
+- dist/ (build output, ignored)
+- public/ (for frontend static assets)
+- For TS: consider index.ts “barrel” files to define clean public APIs for modules.
+
+Python (application or library; prefer “src layout”)
+- pyproject.toml (or setup.cfg), .flake8/.ruff.toml
+- src/package_name/…
+- tests/ (pytest)
+- scripts/ (CLI tools)
+- .env.example, requirements.txt or lock file
+- Avoid top-level package shadowing (use src/ to prevent import confusion).
+
+Java (Maven/Gradle)
+- pom.xml or build.gradle
+- src/main/java/com/example/app/…
+- src/main/resources/…
+- src/test/java/com/example/app/…
+- Consider grouping by feature/package rather than pure layers when codebase grows.
+
+Go
+- go.mod
+- cmd/appname/main.go (entry points)
+- internal/feature/… (private packages)
+- pkg/… (public packages, if you truly want external consumption)
+- api/ (OpenAPI, protobuf, or generated clients)
+- configs/, scripts/, build/
+- Keep packages small and cohesive; avoid cyclic deps.
+
+Rust
+- Cargo.toml
+- src/lib.rs or src/main.rs
+- src/bin/tool.rs (additional binaries)
+- tests/ (integration tests)
+- benches/, examples/
+- Modules map to files or folders; keep public API in lib.rs.
+
+C/C++
+- CMakeLists.txt or other build files
+- include/ (public headers)
+- src/ (sources)
+- tests/ (test framework of choice)
+- cmake/ or build/ for modules and toolchain files
+- Separate platform-specific code (e.g., src/platform/linux).
+
+.NET (C#)
+- Solution.sln
+- src/ProjectName/ProjectName.csproj
+- tests/ProjectName.Tests/ProjectName.Tests.csproj
+- group by feature within each project; separate class libraries for shared code.
+
+Monorepos (multiple apps/libraries in one repo)
+- apps/ (deployable applications)
+- packages/ or libs/ (shared libraries)
+- tools/ (build, codegen)
+- docs/, scripts/, config/
+- Use workspaces or tooling:
+  - JS/TS: npm/pnpm/yarn workspaces, Turborepo
+  - Polyglot: Bazel, Pants, Nx (JS-centric)
+- Enforce boundaries (no cross-feature imports except via published or well-defined package APIs).
+
+Naming and conventions
+- Be consistent with casing:
+  - Python: snake_case files and packages
+  - JS/TS: camelCase for files, kebab-case for folders is common
+  - Go: package names lower_case, short; files snake_case
+  - C#: PascalCase types, folders can be PascalCase
+- Avoid ambiguous names like util2 or misc. Name by responsibility or domain.
+- Keep directories focused; if a folder grows beyond ~7–10 files spanning multiple concerns, split it.
+
+Generated code and assets
+- Put generated sources in gen/ or a subfolder under build/; add clear headers “DO NOT EDIT”.
+- Check in generated code only if required for bootstrapping; otherwise generate in CI.
+
+Documentation
+- docs/overview.md for architecture
+- docs/adr/ for Architecture Decision Records
+- Inline README.md files inside large folders to explain layout and responsibilities.
+
+A simple, good default to start with
+- README.md, LICENSE, .gitignore, .editorconfig
+- src/ (feature-based folders: users, billing, shared)
+- tests/ (mirrors src)
+- scripts/
+- config/ (with .env.example)
+- docs/
+- build/ or dist/ (ignored)
+Add language-specific build and config files as appropriate.
+
+If you share your language/framework, whether it’s an app or a library, and roughly how big the project is or will be, I can tailor a concrete folder tree and naming scheme for you.

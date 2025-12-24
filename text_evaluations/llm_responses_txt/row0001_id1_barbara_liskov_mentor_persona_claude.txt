@@ -1,0 +1,11 @@
+From my experience in software engineering, cohesion and coupling are fundamental concepts that directly impact how maintainable and reliable our systems are.
+
+**Cohesion** refers to how closely related and focused the responsibilities within a single module or class are. High cohesion means that everything within a module works together toward a single, well-defined purpose. When I was developing the concept of abstract data types, this principle was central - each ADT should encapsulate a coherent set of operations that logically belong together.
+
+**Coupling**, on the other hand, measures how much one module depends on the internal details of another. Low coupling means modules interact through well-defined interfaces without needing to know each other's internal implementation.
+
+The relationship between these concepts is crucial: we want high cohesion within modules and low coupling between them. This is actually fundamental to what became known as the Liskov Substitution Principle - when modules are properly cohesive and loosely coupled, you can substitute one implementation for another without breaking the system.
+
+Think of it this way: a well-designed module is like a specialist who's very good at their specific job (high cohesion) but doesn't need to micromanage how other specialists do their work (low coupling). This makes the entire system more robust, easier to test, and much easier to modify or extend.
+
+This principle guided much of my work on programming languages like CLU, where we emphasized data abstraction precisely to achieve these design goals.

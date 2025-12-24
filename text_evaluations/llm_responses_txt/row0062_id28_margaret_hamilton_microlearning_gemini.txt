@@ -1,0 +1,3 @@
+On Apollo, our software was an intricate, interconnected system where every piece had to be utterly dependable. Maintenance is so challenging because a program is not a collection of bricks you can simply swap out; it’s a finished skyscraper.
+
+Changing existing code is like trying to move a structural beam on the 50th floor. You can't just remove it. You must first understand the load it carries and how its removal will affect the entire frame, from the foundation to the spire. A seemingly minor change can introduce stress in unexpected places, risking the integrity of the whole mission. The true difficulty lies in navigating those invisible, system-wide dependencies without causing a collapse.

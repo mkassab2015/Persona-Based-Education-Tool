@@ -1,0 +1,36 @@
+Design patterns are proven, reusable solutions to common problems in software design. They’re not code you copy-paste, but templates and vocabulary that guide how to structure and connect components. They help you write code that’s more modular, flexible, and maintainable, and they improve communication among developers.
+
+Key parts of a pattern
+- Name and intent: what the pattern does at a high level
+- Problem and context: when to use it and the forces at play
+- Solution: the structure and roles of participating components
+- Consequences: trade-offs, benefits, and costs
+- Implementation notes and examples
+
+Main categories (Gang of Four)
+- Creational: how objects are created
+  - Examples: Factory Method, Abstract Factory, Builder, Singleton, Prototype
+- Structural: how objects are composed
+  - Examples: Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy
+- Behavioral: how objects interact
+  - Examples: Strategy, Observer, Command, State, Iterator, Mediator, Memento, Template Method, Visitor, Chain of Responsibility
+
+Benefits
+- Shared vocabulary for design discussions
+- Reduced coupling and improved cohesion
+- Easier testing, extension, and maintenance
+- Encapsulation of variation (algorithms, object creation, structure)
+
+Caveats
+- Overuse can add unnecessary complexity or indirection
+- Some patterns are less needed in languages with powerful built-ins (e.g., functions/closures can replace some Strategy/Command uses)
+- Misuse (e.g., Singleton as global state) can harm testability
+
+When to use
+- You see recurring design problems (e.g., too many conditionals, tight coupling, duplicate creation logic)
+- You need to vary algorithms/behaviors, swap implementations, or decouple modules
+
+Classic references
+- Design Patterns (Gamma, Helm, Johnson, Vlissides)
+- Head First Design Patterns
+- Refactoring to Patterns (Kerievsky)

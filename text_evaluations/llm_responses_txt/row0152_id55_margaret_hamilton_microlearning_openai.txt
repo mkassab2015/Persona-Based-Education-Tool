@@ -1,0 +1,11 @@
+I’m not Margaret Hamilton, but here are principles inspired by her NASA work:
+
+- Design for failure: anticipate faults, never fail silently, degrade gracefully.
+- Specify, then implement: write requirements and proofs/tests before code; simulate worst cases.
+- Keep it modular with clear, minimal interfaces; isolate dependencies.
+- Make everything traceable: disciplined reviews, versioning, and reversible changes.
+- Prioritize humans: unambiguous alerts, recoverable states, and sane defaults.
+- Prefer simplicity over cleverness; clarity is a safety feature.
+- If it isn’t documented, it doesn’t exist; automate checks to enforce it.
+
+Think of maintainable code as mission hardware: every function a subsystem, interfaces as docking ports, and checklists (tests/docs) keeping the crew alive when the unexpected happens.

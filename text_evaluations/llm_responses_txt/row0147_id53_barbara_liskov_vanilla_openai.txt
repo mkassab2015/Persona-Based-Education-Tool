@@ -1,0 +1,77 @@
+DRY (Don’t Repeat Yourself) means one place for each piece of knowledge. Apply it by systematically finding duplication, deciding whether it’s worth abstracting, and centralizing it at the right scope.
+
+A quick workflow
+1) Spot duplication:
+- Same code blocks, similar SQL, repeated styles, copy-pasted tests, duplicated CI steps, repeated infra definitions, duplicated business rules in multiple services.
+- Use tools: SonarQube, jscpd/CPD, ESLint rules, flake8, IDE “duplicate code” inspections.
+
+2) Decide to abstract (or not):
+- Rule of three: after the third repetition, generalize.
+- Ask: Will these change together? If yes, DRY. If not, keep separate to avoid coupling.
+- Prefer “AHA” (Avoid Hasty Abstractions). Duplication is cheaper than a wrong abstraction.
+
+3) Choose the right scope:
+- Local (function/file), module/package, repo-wide, cross-service library, or a generated artifact (schema-first).
+
+4) Centralize and replace:
+- Create a single source (function, module, template, config, schema).
+- Migrate callers, add tests, deprecate old paths, and document ownership.
+
+5) Keep it DRY:
+- Add tests that fail when someone reintroduces duplication.
+- Automate generation (types, clients, docs) from a single schema.
+
+Concrete techniques by area
+- Code
+  - Extract function/module; parameterize differences.
+  - Replace giant if/switch with data maps or Strategy/Polymorphism.
+  - Use generics/utility helpers; avoid copy-pasted edge-case code.
+  - Centralize constants, error messages, and validation logic.
+
+- Data and configuration
+  - Move magic numbers/strings into config.
+  - Use shared validation schemas (e.g., JSON Schema, Zod) consumed by multiple layers.
+
+- APIs and types
+  - Define one API contract (OpenAPI/GraphQL/Protobuf) and generate:
+    - Server stubs, client SDKs, and TypeScript types.
+  - Don’t hand-maintain duplicate DTOs across backend/frontend.
+
+- Database/SQL
+  - Use views/CTEs for repeated query fragments.
+  - Centralize migration logic; avoid divergent schema definitions.
+
+- Frontend/UI
+  - Shared components, hooks, and utility classes.
+  - CSS tokens/variables; design system for repeated patterns.
+
+- Build/CI
+  - Reusable GitHub Actions/composite actions; templates for pipelines.
+  - Share Makefile targets or scripts rather than copy-pasting.
+
+- Infrastructure
+  - Terraform/Helm modules; variables for environment differences.
+  - One module per resource pattern, parameterized for teams/envs.
+
+- Testing and docs
+  - Test helpers, fixtures, factories; shared assertions.
+  - Generate docs from code/comments/schemas; avoid separate hand-written duplicates.
+  - Keep one onboarding guide, link to it—don’t fork docs per team.
+
+Pitfalls to avoid
+- Over-DRY coupling: Don’t share code that changes at different rates across services.
+- Leaky abstractions: Names and boundaries should match domain concepts.
+- Premature generalization: Wait for patterns to stabilize (rule of three).
+- Hidden duplication: Same business rule implemented differently; centralize policy/validation.
+
+Tiny examples
+- Before: Three functions each re-implement tax calculation.
+  - After: one calculateTax(amount, region) used everywhere; regional rates come from config.
+
+- Before: Two services copy the same email templating logic.
+  - After: one template package, or central email service, or shared template files consumed by both.
+
+- Before: Backend and frontend maintain separate User types.
+  - After: generate types from OpenAPI/GraphQL schema; both import the generated type.
+
+If you share your language/stack and where you see repetition (code, tests, CI, infra, docs), I can propose specific refactors and tools.

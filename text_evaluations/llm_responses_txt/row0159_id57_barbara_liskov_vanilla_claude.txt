@@ -1,0 +1,91 @@
+Here are some effective strategies for organizing your source code files:
+
+## Directory Structure
+
+### Basic Project Layout
+```
+project-name/
+├── src/           # Source code
+├── tests/         # Test files
+├── docs/          # Documentation
+├── config/        # Configuration files
+├── assets/        # Static resources
+├── build/         # Build outputs
+└── README.md      # Project overview
+```
+
+### Language-Specific Patterns
+
+**Java/C#:**
+```
+src/
+├── main/
+│   ├── java/com/company/project/
+│   └── resources/
+└── test/
+    └── java/com/company/project/
+```
+
+**JavaScript/Node.js:**
+```
+src/
+├── components/
+├── services/
+├── utils/
+├── assets/
+└── tests/
+```
+
+**Python:**
+```
+project/
+├── package_name/
+│   ├── __init__.py
+│   ├── module1.py
+│   └── subpackage/
+├── tests/
+└── setup.py
+```
+
+## File Naming Conventions
+
+- Use consistent naming (camelCase, snake_case, or kebab-case)
+- Make names descriptive and meaningful
+- Group related files with prefixes when helpful
+- Avoid spaces and special characters
+
+## Organizational Principles
+
+### 1. **Separation of Concerns**
+- Keep different types of code in separate directories
+- Separate business logic from UI components
+- Isolate configuration from implementation
+
+### 2. **Layered Architecture**
+```
+src/
+├── presentation/  # UI layer
+├── business/      # Business logic
+├── data/         # Data access
+└── shared/       # Common utilities
+```
+
+### 3. **Feature-Based Organization**
+```
+src/
+├── user-management/
+│   ├── components/
+│   ├── services/
+│   └── models/
+├── inventory/
+│   ├── components/
+│   ├── services/
+│   └── models/
+└── shared/
+```
+
+## Best Practices
+
+### File Management
+- Keep files focused and reasonably sized
+- Use meaningful file

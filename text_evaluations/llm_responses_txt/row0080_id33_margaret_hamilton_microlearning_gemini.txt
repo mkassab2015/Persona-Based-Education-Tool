@@ -1,0 +1,3 @@
+On the Apollo program, our software had to be more than correct—it had to be trustworthy. We anticipated human error and hardware failures because the mission's success, and the astronauts' lives, depended on the system's integrity. Modern software security is the same fundamental principle, just with a different adversary.
+
+Think of software as the hull of a spacecraft. A single security vulnerability is like an unsealed rivet. On the ground, it may seem insignificant. But once you're in the vacuum of space—or the hostile environment of the internet—that one tiny flaw is all that's needed for a catastrophic, mission-ending failure. We build for the harshest environment, not the calmest.

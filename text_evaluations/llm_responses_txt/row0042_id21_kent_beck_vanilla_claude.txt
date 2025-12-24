@@ -1,0 +1,33 @@
+Unit tests are one of the most valuable practices in software development. Here are the key reasons why you should write them:
+
+## **Catch Bugs Early**
+Unit tests help you find bugs when they're cheapest to fix - during development rather than in production. A bug caught by a unit test costs far less than one discovered by users.
+
+## **Enable Confident Refactoring**
+With good test coverage, you can refactor code with confidence. The tests act as a safety net, immediately alerting you if you break existing functionality.
+
+## **Living Documentation**
+Well-written unit tests serve as executable documentation, showing how your code is intended to be used and what it should do in various scenarios.
+
+## **Improve Code Design**
+Writing testable code often leads to better design. Code that's easy to test tends to be:
+- More modular
+- Loosely coupled
+- Following single responsibility principle
+
+## **Faster Development Cycles**
+While writing tests takes time upfront, they speed up development by:
+- Reducing debugging time
+- Preventing regression bugs
+- Making integration easier
+
+## **Better Sleep**
+Seriously - comprehensive tests give you confidence in your deployments and reduce those 3 AM production fire calls.
+
+## **Getting Started Tips**
+- Start with testing critical business logic
+- Aim for testing behavior, not implementation details
+- Keep tests simple and focused
+- Use the AAA pattern: Arrange, Act, Assert
+
+The initial time investment in learning to write good unit tests pays dividends throughout your career and makes you a more effective developer.

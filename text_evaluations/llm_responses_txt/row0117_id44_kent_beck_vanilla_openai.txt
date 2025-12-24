@@ -1,0 +1,77 @@
+Here’s a practical, team-friendly way to estimate story points.
+
+What story points represent
+- Relative size, not time. They capture:
+  - Complexity: technical difficulty, new patterns
+  - Volume of work: how much to build/test
+  - Risk/unknowns: uncertainty, integration, legacy quirks
+- Points are only comparable within a single team.
+
+Pick a scale
+- Common: Fibonacci-like 1, 2, 3, 5, 8, 13, 20. (If a story is >13, split it.)
+- Alternative: T‑shirt sizes (XS–XL) for quick sizing, then map to points later.
+
+Create reference stories
+- Choose 2–3 already-completed stories everyone knows.
+  - Example references:
+    - 2 points: Small UI validation change, minimal test impact
+    - 5 points: New API endpoint using existing patterns, moderate tests
+    - 8 points: API + DB change + feature flag + integration tests
+- Keep these references visible during estimation.
+
+What to consider for each story
+- Clarity: well-formed acceptance criteria, Definition of Done
+- Complexity: new tech, data model changes, performance/security concerns
+- Coupling: dependencies across services/teams
+- Testing effort: unit, integration, regression, environments
+- Unknowns: spike needed? migrations? legacy code risk?
+
+How to run an estimation session (Planning Poker)
+1) Prep: ensure stories meet a “ready” checklist; split obvious epics first.
+2) For each story:
+   - Read the story and acceptance criteria; answer questions.
+   - Team silently picks a card (1–13).
+   - Reveal simultaneously; discuss highs/lows to surface assumptions.
+   - Re-vote after clarifications; repeat until converged.
+   - If still far apart, either split the story or add a short spike.
+3) Record the estimate, risks, and any follow-ups.
+
+Heuristics and guardrails
+- If it feels bigger than 8–13, split it. Aim for most stories to be 2–8.
+- Don’t convert points to hours. Use velocity over a few sprints for forecasting.
+- Include QA, docs, reviews, and deployment work in the estimate.
+- Unknowns:
+  - Option A: add points to reflect risk
+  - Option B: create a time-boxed spike (often 1–3 points) to reduce uncertainty
+- Bugs:
+  - If tied to an in-progress story, keep them within that story.
+  - If separate, estimate them like any story (they consume capacity).
+- Cross-team dependencies usually increase points unless the other team’s work is guaranteed and scheduled.
+
+Calibrate with velocity
+- After each sprint, note how many points were completed (velocity).
+- Use average velocity (last 3–5 sprints) to forecast.
+- Adjust references if you consistently over/under-estimate.
+
+For new teams
+- Start with T‑shirt sizing; map to points (XS=1, S=2, M=3, L=5, XL=8/13).
+- Expect 2–3 sprints to calibrate. Keep references stable during this period.
+- Don’t compare your points to other teams.
+
+Fast cheat sheet
+- 1–2: Tiny change, low risk, trivial test
+- 3–5: Straightforward work, some integration/tests
+- 8: Multiple components or notable risk
+- 13+: Split it or spike first
+
+Common pitfalls to avoid
+- Treating points as hours or as individual performance metrics
+- Estimating unclear stories
+- Letting senior voices anchor the group (use silent voting)
+- Skipping test/deploy/ops effort
+- Inflating points to hit deadlines
+
+If you want, I can:
+- Facilitate a quick agenda to run your next estimation session
+- Help you pick reference stories from your backlog
+- Walk through 1–2 of your stories and estimate them together

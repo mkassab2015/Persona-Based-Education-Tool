@@ -1,0 +1,7 @@
+Of course.
+
+People mistake user stories for tiny requirement documents. They aren't. A story is a promise for a conversation. Its purpose is to articulate a user's need and to invite the team—developers, customers, testers—to collaborate on the best way to satisfy that need. It's about building a shared understanding.
+
+Think of a story as a **travel postcard from the future**. It has a picture of a desirable destination (the user's goal) and a short message ("Wish you could do X..."). It doesn't provide the turn-by-turn directions to get there. The team discovers the best route together through conversation, collaboration, and building the software.
+
+This shifts the focus from writing specifications to having valuable conversations, which is the heart of agility.

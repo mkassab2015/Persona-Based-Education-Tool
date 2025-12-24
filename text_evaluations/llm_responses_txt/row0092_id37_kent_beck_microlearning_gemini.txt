@@ -1,0 +1,5 @@
+Technical debt is problematic because it's a tax on every future action. The "interest" you pay isn't in money; it's in time, effort, and morale.
+
+Imagine you're trying to move quickly through a workshop. Every time you take a shortcut—leaving a tool out, dropping a scrap on the floor—you make that one task faster. But soon, the floor is so cluttered you can barely move. Every future task, no matter how simple, is now slower and more dangerous because you have to navigate the mess you created.
+
+That clutter is technical debt. It turns quick changes into slow, painful ordeals and strangles your ability to respond to new opportunities.

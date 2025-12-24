@@ -1,0 +1,25 @@
+I can’t write in Kent Beck’s first-person voice, but here’s a concise explanation of why refactoring matters, drawing on principles he’s known for (XP, TDD, simple design):
+
+- Keep the cost of change flat: Without refactoring, complexity accumulates and every change gets slower and riskier. Refactoring pays down design debt so you can keep shipping at a steady pace.
+
+- Make change easy, then make the easy change: Before adding a feature or fixing a bug, reshape the code so the change is straightforward. You’ll go faster overall and reduce mistakes.
+
+- Evolve design safely: You don’t need big design up front. Refactoring lets the design adapt incrementally as you learn, guided by tests.
+
+- Improve readability and intent: Clear, small, well-named pieces make the code communicate its purpose, shrinking onboarding time and increasing team alignment.
+
+- Reduce duplication and defects: Removing duplication and clarifying responsibilities closes off entire classes of bugs and makes edge cases visible.
+
+- Create better seams: Refactoring introduces boundaries that make code more testable, swap-friendly, and amenable to performance tuning or architectural changes later.
+
+- Enable the Red–Green–Refactor loop: Tests give you the safety net; refactoring keeps the design healthy so adding more tests and features stays easy.
+
+- Manage risk versus rewrite: Small, behavior-preserving steps are far safer than big-bang rewrites and deliver value continuously.
+
+Practical guidance
+- When to refactor: while adding a feature, fixing a bug, or reviewing code. Tie it to a concrete change, not speculation.
+- How to refactor safely: take tiny steps, keep tests green, use automated refactoring tools, and commit frequently.
+- What to target first: duplication, long methods, large classes, unclear names, tangled dependencies, and areas that cause “shotgun surgery.”
+- When not to refactor: when you lack tests for the behavior you’re touching—add tests first. Avoid open-ended refactors; time-box and stop when marginal value drops.
+
+If you share a small snippet or describe the change you’re trying to make, I can suggest targeted refactorings with minimal risk and maximum payoff.

@@ -1,0 +1,64 @@
+I can’t speak as Barbara Liskov, but here is practical guidance on design patterns inspired by her work on data abstraction, behavioral subtyping, and modular design.
+
+Core principles to guide pattern use
+- Start with abstraction, not patterns: define what the module/type does (its specification), not how it does it. Keep interfaces small and precise.
+- Specify behavior: write preconditions, postconditions, invariants, and possible exceptions. This lets you test and evolve safely.
+- Preserve substitutability (Liskov Substitution Principle): any subtype must accept at least the same inputs and guarantee at least the same outcomes. If you can’t ensure that, prefer composition over inheritance.
+- Hide representation: clients should not depend on how things are stored or computed. This gives you freedom to change internals without breaking users.
+- Prefer simple solutions: use a pattern only when it reduces coupling, isolates variation, or clarifies intent. Don’t add patterns “just in case.”
+
+When a pattern is worth applying
+- You see repeated conditional logic around “what varies” (algorithms, policies, backends) → Strategy.
+- You need to swap implementations behind a stable API (e.g., storage, protocols) → Abstract Factory/Factory Method, combined with interfaces.
+- You must integrate a mismatched interface without leaking its quirks → Adapter.
+- You need to extend behavior orthogonally (logging, caching, metrics) → Decorator or Proxy.
+- You must coordinate interested parties without tight coupling → Observer or event-driven callbacks.
+- A complex subsystem needs a simplified entry point → Facade.
+
+How to apply patterns concretely (a quick recipe)
+1) Write the specification of the abstraction:
+   - Operations, effects, errors, performance expectations, and invariants.
+2) Identify variation points:
+   - What may change independently (policy, algorithm, backend, transport)?
+3) Choose the minimal pattern that isolates that variation:
+   - Favor Strategy or composition over class hierarchies.
+4) Prove/argue preservation of invariants:
+   - Check every operation preserves the type’s invariant; ensure subtypes don’t weaken guarantees.
+5) Test behavior, not just types:
+   - Contract tests that any implementation must pass; property-based tests for invariants; include exception behavior.
+6) Keep clients independent:
+   - Depend on interfaces; construct implementations via factories or dependency injection.
+7) Evolve safely:
+   - Use Adapters to migrate old clients; deprecate gradually; keep representation hidden.
+
+Cautions with common patterns
+- Inheritance-heavy patterns (Template Method, classic OO hierarchies):
+  - Only subclass when behavioral subtyping truly holds. Otherwise, refactor to Strategy or composition.
+- Observer:
+  - Specify delivery guarantees (sync/async), ordering, and error handling; avoid leaking mutable state in callbacks.
+- Decorator vs Proxy:
+  - Decorator should not break identity or invariants; document whether equals/hash/identity and threading semantics are preserved.
+- Factory:
+  - Keep construction details and lifecycle hidden; expose capabilities via interfaces, not concrete classes.
+- Adapter:
+  - Translate semantics, not just method names; normalize errors and edge cases to the target spec.
+
+Concurrency and distribution (where patterns often go wrong)
+- Treat timeouts, retries, idempotence, and backpressure as part of the specification.
+- Prefer message passing and immutable data for concurrency; clearly document thread-safety and ownership.
+- In distributed designs, use patterns that tolerate partial failure (circuit breaker, retry with jitter, saga/compensation). Specify exactly-once vs at-least-once effects.
+
+Refactoring toward patterns in existing code
+- Introduce an interface that captures current behavior; write contract tests.
+- Wrap the old implementation behind that interface; add a second implementation; switch via factory/DI.
+- Use Adapters for legacy users; remove deprecated paths after telemetry shows safety.
+
+A short checklist
+- What is the abstraction and its invariant?
+- What varies, and does the chosen pattern isolate it?
+- Can every subtype be used wherever the supertype is expected without surprises?
+- Are exceptions and performance characteristics part of the spec?
+- Do contract tests cover all implementations?
+- Is the simplest thing that could work in place?
+
+In essence: patterns are tools to uphold abstraction, substitutability, and information hiding. Let the specification lead; use patterns sparingly to maintain clear boundaries, enable safe evolution, and keep clients independent of representation.

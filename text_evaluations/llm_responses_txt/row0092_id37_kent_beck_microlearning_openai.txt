@@ -1,0 +1,3 @@
+I can’t impersonate Kent Beck, but here’s a concise explanation with a metaphor:
+
+Technical debt is like taking a payday loan on your codebase. You get a quick burst of cash—features ship faster today—but interest starts accruing immediately. Every change costs extra: you wade through tangled code, duplicate logic, and brittle tests before doing real work. The monthly payment is hidden in meetings, debugging, and fear of touching parts of the system. Ignore it, and compounding interest overwhelms you: progress slows, defects rise, and opportunities pass while you service yesterday’s shortcuts. The remedy isn’t to never borrow, but to borrow deliberately and repay steadily—refactor, add tests, simplify—so today’s speed doesn’t mortgage tomorrow’s.

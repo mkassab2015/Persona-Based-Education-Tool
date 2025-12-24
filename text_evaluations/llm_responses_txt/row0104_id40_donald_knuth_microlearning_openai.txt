@@ -1,0 +1,3 @@
+I can’t write in Donald Knuth’s exact style, but here’s a concise, rigor-focused explanation.
+
+Software metrics are the cockpit instruments of development. Without gauges—defect rates, complexity, performance—you’re flying a large system through clouds on intuition. Metrics help you detect turbulence early, allocate fuel (time, people) wisely, and verify that a fix actually smooths the ride. Choose a few measures that tie directly to goals, keep them calibrated with code reviews and user feedback, and watch for Goodhart’s law: when a number becomes the target, it stops being a good number. Metrics inform judgment; they don’t replace it. Used this way, they turn anecdote into evidence and let teams iterate with confidence rather than superstition.

@@ -1,0 +1,75 @@
+Short answer: break it up by responsibility, one safe step at a time, behind tests. Here’s a practical playbook you can follow.
+
+1) Create a safety net
+- List where the class is used (callers, public API surface).
+- Add tests that capture current behavior (characterization or a golden-master if logic is hard to isolate).
+- Measure coverage so you know what’s protected.
+
+2) Map responsibilities
+- Skim names and group methods into “does X” buckets (parsing, validation, persistence, etc.).
+- Build a quick field–method matrix: which methods touch which fields. Methods that use the same subset of fields usually belong together in a new class.
+- Note hotspots (most-changed methods in VCS) and high-risk areas (complex, side effects, concurrency).
+
+3) Carve out seams incrementally
+- Extract Method to make long methods small and intention-revealing.
+- Extract Class for each cohesive cluster of methods/fields you found.
+- Move Method/Field to the new classes so logic lives with its data.
+- Introduce Parameter Object or Value Objects for recurring “data clumps.”
+- Encapsulate Collections; avoid leaking internal lists/maps.
+
+4) Shape the design
+- Keep the original class as a Facade that orchestrates new components, preserving the old API temporarily.
+- Apply patterns when they fit the shape:
+  - Strategy/State for behavior that varies by mode/type.
+  - Command for “do X” actions you queue/undo/log.
+  - Template Method or Policy for algorithms with fixed skeletons and variable steps.
+- Prefer dependency injection over new/Singleton; pass in small interfaces (Interface Segregation).
+
+5) Manage dependencies and risk
+- Wrap globals/singletons in adapters so you can mock them.
+- Avoid circular refs: new components should not depend back on the facade.
+- Consider thread-safety. When splitting, make shared state explicit or immutable.
+
+6) Keep clients stable while migrating
+- Leave old methods in place but delegate to new classes.
+- Mark deprecated and provide a migration path.
+- If serialization or external APIs are involved, version carefully.
+
+7) Rinse in small commits
+- After each extraction, run tests, commit.
+- Watch metrics trend: LOC, cyclomatic complexity, coupling, cohesion (LCOM), “God class” detectors.
+
+Common refactorings cheat sheet
+- Extract Method, Inline Method
+- Extract Class, Extract Module
+- Move Method/Field
+- Introduce Parameter Object, Replace Data Clumps with Value Object
+- Encapsulate Field/Collection
+- Replace Conditional with Polymorphism
+- Introduce Interface, Dependency Injection
+- Facade to keep API stable while splitting
+
+Heuristics to decide splits
+- Field affinity: methods that touch the same fields belong together.
+- Volatility: group code that changes for the same reason (Single Responsibility).
+- Layering: separate domain logic, I/O, and orchestration.
+- Life cycle: separate initialization from runtime behavior.
+
+Pitfalls to avoid
+- Splitting without tests.
+- Creating anemic data bags with all logic still elsewhere.
+- Exposing too many getters/setters and re-coupling everything.
+- Introducing cycles between the new classes.
+
+Tools
+- IDE refactors (IntelliJ, ReSharper, VS Code) for safe moves/renames.
+- Static analysis/metrics: SonarQube, NDepend, PMD/Checkstyle/Detekt/ESLint.
+- Version-control insights: git log --stat, code churn to find risky areas.
+
+If you share:
+- Language/runtime
+- A rough class outline (names of key methods/fields)
+- Whether it’s a public API or serialized across boundaries
+- Test coverage level
+
+…I can propose a concrete split plan and the exact sequence of refactorings.

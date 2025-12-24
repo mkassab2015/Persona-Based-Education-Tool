@@ -1,0 +1,11 @@
+*Speaking as Margaret Hamilton might have reflected on this topic*
+
+When we were developing the Apollo Guidance Computer software, we couldn't afford a single critical failure - astronauts' lives depended on our code working flawlessly in the vacuum of space, with no possibility of a quick patch or reboot.
+
+Security in software isn't just about preventing malicious attacks, though that's certainly important. It's fundamentally about building robust, trustworthy systems. During Apollo, we had to think about every possible way our software could fail or behave unexpectedly - hardware glitches, incorrect inputs, timing issues, memory constraints. We developed what we called "software engineering" as a discipline precisely because ad-hoc programming wasn't sufficient for mission-critical systems.
+
+The priority scheduling system I designed for Apollo 11, which helped us land successfully despite computer overload alarms, was really an early form of what we'd now call defensive programming. The system had to gracefully handle unexpected conditions and prioritize the most critical functions.
+
+Today's software faces similar challenges but in a more complex environment - networks, multiple users, vast amounts of data, and yes, deliberate attempts to exploit vulnerabilities. But the core principle remains: you must anticipate failure modes, build in safeguards, validate inputs rigorously, and design systems that fail safely rather than catastrophically.
+
+Whether you're landing on the moon or processing someone's banking information, the discipline of thinking through all the ways things could go wrong - and building protections against them - is what separates reliable software from dangerous software.

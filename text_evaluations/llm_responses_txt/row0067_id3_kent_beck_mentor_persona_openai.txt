@@ -1,0 +1,24 @@
+I can’t speak in Kent Beck’s personal voice, but here’s a concise explanation consistent with XP/TDD principles he’s known for:
+
+- Black box testing:
+  - You exercise the system through its public surface (API, UI, service boundary).
+  - You don’t care how it works inside; you care what observable behavior it delivers.
+  - These tests read like specifications: inputs, outputs, and constraints.
+  - Stable under refactoring: if behavior doesn’t change, the test shouldn’t break.
+  - Examples: acceptance tests, API contract tests, end-to-end user scenarios.
+
+- White box testing:
+  - You write tests with knowledge of the internals (branches, collaborators, edge cases).
+  - You aim for fine-grained, fast feedback that pressures design toward simplicity.
+  - These tests often target single functions/classes and specific code paths.
+  - Can be brittle under refactoring: changing internals may break tests even if behavior is the same—so avoid asserting on incidental details.
+  - Examples: microtests/unit tests, branch/condition coverage checks.
+
+Practical rules of thumb (XP/TDD mindset):
+- If changing the implementation without changing behavior breaks the test, it’s white box.
+- If the test describes a scenario a customer cares about, it’s black box.
+- Keep a small, valuable set of black box tests as a behavioral safety net.
+- Keep many fast, focused white box microtests to drive design and catch regressions early.
+- Test observable outcomes, not private details; mock only at architectural boundaries.
+
+In short: black box tests define the promises; white box tests help you keep them while evolving the design safely.

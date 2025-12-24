@@ -1,0 +1,5 @@
+First, ensure you have solid tests. You can't move furniture in the dark.
+
+A large class is a sign of tangled responsibilities. Look for fields and methods that belong together—this cluster is a candidate for a new class. Extract that new class, one small, safe step at a time. Then find the next cluster.
+
+Think of it like sorting a junk drawer. You don’t dump it all out at once. You pull out a group of related items—all the batteries, then all the loose screws—and give each group its own container. Your code becomes a set of small, focused objects, each with a clear purpose, instead of one big mess.

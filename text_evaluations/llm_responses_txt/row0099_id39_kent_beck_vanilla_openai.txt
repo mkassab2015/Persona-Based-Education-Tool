@@ -1,0 +1,41 @@
+Refactoring makes future changes cheaper and safer. It doesn’t add features; it improves the code’s internal design so you can deliver features faster with fewer bugs.
+
+Key benefits
+- Maintainability: Clearer structure and names reduce cognitive load and onboarding time.
+- Fewer bugs: Simpler, well-factored code has fewer hidden edge cases and is easier to test.
+- Speed of change: Lower friction to add features or fix defects; better DORA metrics (lead time, change failure rate).
+- Testability: Smaller, decoupled units are easier to unit test and mock.
+- Reuse and consistency: Eliminates duplication (DRY), centralizes logic, and enforces standards.
+- Performance and reliability: Clarifies hot paths and makes targeted optimizations safer.
+- Scalability and flexibility: Better boundaries allow components to evolve independently (e.g., swap implementations).
+- Risk management: Reduces “technical debt interest” that otherwise compounds over time.
+- Developer happiness: Less frustration, better retention, and smoother code reviews.
+
+When to refactor
+- While adding a feature or fixing a bug (Boy Scout Rule: leave the code a bit better).
+- When code is hard to understand, change, or test (high complexity, duplication, long functions).
+- After you have tests green (red-green-refactor loop).
+- When code reviews repeatedly flag the same issues.
+
+When not to (or to limit scope)
+- Right before a hard deadline unless the refactor removes a blocker.
+- When requirements are still shifting drastically.
+- If you lack a safety net of tests—write characterization tests first.
+
+How to refactor safely
+- Make small, behavior-preserving steps; commit frequently.
+- Lean on tests and add characterization tests around legacy behavior.
+- Use IDE refactorings (rename, extract method/class, move module) to avoid mistakes.
+- Run static analysis/linters and track complexity/duplication metrics.
+- Use feature flags for bigger changes and migrate incrementally.
+
+Common techniques
+- Rename for clarity; extract method/class; inline temp variables.
+- Reduce parameter lists (introduce parameter object); eliminate globals; inject dependencies.
+- Break long functions; separate concerns; enforce module boundaries.
+- Replace duplication with shared utilities; replace conditionals with polymorphism when appropriate.
+
+Rule of thumb
+If it’s hard to explain, hard to test, or risky to change, refactor it until it’s simple, obvious, and covered by tests.
+
+If you want, share a small snippet or describe a pain point (e.g., “it’s hard to add X because Y”), and I’ll suggest targeted refactors.

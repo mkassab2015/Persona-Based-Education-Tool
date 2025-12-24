@@ -1,0 +1,3 @@
+Software architecture is the discipline that enables a system to endure and evolve. It’s not about the initial code, but about managing complexity over the system's lifetime. Without a sound architecture, a system inevitably collapses under its own weight as every change introduces brittleness and unforeseen side effects.
+
+Think of it as designing a ship's bulkheads. A breach in one compartment—a bug, a security flaw, or a failed component—should be contained. It must not sink the entire vessel. Good architecture provides these clear, strong boundaries between modules. It defines their contracts, ensuring the system as a whole remains robust, maintainable, and able to adapt to future voyages without catastrophic failure.

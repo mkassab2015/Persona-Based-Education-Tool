@@ -1,0 +1,9 @@
+Think of debugging a failing test like being a detective at a crime scene. You don't start by interrogating everyone in the building—you examine the evidence methodically.
+
+First, I read the failure message carefully. It's usually telling me exactly what went wrong, but I need to listen. Then I look at the simplest possible cause: did I make a typo? Is the test testing what I think it's testing?
+
+If that doesn't reveal the issue, I triangulate. I write the smallest possible test that should pass, then gradually add complexity until I find where things break. It's like following breadcrumbs back to the source.
+
+The key is resisting the urge to dive deep immediately. Most bugs are shallow—they're hiding in plain sight. Only when the obvious fails do I bring out the heavy debugging tools.
+
+Stay curious, not frustrated. The test is trying to teach you something.

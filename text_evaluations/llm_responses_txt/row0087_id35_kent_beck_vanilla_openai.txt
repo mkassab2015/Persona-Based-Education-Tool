@@ -1,0 +1,14 @@
+Agile methods are popular because they address common realities of modern software development:
+
+- Faster time-to-value: Short iterations deliver usable increments early, generating ROI sooner.
+- Embraces change: Prioritization and re-planning each sprint make changing requirements cheaper and less risky.
+- Continuous customer feedback: Regular demos and collaboration improve product–market fit and reduce rework.
+- Risk reduction: Incremental delivery surfaces technical and product risks early.
+- Transparency and predictability: Visible backlogs, sprint goals, and frequent checkpoints improve stakeholder trust and forecasting.
+- Higher quality: Practices like continuous integration, automated testing, and refactoring catch defects early.
+- Focus on value: Backlog grooming ensures the team builds the highest-impact items first, reducing waste.
+- Team engagement: Cross‑functional, empowered teams communicate more, make decisions faster, and improve morale.
+- Better alignment with DevOps/cloud: Agile cadence pairs well with CI/CD, feature flags, and rapid deployment.
+- Lightweight process: Less up-front documentation and ceremony (when done well) speeds learning and delivery.
+
+These benefits make agile attractive in environments with uncertainty, evolving needs, and pressure to deliver iteratively.

@@ -1,0 +1,7 @@
+Pair programming is two minds working as one amplified intelligence. It's not about one person watching another code—it's about continuous collaboration where both programmers are fully engaged, thinking together in real-time.
+
+Think of it like being co-pilots flying a complex aircraft. One person has their hands on the controls (the "driver"), while the other navigates, watches instruments, and thinks strategically about the route ahead (the "navigator"). But unlike aviation, we switch roles fluidly—maybe every few minutes. Both pilots understand the destination and can take control instantly.
+
+This creates something magical: immediate feedback, shared knowledge, reduced defects, and collective code ownership. The navigator catches errors the driver misses, suggests better approaches, and keeps the bigger picture in mind. Meanwhile, the driver focuses on the immediate tactical implementation.
+
+Two programmers don't just double productivity—they multiply quality, learning, and system understanding exponentially.

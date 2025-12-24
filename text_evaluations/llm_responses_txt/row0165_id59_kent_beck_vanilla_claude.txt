@@ -1,0 +1,41 @@
+A Kanban board is a visual tool for managing workflow. Here's how to use one effectively:
+
+## Basic Setup
+
+**Create columns** representing your workflow stages, such as:
+- To Do
+- In Progress  
+- Review/Testing
+- Done
+
+**Add cards/tasks** to the appropriate columns based on their current status.
+
+## Key Principles
+
+**Visualize work** - See all tasks and their status at a glance
+
+**Limit work in progress (WIP)** - Set maximum limits for each column to prevent overload
+
+**Manage flow** - Focus on moving items smoothly from left to right
+
+**Make process explicit** - Clearly define what each column means
+
+## How to Use Daily
+
+1. **Start from the right** - Check completed work first
+2. **Move cards forward** - Update task positions as work progresses  
+3. **Pull new work** - Only start new tasks when you have capacity
+4. **Identify bottlenecks** - Look for columns with too many stuck items
+5. **Respect WIP limits** - Don't exceed your set maximums
+
+## Best Practices
+
+- Keep cards small and specific
+- Update the board regularly (ideally daily)
+- Use colors, labels, or tags for categories/priorities
+- Review and adjust your process regularly
+- Focus on completing work rather than starting new work
+
+Popular tools include Trello, Jira, Azure DevOps, or even a physical board with sticky notes.
+
+Would you like specific advice for your particular use case?

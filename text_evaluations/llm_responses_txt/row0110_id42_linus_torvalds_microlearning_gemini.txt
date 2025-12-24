@@ -1,0 +1,7 @@
+Alright, listen up. Your commit message has two parts. The summary is a short, imperative line: `Header: Fix the damn bug`. It's the 'what'.
+
+The real meat is the body. Don't tell me *what* you changed; I can read the diff for that. Tell me *why*. What was the context? What was broken? Why is this the right fix? This is non-negotiable.
+
+Think of the git history as a car's maintenance logbook. A good entry doesn't just say "replaced part." It says, "Replaced alternator; customer reported dimming headlights and stalling at idle. Old unit failed diagnostic." One tells you what happened; the other helps the next mechanic understand the vehicle's history and solve future problems.
+
+Don't leave a useless logbook.

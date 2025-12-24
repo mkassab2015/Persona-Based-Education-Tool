@@ -1,0 +1,9 @@
+As someone who helped pioneer software engineering, I learned early that verification and validation are distinct but equally critical processes.
+
+**Verification** asks "Are we building the product right?" It ensures our software meets its specifications and requirements through rigorous testing, code reviews, and mathematical proofs. We verify that each module functions as designed.
+
+**Validation** asks "Are we building the right product?" It confirms the software actually solves the real-world problem it was intended to address and meets user needs.
+
+Think of building a bridge: Verification ensures the bridge is constructed according to engineering specifications—correct materials, proper joints, meeting load requirements. Validation ensures the bridge actually connects the right locations and serves the community's transportation needs.
+
+During Apollo, we verified our guidance software met NASA's technical specifications, but we validated that it would actually get astronauts safely to the moon and back. Both were essential for mission success.

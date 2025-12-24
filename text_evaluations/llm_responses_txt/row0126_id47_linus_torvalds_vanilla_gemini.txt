@@ -1,0 +1,109 @@
+Of course. Running effective code reviews is one of the most impactful practices a software team can adopt. It's a skill for both the person writing the code (the author) and the person reviewing it.
+
+Here is a comprehensive guide on how to run code reviews, broken down by roles, principles, and a practical checklist.
+
+---
+
+### The Big Picture: Why Do We Do Code Reviews?
+
+Before diving into the "how," understand the "why." Code reviews are **not** just about finding bugs. They are for:
+
+*   **Improving Code Quality:** Catching bugs, logic errors, and architectural mistakes early.
+*   **Sharing Knowledge:** Spreading context about the codebase. The reviewer learns about a new feature, and the author might learn a new technique from the reviewer.
+*   **Mentoring and Growth:** A fantastic way for senior developers to mentor junior developers and for everyone to learn from each other.
+*   **Maintaining Consistency:** Enforcing team-wide coding styles, patterns, and best practices.
+*   **Fostering Collective Ownership:** The code becomes "our code," not just "your code."
+
+---
+
+### The Core Process: A Step-by-Step Flow
+
+1.  **Author Prepares the Change:**
+    *   Writes the code for a single, logical feature or bug fix.
+    *   **Crucially, performs a self-review.** They run tests, use a linter/formatter, and read through their own changes to catch obvious mistakes.
+2.  **Author Creates a Pull Request (PR) / Merge Request (MR):**
+    *   Pushes the code to a separate branch.
+    *   Opens a PR to merge their branch into the main branch (e.g., `main` or `develop`).
+    *   Writes a clear, descriptive title and summary.
+3.  **Reviewers are Assigned:**
+    *   The author requests reviews from one or more teammates. Most platforms can automate this.
+4.  **Reviewers Provide Feedback:**
+    *   Reviewers read the PR description and then the code.
+    *   They leave comments with questions, suggestions, and requests for changes.
+5.  **Discussion and Iteration:**
+    *   The author responds to comments, clarifies their reasoning, and pushes new commits to address the feedback.
+    *   This is a collaborative loop. It might take a few rounds.
+6.  **Approval and Merge:**
+    *   Once the reviewers are satisfied, they approve the PR.
+    *   The author (or an automated system) merges the code into the main branch.
+
+---
+
+### Best Practices for Everyone (The Cultural Foundation)
+
+This is the most important part. A good culture makes the process effective and enjoyable.
+
+*   **Critique the code, not the coder.** This is the golden rule. Frame feedback around the code's behavior, not the author's ability.
+    *   **Bad:** "Why did *you* do it this way? It's wrong."
+    *   **Good:** "What do you think about using a different approach here? It might be more performant because..."
+*   **Automate the small stuff.** Use tools like linters (ESLint, RuboCop) and code formatters (Prettier, Black). Let the machine be the bad guy for style nits. The review should focus on logic and design.
+*   **Keep PRs small and focused.** A PR should represent one logical change. A 200-line PR is easy to review; a 2000-line PR is impossible to review thoroughly.
+*   **Be timely.** Don't let a PR sit for days. Unblocking your teammates is a high-priority task.
+*   **Ask questions, don't make demands.** A question invites discussion and respects the author's work.
+    *   **Instead of:** "Change this variable name to `user_profile`."
+    *   **Try:** "Would `user_profile` be a clearer name for this variable?"
+*   **Acknowledge good work!** A code review isn't just for finding flaws. If you see a clever solution or a clean implementation, leave a positive comment.
+
+---
+
+### For the Author: How to Request a Great Review
+
+Your job is to make the reviewer's job easy.
+
+1.  **Write a Killer PR Description:**
+    *   **The What:** Briefly summarize the change.
+    *   **The Why:** Explain the business reason or link to the ticket/issue. This provides crucial context.
+    *   **How to Test:** Provide clear steps for the reviewer to verify your changes.
+    *   **Screenshots/GIFs:** For any UI changes, this is non-negotiable.
+2.  **Self-Review First:** Read through your own code as if you were the reviewer. You will be amazed at what you catch. Fix typos, remove commented-out code, and clarify variable names *before* asking for a review.
+3.  **Keep it Focused:** One PR, one concern. If you fix a bug and refactor a separate module in the same branch, split them into two PRs.
+4.  **Guide the Reviewer:** If there's a specific area you're unsure about or a complex piece of logic, point it out in a comment. "I'm not sure if this is the best way to handle this edge case. Any thoughts?"
+5.  **Respond Gracefully:** Don't be defensive. The goal is to create the best possible code together. Thank reviewers for their time and feedback. If you disagree, explain your reasoning calmly.
+
+---
+
+### For the Reviewer: How to Give a Great Review
+
+Your job is to be a helpful collaborator, not a gatekeeper.
+
+1.  **Understand the Context First:** Read the PR description and the linked ticket. Don't start reading code until you understand what it's supposed to do.
+2.  **Start with the Big Picture:**
+    *   Does this change make sense? Is the overall approach sound?
+    *   Does it fit with the existing architecture and patterns?
+    *   If you have major architectural concerns, raise them first before nitpicking syntax.
+3.  **Be Constructive and Specific:**
+    *   **Bad:** "This is confusing."
+    *   **Good:** "This function name, `processData`, is a bit generic. Could we rename it to `parseUserProfileFromJSON` to be more specific about what it does?"
+4.  **Use Conventions:** Many teams adopt prefixes for comments to indicate importance:
+    *   **`[Nitpick]` or `[Nit]:`**: For minor, non-blocking suggestions (e.g., a typo in a comment). The author can choose to address it or not.
+    *   **`[Question]:`**: When you need clarification.
+    *   **`[Suggestion]:`**: For an optional improvement.
+5.  **Balance Rigor and Pragmatism:** The goal is not perfect code, but better code. Don't block a PR for a week over a minor preference. Ask yourself: "Does this change make the codebase better than it was before?" If yes, that's a good reason to approve.
+6.  **Pull Down and Run the Code:** For complex changes, don't just read the diff. Check out the branch, run the code, and test the feature yourself.
+
+---
+
+### The Reviewer's Checklist: What to Look For
+
+Here's a mental checklist to run through during a review.
+
+| Category               | What to Check                                                                                                                                                             |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Correctness**        | Does the code do what it's supposed to do? Does it handle edge cases (e.g., null inputs, empty lists)? Are there any obvious off-by-one or logic errors?                    |
+| **Design/Architecture**| Does this change fit well within the existing system? Is it over-engineered? Could it be simpler? Does it introduce unnecessary dependencies?                                 |
+| **Readability**        | Is the code clear and easy to understand? Are variable and function names descriptive? Is the logic unnecessarily complex?                                                |
+| **Security**           | Are there any potential security vulnerabilities (e.g., SQL injection, XSS, exposing sensitive data)? Is user input being properly sanitized?                                |
+| **Performance**        | Are there any obvious performance issues (e.g., database queries inside a loop)? Is it efficient enough for the expected load?                                             |
+| **Testing**            | Are there tests? Do they cover the main logic and important edge cases? Are the tests readable? Do they pass?                                                             |
+| **Documentation**      | If the logic is complex, is there a comment explaining the "why"? Are public-facing APIs or functions properly documented (e.g., with docstrings)?                         |
+| **Consistency**        | Does the code follow the team's established style guide and patterns?                                                                                                       |

@@ -1,0 +1,20 @@
+Here’s a concise summary of how Margaret Hamilton has characterized and practiced the distinction, based on her work on Apollo and later with the Universal Systems Language (USL) and “Development Before the Fact”:
+
+- Verification: “Did we build the system right?”
+  - Checks that the implementation is consistent with the formal specification.
+  - Emphasizes provability, completeness, consistency, and traceability within the specification-to-code chain.
+  - Uses reviews, proofs, static analysis, automated checks, and tests against the spec.
+  - In her later work, code generation from a formally verified spec makes much of verification mechanical.
+
+- Validation: “Did we build the right system?”
+  - Checks that the specification itself captures the real-world domain, mission goals, constraints, and human-in-the-loop behavior.
+  - Emphasizes modeling the domain, off-nominal and error conditions, timing/asynchrony, and operational scenarios.
+  - In her approach, validation “comes first”: if the domain model/spec is right and complete (including error detection and recovery), verification follows more naturally.
+
+Practical emphasis from her perspective:
+- Treat error detection, recovery, and off-nominal behavior as first-class requirements during validation, not afterthoughts for testing.
+- Aim for before-the-fact correctness: build a formal, executable specification that is complete and consistent; automate verification where possible.
+- Maintain end-to-end traceability from mission/domain requirements through specification to the running system.
+
+Apollo example often cited around this distinction:
+- The AGC’s priority-driven executive and the handling of 1201/1202 alarms during Apollo 11 reflected validation of real operational conditions (asynchrony, overload) and verification that the implementation honored those priorities and recovery paths defined in the spec.

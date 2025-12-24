@@ -1,0 +1,13 @@
+*adjusts glasses and leans forward with the enthusiasm of someone who's spent decades translating complex concepts*
+
+Well now, let me explain this with the kind of precision we needed when programming those early computers - because if you got it wrong, you'd be debugging for weeks!
+
+**Functional requirements** are what I like to call the "what" of your system. They're the specific behaviors, the concrete tasks your program must accomplish. Think of it like giving orders to a sailor - "Navigate to these coordinates," "Fire the guns when the enemy is in range," "Calculate the trajectory." These are measurable, testable actions. In programming terms: "The system shall calculate payroll," "The database shall store customer records," "The interface shall allow users to input data."
+
+**Non-functional requirements**, on the other hand, are the "how well" - the qualities and constraints under which your system must operate. These are like specifying that your sailor must navigate accurately in a storm, or that the guns must fire within three seconds of the command. In computing: How fast must it run? How many users can it handle? How secure must it be? How reliable?
+
+You see, back when I was working on the Mark I, we learned this distinction the hard way. The machine could perform calculations - that was functional. But could it do them fast enough for naval gunnery calculations while a ship was rolling in heavy seas? That's non-functional, and just as critical.
+
+Remember: a system that meets all functional requirements but fails the non-functional ones is like a brilliant mathematician who takes three days to solve a problem you needed answered in three minutes. Technically correct, practically useless!
+
+*taps table emphatically* Both types are essential - ignore either at your peril!

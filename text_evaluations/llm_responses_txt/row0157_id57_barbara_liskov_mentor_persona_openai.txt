@@ -1,0 +1,25 @@
+I can’t speak for Barbara Liskov, but drawing on her work on data abstraction, modular design, and behavioral subtyping, these principles tend to produce clean, evolvable source layouts:
+
+- Organize by abstraction (module), not by technical layer alone. Each module encapsulates one concept and its data. Avoid “misc/util” dumping grounds.
+- Separate interface from implementation. Put public APIs/specs in clearly identified files or packages; keep concrete implementations in “internal” areas.
+- Hide representations. Don’t leak concrete data structures across module boundaries; expose constructors/factories thoughtfully; keep fields private.
+- Document contracts at the boundary. Co-locate specs (behavior, pre/postconditions, invariants) with the public interface; make exceptions/error behavior part of the spec.
+- Keep modules small and cohesive. One main abstraction per file; keep file names aligned with the abstraction; avoid sprawling god-files.
+- Enforce acyclic dependencies. Structure packages as a DAG; use build or module systems to prevent cycles and unauthorized imports.
+- Layer carefully. Lower layers know nothing about higher layers; when higher layers must influence lower, use inversion via small interfaces.
+- Be cautious with inheritance across modules. Favor composition at module boundaries; if you export extension points, specify behavioral contracts (subtypes must not strengthen preconditions nor weaken postconditions).
+- Keep public APIs stable and narrow; allow implementation to change freely. Re-export minimal symbols; mark internal code as non-API.
+- Mirror structure in tests. tests/<module>/<public-api-tests>; add white-box tests inside the module for invariants; use property-based tests where suitable.
+- Control visibility with language features. Use internal packages, module systems, access modifiers, sealed/closed sets of types as appropriate.
+- Automate boundary checks. Lint for forbidden imports, detect dependency cycles, run API-diff tools, gate changes to public interfaces.
+- Plan for evolution. Version or deprecate public APIs gradually; keep migration notes next to the interface.
+
+A small, concrete shape (illustrative; adapt to your language/tooling):
+- payments/
+  - api/ PaymentService.(interface), specs/docs
+  - model/ Payment, Receipt (public types with private reps)
+  - errors/ PaymentError
+  - internal/ DefaultPaymentService, StripeGateway, mappers, helpers
+  - tests/ public-api tests; internal invariant tests
+
+These ideas aim to preserve abstraction barriers and representation independence so that you can refactor internals without breaking clients, which is the core of Liskov’s approach to modular software.

@@ -1,0 +1,43 @@
+Ah, an interesting question. It is a matter that goes to the very heart of building robust and maintainable software systems. People often get preoccupied with specific naming conventions or directory structures—whether to group by feature or by type, for instance. While those are not unimportant decisions, they are secondary. The physical layout of files should be a direct reflection of the logical structure of the program.
+
+From my perspective, the primary goal of any organization scheme is to manage complexity. A well-organized system allows a programmer to reason about a part of the system without having to understand the entirety of it. Therefore, the principles for organizing source code are derived from the principles of good program design itself.
+
+Here are the principles I would advocate for.
+
+### 1. Organize Around Abstractions
+
+This is the most fundamental principle, stemming directly from my work on abstract data types. A program should be composed of a set of modules, where each module represents a single, coherent abstraction.
+
+*   **What this means:** A set of files, whether in a single directory or a package, should work together to implement one concept—a `TextFormatter`, a `BillingTransaction`, a `NetworkScheduler`. The user of this module should interact with it through a well-defined public interface or *specification*, and should have no need to know about its internal implementation details.
+*   **In practice:** All the private helper functions, internal data structures, and implementation-specific logic for an abstraction should be co-located and clearly delineated as internal. The file organization should enforce this information hiding. If changing the internal data structure of your `UserCache` from a hash map to a tree requires you to modify files in five different directories, your organization has failed to properly encapsulate the abstraction.
+
+### 2. Reflect Behavioral Hierarchies (The Liskov Substitution Principle)
+
+How you group your types and subtypes is critical. The file structure should make the intended substitution properties of your system clear.
+
+*   **What this means:** My substitution principle states that objects of a supertype ought to be replaceable with objects of a subtype without altering the correctness of the program. This implies a strong behavioral contract. Your file organization should group types that share a common behavioral contract.
+*   **In practice:** Subtypes should generally reside with or near their base types. This makes the "is-a" relationship visible. More importantly, the organization should help you reason about the family of types. If you have an `OutputStream` abstraction, then `FileOutputStream`, `NetworkOutputStream`, and `MemoryOutputStream` should be organized together. A developer looking at this directory immediately understands that these are all substitutable for one another and are expected to uphold the same contract (preconditions, postconditions, and invariants) of the base `OutputStream`.
+
+### 3. Maximize Cohesion and Minimize Coupling
+
+This is a classic tenet of software engineering, but it is the direct result of organizing around strong abstractions.
+
+*   **High Cohesion:** The code within a single module (a directory or package) should be highly related. It all works towards a common purpose. If a directory contains files related to user authentication, database connection pooling, and image rendering, it has low cohesion and is poorly organized.
+*   **Low Coupling:** A module should have as few dependencies on other modules as possible. The dependencies it does have should be through stable, public interfaces. Your directory structure can be a physical indicator of coupling. If modifying a module in `directory_A` almost always requires a corresponding change in `directory_B`, you should question whether they are truly separate abstractions. Perhaps they should be merged, or their interface needs to be redesigned.
+
+### 4. Separate Concerns
+
+A system performs many different kinds of tasks. The code for these different tasks should be kept separate.
+
+*   **What this means:** This is the idea behind layers or the more modern "hexagonal" or "clean" architectures. The logic that represents your core business domain (e.g., how to calculate an insurance premium) should be separate from the logic that handles infrastructure (e.g., how to write a record to a database or send an HTTP request).
+*   **In practice:** You might have top-level directories for `domain`, `infrastructure`, and `application`. Inside the `domain` directory, you would organize by abstractions as described in my first point. Inside `infrastructure`, you might have sub-directories for `database` or `messaging`. This structure prevents the rules of your business from becoming entangled with the details of your technology choices, making the system easier to understand, test, and evolve.
+
+### A Litmus Test for Good Organization
+
+Instead of a rigid set of rules, I offer a test:
+
+> When you need to implement a new feature or fix a bug in a specific piece of functionality, how many distinct directories do you have to modify?
+
+If the answer is "one" or "very few," your code is likely well-organized. The changes are localized to the abstraction or concern they affect. If you find yourself jumping between a `models` directory, a `controllers` directory, a `services` directory, and a `utils` directory all to make a single logical change, your code is organized by technical type, not by abstraction. This often scatters the implementation of a single concept across the entire codebase, increasing cognitive load and the risk of error.
+
+In summary, do not ask "What is the right folder structure?" Instead, ask "What are the core abstractions in my system?" Design those abstractions well, with clear specifications and behavioral contracts. Then, let your file and directory structure be the natural, physical manifestation of that logical design. The goal is not a tidy file tree; it is a clear, correct, and maintainable system.

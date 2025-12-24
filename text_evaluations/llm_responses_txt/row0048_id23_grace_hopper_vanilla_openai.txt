@@ -1,0 +1,30 @@
+Short answer: because future you (and your teammates) won’t remember today’s context, and that gap is expensive.
+
+Benefits of documenting code
+- Faster onboarding and fewer “quick questions” interruptions.
+- Easier maintenance: code reviews, refactors, and bug fixes need less spelunking.
+- Fewer defects: clear contracts (inputs/outputs/side effects/errors) prevent misuse.
+- Better design decisions: writing down assumptions and trade‑offs exposes flaws early.
+- Operational reliability: runbooks and notes cut incident MTTR.
+- Reuse and adoption: well‑documented APIs/libraries get used correctly.
+- Continuity: reduces bus factor risk when people leave.
+- Compliance/audit readiness in regulated environments.
+
+What to document (prioritize)
+- Public interfaces: what it does, parameters, return values, errors, side effects, performance constraints.
+- Non-obvious “why”: invariants, assumptions, edge cases, trade-offs, hacks, and TODOs with intent.
+- How to run/build/deploy: setup steps, configs/env vars, migrations, common pitfalls.
+- Data and contracts: schemas, events, file formats, versioning and compatibility.
+- Architecture and decisions: high-level overview, dependencies, ADRs (why you chose X over Y).
+- Operations: runbooks, alerts, SLOs, feature flags, rollback steps.
+- Examples: minimal snippets showing typical and tricky usage.
+
+How to do it efficiently
+- Prefer self-documenting code first (good names, clear structure); comment the “why,” not the obvious “what.”
+- Keep docs close to code (docstrings, module READMEs); version them with the code.
+- Avoid duplication; have a single source of truth and link to it.
+- Use tooling and tests: generate API docs (e.g., JSDoc/Sphinx), run doctests/examples in CI.
+- Make it part of the PR checklist: update docs when behavior changes.
+- Keep docs short, accurate, and alive; prune when obsolete.
+
+Net effect: less time wasted rediscovering context, fewer bugs, smoother collaboration, and software that ages well.

@@ -1,0 +1,14 @@
+Let me put it plainly: computers do exactly what you tell them—nothing more, nothing less. Requirements engineering is how we make sure we’re telling them the right thing.
+
+- It sets the mission. A ship without a chart will sail, but not arrive. Clear requirements define where we’re going and why.
+- It creates a common language. I built compilers so people could talk to machines in more human terms; requirements do that at project scale—business, engineers, and operators align on one story.
+- It reduces expensive surprises. The cheapest place to fix a mistake is on paper. Late changes cost time, money, and confidence.
+- It makes work measurable. If you can’t quantify it, you can’t test it. A requirement that’s precise and testable lets you know when you’re done.
+- It enables modular design. Stable, well-defined interfaces let teams build and evolve parts independently without breaking the whole.
+- It manages risk and compliance. For critical systems, safety, security, and auditability start with explicit, traceable requirements.
+- It supports maintenance and evolution. Clear intent helps the next crew improve the system without guessing what the first crew meant.
+- It focuses innovation. Constraints don’t stifle creativity; they aim it at the real problem, not shiny distractions.
+
+I used to hand out a “nanosecond” of wire to show how small delays add up. Vague requirements are like hidden nanoseconds—tiny ambiguities that compound into months of drift.
+
+Write it down. Make it unambiguous and measurable. Tie every requirement to a design decision and a test. Then build. That’s how you deliver systems that arrive where they’re meant to go—and keep on arriving. The most dangerous phrase is “we’ve always done it this way.” Requirements engineering is how we do it the right way.

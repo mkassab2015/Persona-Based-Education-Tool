@@ -1,0 +1,58 @@
+Ah, an excellent question. It's heartening to see developers still grappling with the fundamental principles of building robust and maintainable software. The "Don't Repeat Yourself" or DRY principle is often presented as a simple mantra against copy-pasting code, but its true value lies in a much deeper concept that has been central to my work for decades: **abstraction**.
+
+From my perspective, applying DRY is not merely about eliminating textual duplication. It is about identifying, isolating, and creating a single, authoritative representation of every piece of *knowledge* within a system. When you repeat code, you are more dangerously repeating the logic—the knowledge—that the code represents.
+
+Here is how I would advise a developer to approach this principle in their daily work.
+
+### 1. Think in Terms of Abstraction, Not Just Functions
+
+The first instinct for a developer seeing repeated lines of code is often to extract them into a function or method. This is a good start, but it's only the surface. I urge you to ask a more profound question: **What is the concept this repeated code represents?**
+
+Instead of just creating a helper function `formatUserAddress(street, city, state)`, consider if what you truly need is an `Address` abstract data type. This type would encapsulate not only the data (the street, city, etc.) but also the *behavior* associated with it, such as formatting, validation, or calculating distance.
+
+By creating a proper data abstraction, you are not just avoiding repeated code; you are creating a single source of truth for the *concept* of an address. If the business rule for formatting addresses changes, you change it in one place: the `Address` type's implementation. All users of that type automatically receive the update. This is the heart of DRY.
+
+### 2. Differentiate Between Coincidental and Essential Duplication
+
+This is a critical point where developers often misapply the principle. Not all code that looks the same *is* the same. Before you abstract something away, you must be certain that the two pieces of code are duplicates because they represent the same underlying knowledge.
+
+Imagine you have a validation rule that checks if a string is 10 characters long for both a user's phone number and a product's serial number. The code `if (string.length !== 10)` might appear in two places. It is tempting to create a `validateLength10(string)` function.
+
+However, is this duplication essential or coincidental? A phone number's length is determined by telecommunication standards. A serial number's length is determined by manufacturing and inventory policies. These are two entirely separate domains. It is a coincidence that they are both 10 today. Next month, the serial number format might change to 12 characters. If you had coupled them in a single function, a change in one domain would force you to either break the abstraction or create a new one, defeating the purpose.
+
+Wait for the abstraction to become clear. Sometimes, writing it twice (WET, as some call it) is the correct path until the true, essential relationship is understood. **A wrong abstraction is far more costly than a little duplication.**
+
+### 3. Uphold the Contract: The Liskov Substitution Principle and DRY
+
+My work on type hierarchies and what is now called the Liskov Substitution Principle (LSP) is directly related to DRY. The principle states that objects of a superclass should be replaceable with objects of a subclass without altering the correctness of the program.
+
+How does this relate to DRY? Consider a function that operates on a `Document` object.
+
+```
+function printDocument(doc: Document) {
+  // ... some setup
+  const content = doc.serialize();
+  // ... print content
+}
+```
+
+If you have subclasses like `PDFDocument` and `WordDocument`, LSP ensures that they both honor the `serialize()` contract of the parent `Document` class. Because of this, your `printDocument` function doesn't need to know the specific type it's dealing with. You avoid code like this:
+
+```
+// ANTI-PATTERN: VIOLATES LSP AND DRY
+if (doc instanceof PDFDocument) {
+  // logic to serialize a PDF
+} else if (doc instanceof WordDocument) {
+  // logic to serialize a Word doc
+}
+```
+
+This `if/else` block is a form of repetition. You are repeating the *knowledge* of how to select the correct serialization algorithm. By using a proper polymorphic design that adheres to LSP, you place the knowledge of serialization within each subtype, and the calling code remains clean and singular in its purpose. You don't repeat the dispatch logic all over your application.
+
+### Summary of My Advice:
+
+*   **Elevate Your Thinking:** Don't just look for duplicate lines. Look for duplicate *concepts* and *knowledge*. Encapsulate them in robust data abstractions (classes, modules, types).
+*   **Be a Skeptic:** Before merging two pieces of similar code, prove to yourself that they represent the same fundamental rule. If they don't, keeping them separate is the correct choice. Premature abstraction is a design debt.
+*   **Design with Contracts:** Use interfaces and inheritance correctly. Ensure your subtypes are truly substitutable for their base types. This allows you to write code once that operates on a whole family of types, which is the ultimate expression of DRY.
+
+The goal is not a dogmatic elimination of every repeated line. The goal is to build a system where each concept is expressed clearly, unambiguously, and in exactly one place. Do that, and you will have created a system that is not only efficient but also resilient to change.

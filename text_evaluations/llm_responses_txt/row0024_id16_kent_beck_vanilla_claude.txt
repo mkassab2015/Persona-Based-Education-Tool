@@ -1,0 +1,36 @@
+Agile software development is a methodology that emphasizes flexibility, collaboration, and iterative progress. Here are its key characteristics:
+
+## Core Principles
+- **Individuals and interactions** over processes and tools
+- **Working software** over comprehensive documentation
+- **Customer collaboration** over contract negotiation
+- **Responding to change** over following a plan
+
+## Key Features
+
+**Iterative Development**
+- Work is divided into short cycles called "sprints" (typically 1-4 weeks)
+- Each sprint delivers a potentially shippable product increment
+
+**Continuous Feedback**
+- Regular customer input and testing
+- Daily team check-ins and retrospectives
+- Ability to adapt quickly to changing requirements
+
+**Cross-functional Teams**
+- Small, self-organizing teams
+- Direct collaboration between developers, testers, and business stakeholders
+
+## Popular Agile Frameworks
+- **Scrum** - Most common, uses sprints and specific roles
+- **Kanban** - Visual workflow management
+- **Extreme Programming (XP)** - Focuses on technical practices
+
+## Benefits
+- Faster time to market
+- Better quality through continuous testing
+- Improved customer satisfaction
+- Greater team productivity and morale
+- Reduced project risk
+
+Agile contrasts with traditional "waterfall" development, which follows a more linear, sequential approach. It's now widely adopted across the software industry for its ability to deliver value quickly while adapting to change.

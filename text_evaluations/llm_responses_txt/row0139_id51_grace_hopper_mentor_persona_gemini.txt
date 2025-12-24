@@ -1,0 +1,99 @@
+Alright, pull up a chair. You want to know how to write a plan before you start wrestling with the machine. Good. That's the most important step, and it’s the one most people are in a hurry to skip.
+
+Back when we were working with the Mark I, we didn't have the luxury of fancy languages. We had switches, and plugboards, and raw machine instructions. If you made a logical error, you might not find it for days. We learned the hard way: you had better have your thinking straight *before* you commit to a single line of code.
+
+Think of it like building a ship. You don't just start welding steel plates together and hope a cruiser comes out the other end. You start with a blueprint. You draw every bulkhead, every wire, every pipe. You make sure the engine room actually connects to the propeller shaft *on paper* first. That blueprint is your pseudocode. It's a tool for thinking and for communicating.
+
+So, here's how I see it. My guide to writing a proper blueprint for your programs.
+
+### 1. Speak Plain English, Not Gibberish
+
+This was the whole point of COBOL. We wanted to write instructions in a language that people could read. Your pseudocode is for *you* and your fellow humans, not for the computer. The machine is a glorified, high-speed idiot; it will do exactly what you tell it. The hard part is telling it the right thing.
+
+So, write it out in clear, simple, unambiguous English. Forget about semicolons and curly braces. Think about commands.
+
+*   Instead of `let x = document.getElementById("userInput").value;`
+*   Write: `GET the user's name FROM the input box`
+
+Anyone on your team, even the new ensign who just came aboard, should be able to read your pseudocode and understand the *intent* of your program.
+
+### 2. Focus on the Logic, Not the Syntax
+
+This is where young people get tangled up. They start worrying about whether to use a `for` loop or a `while` loop or what the exact syntax for a function call is in Python versus Java.
+
+Stop. That's detail work. That's picking out the rivets for the ship. Right now, you're the architect. You need to decide *what* happens, in *what order*, and *when*.
+
+Use keywords that describe the logical flow. Keep them consistent.
+
+*   **SEQUENCE:** Write steps in the order they happen.
+*   **SELECTION:** Use `IF`, `THEN`, `ELSE`, `ENDIF` for decisions. "IF the fuel tank is empty, THEN sound the alarm, ELSE continue normal operations."
+*   **ITERATION:** Use `WHILE` or `FOR` for loops. "WHILE there are still records in the logbook, DO the following..." or "FOR each sailor on the duty roster..."
+
+### 3. Indent Like a Commanding Officer
+
+Your logic has a chain of command. Some instructions are subordinate to others. An action inside an `IF` statement only happens if that condition is true. It works for the `IF`.
+
+Show that relationship with indentation. It's not for the computer; it's for your brain. It makes the structure of your logic immediately obvious.
+
+**Look at this mess:**
+`IF user is valid THEN`
+`DISPLAY welcome message`
+`GET user's records`
+`FOR each record`
+`DISPLAY record summary`
+`END FOR`
+`ELSE`
+`DISPLAY error message`
+`ENDIF`
+
+**Now, look at the blueprint:**
+
+```
+IF the user is valid THEN
+    DISPLAY the welcome message
+    GET the user's records from the database
+    FOR each record in the user's records
+        DISPLAY a summary of the record
+    END FOR
+ELSE
+    DISPLAY an "access denied" error message
+ENDIF
+```
+See? You can immediately see the structure. You know exactly what's inside the `IF` and what's inside the `FOR` loop. It's clean. It's disciplined.
+
+### An Example: The Coffee Pot Problem
+
+Let's say our task is simple: check if there's coffee. If there is, pour a cup. If not, make a new pot.
+
+Here's my pseudocode for that:
+
+```
+PROCEDURE: Get_A_Cup_Of_Coffee
+
+  START
+
+    // Check the status of the pot
+    GET the status of the coffee pot.
+
+    IF the pot is empty THEN
+        // If it's empty, we have to make more
+        DISPLAY "The pot is empty. Making a new one."
+        EXECUTE the procedure "Make_New_Pot_Of_Coffee"
+        POUR a cup of coffee.
+    ELSE
+        // If it's not empty, just pour
+        POUR a cup of coffee.
+        DISPLAY "Enjoy your coffee."
+    ENDIF
+
+  END
+```
+Notice a few things. I gave the whole process a name (`Get_A_Cup_Of_Coffee`). I broke a complex step (`Make_New_Pot_Of_Coffee`) into its own procedure, which I'd define elsewhere. It's written in plain English. The logic is crystal clear because of the keywords and indentation.
+
+---
+
+Remember, the goal of pseudocode isn't to be "correct" in a programming language sense. Its goal is to be **clear**. It’s your chance to find the logical bugs—the flaws in your thinking—before you've wasted hours writing code that was doomed from the start.
+
+You debug your *thinking* with pseudocode. You debug your *typing* with a compiler. The first one is a lot cheaper and faster.
+
+Now, stop asking and start planning. You've got work to do. Dismissed.

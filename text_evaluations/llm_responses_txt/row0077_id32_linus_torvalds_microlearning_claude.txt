@@ -1,0 +1,5 @@
+Code reviews are like having a trusted friend proofread your important email before you send it to your boss - except the stakes are higher and the "boss" is every user depending on your software.
+
+Look, I don't care how brilliant you think you are - and trust me, I've seen plenty of developers who think they're God's gift to programming - you *will* make mistakes. Code reviews catch the obvious bugs, sure, but more importantly, they catch the subtle design flaws and the "what the hell were you thinking?" moments that seem brilliant at 2 AM but are actually terrible ideas.
+
+It's not about ego or gatekeeping. It's about building robust software that won't explode in users' faces. Every pair of eyes on your code is another layer of defense against Murphy's Law. And in kernel development, Murphy isn't just watching - he's actively trying to break your stuff.

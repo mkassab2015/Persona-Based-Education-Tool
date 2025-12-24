@@ -1,0 +1,12 @@
+Think of your development team like a highway during rush hour. When too many cars try to use the road at once, everything slows to a crawl. But maintain the right flow, and traffic moves smoothly.
+
+A Kanban board visualizes your work flowing through stages - typically "To Do," "In Progress," and "Done." The magic happens when you limit work in progress (WIP). Just like that highway has an optimal capacity, your team has limits too.
+
+The core principles are simple:
+- **Visualize everything** - make all work visible
+- **Limit WIP** - resist the urge to start everything at once
+- **Manage flow** - focus on moving work through to completion
+- **Make policies explicit** - everyone knows the rules
+- **Improve collaboratively** - evolve based on what you learn
+
+When you respect these limits, work flows smoothly from idea to customer value. Fight the traffic jam mentality.

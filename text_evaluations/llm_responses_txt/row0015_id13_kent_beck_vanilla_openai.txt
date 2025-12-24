@@ -1,0 +1,23 @@
+Software refactoring is the disciplined process of improving the internal structure of existing code without changing its external behavior. The goal is to make code easier to understand, maintain, and extend, and to reduce technical debt.
+
+Key points:
+- What changes: Code organization, naming, modularity, duplication, complexity—not features or outputs.
+- Why do it: Improve readability, maintainability, testability, performance of development (not necessarily runtime), and reduce bugs over time.
+- Common techniques:
+  - Rename variables/methods/classes for clarity
+  - Extract/inline methods or classes
+  - Remove duplication (DRY)
+  - Simplify conditionals and complex logic
+  - Improve cohesion and reduce coupling
+  - Introduce or remove design patterns as appropriate
+  - Break up large functions/modules; separate concerns
+- Best practices:
+  - Make small, incremental changes
+  - Keep a comprehensive test suite and run it frequently to ensure behavior is unchanged
+  - Use version control and IDE refactoring tools
+  - Refactor when you touch code (“boy scout rule”) or when code smells appear (e.g., long methods, large classes, shotgun surgery)
+- Not the same as:
+  - Feature development (adds behavior)
+  - Optimization (improves performance; refactoring’s primary aim is code quality, though it can enable optimizations)
+
+Result: cleaner, more reliable code that’s cheaper and safer to change.

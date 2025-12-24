@@ -1,0 +1,11 @@
+Of course.
+
+In software design, these two concepts measure the quality of a module.
+
+**Cohesion** is an internal property. It measures how well the elements *inside* a single module belong together. High cohesion is good; it means the module has a single, well-defined purpose.
+
+**Coupling** is an external property. It measures how dependent a module is on *other* modules. Low coupling is good; it means changes in one module are less likely to break others.
+
+Think of a modern stereo system. The amplifier is a highly cohesive unit—all its internal parts serve to amplify sound. It connects to the speakers via standard cables—this is low coupling. You can easily replace the speakers without redesigning the amplifier. An old, all-in-one record player had high coupling; if the speaker broke, the whole system was compromised.
+
+Strive for high cohesion and low coupling.

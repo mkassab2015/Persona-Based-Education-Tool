@@ -1,0 +1,60 @@
+Here’s a fast, practical workflow you can use for almost any stack. If you share the failure message, code snippet, and stack/tooling, I can tailor it.
+
+1) Reproduce reliably
+- Run only the failing test, with verbose output and no parallelism.
+- Disable output capturing so you see prints/logs.
+- Try to reproduce in the same environment as CI (versions, OS, env vars, timezone).
+
+2) Read the failure carefully
+- Focus on the first stack frame in your code (not libraries).
+- Compare expected vs actual. Check types, units, timezones, locale, and floating‑point tolerance.
+
+3) Isolate the cause
+- If it only fails in the full suite, suspect shared/global state or order dependence.
+- Randomize test order or run the single test before/after others to confirm order sensitivity.
+- Reduce to a minimal repro by removing code until the failure disappears; the last change that makes it pass points to the cause.
+
+4) Inspect and instrument
+- Add targeted logging around the failing path (inputs, key branches, boundary values).
+- Use a debugger/breakpoints to step into the code under test; watch variables.
+- Use code coverage to confirm the exact lines executed.
+
+5) Control external factors
+- Freeze or stub time; set a fixed timezone (often UTC).
+- Seed randomness; record and reuse the failing seed.
+- Stub/mocking for network, filesystem, environment variables, feature flags.
+- Avoid relying on wall‑clock timing; use condition waits instead of sleeps.
+
+6) Clean state and fixtures
+- Reset globals/singletons, caches, and static config between tests.
+- Use unique temp directories, ports, and database schemas.
+- Ensure proper setup/teardown; roll back DB transactions; close file handles/sockets.
+
+7) Concurrency and flakiness
+- Run the test in a loop (e.g., 100x) to reproduce flakiness.
+- Disable parallelism to see if it stabilizes; if so, fix shared state.
+- Use race detectors where available; replace sleeps with explicit sync.
+
+8) Environment and dependencies
+- Log versions of runtime, libraries, OS; compare local vs CI.
+- Pin/lock dependency versions; clear caches; rebuild clean.
+- If the failure started recently, use git bisect to find the introducing change.
+
+9) Decide if the test or the code is wrong
+- If requirements changed, update the test.
+- Soften brittle checks: compare sets ignoring order, use approximate equality for floats, make snapshot tests stable.
+
+10) Prevent recurrence
+- Keep the failing case as a regression test.
+- Make tests hermetic and deterministic (seed, clock, locale).
+- Add assertions/invariants in code paths that were buggy.
+
+Quick run commands (pick what matches your stack)
+- Python/pytest: pytest -k "name" -vv -x -s; pytest --pdb; breakpoint(); pytest -n 1
+- JS/Jest: jest path -t "name" --runInBand --detectOpenHandles; node --inspect-brk
+- Java/JUnit (Maven): mvn -Dtest=Class#method -DforkCount=0 -DtrimStackTrace=false -X
+- Go: go test -run Name -v -race -count=100
+- Rust: cargo test name -- --nocapture --test-threads=1
+- .NET: dotnet test --filter "FullyQualifiedName~Name" -v n
+
+If you paste the exact failure output, the test code, and the function under test, I’ll walk through a targeted debugging plan.

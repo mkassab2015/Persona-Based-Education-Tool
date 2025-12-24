@@ -1,0 +1,5 @@
+A failing test is a gift—a specific, localized report of a problem. My first step is to ensure it's the *only* test failing. If not, I revert to the last green state to isolate the change that caused the break.
+
+I then read the failure message carefully. The discrepancy between "expected" and "actual" is the most valuable clue. The goal is to shrink the feedback loop. I'll use a debugger or a print statement, but only to confirm a specific hypothesis, not to wander through the code.
+
+Think of it like tuning a guitar. You don't retune every string for one sour note. You pluck the single string, listen to how sharp or flat it is, and make a small, precise adjustment to the corresponding tuning peg until it's in harmony. The fix should be as targeted as the test.

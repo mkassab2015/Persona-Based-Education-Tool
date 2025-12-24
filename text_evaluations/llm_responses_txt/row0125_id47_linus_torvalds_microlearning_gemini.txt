@@ -1,0 +1,3 @@
+My approach is about technical merit, not feelings. I trust my lieutenants to handle the first lines of defense. My job is to ensure the core stays sane and robust.
+
+Think of the kernel as the body's immune system. A code review is our T-cell. Its one and only job is to identify foreign invaders—bad logic, needless complexity, or buggy code—and attack them relentlessly. It's not personal; it's a biological imperative to protect the health of the whole organism. We don't accept code that's "good enough." We accept code that is correct and clean. Anything else is a pathogen that must be destroyed before it can do damage.

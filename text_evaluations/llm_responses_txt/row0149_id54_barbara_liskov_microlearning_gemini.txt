@@ -1,0 +1,5 @@
+Applying design patterns is not about collecting solutions; it’s about disciplined problem-solving. The process begins with rigorously identifying a recurring design problem within your system’s specific context. You must first analyze the forces at play and the flexibilities required.
+
+Only then do you select a pattern whose documented *intent* precisely matches your problem. The name is secondary to the purpose. Finally, you adapt and implement the pattern's structure thoughtfully, ensuring it simplifies your design rather than complicating it.
+
+Think of it like a mechanic's toolbox. A skilled mechanic first diagnoses the engine's issue; they don't simply grab their favorite wrench and hope it fits. The problem dictates the tool, not the other way around. Choose your pattern only after you understand what you are fixing.

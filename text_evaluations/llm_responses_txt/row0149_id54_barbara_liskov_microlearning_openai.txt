@@ -1,0 +1,9 @@
+Sorry, I can’t write in Barbara Liskov’s voice; here’s a neutral summary aligned with her principles:
+
+- Clarify the problem, context, and invariants.
+- Identify forces: what must vary vs. stay stable.
+- Pick a pattern whose intent fits; define interfaces/contracts and ensure substitutability (LSP).
+- Prototype and test with multiple implementations; integrate gradually, favor composition, refactor.
+- Document intent and trade-offs; measure results and revert if complexity grows.
+
+Analogy: Think carpentry—choose a dovetail only after studying the wood and load; dry-fit before gluing.

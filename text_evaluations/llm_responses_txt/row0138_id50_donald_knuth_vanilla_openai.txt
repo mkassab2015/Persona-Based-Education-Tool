@@ -1,0 +1,60 @@
+Use a needs-first approach: pick the structure that makes your most frequent or most expensive operations cheap, while meeting constraints like ordering, memory, and concurrency.
+
+A quick 3-step process
+1) Write down operations and frequencies
+- Lookup by key? by index? existence check? min/max? range queries? insert/delete where? iterate in order?
+- How many items (n), and how often do operations happen?
+
+2) Note constraints
+- Ordering needed? (sorted, insertion order, none)
+- Uniqueness vs duplicates (set vs multiset/multimap)
+- Range queries or prefix searches?
+- Memory limits, real-time bounds, immutability/persistence, concurrency, disk-based data?
+
+3) Choose for the bottleneck
+- Target O(1) or O(log n) for the operations that dominate time; prefer contiguous memory for cache locality unless you need node-level operations.
+
+Quick picks (general-purpose)
+- Fast lookup by key, no ordering: Hash map/set (average O(1) insert/find/erase).
+- Need sorted order or range queries (min/max, <= x, between a..b): Balanced tree map/set or skip list (O(log n)); for small n, a sorted array + binary search is often fastest and very memory-friendly.
+- Need stable iteration in insertion order plus fast lookup: Ordered hash (e.g., LinkedHashMap) or hashmap + list.
+- Top-k / min or max with ongoing inserts: Heap/priority queue (push/pop O(log n)); for fixed small k, maintain a size-k heap.
+- Need k-th by order / rank/select: Order-statistics tree or indexed skip list; sometimes Fenwick tree for prefix sums with counts.
+- Queue/stack: Queue/stack (O(1)); double-ended queue for push/pop at both ends.
+- Append-heavy sequences with random reads: Dynamic array/vector (amortized O(1) append, O(1) index).
+- Frequent middle insert/delete with references to nodes: Linked list (rarely best; only if you already have node handles). Otherwise a deque, gap buffer, rope, or piece table (e.g., text editing).
+- Sliding window min/max: Monotonic deque (amortized O(1) per step).
+- Membership test with tiny memory and some false positives: Bloom filter (or Cuckoo filter to support deletes).
+- Bit-level sets over small-ish known universe: Bitset/Roaring bitmap (very memory- and cache-friendly).
+- Prefix or dictionary of strings: Trie/radix tree (O(length)); for substring queries: suffix array/tree.
+- Sparse graphs: Adjacency list (or CSR for performance); dense graphs: adjacency matrix.
+- Spatial/nearest neighbors: KD-tree/ball tree for low dimensions, R-tree for rectangles, HNSW/LSH for high-dimensional approximate search.
+- Disk or very large data: B/B+ trees (range queries) or LSM trees (write-heavy).
+- Concurrency: Language-provided concurrent maps/queues, immutable/persistent structures, or copy-on-write where reads dominate.
+
+Rule-of-thumb heuristics
+- If n is small (say < 1–5k), pick the simplest thing that works (often a vector/array and sort); simplicity beats micro-optimizing.
+- Arrays/vectors are extremely fast to iterate (cache-friendly). Linked structures pay pointer and cache penalties; only use them for true node-level O(1) edits.
+- Hash vs tree: choose hash for average O(1) and no order; choose tree for sorted/range queries, predictable O(log n) worst-case, or when you need in-order iteration.
+- Prefer immutable/persistent structures for thread-safety and undo/redo, at some memory/time cost.
+- If you need predictable latency (real-time), avoid structures with occasional O(n) pauses (e.g., resizing) or use bounded versions.
+- Consider iterator invalidation (e.g., vector insert/erase can invalidate references).
+- Profile before and after. Start with the simplest correct structure; change only if measurements say so.
+
+Cheat-sheet complexities (very short)
+- Dynamic array: index O(1); push_back amortized O(1); insert/delete middle O(n); find O(n) or O(log n) if sorted.
+- Linked list: insert/delete with node O(1); find O(n); poor locality.
+- Hash map/set: average O(1) insert/find/erase; no order; worst-case O(n) without safeguards.
+- Tree map/set: O(log n) insert/find/erase; ordered; range queries efficient.
+- Heap: push/pop-min/max O(log n); no fast contains.
+- Deque: O(1) push/pop ends; random access O(1) in many languages but less cache-friendly than vectors.
+- Fenwick/segment tree: O(log n) prefix/range sums/updates.
+- Trie: O(L) by key length; good for prefixes.
+- Bloom filter: O(k) check/insert; false positives possible.
+
+If you share:
+- your language,
+- n scale,
+- the exact operations and their relative frequencies,
+- ordering/uniqueness needs and any special constraints (memory, concurrency, real-time),
+I can recommend a concrete structure (and a snippet) tailored to your case.

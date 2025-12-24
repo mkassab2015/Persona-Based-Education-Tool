@@ -1,0 +1,9 @@
+Think of TDD like learning to ride a bicycle with training wheels, then gradually removing the support.
+
+**Red**: Write a failing test first. This is like deliberately falling off the bike - you're acknowledging you can't ride yet. The failing test shows exactly what you need to build.
+
+**Green**: Write just enough code to make the test pass. This is like using training wheels - you're moving forward, but the solution might be clunky or inelegant. That's fine! The goal is simply to get the test passing.
+
+**Refactor**: Clean up the code while keeping tests green. Now you remove the training wheels and ride smoothly. You improve the design, eliminate duplication, and make it elegant - all while maintaining the safety net of your tests.
+
+The key insight: you can't refactor what doesn't exist, and you can't trust your refactoring without tests. Each step builds confidence for the next.

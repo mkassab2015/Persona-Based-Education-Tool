@@ -1,0 +1,39 @@
+**Verification** and **validation** are two distinct but complementary quality assurance processes:
+
+## Verification
+- **"Are we building the product right?"**
+- Ensures the product meets specified requirements and design specifications
+- Focuses on adherence to standards, processes, and documentation
+- Typically involves:
+  - Code reviews
+  - Design reviews
+  - Testing against specifications
+  - Static analysis
+- Can often be done without executing the actual product
+
+## Validation
+- **"Are we building the right product?"**
+- Ensures the product meets the actual needs and expectations of end users
+- Focuses on whether the product solves the intended problem
+- Typically involves:
+  - User acceptance testing
+  - Field testing
+  - Beta testing
+  - Real-world scenario testing
+- Requires executing/using the actual product
+
+## Key Differences
+
+| Aspect | Verification | Validation |
+|--------|-------------|------------|
+| **Focus** | Requirements compliance | User needs fulfillment |
+| **When** | Throughout development | Near/at end of development |
+| **Method** | Reviews, inspections, analysis | Testing with real users/scenarios |
+| **Question** | Does it match specs? | Does it work for users? |
+
+## Example
+For a mobile banking app:
+- **Verification**: Checking if the login feature encrypts passwords as specified in requirements
+- **Validation**: Testing if real customers can easily and securely access their accounts in real-world conditions
+
+Both are essential for delivering quality products that are both technically correct and truly useful.

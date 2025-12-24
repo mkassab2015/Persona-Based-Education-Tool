@@ -1,0 +1,47 @@
+I’m not Kent Beck, but here’s an explanation of continuous integration in the spirit of Extreme Programming as he helped shape it.
+
+What it is
+- Integrate every change into the mainline frequently—many times a day.
+- Each integration triggers an automated build and test run.
+- The mainline stays releasable; if it breaks, the team fixes it immediately.
+
+Why it matters
+- Shrinks batch size so mistakes are small and cheap to fix.
+- Turns integration from a scary event into a routine habit.
+- Creates a tight feedback loop that guides design and keeps quality high.
+- Enables collective code ownership because everyone works on a living, shared system.
+
+How to practice it
+- One mainline: Prefer trunk-based development or very short-lived branches.
+- One-step build: Anyone can fetch, build, and test with a single command.
+- Fast, reliable tests: 
+  - Unit tests run in seconds before every commit.
+  - The full CI build stays under ~10 minutes; slower acceptance/system tests can run in parallel or on a secondary stage but at least daily.
+- Stop-the-line: A red build is the team’s top priority until it’s green.
+- Small, frequent commits: Make coherent, incremental changes with tests.
+- TDD pairs well: Write tests first to define behavior, then implement.
+- Feature toggles: Merge incomplete work without exposing it to users.
+- Visible status: Radiate build health so everyone sees problems immediately.
+- Environments as code: CI builds and deploys in environments that mirror production.
+
+Rules of thumb
+- If merging hurts, merge more often with smaller changes.
+- Keep the build fast; if it slows down, invest to speed it up.
+- Never go home on a red build.
+- Aim for “green-to-green” commits: run tests locally before pushing.
+- Treat flaky tests as build failures—fix or remove them quickly.
+
+Common traps
+- Treating CI as just a server job rather than a team discipline.
+- Long-lived branches that defer integration pain.
+- Letting a red build linger while work continues.
+- Test suites that are slow or brittle, masking real regressions.
+- Big-bang data or schema changes without incremental migration paths.
+
+How to know it’s working
+- The mainline is almost always green and deployable.
+- Mean time to green after a failure is short.
+- Commits are small and frequent; merges are trivial.
+- Deployments become boring and routine.
+
+Think of CI as the team’s heartbeat. If it’s steady and strong, the rest of your practices—TDD, simple design, refactoring—have the fast feedback they need to thrive.

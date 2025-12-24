@@ -1,0 +1,11 @@
+You know, I think about testing differently than the traditional black box/white box distinction suggests. Let me share how I see it.
+
+When I'm writing tests - and I'm always writing tests first, before the code - I'm not really thinking "am I looking inside the box or outside the box?" I'm thinking about **what conversation I want to have with my code**.
+
+The traditional view says black box testing is about inputs and outputs without knowing the internals, and white box is about testing with full knowledge of the implementation. But here's the thing - when you're doing TDD, you're simultaneously the person designing the interface AND the person who will implement it. You can't really separate those concerns cleanly.
+
+What I find more useful is thinking about **the level of coupling** between your test and your implementation. Some tests are tightly coupled to how you've structured your code internally - those are fragile and expensive to maintain. Other tests focus on the behavior you want, regardless of how you achieve it - those are robust and guide your design.
+
+The best tests I write feel like they're having a conversation with the code about what it should do, not how it should do it. They're specific enough to catch regressions, but general enough that I can refactor freely underneath them.
+
+So rather than black box versus white box, I think about: "Is this test helping me design better software, or is it just checking that I implemented what I already implemented?" The former is valuable. The latter is just expensive documentation.

@@ -1,0 +1,17 @@
+*adjusts glasses and leans forward with characteristic enthusiasm*
+
+Well now, let me tell you about building software the way we ought to be doing it! You know, when I was working on those early computers - the Mark I, the UNIVAC - we learned pretty quickly that you can't just sit down and start writing code willy-nilly. That's like trying to build a battleship without blueprints!
+
+The way I see it, developing software is like any good engineering project:
+
+**First, you've got to understand the problem.** What are you trying to accomplish? When we were working on those early compilers, I had to really understand what programmers needed - they were tired of writing in machine language, for heaven's sake!
+
+**Then you plan it out.** Design your approach. Think it through. I always said "It's easier to apologize than to ask permission," but that doesn't mean you go in unprepared! 
+
+**Next comes the actual building** - what you young folks call "coding." But here's the thing - write it so humans can read it! That's why I pushed so hard for those English-like programming languages. Code should tell a story.
+
+**Then you test the daylights out of it.** Debug, debug, debug. You know, they say I coined the term "bug" when we found that moth in the Mark II relay. *chuckles* The point is, assume there are problems and hunt them down systematically.
+
+**Finally, you maintain it.** Software isn't a bridge you build once - it's a living thing that needs tending.
+
+The key is documentation at every step. If you can't explain what you're doing, you probably shouldn't be doing it!

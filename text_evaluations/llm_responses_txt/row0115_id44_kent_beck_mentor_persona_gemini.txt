@@ -1,0 +1,49 @@
+Alright, pull up a chair. Let's talk about story points. But first, let's clear the air. People get really wrapped up in the numbers, the ceremony, the "right way" to do it. That's a trap.
+
+Story points are not hours. They are not a contract. They are not a weapon to be used against a team. If you're doing any of that, you've missed the point entirely.
+
+For me, the process of estimating is first and foremost a tool for **conversation and discovery**. The number we land on is almost a side effect. The real value is what happens *before* we get to the number.
+
+Here's how I think about it.
+
+### 1. It’s About Shared Understanding
+
+When the team gets together to estimate a story, we're not just assigning a number. We're asking questions.
+
+*   The developer might say, "This looks like a 3, it's a simple API change."
+*   The tester then says, "Whoa, wait. The last time we touched that API, it broke three other services. We'll need a full regression suite. That feels more like an 8 to me because of the risk."
+*   Then the designer chimes in, "And are we accounting for the new accessibility standards? That adds some complexity to the front-end work."
+
+See what happened? We just uncovered risk, dependencies, and hidden work. We forced a conversation that might not have happened otherwise. The goal wasn't to get the "right" number; it was to get everyone on the same page about what "done" for this story truly means. The estimate is the catalyst for that conversation.
+
+### 2. It’s All Relative
+
+Humans are terrible at absolute estimation. If I ask you how long it will take to drive to a city you've never visited, you'll guess and be wrong. But if I ask you, "Is it further than driving to the next town over?" you can answer that instantly.
+
+That's the core of story points. We're not saying, "This will take 24 hours." We're saying, "This feels about twice as complex as that other story we did last week."
+
+We start by finding a small, well-understood piece of work. Let's call that a "2". It's our yardstick. Then, for every new story, we just ask the team: "Is this bigger, smaller, or about the same as our '2'?"
+
+*   If it’s a bit bigger, maybe it's a 3.
+*   If it’s much bigger, maybe it's a 5 or an 8.
+*   If it feels huge and unknowable, it's a 13 or a 20. That's not an estimate; it's a **signal**. It's the story screaming, "I am too big! You don't understand me! Break me down!"
+
+We use a scale like the Fibonacci sequence (1, 2, 3, 5, 8, 13...) to bake in the idea that the bigger something is, the more uncertain it is. The gap between 8 and 13 is huge because our confidence is low.
+
+### 3. It’s a Tool for Forecasting, Not a Promise
+
+Once a team gets into a rhythm, they'll start completing a certain number of points per iteration. We call this "velocity."
+
+Velocity is not a performance metric. I can't stress this enough. It's not for comparing teams. It's not for judging individuals. It is simply a historical average that helps the team answer one question for the business: "**Roughly how much can we get done in the next couple of weeks?**"
+
+It's a forecasting tool. It allows us to make reasonable plans, to have honest conversations about scope, and to manage expectations. If the business wants 60 points of work and our velocity is 30, we have a fantastic, data-informed conversation ahead of us. It's not an argument; it's just math.
+
+### My Approach in a Nutshell:
+
+1.  **Get the Team Together:** The people doing the work are the only ones who can estimate the work. Full stop.
+2.  **Focus on Conversation:** Use the estimate as an excuse to talk. If everyone instantly agrees on a number, I get suspicious. I want to hear the outliers. "Why do you think it's a 3 when everyone else thinks it's an 8?" That's where the learning is.
+3.  **Use Relative Sizing:** Compare new stories to old, completed stories. "Remember that login feature? Is this bigger or smaller?"
+4.  **Embrace the "I Don't Know":** A high estimate is a gift. It's the system telling you to simplify and break the work down into smaller, more understandable pieces.
+5.  **Use the Output for Planning:** Look at your velocity as a gentle guide for the future, not a rigid contract.
+
+At the end of the day, the goal isn't to be "good at estimating." The goal is to build a shared understanding, manage risk, and create a sustainable pace for delivering valuable software. Story points are just one simple, often misunderstood, tool to help us get there. If they stop being helpful, we should have the courage to change them or throw them away. The practice serves the team, not the other way around.

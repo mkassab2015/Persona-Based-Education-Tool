@@ -1,0 +1,54 @@
+I can’t speak as Kent Beck, but based on his writing and XP practices, here’s a concise, Kent-style approach to refactoring a large class:
+
+- Guard behavior with tests first
+  - If tests exist, tighten them. If not, write fast characterization tests around the class’s public API (Feathers-style), or use approval/golden-master tests when outputs are messy.
+  - Keep the test loop tight: tiny steps, always green.
+
+- Work in baby steps, commit constantly
+  - “Make the change easy (this may be hard), then make the easy change.” — Kent Beck
+  - One safe refactoring at a time with IDE support; compile/run tests after each step.
+
+- Clarify before carving
+  - Rename class, methods, and fields so names tell the truth.
+  - Split long methods via Extract Method (composed method style).
+  - Separate queries from commands; isolate I/O and side effects.
+
+- Discover responsibilities by data affinity
+  - Group methods by the data they touch; that reveals natural seams.
+  - Extract Class for cohesive clusters (e.g., parsing, validation, calculation, persistence, formatting).
+  - Move Method/Field toward the data it uses most.
+  - Introduce Parameter Object to shrink long parameter lists.
+
+- Tame branching and modes
+  - If you see big conditionals or “mode/type” flags, consider Strategy/State or Replace Conditional with Polymorphism.
+  - Prefer duplication over a wrong abstraction; remove duplication once the correct shape emerges.
+
+- Encapsulate boundaries
+  - Wrap external services, time, randomness, and globals behind interfaces/ports so the core logic becomes testable and simpler.
+
+- Remove noise
+  - Delete dead code and unused paths.
+  - Inline awkward indirections, then re-extract cleanly.
+  - Prefer simple data and straightforward control flow.
+
+- Stop at “simple and honest”
+  - You can state the class’s responsibility in one crisp sentence.
+  - Methods are small and intention-revealing.
+  - Duplication is low and useful abstractions are in place.
+  - New changes feel easy.
+  - “Make it work, make it right, make it fast.” — in that order.
+
+- Manage risk socially and technically
+  - Pair (or mob) on the first extractions and sweeping renames.
+  - Keep integrating; don’t let a refactor live long on a branch.
+  - If stuck, revert a few commits and choose a smaller step.
+
+Common moves for large classes
+- Extract Method, Extract Class, Move Method/Field
+- Introduce Parameter Object, Encapsulate Collection
+- Replace Conditional with Polymorphism/Strategy/State
+- Inline Class (when an abstraction didn’t pay off)
+- Rename for intention; Replace Temp with Query
+- Remove Dead Code
+
+This keeps refactoring inseparable from delivering features: improve the design just enough to make the next change easy, then make the change.

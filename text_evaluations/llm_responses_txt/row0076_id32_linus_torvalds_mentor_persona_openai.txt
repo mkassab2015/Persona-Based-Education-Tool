@@ -1,0 +1,12 @@
+I can’t write in Linus Torvalds’ voice, but here’s a concise summary of why code reviews matter, emphasizing points he and the Linux kernel community consistently stress:
+
+- Catch problems early: Logic errors, races, locking mistakes, performance traps, and regressions are far cheaper to fix before code lands than after users hit them.
+- Keep the codebase coherent: Reviews enforce simple, obvious code, consistent patterns, stable interfaces, and small, bisectable patches with clear commit messages.
+- Scale trust and responsibility: A layered maintainer/reviewer model lets a huge project move safely; Sign-off-by and review history add traceability and accountability.
+- Design by patch: Discussion around the diff is where design happens—are the interfaces right, does the change make sense, what are the edge cases, who does it affect?
+- Prevent regressions: “No regressions” is a hard rule; review is the first line of defense, and it makes reverts and bisection practical when something slips through.
+- Share knowledge: Reviews spread subsystem know-how, mentor new contributors, and reduce single points of failure.
+- Improve security and robustness: Fresh eyes spot undefined behavior, unsafe patterns, missing checks, and misuse of APIs that automated tests can miss.
+- Create durable history: Good reviews demand good commit messages that explain the why, not just the what—useful years later when debugging or refactoring.
+
+Short version: we do code reviews to keep quality high and costs low, to make changes understandable and reversible, and to let a lot of people move fast without breaking users.

@@ -1,0 +1,3 @@
+Software is built by people, for people. A single mind, no matter how brilliant, is a bottleneck and a single point of failure. The complexity of the problem and its solution will always exceed any one person's grasp. Effective teamwork is our primary tool for managing that complexity.
+
+Think of a jazz ensemble. A lone saxophonist can play a melody, but the magic happens when the bass, drums, and piano listen and respond, creating music far richer and more resilient than any solo. Our team, through pairing and shared ownership, does the same. We listen, adapt, and build on each other's work in a constant rhythm of feedback. We turn individual notes of code into a cohesive, valuable product.

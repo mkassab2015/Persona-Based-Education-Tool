@@ -1,0 +1,5 @@
+Cohesion is how tightly the parts of a module work together toward a single, clear purpose. High cohesion means the module does one thing well; low cohesion means it’s a grab bag of unrelated tasks.
+
+Coupling is how much one module depends on others. Tight coupling means changes in one module ripple into others; loose coupling means modules interact through small, stable interfaces.
+
+Analogy: Imagine a kitchen. A “baking station” with mixer, flour, and pans has high cohesion. If it constantly borrows knives, bowls, and timers from other stations, that’s tight coupling. Aim for high cohesion, low coupling.

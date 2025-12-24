@@ -1,0 +1,124 @@
+Here’s a practical blueprint you can adopt and tailor to your team. It covers goals, workflow, expectations, and templates.
+
+1) What good code reviews aim to achieve
+- Catch issues early: correctness, security, reliability, performance, privacy, accessibility.
+- Improve maintainability: clarity, structure, tests, docs.
+- Share knowledge: spread context, standards, and patterns.
+- Sustain speed without burnout: small PRs, quick feedback loops.
+
+2) Core workflow
+- Before the PR (author)
+  - Do a quick self-review; run all checks locally.
+  - Ensure tests, docs, migration notes, and rollout plan are included.
+  - Keep PRs small (ideally < 400 changed lines); split large changes.
+- Open the PR
+  - Use a clear title and description (template below).
+  - Label risk level, type (feat/fix/refactor), and areas (security/migration).
+  - Tag code owners; auto-assign reviewers if possible.
+- During review (reviewer)
+  - Read description first; run the branch if feasible; skim changeset; review commit-by-commit for big PRs.
+  - Prioritize correctness/security first; then maintainability and style.
+  - Classify comments: Blocking, Suggestion, Nit, Question.
+  - Be specific, constructive, and propose alternatives when possible.
+- Resolve and merge
+  - Author addresses comments or explains trade-offs; keep conversation public.
+  - Require passing CI and approvals (e.g., 1–2 approvals per risk).
+  - Prefer squash-merge for clean history; ensure a meaningful commit message.
+  - Post-merge: monitor metrics/alerts; execute rollback plan if needed.
+
+3) SLAs and etiquette
+- SLAs
+  - First response within 1 business day.
+  - Author responds to review comments within 1 business day.
+  - High-risk or hotfix PRs: explicitly marked; faster turnaround.
+- Etiquette
+  - Critique code, not people. Assume good intent.
+  - Ask questions before prescribing solutions for non-critical issues.
+  - If stuck, sync for 10–15 minutes rather than long threads.
+  - Disagree-and-commit: escalate only when impact is meaningful.
+
+4) What to look for (review checklist)
+- Correctness and design
+  - Does it meet the stated requirement? Edge cases? Error handling?
+  - Data contracts and APIs: backward compatibility? Versioning?
+  - Concurrency, async, transactions; idempotency where relevant.
+- Tests and quality
+  - Unit/integration tests cover success, failure, and edge cases.
+  - Tests are deterministic; no flaky sleeps; meaningful assertions.
+  - Adequate code coverage for changed areas.
+- Security and privacy
+  - Input validation, escaping, authN/authZ checks.
+  - Secrets not hardcoded; keys in vault; least-privileged access.
+  - Sensitive data handling (PII/PHI); logging avoids secrets; GDPR/CCPA concerns.
+- Performance and reliability
+  - Complexity hotspots; N+1 queries; memory/CPU implications.
+  - Timeouts, retries with backoff; circuit breakers where needed.
+  - Caching strategy; indexes and query plans.
+- Observability and ops
+  - Structured logs, metrics, tracing; actionable error messages.
+  - Feature flags; dark launches; rollback strategy; migrations safe to run.
+- Maintainability
+  - Readability, naming, small functions, clear boundaries.
+  - Follows architecture and style guide; avoids dead code.
+  - Comments explain why, not what; public APIs documented.
+- Frontend/accessibility (if applicable)
+  - Keyboard navigation, ARIA roles, color contrast, i18n.
+
+5) Author responsibilities
+- Keep PRs small and single-purpose; call out non-functional changes (renames, formatting).
+- Provide context: why, alternatives considered, risks, rollout plan.
+- Provide testing notes: how to reproduce and verify.
+- Run linters/formatters; pass CI locally when possible.
+
+6) Reviewer responsibilities
+- Focus on the highest-value feedback first.
+- Don’t block on style if a formatter enforces it.
+- Use comment labels:
+  - Blocking: must address
+  - Suggestion: consider change; explain trade-off
+  - Nit: non-blocking polish
+  - Question: seeking clarification
+- Approve with conditions if minor issues remain; be explicit.
+
+7) Tooling recommendations
+- PR templates, issue links, and labels.
+- CODEOWNERS for auto-assignments.
+- Branch protection: required reviews, required status checks.
+- CI gates: tests, linters/formatters, type checks, security scans (SAST/secret scan), dependency audit.
+- Pre-commit hooks to catch formatting and simple errors early.
+- Bots: stale PR warnings, size labels, auto-merge after approvals.
+
+8) Handling special cases
+- Large refactors: do a design doc; split into mechanical vs logical changes; use draft PRs.
+- Hotfixes: minimal diff, post-incident retrospective, follow-up PR with tests.
+- Data/schema migrations: backward-compatible two-step deploys; feature flags; verify rollbacks.
+- Generated code: check only the generator and config; avoid reviewing the generated diff line-by-line.
+
+9) Example PR description template
+- Title: type(scope): short summary [Ticket/Link]
+- Context
+  - What problem does this solve? Why now?
+- Changes
+  - High-level bullet points; call out risky areas.
+- How I tested
+  - Test plan, commands, screenshots, perf numbers if relevant.
+- Risks and rollout
+  - Migration steps, flags, monitors, rollback plan.
+- Backward compatibility
+  - API/DB/versioning notes.
+- Follow-ups
+  - Deferred items, tech debt tickets.
+
+10) Lightweight metrics to track
+- Time to first review, time to merge.
+- PR size distribution.
+- Re-open rate or post-merge defects tied to PRs.
+- Review load per person (avoid bottlenecks).
+- Percent of PRs with tests/docs updated.
+
+11) Continuous improvement
+- Calibrate with periodic “review the reviews” sessions: share good examples, align on standards.
+- Evolve checklists per language/framework.
+- Rotate reviewers to spread context; pair-review tough areas.
+
+If you share your team size, stack, repo host (GitHub/GitLab/Bitbucket), and any compliance needs, I can tailor a concrete policy with exact settings, CI gates, and language-specific checklists.

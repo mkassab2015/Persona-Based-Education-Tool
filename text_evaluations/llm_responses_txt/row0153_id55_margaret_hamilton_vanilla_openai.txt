@@ -1,0 +1,77 @@
+Maintainable code is predictable, readable, testable, observable, and easy to change safely. Here are practical guidelines you can apply in any language.
+
+Core principles
+- Prefer clarity over cleverness. Optimize for the next reader (often you).
+- Keep things small and focused: functions, modules, and classes should do one thing well.
+- Reduce coupling, increase cohesion. Hide details behind clear interfaces.
+- Be explicit. Make data flows, side effects, and dependencies obvious.
+- Design for change: choose abstractions that are stable even if implementations change.
+
+Design and structure
+- Naming: use precise, domain terms. Nouns for types, verbs for actions. Avoid abbreviations and overloaded names.
+- Functions/methods: short, single responsibility; ≤3 parameters; prefer passing objects to long arg lists.
+- Data and invariants: validate at boundaries; encode invariants in types/constructors when possible.
+- State: avoid shared mutable state; prefer immutability and pure functions; inject dependencies.
+- Boundaries: separate domain, application, and infrastructure layers; don’t let frameworks leak into core logic.
+- Errors: fail fast at boundaries; don’t swallow exceptions; add context to errors; bubble or handle consistently.
+- Concurrency: avoid shared state; use timeouts, retries with backoff, and idempotency where relevant.
+
+Testing
+- Test pyramid: many fast unit tests, some integration tests, a few end-to-end.
+- Tests as specs: each test states behavior, is deterministic, and isolated. Name tests to read like requirements.
+- Prefer fakes over mocks across service boundaries; mock only your own interfaces.
+- Add regression tests before fixing a bug. Use coverage as a guide, not a goal.
+- Property-based or fuzz tests for critical or parsing logic.
+
+Documentation (light but useful)
+- README: how to build/run/test, dependencies, environments.
+- Architecture overview: key components, boundaries, and data flow.
+- ADRs (Architecture Decision Records) for significant decisions and trade-offs.
+- Inline comments explain why, not what (the code should say what).
+- Example usage for public APIs. Keep docs close to code; generate where possible.
+
+Tooling and process
+- Enforce consistency automatically: formatter, linter, type checker, static analysis.
+- CI runs fast and reliably: build, test, lint, security scan on every change.
+- Pre-commit hooks for formatting/linting; block merges on red CI.
+- Observability: structured logs with context, metrics for key events, tracing for distributed flows.
+
+Dependencies and configuration
+- Minimize dependencies; prefer well-maintained ones. Pin versions and use lockfiles.
+- Update regularly (little and often) with automated security checks.
+- Keep secrets out of code; use a secret manager. Configure via environment or config files, not constants.
+
+Version control and reviews
+- Small, scoped PRs with clear descriptions and rationale. Include tests with changes.
+- Commit messages: imperative mood, explain why + what.
+- Code review checklist: readability, tests, error handling, logging context, performance pitfalls, security.
+
+Refactoring and tech debt
+- Boy Scout Rule: leave code a bit better than you found it.
+- Rule of Three: abstract only after the pattern repeats.
+- Safe refactors guarded by tests; use feature flags for risky changes.
+- Track debt with owners and intent; timebox spikes; prefer strangler-fig for legacy rewrites.
+
+APIs and compatibility
+- Stable contracts: don’t break consumers without a deprecation path.
+- Semantic versioning; clear migration notes; version external APIs.
+- Validate inputs at the edge; maintain backward-compatible schemas/migrations.
+
+Performance and reliability
+- Don’t optimize blindly; measure and set SLOs. Keep complexity in check.
+- Timeouts, retries, and circuit breakers for external calls.
+- Idempotent operations where retried.
+
+A quick checklist before merging
+- Code is readable, named well, and follows agreed style.
+- Function/class/module is small and single-purpose.
+- No surprising side effects; dependencies are injected.
+- Errors are handled or propagated with context; no silent catches.
+- Logs/metrics added where they aid debugging; no sensitive data in logs.
+- Tests cover new or changed behavior and are deterministic.
+- Public interfaces documented with examples; rationale captured if non-obvious.
+- CI green: build, tests, lint, types, security checks.
+- Dependencies pinned and minimal; config/secrets handled properly.
+- PR description explains why, what, and any risks or rollbacks.
+
+If you share your language/stack and project type, I can suggest a concrete starter toolkit (formatter, linter, type checker, test libraries) and a repo skeleton tailored to it.

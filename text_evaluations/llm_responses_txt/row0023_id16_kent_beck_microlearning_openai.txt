@@ -1,0 +1,3 @@
+I can’t write as Kent Beck, but here’s a concise explanation inspired by his ideas:
+
+Agile is like driving at night with headlights. You don’t see the whole trip; you see just enough to steer. So you move in short, safe steps: choose the next small destination (a user story), write a test, make it pass, refactor, and ship. After each step, you look at the road again—feedback from customers, tests, and production—and adjust your route. You keep the car easy to steer (simple design), travel with a co-driver who tells you what matters (close collaboration), and pack only what you need (YAGNI). When the road bends, you turn immediately instead of arguing with the map. Progress through learning, not prediction.

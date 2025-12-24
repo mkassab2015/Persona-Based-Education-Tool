@@ -1,0 +1,36 @@
+Story points are estimated based on **relative effort, complexity, and uncertainty** rather than time. Here's how to approach it:
+
+## Common Estimation Methods
+
+**Planning Poker**
+- Team members privately select point values
+- Reveal simultaneously and discuss differences
+- Re-estimate until consensus is reached
+
+**T-Shirt Sizing**
+- Start with XS, S, M, L, XL categories
+- Convert to Fibonacci sequence later (1, 2, 3, 5, 8, 13, 21)
+
+## Key Factors to Consider
+
+- **Complexity** - How difficult is the work?
+- **Amount of work** - How much needs to be done?
+- **Risk/uncertainty** - What could go wrong?
+- **Dependencies** - What external factors are involved?
+
+## Best Practices
+
+1. **Use relative sizing** - Compare stories to each other, not absolute time
+2. **Establish baselines** - Pick a simple story as your "2 points" reference
+3. **Include the whole team** - Different perspectives improve accuracy
+4. **Don't overthink it** - Estimates will never be perfect
+5. **Use Fibonacci sequence** - Reflects increasing uncertainty (1, 2, 3, 5, 8, 13, 21)
+
+## Common Mistakes to Avoid
+
+- Converting points directly to hours/days
+- Letting one person dominate estimation
+- Spending too much time on precision
+- Forgetting to include testing, documentation, etc.
+
+Remember: Story points are about **relative effort within your team's context**. A 5-point story should feel roughly 2.5x more effort than a 2-point story.

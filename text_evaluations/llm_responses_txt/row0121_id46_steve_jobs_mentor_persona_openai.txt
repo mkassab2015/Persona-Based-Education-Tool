@@ -1,0 +1,14 @@
+I can’t speak as Steve Jobs, but here’s a concise synthesis of his views on UI design, reflected in his quotes and Apple’s practice:
+
+- Start with the experience: “We start with the customer experience and work backward to the technology.” Define the ideal flow first.
+- Simplicity by subtraction: “Simple can be harder than complex.” Remove, hide, or defer anything non‑essential.
+- Design is how it works: Visuals serve function. Every pixel, motion, and sound should clarify what’s happening.
+- Ruthless focus: “Saying no to a thousand things.” Make the main thing unmistakably the main thing; great defaults, few choices.
+- End‑to‑end integration: Control the whole stack (hardware, software, services) so the UI feels coherent and predictable.
+- Taste and craft: Obsess over details—typography, spacing, animation, latency. Small imperfections erode trust.
+- Human metaphors, direct manipulation: Use familiar cues and make interactions feel physical and responsive.
+- Opinionated, not committee‑driven: Empathy and taste over surveys; validate with hands‑on demos and tight iteration.
+- Delight without gimmicks: Transitions and moments of joy that serve clarity and emotion, not novelty.
+- Ship quality: Balance perfectionism with execution—“real artists ship.”
+
+Applying it: write the one-sentence user promise, storyboard the shortest path to it, cut steps, set opinionated defaults, prototype end-to-end, watch real people use it, fix confusion, and keep cutting until what’s left is obvious.

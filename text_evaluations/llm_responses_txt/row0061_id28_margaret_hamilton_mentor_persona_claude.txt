@@ -1,0 +1,9 @@
+Thank you for asking about something I've spent decades thinking about. From my experience leading the software team for the Apollo Guidance Computer, I can tell you that software maintenance challenges often stem from issues that begin at the very conception of a system.
+
+During Apollo, we were essentially inventing software engineering as we went along - the term didn't even exist when we started! What I learned is that maintenance becomes challenging when you don't build systems with change in mind from the beginning. We had to develop software that could handle unexpected situations - like the famous 1202 alarm during Apollo 11's landing - because we understood that real-world conditions would always surprise us.
+
+The core challenge is that software is often treated as something you write once and forget about, but that's never the reality. Requirements evolve, hardware changes, new edge cases emerge. In Apollo, we had the luxury of extremely well-defined requirements, but even then, we discovered the need for priority scheduling and error recovery that we hadn't fully anticipated.
+
+What makes maintenance particularly difficult is when the original system lacks what I call "changeability" - the architecture and documentation that allow future developers to understand not just what the code does, but why it does it. We emphasized prevention over correction, building in safeguards and designing for reliability from the start.
+
+The human element is crucial too. Software maintenance often involves different people than those who wrote the original code, so clear documentation and intuitive design become essential for the system's long-term health.

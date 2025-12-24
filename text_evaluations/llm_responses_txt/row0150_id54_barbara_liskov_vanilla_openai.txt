@@ -1,0 +1,62 @@
+Short answer: start with the problem, not the pattern. Use patterns to isolate change, improve clarity, or enable reuse/testability—only when you feel real friction.
+
+A practical way to apply design patterns
+1) Clarify the forces
+- What’s changing often?
+- What must be decided at runtime vs compile time?
+- What complexities do you want to hide (APIs, construction, state, cross-cutting concerns)?
+- Performance, concurrency, and persistence constraints?
+
+2) Lock in behavior with tests
+- Add characterization tests around the code you’ll change. Patterns are easier and safer to introduce via refactoring.
+
+3) Find the variation and extract it
+- Prefer composition over inheritance.
+- Program to interfaces. Keep interfaces small.
+
+4) Pick the smallest fitting pattern
+- Choose the pattern that isolates the variation with minimum indirection.
+
+5) Refactor incrementally
+- Introduce the interface/abstraction, move one case at a time, keep everything passing.
+- Name the pattern in code reviews and docs to share intent.
+
+6) Reassess
+- If the pattern doesn’t pay for its complexity (fewer bugs, easier changes), simplify.
+
+Quick symptom → pattern guide
+- Many if/else or switch on behavior: Strategy or State
+- Different ways to build complex objects: Builder; abstract creation: Factory/Abstract Factory
+- Hide ugly/complex external API: Facade (simplify) or Adapter (translate)
+- Add features dynamically (logging, caching, auth): Decorator or Proxy
+- Notify many parts about changes: Observer or Pub/Sub
+- Chain of rules/filters: Chain of Responsibility
+- Undo/redo, macro operations: Command (+ Memento for snapshots)
+- Tree structures (part-whole): Composite
+- Share many similar, heavy objects: Flyweight
+- Convert between incompatible models: Adapter/Mapper
+- Aggregate persistence operations: Repository + Unit of Work
+- Complex workflows with fixed skeleton, customizable steps: Template Method or Strategy
+
+Tiny example (refactor toward Strategy)
+Problem: Discount logic is a big conditional.
+- Define DiscountStrategy with method calculate(total, customer).
+- Implement PercentageDiscount, LoyaltyDiscount, NoDiscount.
+- A selector (simple map or Factory) chooses strategy from config/customer type.
+- The Order uses the interface, not concrete classes. Tests prove the same totals before/after.
+
+Do and don’t
+- Do: apply when you feel pain (duplication, rigidity, high churn), keep interfaces focused, test-drive refactors, document the intent.
+- Don’t: start with patterns, stack multiple patterns “just in case,” or introduce abstractions the team can’t maintain.
+
+Architecture-level patterns (when the problem is bigger than a class)
+- UI: MVC/MVP/MVVM
+- Services: Hexagonal/Clean/Onion (Ports & Adapters)
+- Integration: CQRS, Event Sourcing, Saga, Outbox
+
+How to practice
+- Take a small, messy module or a kata (checkout, chess moves, pricing rules). Add tests, then refactor toward a fitting pattern.
+- Read commit-by-commit examples (Refactoring by Fowler; Head First Design Patterns).
+- In PRs, state “Refactor to Strategy to remove conditional and enable runtime selection.”
+
+If you share your language, domain, and a short snippet or scenario, I can recommend a specific pattern and sketch the refactor steps.

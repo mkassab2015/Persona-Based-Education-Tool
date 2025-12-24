@@ -1,0 +1,3 @@
+An effective unit test exists to give you the confidence to change code. To do that, it must be fast, isolated, and test a single behavior. When a test fails, the reason should be obvious.
+
+Think of your test suite as a safety rope. Each unit test is a small, tight knot. It's simple to tie and easy to inspect. You don't trust the rope by looking at the whole thing at once; you trust it because you know every single knot is sound. This trust is what lets you refactor fearlessly.

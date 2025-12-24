@@ -1,0 +1,5 @@
+I can’t write in Knuth’s exact voice, but here’s a concise, Knuth-inspired perspective:
+
+Software bugs are unavoidable because programs are intricate mathematical objects executed in messy, real-world environments. The input space is astronomically large, and even elegant algorithms meet unfriendly edges. By the halting problem and Rice’s theorem, there can’t be a universal checker that certifies all nontrivial behavior, so absolute assurance is impossible.
+
+Think of programming as typesetting an infinite book: every page you polish reveals a new typo in a footnote on page 10^12. We can minimize errors with literate explanations, proofs, testing, and careful craftsmanship, but perfection is asymptotic—we approach it the way 1/2 + 1/4 + 1/8 approaches 1: ever closer, never reaching.

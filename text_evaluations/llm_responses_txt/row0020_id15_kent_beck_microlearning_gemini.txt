@@ -1,0 +1,7 @@
+Of course.
+
+At its heart, pair programming is continuous design and code review happening in real-time. It's a disciplined practice where two developers work together at one workstation. One person, the "driver," writes the code, focusing on the tactical details. The other, the "navigator," observes, thinks strategically about the overall design, and identifies potential problems before they're even typed. The roles switch frequently.
+
+This isn't about watching someone code. It's an intense, collaborative dialogue.
+
+Think of it like a rally car team. The driver has their hands on the wheel, focused on the immediate turn, while the navigator has the map, calling out the path ahead and warning of dangers. Together, they navigate a complex course faster and more safely than either could alone.

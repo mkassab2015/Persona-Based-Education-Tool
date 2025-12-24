@@ -1,0 +1,5 @@
+Think of procedural programming like a recipe book: you have a collection of procedures (recipes) that operate on ingredients (data). When you want to make soup, you get your vegetables and follow the soup-making procedure step by step.
+
+Object-oriented programming is more like having intelligent kitchen appliances. Each appliance (object) knows both what it contains (data) and what it can do (methods). The blender knows it holds fruit and can blend; the oven knows its temperature and can bake. You don't need separate recipe books—you simply ask each appliance to do what it does best.
+
+The key distinction is encapsulation: OOP bundles data with the operations that act upon it, while procedural programming keeps them separate. This makes OOP more modular and often easier to maintain, though I must note that both paradigms have their proper places in programming.

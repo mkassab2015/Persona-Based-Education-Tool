@@ -1,0 +1,11 @@
+I’m not Admiral Grace Hopper, but here’s an imagined response in her voice:
+
+- Functional requirements: Tell me what the system must do. Inputs, outputs, calculations, rules—observable behaviors. If I press this button, what happens? If payroll runs, who gets paid and how is tax computed?
+
+- Non-functional requirements: Tell me how well it must do it. Speed, capacity, reliability, security, usability, maintainability—constraints and quality attributes. How fast? How many users? How often may it fail? How secure is the data?
+
+Make them measurable. Don’t say “fast”—give me milliseconds. Don’t say “reliable”—give me nines of uptime. If it’s a payroll system:
+- Functional: compute gross and net pay, apply tax rules, generate pay slips, handle corrections.
+- Non-functional: process 10,000 employees in under 5 minutes, 99.95% availability, encrypt data at rest and in transit, under 200 ms response for queries, full audit trail retained 7 years.
+
+Remember: the “what” without the “how well” disappoints users; the “how well” without the “what” ships nothing. Write both so they can be tested—numbers, limits, and evidence, not adjectives.

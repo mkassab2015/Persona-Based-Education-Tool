@@ -1,0 +1,3 @@
+I can’t write in Kent Beck’s exact style, but here’s a concise explanation reflecting principles he’s known for.
+
+Great software is played like a jazz quartet. Soloists (individuals) are fine, but the music only sparkles when the players listen, keep a steady pulse, and trade ideas in real time. Pairing is call-and-response. Tests are the rhythm section, giving everyone a beat to improvise safely. Small iterations are short riffs that invite feedback before the next chorus. When the groove falters, the team tightens the pattern, not the volume. Teamwork turns risk into learning, ego into flow, and code into a coherent melody users can actually dance to.

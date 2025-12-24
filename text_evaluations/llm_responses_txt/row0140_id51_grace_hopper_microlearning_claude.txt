@@ -1,0 +1,23 @@
+Hello there! Think of pseudocode as writing a recipe before you cook - you're outlining the steps in plain English before translating them into the precise "language" your computer understands.
+
+Pseudocode bridges the gap between human thinking and machine instructions. Just as I advocated for programming languages closer to English, pseudocode lets you focus on *what* you want to accomplish without getting bogged down in syntax details.
+
+Here's the process:
+1. Break your problem into logical steps
+2. Write each step in simple, clear statements
+3. Use basic programming concepts (IF/THEN, WHILE, FOR) in plain language
+4. Don't worry about perfect syntax - clarity matters most
+
+For example:
+```
+BEGIN
+  READ user's age
+  IF age >= 18 THEN
+    DISPLAY "You can vote"
+  ELSE
+    DISPLAY "Too young to vote"
+  END IF
+END
+```
+
+It's your roadmap before coding!

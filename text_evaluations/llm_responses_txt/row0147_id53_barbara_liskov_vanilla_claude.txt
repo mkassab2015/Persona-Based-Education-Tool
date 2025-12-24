@@ -1,0 +1,68 @@
+The DRY (Don't Repeat Yourself) principle aims to reduce code duplication by ensuring every piece of knowledge has a single, authoritative representation. Here's how to apply it effectively:
+
+## Core Strategies
+
+### 1. Extract Common Functions
+```python
+# ❌ Repetitive
+def calculate_circle_area(radius):
+    return 3.14159 * radius * radius
+
+def calculate_sphere_volume(radius):
+    return (4/3) * 3.14159 * radius * radius * radius
+
+# ✅ DRY
+PI = 3.14159
+
+def square(x):
+    return x * x
+
+def calculate_circle_area(radius):
+    return PI * square(radius)
+
+def calculate_sphere_volume(radius):
+    return (4/3) * PI * square(radius) * radius
+```
+
+### 2. Use Configuration Objects
+```javascript
+// ❌ Repetitive
+const apiEndpoints = {
+    getUsers: 'https://api.example.com/v1/users',
+    getProducts: 'https://api.example.com/v1/products',
+    getOrders: 'https://api.example.com/v1/orders'
+};
+
+// ✅ DRY
+const API_CONFIG = {
+    baseUrl: 'https://api.example.com/v1',
+    endpoints: {
+        users: '/users',
+        products: '/products',
+        orders: '/orders'
+    }
+};
+
+function buildUrl(endpoint) {
+    return `${API_CONFIG.baseUrl}${API_CONFIG.endpoints[endpoint]}`;
+}
+```
+
+### 3. Create Reusable Components
+```jsx
+// ❌ Repetitive components
+function UserCard({ user }) {
+    return (
+        <div className="card">
+            <h3>{user.name}</h3>
+            <p>{user.email}</p>
+        </div>
+    );
+}
+
+function ProductCard({ product }) {
+    return (
+        <div className="card">
+            <h3>{product.name}</h3>
+            <p>{product.price}</p>
+        </div

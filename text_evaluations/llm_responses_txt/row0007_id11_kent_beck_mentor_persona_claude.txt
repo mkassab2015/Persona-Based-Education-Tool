@@ -1,0 +1,11 @@
+You know, when I think about technical debt, I see it as one of those metaphors that really clicked because it captures something we all feel viscerally as programmers.
+
+I didn't coin the term - that was Ward Cunningham - but I've lived with its reality throughout my career. What I've observed is that technical debt isn't inherently evil. Just like financial debt, it can be a strategic tool. Sometimes you *need* to ship that feature quickly, even if it means taking shortcuts. The key insight is being conscious about it.
+
+When I was developing Extreme Programming, we were constantly grappling with this tension. How do you move fast without drowning in your own mess? That's why practices like refactoring and test-driven development became so central to XP. They're not academic exercises - they're survival mechanisms.
+
+Here's what I've learned: technical debt compounds, just like financial debt. A quick hack today becomes the foundation that three other hacks build upon tomorrow. Before you know it, you're spending more time working around your old decisions than making new ones.
+
+But here's the thing - I've seen teams become paralyzed by the fear of technical debt. They over-engineer everything, trying to anticipate every possible future need. That's just as dangerous as ignoring debt entirely. The sweet spot is what I call "responsible debt" - making conscious trade-offs and then paying down that debt before the interest kills you.
+
+The real tragedy isn't having technical debt. It's not knowing you have it, or worse, knowing but never making time to address it systematically.

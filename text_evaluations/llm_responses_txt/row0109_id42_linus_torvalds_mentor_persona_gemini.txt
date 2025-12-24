@@ -1,0 +1,52 @@
+Alright, you want to know how to write a commit message. Good. Because most people are terrible at it, and it wastes a staggering amount of time. It's not some black art; it's basic professional courtesy.
+
+So, listen up. Here's how I see it.
+
+The whole point of a commit message is to tell the story of a change. Not just *what* you changed—I can see that in the diff. I'm not an idiot. I need to know *why* you changed it. The commit message is for the poor bastard—who is very often you, six months later—who is staring at your code trying to figure out what you were thinking at 2 AM.
+
+Your commit is a self-contained, logical change. Your message should reflect that.
+
+### The Anatomy of a Real Commit Message
+
+It has two parts. The subject and the body. Don't screw this up.
+
+**1. The Subject Line: The 50-Character Summary**
+
+This is the most important part. It's the headline. It's what people see in `git log --oneline`. It needs to be short, concise, and descriptive.
+
+*   **Use the imperative mood.** Write it as a command. "Fix bug," not "Fixed bug." "Add feature," not "Added feature." Think of it as the instruction you're giving the codebase: "This commit will `Fix the foo-bar memory leak`." It's a convention, it's clean, and it makes sense. Just do it.
+
+*   **Prefix with the subsystem.** For any non-trivial project, you need to tell people what part of the code you're touching. `doc:`, `kernel/`, `net:`, `fs/btrfs:`. Whatever your project's convention is. This lets people who care about that area pay attention and people who don't, ignore it. It makes filtering history a sane activity. For example:
+    `net: sched: Fix race condition in sch_qfq`
+
+*   **No period at the end.** It's a title, not a sentence.
+
+If you can't summarize your change in about 50 characters, your commit is probably too big and trying to do too many things. Break it up. One logical change per commit.
+
+**2. The Body: The "Why"**
+
+This is where you explain yourself. After the subject line, leave **one blank line**. That's not a suggestion, it's a requirement for many tools that parse commit messages.
+
+Then, you write the body.
+
+*   **Explain the problem.** Don't just jump into your solution. What was the bug? What was the context? How could someone reproduce it? Describe the state of the world *before* your patch. "When doing X under Y conditions, Z would happen, which is wrong because of A, B, and C."
+
+*   **Explain your solution.** Now, explain *why* you chose this particular fix. Briefly describe the approach. Don't just repeat the diff in English. I can read the code. Explain the *reasoning*. "The original code failed to account for a null pointer return from `some_function()`. This patch adds a check to handle that case, preventing a kernel panic."
+
+*   **Why this way?** If there were alternative solutions you considered, mention them and explain why you discarded them. This is gold. It shows you've thought about the problem and prevents someone from coming along later and "helpfully" suggesting the thing you already know is a bad idea.
+
+*   **Keep paragraphs short and wrap your lines.** Don't write a giant wall of text. Wrap your lines at around 72 characters. It makes the log much easier to read in a terminal.
+
+### What NOT To Do (The Garbage List)
+
+If I see any of these, I'm going to be annoyed.
+
+*   **Useless messages:** `Fix bug`, `Update`, `typo`, `fixes`. This is completely and utterly useless. It tells me nothing. If you write this, you're just being lazy and pushing the work of understanding your change onto everyone else. Don't do it.
+
+*   **The Git-hosting-platform-is-not-the-message:** "Fixes #1234". Fine, put that at the end. But that is not a commit message. The issue tracker might go away. The project might move. The information needs to be *in the repository*. The repository is the source of truth, forever. The commit message must stand on its own.
+
+*   **Lies.** Don't write a message that describes what you *wanted* to do. Write what the commit *actually* does. If your commit to "Refactor the entire networking stack" only ends up fixing a typo in a comment, your message should be `net: Fix typo in foobar comment`. Be honest.
+
+Look, this isn't about being a beautiful writer. It's about being a good engineer. It's about clarity. It’s about leaving a trail of breadcrumbs so that when something breaks, we can figure out why. A good commit message is a sign of respect—for your teammates and for your future self.
+
+It's not that hard. Just explain the "why." Now stop wasting time and go write a decent commit message.

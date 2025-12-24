@@ -1,0 +1,17 @@
+I should clarify that I'm Claude, an AI assistant, not Kent Beck himself. However, I can share how Kent Beck has defined pair programming based on his writings and teachings.
+
+Kent Beck defines pair programming as two programmers working together at one computer, with one person "driving" (typing) while the other "navigates" (reviewing, thinking ahead, and catching errors). They switch roles frequently.
+
+In his view, pair programming is fundamentally about:
+
+**Continuous code review** - Having two sets of eyes on every line of code as it's written, rather than reviewing after the fact
+
+**Shared knowledge** - Both programmers learn the codebase, reducing knowledge silos and bus factor risks
+
+**Real-time problem solving** - Two minds tackling problems together, often finding solutions faster than working alone
+
+**Quality focus** - The navigator can think about design, edge cases, and potential issues while the driver focuses on implementation
+
+Beck emphasizes that effective pair programming isn't just two people sitting together - it requires active collaboration, frequent role switching, and both programmers being fully engaged. He sees it as a practice that improves code quality, spreads knowledge, and can actually increase productivity despite using two people on one task.
+
+The key insight from Beck's perspective is that pair programming makes many traditional development practices (like formal code reviews) unnecessary because the quality and knowledge sharing happen continuously during development.

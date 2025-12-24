@@ -1,0 +1,29 @@
+I’m not Margaret Hamilton, but based on her published work and accounts from the Apollo program, here are principles she championed that lead to maintainable, mission‑grade software:
+
+- Treat software as engineering: Specify, design, review, implement, verify. Keep requirements precise, testable, and traceable to code and tests. Maintenance is easy when intent is explicit and traceability is intact.
+- Design for the unexpected: Assume anomalies will happen. Detect them early, fail safe, and recover gracefully. Apollo’s 1201/1202 alarms worked because the executive could shed noncritical work and keep landing.
+- Prioritize what matters: Separate critical from noncritical functions. Make priorities explicit and enforced by the runtime so overload degrades service, not safety.
+- Make impossible states unrepresentable: Guard modes and transitions with interlocks and checks. After a simulator incident caused by an unintended mode switch, Apollo added protections to prevent human-error pathways.
+- Defensive programming everywhere: Validate inputs, cross‑check redundant data, assert invariants, and surface actionable alarms (not cryptic errors). Prefer sanity checks over assumptions.
+- Architect for isolation and clarity: Small, cohesive modules with clear interfaces and minimal coupling. Hide hardware quirks behind stable abstractions. Maintenance pain scales with hidden dependencies.
+- Concurrency that’s deterministic: Use simple, analyzable tasking models; bound execution time; avoid races. Prefer message passing or well-defined critical sections over ad‑hoc shared state.
+- Predictability over cleverness: Choose algorithms with known time/memory bounds. Optimize last, with measurement. Apollo favored predictability that could be reasoned about and verified.
+- Build for restart and recovery: Make tasks restartable, persist essential state, and define known-good checkpoints. Recovery paths should be tested as much as nominal ones.
+- Make intent obvious in code: Name things by purpose, not mechanism. Comments explain “why,” not “what.” Keep code and design docs in sync; the next engineer should succeed at 3 a.m. under pressure.
+- Instrument from day one: Logging, telemetry, and health metrics designed in, not bolted on. If you can’t see it, you can’t maintain it.
+- Independent verification and validation: Peer reviews, static analysis, property checks, and an IV&V mindset. Separate roles that can say “no-go” based on evidence.
+- Test like reality (and worse): High-fidelity sims, hardware-in-the-loop, fault injection, boundary and stress tests. Reproduce, fix, and prevent regressions with automated suites.
+- Configuration and change control: Reproducible builds, versioned baselines, rigorous change reviews, and rollback plans. Maintenance decays without discipline.
+- Human factors matter: Clear, prioritized alerts; procedures and checklists; interfaces that help operators do the right thing and make the wrong thing hard.
+
+A short, actionable checklist you can adopt:
+- Define priorities, invariants, and failure modes for each module.
+- Establish coding standards, naming rules, and a review checklist focused on readability and risk.
+- Write interface contracts (pre/postconditions, timing, units) and validate at boundaries.
+- Add centralized error handling, telemetry, and structured logs with IDs traceable to requirements.
+- Create deterministic tests for nominal paths plus fault-injection tests for recovery paths.
+- Set CI to run static analysis, style checks, full tests, and size/time budget checks on every change.
+- Maintain a living traceability matrix linking requirements → design → code → tests → field issues.
+- Hold post-incident reviews that produce concrete rules or tests to prevent repeats.
+
+The spirit behind all of this: expect errors, design so the system continues to operate safely, and make the software’s intent and behavior clear enough that others can change it confidently years later.

@@ -1,0 +1,5 @@
+Continuous Integration is about managing risk by shrinking the feedback cycle. Every commit triggers a build and tests, giving the team immediate insight into the health of the whole system. This isn't just automation; it's a discipline of collaboration and collective ownership.
+
+Think of it like washing dishes. You can wash one dish right after a meal—a small, trivial task. Or, you can let them pile up for a week. Now you face a disgusting, overwhelming chore where you can't even find the sink.
+
+CI is the practice of washing your code-dishes immediately. It keeps the development process clean and smooth, preventing the catastrophic "merge hell" that paralyzes teams and drains their energy. It makes integration a non-event, so you can focus on delivering value.

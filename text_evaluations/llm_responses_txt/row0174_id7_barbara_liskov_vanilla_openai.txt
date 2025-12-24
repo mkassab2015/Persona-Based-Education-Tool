@@ -1,0 +1,22 @@
+Model–View–Controller (MVC) is a software architectural pattern that separates an application into three interconnected parts to improve modularity, testability, and parallel development.
+
+- Model: The domain data and business rules. Manages state, validation, persistence, and domain logic. Often emits change notifications.
+- View: The presentation layer. Renders the model to the user (UI) and displays state; ideally contains minimal logic.
+- Controller: The input coordinator. Interprets user actions (clicks, routes, API calls), invokes model operations, and selects which view to render.
+
+Typical flow
+- User interacts with a View.
+- The Controller handles the event/request, updates the Model or queries it.
+- The Model changes state and may notify observers.
+- A View reads the Model and renders the updated UI (or the Controller chooses a View to render in server-side web MVC).
+
+Why use it
+- Separation of concerns, easier testing, reuse of Models across multiple UIs, and clearer team boundaries.
+- Trade-offs: more files/indirection, potential coupling between Controller and View, and overengineering for small apps.
+
+Examples and context
+- Web frameworks: Ruby on Rails, ASP.NET MVC, Spring MVC follow request→controller→model→view. Django uses a similar MTV variant.
+- Desktop/mobile: iOS UIKit uses MVC; many UI toolkits adopt MVC-like patterns.
+- Variants: MVP (Model–View–Presenter), MVVM (Model–View–ViewModel), and “MVU” in reactive UIs; they differ mainly in how input handling and state binding are structured.
+
+Key idea: keep domain logic (Model), UI (View), and input/flow (Controller) separate so each can change independently.

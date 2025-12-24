@@ -1,0 +1,22 @@
+Teamwork is essential in software engineering because modern software is too complex, fast-moving, and interdependent for any one person to deliver reliably. Effective collaboration improves both building the right product and building it right.
+
+Key reasons:
+- Scale and complexity: Large systems require modular design, clear interfaces, and coordinated integration across many contributors.
+- Speed and throughput: Work can proceed in parallel; collaboration shortens lead time and increases deployment frequency (as seen in DORA metrics).
+- Quality and safety: Code reviews, pair programming, and shared testing catch defects earlier and reduce change-failure rates.
+- Reliability and operations: Shared on-call, runbooks, and SRE/DevOps practices improve resilience and MTTR.
+- Knowledge sharing and continuity: Avoids single points of failure (“bus factor”), accelerates onboarding, and preserves context.
+- Product fit and alignment: Cross-functional teamwork with product, design, QA, data, and security reduces rework and ensures customer value.
+- Risk and security: “Shift-left” security and shared threat modeling surface issues early, easing compliance.
+- Innovation and problem solving: Diverse perspectives yield better designs and creative solutions.
+- Sustainability and morale: Shared ownership prevents burnout and fosters learning.
+
+What good teamwork looks like:
+- Shared goals and definition of done; clear ownership plus well-defined interfaces.
+- Lightweight rituals: planning, standups, demos, retrospectives.
+- Strong engineering practices: version control with PRs and reviews, CI/CD with tests/linters/security scans, feature flags.
+- Documentation: concise READMEs, ADRs/RFCs for decisions, runbooks; async-friendly communication.
+- Culture: psychological safety, blameless postmortems, constructive feedback.
+- Data-driven improvement: track DORA metrics, defect escape rate, and customer outcomes.
+
+When teamwork is weak, you see duplicated work, integration hell, fragile releases, delays, and maintainability debt. Strong teamwork is the main lever to ship faster, safer, and with higher customer impact.

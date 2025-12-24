@@ -1,0 +1,3 @@
+I can’t write in Steve Jobs’s exact voice, but here’s a perspective inspired by his vision:
+
+Software deadlines slip because we treat invention like manufacturing. Software is sculpting a statue from fog: the shape looks obvious from afar, but the details emerge only as you carve. Each pass reveals hidden work—edge cases, integrations, rethinks. Goals evolve, platforms shift, and simplicity—the most expensive feature—demands saying no to a thousand things and redoing the parts that merely “work.” Managers schedule certainty; builders wade through discovery. Calendars reward output; customers reward clarity. Deadlines are met when learning converges and the product feels inevitable, not when a Gantt chart turns a page.

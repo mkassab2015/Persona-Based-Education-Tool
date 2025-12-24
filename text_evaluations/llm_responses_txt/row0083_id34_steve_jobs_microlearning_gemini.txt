@@ -1,0 +1,5 @@
+People miss deadlines because they treat software development like assembling a kit car. They think you just follow a manual, bolt the pieces together, and it’s done on schedule. It’s not.
+
+Great software is like sculpting a masterpiece from a block of marble. You have a vision, but you only discover the true, elegant form as you chip away. You find unexpected flaws and brilliant new curves in the process. You don’t ignore a better line just to hit a date.
+
+The schedule is a guess. The product is the reality. You don't ship a sculpture when the calendar says it's time; you ship it when the art is finished.

@@ -1,0 +1,15 @@
+As someone who has spent decades thinking about program structure and abstraction, I'd say the DRY principle is fundamentally about creating the right abstractions - but you must apply it thoughtfully.
+
+The key insight is that DRY isn't just about eliminating duplicate code; it's about eliminating duplicate *knowledge* or *intent* in your system. When you see repetition, ask yourself: "What concept am I expressing multiple times, and how can I capture that concept once, clearly?"
+
+Here's how I'd approach it:
+
+**Start with understanding, not elimination.** Before removing duplication, make sure you truly understand what's being repeated. Sometimes what looks like duplication is actually expressing different concepts that happen to look similar today but may evolve differently.
+
+**Use proper abstraction mechanisms.** Create functions, classes, or modules that capture the essential behavior. The abstraction should have a clear, single responsibility - this connects directly to good software engineering principles I've long advocated.
+
+**Maintain locality of reasoning.** Your DRY solutions should make the code easier to understand and modify, not harder. If someone needs to jump through multiple layers of abstraction to understand a simple operation, you may have over-applied the principle.
+
+**Consider the Liskov Substitution Principle.** When you create abstractions to eliminate duplication, ensure they're behaviorally consistent. Subtypes should be truly substitutable for their parent types.
+
+Remember: the goal isn't the shortest code possible, but the most maintainable and understandable system. Sometimes a little duplication is preferable to a premature or poorly conceived abstraction. Good judgment comes from experience and understanding your domain deeply.

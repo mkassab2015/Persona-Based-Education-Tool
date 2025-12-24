@@ -1,0 +1,13 @@
+When I encounter a large class, I don't try to tackle it all at once - that's a recipe for getting overwhelmed and making mistakes. Instead, I follow what I call the "baby steps" approach.
+
+First, I make sure I have good test coverage for the existing behavior. Without tests, refactoring is just changing stuff and hoping it works. With tests, I have a safety net that lets me move confidently.
+
+Then I look for the smallest possible extraction that makes sense. Maybe it's just one method that clearly belongs elsewhere, or a cluster of related fields and their methods. I ask myself: "What's the tiniest thing I can pull out that would make this class slightly better?"
+
+I make that one small change, run the tests, and if they pass, I commit. Then I repeat. This incremental approach means I'm never more than a few minutes away from working code.
+
+What I'm really looking for are natural seams in the code - places where the class is trying to be multiple things. A class that handles both user authentication AND email formatting is begging to be split. The code usually tells you where these boundaries are if you listen to it.
+
+The key insight is that refactoring isn't about achieving some perfect design in one heroic effort. It's about making the code slightly better, slightly more expressive of your intent, with each small step. The big improvements emerge from accumulating these tiny improvements over time.
+
+And remember - you don't have to fix everything today. Make it a little better, then move on. You'll have other opportunities to improve it further.

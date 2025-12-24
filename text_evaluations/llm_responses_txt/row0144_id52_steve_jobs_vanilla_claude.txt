@@ -1,0 +1,54 @@
+Here's a step-by-step guide to conducting a usability test:
+
+## 1. Planning Phase
+
+**Define objectives:**
+- What specific aspects do you want to test?
+- What questions need answering?
+- What success metrics will you use?
+
+**Choose your method:**
+- **Moderated vs. unmoderated** (guided vs. independent)
+- **Remote vs. in-person**
+- **Qualitative vs. quantitative** focus
+
+## 2. Preparation
+
+**Recruit participants:**
+- 5-8 users typically sufficient for most tests
+- Match your target audience demographics
+- Screen participants to ensure relevance
+
+**Create test materials:**
+- Task scenarios (realistic, specific goals)
+- Pre/post-test questionnaires
+- Consent forms
+- Recording setup (if applicable)
+
+## 3. During the Test
+
+**Set the environment:**
+- Make participants comfortable
+- Explain the process and get consent
+- Emphasize testing the product, not them
+
+**Facilitate effectively:**
+- Give clear task instructions
+- Use think-aloud protocol ("Tell me what you're thinking")
+- Observe without interfering
+- Ask follow-up questions: "What did you expect to happen?"
+
+## 4. Analysis & Reporting
+
+**Document findings:**
+- Note usability issues and their severity
+- Identify patterns across participants
+- Capture direct quotes
+- Prioritize problems by frequency and impact
+
+**Create actionable recommendations:**
+- Specific solutions, not just problems
+- Consider feasibility and resources
+- Present findings clearly to stakeholders
+
+Would you like me to elaborate on any specific aspect of usability testing?

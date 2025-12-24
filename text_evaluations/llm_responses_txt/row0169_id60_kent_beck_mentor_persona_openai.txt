@@ -1,0 +1,74 @@
+I’m not Kent Beck and can’t speak in his personal voice, but here’s how he describes and teaches TDD in his books and talks.
+
+What TDD is
+- A design technique that uses tests to drive small, safe steps in code and design.
+- Rhythm: red (failing test), green (make it pass simply), refactor (improve design, keep tests green).
+
+The three rules (Beck)
+1) You’re not allowed to write production code unless it’s to make a failing test pass.
+2) You’re not allowed to write any more of a test than is sufficient to fail (and not compiling counts as failing).
+3) You’re not allowed to write any more production code than is sufficient to pass the currently failing test.
+
+How to do it (step-by-step)
+- Make a test list: jot down the tiny behaviors you want. Pick the next simplest.
+- Red: Write the smallest test that expresses one behavior. See it fail for the right reason.
+- Green: Write the simplest code to pass that test. Prefer baby steps—even a constant or stub is fine at first.
+- Refactor: Remove duplication, clarify names, improve design while tests stay green.
+- Repeat: Take the next item from your list. Keep steps so small they feel a bit trivial.
+- Commit when green. If you get stuck, back up to the last green and take a smaller step.
+
+Heuristics Beck uses
+- Baby steps: keep cycles under a minute or two.
+- Fake it, then triangulate, then obvious implementation:
+  - Fake it: return a constant just to pass the first test.
+  - Triangulate: add a second test that forces a more general solution.
+  - Obvious implementation: when the general solution is clear, write it.
+- Keep the bar green to keep the code clean: prioritize getting back to green quickly so you can safely refactor.
+- Name tests as behaviors (what, not how). Treat tests as living examples.
+- Remove duplication in both tests and code during refactor.
+- Prefer testing public behavior; use collaborators via seams; keep unit tests fast.
+
+What to test first
+- Happy path with the smallest, degenerate cases (empty, zero).
+- Then typical cases.
+- Then edge and error cases.
+- Drive out design: new concepts appear in tests first, then in code.
+
+Tiny example (String calculator in Python-style pseudocode)
+- Test 1 (red): add("") -> 0
+  - Write test; it fails.
+- Code (green): def add(s): return 0
+  - Passes.
+- Refactor: nothing yet.
+
+- Test 2 (red): add("5") -> 5
+  - Fails.
+- Code (green): if s == "": return 0; else: return int(s)
+  - Passes.
+- Refactor: clarify names.
+
+- Test 3 (red): add("2,3") -> 5
+  - Fails.
+- Code (green): parts = s.split(","); return sum(int(p) for p in parts if p)
+  - Passes.
+- Refactor: extract parse_numbers(s), handle whitespace, etc., as new tests demand.
+
+When it feels hard
+- Your step is too big. Write a smaller test.
+- You’re testing implementation. Flip to testing behavior.
+- Tests are slow. Push more logic out of I/O boundaries; isolate pure functions.
+
+Working with legacy code
+- Add characterization tests around a seam (a method boundary you can call).
+- Refactor in small steps behind those tests.
+- Introduce new behavior via sprout method/class, covered by new tests.
+
+When to pause TDD
+- Spikes and discovery (UI spikes, unknown APIs). Prototype first, then TDD the real solution.
+
+Why it works (Beck’s emphasis)
+- Confidence to refactor safely.
+- Emergent design from many small, reversible decisions.
+- A living spec: examples that prevent regressions and document behavior.
+
+If you want, tell me your language and I’ll walk you through the first 3–4 red/green/refactor cycles on a small feature.

@@ -1,0 +1,9 @@
+In our work on the Apollo systems, this distinction was mission-critical.
+
+**Verification** asks: “Are we building the system right?” It’s the process of checking our software against the detailed engineering specifications and requirements.
+
+**Validation** asks the more vital question: “Are we building the right system?” This confirms that the final product actually meets the user’s needs and accomplishes the mission’s objective.
+
+Think of it like building a ship. **Verification** is ensuring the ship is built exactly to the blueprints—the welds are strong, the hull is sound. But **Validation** is confirming that this ship can actually cross the intended ocean and get the crew to their destination safely.
+
+One ensures you followed the map; the other ensures you arrived at the correct destination.

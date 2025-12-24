@@ -1,0 +1,35 @@
+Alright, look. People love to overcomplicate this to a ridiculous degree, as if deploying a web app is some kind of mystical art. It’s not. It’s plumbing. It’s about getting bits from point A to point B reliably. Most of the complexity people invent is because they're either trying to sell you something, or they read a blog post about how Google does it and think their cat photo sharing app needs the same infrastructure.
+
+Frankly, it's about engineering and good taste. Not buzzwords.
+
+Here’s how I see it. Forget the fancy "paradigms" for a minute and think about the fundamentals.
+
+**1. Start Simple, You Idiot.**
+Do you have a simple web app? Then have a simple deployment. A shell script that does an `ssh`, a `git pull`, and restarts a service is a perfectly valid starting point. It’s understandable, it’s auditable, and it works. Don't you dare start with a ten-node Kubernetes cluster for your personal blog. That’s not just overkill; it’s stupid. You’ve created a hundred new ways for things to fail before you've even served a single user. Add complexity only when the *pain* of not having it becomes greater than the pain of managing it.
+
+**2. Version Control is God. Treat it as such.**
+This shouldn't even need to be said, but I'll say it anyway. If it's not in Git, it doesn't exist. That’s not just your source code. That's your server configuration (Ansible playbooks, Dockerfiles), your deployment scripts, your database schemas. Everything. Your entire system should be reproducible from a Git repository. This gives you history, blame, and the ability to revert to a known-good state. If you’re still FTPing files to a server, for the love of God, stop.
+
+**3. Automate the Boring Crap.**
+The goal of a deployment process is to make it a non-event. It should be boring. It should be so reliable that you can do it at 4 PM on a Friday without sweating. If you have to manually SSH into a box, copy files, and restart services by hand, you're going to make a mistake. Computers are good at repetitive tasks; people are not. Use a CI/CD system. It doesn't have to be a big, complex one. A simple Jenkins job or a GitHub Action that runs your script is a thousand times better than a human with a checklist.
+
+**4. The Rollback Is a First-Class Citizen.**
+If you don’t have a clear, tested, and fast way to roll back a bad deployment, you don’t have a deployment process. You have a prayer. This is why things like blue-green deployments or even simple symlink switching exist. The goal is to make failure cheap. In kernel development, if a patch is bad, we revert it. The same logic applies here. Your deployment tool should make `deploy-previous-version` as easy as `deploy-latest-version`.
+
+**5. Know Your Tools, Don't Worship Them.**
+Docker is a good tool. Kubernetes can be a good tool—if you have the scale and complexity that justifies it. But people become religious about them. They're just tools to solve a problem. The problem is isolating your application and managing its resources, not "doing microservices" or "being cloud-native." Understand what problem the tool solves and if *you* actually have that problem. Often, a simple systemd service file is all you need. Don’t use a chainsaw to cut butter just because it looks cool.
+
+**6. Logs Aren't Optional.**
+You wouldn't run a kernel without `dmesg`. Why are you running a web application blind? Your application needs to spit out useful information, and you need a way to collect it and look at it. Centralized logging isn't a luxury; it’s a basic requirement for not being completely clueless when something goes wrong. If your only way to see an error is to `ssh` into a box and `tail` a file, you've already failed.
+
+So, to summarize:
+
+*   **Be pragmatic.** Use the simplest thing that can possibly work.
+*   **Put everything in Git.** No excuses.
+*   **Automate your releases.** Make them boring.
+*   **Plan for failure.** Make rollbacks easy.
+*   **Stop chasing trends.** Solve your own problems, not Google’s.
+
+It's just engineering. Apply good taste. Now stop talking about it and go build something that works.
+
+Linus

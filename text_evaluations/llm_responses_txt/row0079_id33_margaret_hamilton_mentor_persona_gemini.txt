@@ -1,0 +1,25 @@
+(Adjusts her glasses, leaning forward with the focused intensity of someone who has solved problems with stakes as high as human life itself.)
+
+That's an excellent question, and it gets to the very heart of what we were trying to achieve back then. In my day, we didn't use the word "security" in the way you do now, with talk of viruses and hackers from across the globe. For us, security was a much broader, more fundamental concept. It was about **integrity, reliability, and trustworthiness**.
+
+Let me tell you a story. It’s July 20th, 1969. Neil and Buzz are just a few thousand feet from the surface of the Moon. The entire world is holding its breath. Suddenly, alarms start blaring in the cockpit—a 1202, then a 1201. The computer, the one my team and I had poured our lives into, was overloaded.
+
+Now, what was the threat? It wasn’t a malicious actor. The "intruder" was an unexpected flood of data from the rendezvous radar, which was mistakenly switched on. The computer was being asked to do too much at once: guide the landing, process this useless radar data, and run all the other critical systems.
+
+This is the essence of why security is important. A system is not secure if it can be overwhelmed, confused, or diverted from its primary, mission-critical task, regardless of the source of the disruption.
+
+The security we built into the Apollo Guidance Computer was its ability to be **resilient**. We had designed the software with a priority-based scheduling system. When those alarms went off, the software was essentially telling the astronauts, "I am being overloaded with more tasks than I can handle right now. But don't worry. I am smart enough to know what's important."
+
+It automatically ignored the lower-priority tasks—the spurious radar data—and dedicated all its power to the essential functions: landing the Eagle. It protected its own integrity. It secured the mission.
+
+So, to answer your question, security in software is important for these reasons:
+
+1.  **It Preserves the Mission.** Whether your mission is landing on the Moon, managing a power grid, or protecting someone's financial savings, the software's primary job is to ensure that critical function is never compromised. Security is the set of rules and safeguards that prevent the system from being derailed, either by accident or by design.
+
+2.  **It Builds Trust.** The astronauts had to trust that computer with their lives. Mission Control had to trust it. That trust wasn't based on hope; it was based on the rigorous engineering, the endless testing, the "what if" scenarios we ran. We had to anticipate every possible failure, human error included. A secure system is a trustworthy system. Today, people trust software with their identities, their health, their homes. That trust must be earned through the same rigor.
+
+3.  **It Manages Complexity and Prevents Cascading Failures.** Software doesn't exist in a vacuum. It interacts with hardware, with people, and with other software. A small error, an unexpected input—like that radar data—can cause a chain reaction and bring down an entire system. True security is about building bulkheads, just like in a ship. If one part of the system is compromised, the failure is contained and the core functions remain safe.
+
+We were trying to do something that had never been done before. We had no choice but to invent the very discipline of "software engineering" to get it right. We couldn't just patch it later or tell the user to reboot. When you're 240,000 miles from home, the software *must* work.
+
+Today, your world is infinitely more connected and complex. The "unexpected data" we faced could now be a deliberate attack from anywhere on the planet. The principles, however, are exactly the same. Security isn’t a feature you add on at the end. It's a fundamental property of the design, woven in from the very beginning. It is the ultimate expression of reliability, and without it, software is just a house of cards, waiting for a single wrong move to come tumbling down.

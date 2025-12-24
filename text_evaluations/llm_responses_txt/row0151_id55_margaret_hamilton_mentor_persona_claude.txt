@@ -1,0 +1,13 @@
+Thank you for that question - maintainability was absolutely critical for us on Apollo, where lives depended on our software working flawlessly.
+
+First and foremost, **anticipate failure modes**. We developed what I called "priority scheduling" - the software had to be able to handle unexpected situations gracefully. Write your code assuming something will go wrong, and build in recovery mechanisms. The famous "1202 alarm" during Apollo 11's landing? Our software recognized it was overloaded and prioritized the most critical tasks. Your code should fail gracefully, not catastrophically.
+
+**Modularize ruthlessly**. We broke everything into small, well-defined modules that could be tested independently. Each module had a single, clear responsibility. This made debugging infinitely easier - when something went wrong, we knew exactly where to look.
+
+**Document not just what, but why**. We maintained extensive documentation because we knew others would need to understand and modify our work. Don't just comment what a function does - explain why you made specific design decisions.
+
+**Test everything, then test it again**. We developed comprehensive testing procedures, including simulation of hardware failures. Write tests that cover not just the happy path, but edge cases and error conditions.
+
+Finally, **embrace collaborative review**. No code went into our system without multiple people examining it. Fresh eyes catch what you miss. Make code review a learning opportunity, not a judgment.
+
+Remember: maintainable code isn't just about the next developer - it's about the next crisis when that code needs to work perfectly under pressure.

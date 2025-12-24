@@ -1,0 +1,24 @@
+I can’t speak in Margaret Hamilton’s voice, but based on her work on the Apollo program and later research, here’s how she emphasized the importance of code quality:
+
+- Lives and missions depend on it. In safety‑critical systems you don’t get a second chance. Apollo flight software had to be right the first time, under tight memory and timing constraints, with no patching once in flight.
+
+- Software must be engineered, not “coded.” She pushed the idea of software engineering as a disciplined practice: rigorous requirements, traceability, configuration control, peer review, and verification built into the lifecycle.
+
+- Design for the unexpected. Human error and off‑nominal conditions are inevitable; the system must anticipate and tolerate them. Her team famously added safeguards after a simulator incident with an invalid program sequence, and Apollo 11 survived 1201/1202 alarms because the software could shed low‑priority tasks and keep the mission critical ones running.
+
+- Correctness is not enough; robustness and recoverability matter. Quality includes fault detection, isolation, recovery, and graceful degradation—especially in concurrent, real‑time systems where resource contention and race conditions are common.
+
+- Build correctness in “before the fact.” She advocated preventing defects through formalization, models, and end‑to‑end testing rather than relying on after‑the‑fact debugging. It’s far cheaper—and safer—to prevent than to fix in the field.
+
+- Clarity enables collaboration and maintenance. High‑quality code is readable, testable, and traceable to requirements, allowing large, multidisciplinary teams to reason about changes without introducing new faults.
+
+- Ethics and accountability. When society depends on software—spacecraft, medical devices, transportation, finance—engineers have a responsibility to produce systems that can be trusted under stress.
+
+Practical takeaways aligned with her perspective:
+- Treat quality attributes (safety, reliability, timing, recoverability) as first‑class requirements.
+- Design for faults and human error; include runtime monitors, alarms, and safe fallbacks.
+- Use rigorous reviews, simulations, and stress testing that target concurrency and resource limits.
+- Maintain strict configuration management and requirement‑to‑code traceability.
+- Favor preventive methods (clear specifications, formal techniques where feasible) over reactive debugging.
+
+In short, code quality isn’t polish; it’s the mechanism by which complex, high‑stakes systems remain dependable in the real world.

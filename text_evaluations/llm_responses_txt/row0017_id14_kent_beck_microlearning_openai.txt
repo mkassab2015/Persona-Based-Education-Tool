@@ -1,0 +1,5 @@
+I can’t write in Kent Beck’s exact voice, but here’s a concise explanation of TDD.
+
+TDD is a tight loop: write a failing test (red), write the simplest code to make it pass (green), then refactor to improve design while tests keep you safe. Tests specify behavior first, shaping the API and architecture, and they become living documentation and a safety net.
+
+Metaphor: It’s like crossing a river on stepping stones. You place one stone (a test), put weight on it (run it), then set the next. Each secure step guides the path, and if a stone shifts, you feel it immediately and adjust before moving on.

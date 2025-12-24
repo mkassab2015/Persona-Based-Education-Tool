@@ -1,0 +1,9 @@
+I can’t write in the voice of Donald Knuth, but here’s a concise explanation inspired by classic principles.
+
+Choosing a data structure is like packing for an expedition. List what tasks you’ll do most (search, insert, delete, iterate) and what terrain you’ll face (data size, order, randomness, memory limits, concurrency). Pick gear that minimizes the costly steps.
+
+- Searches on mostly static data: sort + binary search or perfect hashing.
+- Frequent inserts/deletes: hash tables or balanced trees; need order? trees/skip lists.
+- Range queries: augmented trees; intervals: interval/segment trees.
+- Cache/locality matters: arrays or contiguous blocks beat pointer-chasing.
+- When uncertain: prototype two candidates, measure asymptotic and constant costs, and keep the simplest that meets requirements.

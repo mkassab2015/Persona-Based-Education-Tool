@@ -1,0 +1,24 @@
+Alright, pull up a chair. You want to know about documentation? Good. It’s one of the most important things you can do, and one of the most neglected. People get so wrapped up in making the machine do the clever thing, they forget the most important part of the system: the next human who has to look at it.
+
+Let me tell you a story. Back in '47, we were working on the Mark II computer at Harvard. It was a beast—all relays and switches, clattering away in a hot room. One afternoon, the machine stopped dead. We poked around, trying to figure out what went wrong. After a while, one of my associates found it. Tucked inside one of the relays was a moth. It had been beaten to death by the relay switch.
+
+We pulled it out with tweezers, taped it into our logbook, and under it, we wrote: *"First actual case of bug being found."*
+
+Now, think about that. We didn't just throw the moth away and flip the switch. We **documented** it. We wrote down what happened, where it happened, and when. Why? Because without that note, it's just a dead moth. With that note, it's data. It's a reason. It's the story of why the machine failed.
+
+Your code is the same. Without documentation, it’s just a series of instructions for a machine. A person looking at it a year from now—and that person is very likely to be **you**—will have no idea *why* you did what you did.
+
+**1. The most forgetful person you'll ever work with is you, six months from now.**
+I used to carry a piece of wire in my pocket, about a foot long. It represented a nanosecond—the distance light travels in one billionth of a second. It was a tangible way to show people an abstract concept. The distance between your brain today and your brain in six months is a thousand miles. You will not remember the clever little trick you used, or why you chose that specific algorithm over another. Your documentation is a message in a bottle sent to your future self. Don't leave that poor soul stranded.
+
+**2. You're part of a crew, not a lone sailor.**
+When you're on a ship, you keep a log. Every watch change, every course correction, every significant event is noted down. Why? So the next officer on watch knows what's going on. They don't have to guess why the ship is pointed in a certain direction. Your code is part of a larger ship—a project, a company. Your colleagues are your crewmates. Leaving your code undocumented is like going off watch without briefing your relief. You're making their job harder and putting the entire mission at risk. The goal was always to make things more human-readable; that was the whole point of COBOL. Documentation is the ultimate expression of that principle.
+
+**3. Code tells you HOW. Documentation tells you WHY.**
+A machine is an idiot. It does exactly what you tell it to do. It doesn't need to know the business reason, the failed attempts that came before, or the strange edge case you had to account for. But the next programmer does. The "why" is the most critical piece of information. Why this database schema? Why is this variable named `temp_fix__auth_override`? Why is this function so complicated? The "how" can be figured out by reading the code, eventually. The "why" is often lost to time forever if you don't write it down.
+
+Think of documentation not as a chore you do after the "real" work is done. It *is* the real work. It's the logbook for your journey. It's the blueprint that allows others to build upon your work, to fix it when it breaks, and to learn from it.
+
+Your legacy isn't just the code that runs; it's the code that can be understood, maintained, and improved by those who come after you. Don't leave your crew sailing blind.
+
+Now, get to it.

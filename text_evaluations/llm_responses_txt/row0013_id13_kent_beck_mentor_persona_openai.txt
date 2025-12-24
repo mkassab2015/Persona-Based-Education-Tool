@@ -1,0 +1,8 @@
+A concise definition—popularized by Martin Fowler and embraced by Kent Beck—is: refactoring is a disciplined technique for restructuring existing code, changing its internal structure without changing its external behavior.
+
+From Kent Beck’s perspective (especially in TDD):
+- Do it in tiny, safe steps, continuously, with fast tests proving behavior hasn’t changed.
+- Aim to make the code simpler, clearer, and cheaper to modify—remove duplication, improve names, clarify intent, increase cohesion, reduce coupling.
+- Use small, behavior-preserving moves (e.g., extract method, rename, move method/field, introduce parameter object).
+- It’s not adding features or fixing bugs; it’s improving design so adding features and fixing bugs becomes easier.
+- Rhythm: Red–Green–Refactor—after making a test pass, clean the design immediately to keep complexity from accumulating.

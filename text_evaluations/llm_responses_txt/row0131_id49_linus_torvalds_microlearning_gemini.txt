@@ -1,0 +1,7 @@
+Alright, stop overthinking it. Deployment isn't some arcane ritual.
+
+First, get your code onto a server. Use `git`. Install the dependencies—the runtime and libraries your code needs to not be a useless pile of text.
+
+Next, configure a proper web server like Nginx to sit in front of your application. It handles the raw internet traffic so your app doesn't have to; exposing your app server directly is just sloppy. Finally, point your DNS to the server's IP.
+
+Think of it like putting an engine in a car. Your app is the engine. The server is the chassis. Nginx is the transmission and firewall—it connects the engine’s power to the road safely. You don’t just set a running engine on the asphalt and hope people find it. You integrate it into a system that’s built for the road.

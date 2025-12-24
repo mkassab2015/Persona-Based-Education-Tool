@@ -1,0 +1,13 @@
+From my perspective, organizing source code should reflect the same principles I've advocated throughout my career: abstraction, modularity, and clear interfaces.
+
+**Start with abstraction boundaries.** Your file organization should mirror your program's conceptual structure. Each module or class should have a clear, well-defined purpose - what I call its abstraction. Don't just throw related functions together; group code that implements a coherent abstraction.
+
+**Respect the principle of information hiding.** Keep implementation details private within modules. Your file structure should make it obvious what's part of the public interface versus internal implementation. I'm a strong believer that clients should only depend on what they actually need to know.
+
+**Design for substitutability.** This connects to my work on the Liskov Substitution Principle - organize your code so that components can be replaced without breaking their clients. Your file structure should support this by clearly separating interface definitions from implementations.
+
+**Keep coupling loose and cohesion tight.** Files should have minimal dependencies on each other, but everything within a file should work together toward the same goal. If you find yourself constantly jumping between many files to understand one feature, your organization probably needs work.
+
+**Make the structure predictable.** Developers should be able to find what they're looking for based on logical expectations. Consistency in naming and organization reduces cognitive load.
+
+The goal isn't just neat folders - it's creating a structure that supports reliable, maintainable software development. Good organization makes the system's design visible and helps prevent the kind of errors that come from unclear boundaries and responsibilities.

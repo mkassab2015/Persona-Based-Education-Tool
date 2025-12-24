@@ -1,0 +1,7 @@
+Story points aren't about time—they're about relative effort and complexity. Think of it like hiking trails: you don't estimate a trail by how long it takes (that depends on weather, your fitness, pack weight), but by its difficulty relative to other trails you've hiked.
+
+I start teams with a reference story—something small but real they've completed. Call it a "3." Then compare new stories: "Is this bigger or smaller than our reference? How much bigger?" Use the Fibonacci sequence (1, 2, 3, 5, 8, 13) because precision is an illusion anyway.
+
+The magic happens through team conversation. When someone says "that's a 5" and another says "that's a 13," you've found something worth discussing. Those conversations reveal assumptions, uncover complexity, and align understanding.
+
+Don't overthink it. Points are a tool for planning, not accounting. Focus on consistency within your team, not accuracy across the universe.

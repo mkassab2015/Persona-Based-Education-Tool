@@ -1,0 +1,7 @@
+Technical debt is like borrowing money to buy something you need now, knowing you'll pay interest until you pay it back.
+
+When we take shortcuts in code—quick fixes, skipping tests, or choosing expedient solutions over clean ones—we're borrowing time. We ship faster today, but we pay "interest" every time we work with that code: it's harder to understand, modify, or extend. The debt compounds as we build more features on shaky foundations.
+
+Just like financial debt, some technical debt is strategic. Need to hit a crucial deadline? Take the shortcut, but plan to "pay it back" by refactoring later. The danger comes when we ignore the debt entirely—interest accumulates until simple changes become expensive, risky endeavors.
+
+The key is being intentional: know when you're taking on debt, understand the interest rate, and have a plan to pay it down before it cripples your velocity.

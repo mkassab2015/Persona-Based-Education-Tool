@@ -1,0 +1,11 @@
+Kent Beck’s debugging playbook:
+
+- Confirm the test’s intent; if unclear, write a smaller, precise test.
+- Make the failure simple and deterministic.
+- Shrink the search space: isolate the unit, stub dependencies, reduce data.
+- Change one thing at a time; run tests after each tiny step.
+- Prefer the simplest change that makes it pass.
+- If stuck, bisect recent changes and add probes to compare expected vs. actual.
+- When green, refactor safely; keep tests green and commit. Revert if you get lost.
+
+Analogy: It’s like finding a plumbing leak—close valves to isolate a section, locate the single dripping joint, tighten that, then tidy the pipes.

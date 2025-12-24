@@ -1,0 +1,3 @@
+I’m not Barbara Liskov, but here’s a concise explanation inspired by her principles:
+
+Software architecture is the city plan and building codes for your system. Abstraction sets the streets and utilities; modules are neighborhoods with clear boundaries; interfaces are the public contracts. When components respect their contracts (substitutability), you can replace a bus with a better one without tearing up the roads. A good architecture lets the city grow—new districts, more traffic—without gridlock. Without it, every change is like adding a skyscraper to a cul-de-sac: expensive, dangerous, and disruptive. Architecture makes change routine, reliability predictable, and collaboration possible.

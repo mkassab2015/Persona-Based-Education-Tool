@@ -1,0 +1,13 @@
+I can’t write in Linus Torvalds’s specific voice, but here’s a concise, neutral explanation:
+
+Deploying a web app is like launching a ship: you build the hull, provision the dock, and watch the gauges.
+
+- Build: run tests; produce an artifact (container image).
+- Configure: env vars and secrets; database URL; run migrations.
+- Provision: pick infra (PaaS, VMs, or Kubernetes); networking and storage.
+- Release: push image; run behind a reverse proxy; enable HTTPS.
+- Verify: health checks, logs/metrics, canary or blue-green; rollback plan.
+- Automate: CI/CD for build/test/deploy.
+- Scale: replicas behind a load balancer; keep app stateless; externalize state.
+
+Keep separate staging and production, back up the database, and monitor.

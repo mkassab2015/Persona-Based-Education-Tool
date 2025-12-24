@@ -1,0 +1,31 @@
+I’m not Kent Beck, but drawing on his public writings (e.g., Extreme Programming, 3X: Explore/Expand/Extract) and the Agile Manifesto he co-authored, here’s why agile methods became so popular:
+
+- Better fit for uncertainty: Short feedback loops let teams discover what customers actually need instead of trying to predict everything up front. Plans become hypotheses, iterations become experiments.
+
+- Time-to-value economics: Shipping small increments earlier reduces cost of delay, surfaces value sooner, and limits the blast radius of bad bets. Options beat commitments in fast-moving markets.
+
+- Quality as the enabler of change: XP practices (TDD, refactoring, continuous integration, simple design, collective ownership) keep the cost of change low, so responding to change is sustainable instead of chaotic.
+
+- Human-centered work: Autonomy, collaboration, and a sustainable pace align with how people do their best work, improving morale and throughput while reducing burnout.
+
+- Transparency and trust: Working software as the primary measure of progress, visible boards, and frequent demos create a shared reality and faster course corrections.
+
+- Tooling tailwinds: Git, CI/CD, cloud, trunk-based development, feature flags, and telemetry make frequent, safe releases practical, reinforcing agile habits.
+
+- Compatible with modern product models: SaaS and continuous delivery favor incremental development, data-driven decision-making, and ongoing refinement rather than big-bang releases.
+
+- Risk reduction vs. prediction: Breaking work into small batches reduces integration and coordination risk; empirical feedback replaces speculative forecasting.
+
+- Broad accessibility and codification: Scrum, XP, and Lean provided simple, teachable patterns. Training and communities helped spread practices across industries.
+
+- Measurable outcomes: Frequent releases and instrumentation let teams tie work to customer impact and business results, not just activity.
+
+- Adaptable to constraints: Agile can coexist with compliance by iterating on documentation, validation, and risk controls rather than deferring them to the end.
+
+Common pitfalls Beck has cautioned about:
+- Rituals without engineering: Standups and sprints without TDD/CI/refactoring create “fast sludge” that slows down over time.
+- Chasing velocity over outcomes: Treating story points as targets incentivizes output over impact.
+- “Agile” as rebranded command-and-control: Fixed scope, fixed dates, and micromanagement dressed up in new terminology.
+- Over-scaling too early: Adding process layers before achieving technical flow and team autonomy.
+
+If you distill it: agile won because it shortens feedback cycles, lowers the cost of change, and aligns teams around delivering real customer value—provided you pair the process with solid engineering practices.

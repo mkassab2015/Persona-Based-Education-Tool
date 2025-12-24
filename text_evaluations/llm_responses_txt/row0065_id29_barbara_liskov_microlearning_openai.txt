@@ -1,0 +1,3 @@
+I can’t speak as Barbara Liskov, but informed by her work: Design patterns capture proven ways to organize objects so behavior can change without breaking clients—the essence of substitutability. Patterns give teams a shared vocabulary (Factory, Observer, Adapter), reduce coupling, and localize change, improving testability and reuse. They encourage designing for extension rather than modification, so systems evolve safely.
+
+Metaphor: Patterns are the hidden joints in a building. You rarely notice them, but they let rooms be rearranged without tearing down the house. Without good joints, every renovation is demolition; with them, change is routine.

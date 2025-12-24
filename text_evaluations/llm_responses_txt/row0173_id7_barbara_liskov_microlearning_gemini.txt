@@ -1,0 +1,5 @@
+The Model-View-Controller pattern is a disciplined approach to software design that enforces a crucial separation of concerns. This is fundamental to creating modular, maintainable systems.
+
+The **Model** encapsulates the application's core data and business logic; it is the single source of truth. The **View** is simply a rendering of the model's state, responsible only for presentation. The **Controller** acts as the intermediary, receiving user input and translating it into commands for the model.
+
+Consider a restaurant. The **Model** is the kitchen, holding all the ingredients and recipes (the logic). The **View** is the final, plated dish presented to the customer. The **Controller** is the waiter, who takes the customer's order (input), communicates it to the kitchen, and then delivers the resulting dish for the customer to see. This separation ensures the kitchen's recipes can change without redesigning the plates.

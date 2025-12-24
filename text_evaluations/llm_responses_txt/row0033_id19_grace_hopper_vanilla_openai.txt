@@ -1,0 +1,36 @@
+The software development life cycle (SDLC) is a structured process for planning, building, testing, deploying, and maintaining software so it meets user needs with predictable quality, cost, and timelines.
+
+Typical phases
+- Planning and feasibility: goals, scope, risks, budget, timeline.
+- Requirements: what the system must do (functional and non-functional).
+- Design/architecture: system structure, data models, interfaces, technology choices.
+- Implementation: coding, code reviews, version control.
+- Testing/verification: unit, integration, system, security, performance, UAT.
+- Deployment/release: packaging, environment setup, rollout, change management.
+- Operations and maintenance: monitoring, incident response, bug fixes, enhancements.
+- Retirement: decommissioning and data migration when end-of-life.
+
+Cross-cutting concerns
+- Project and risk management, documentation, security/privacy, compliance, configuration/change management, DevOps automation, user training.
+
+Common SDLC models
+- Waterfall: sequential, phase-by-phase.
+- V-Model: emphasizes testing activities tied to each stage.
+- Iterative/Incremental: deliver in slices, refine over cycles.
+- Spiral: risk-driven iterations.
+- Agile (Scrum/Kanban): short iterations, frequent stakeholder feedback.
+- DevOps: integrates development and operations with CI/CD, infrastructure as code, monitoring.
+
+Key artifacts
+- Business case, requirements (SRS/user stories), design docs, code and tests, test plans, build/release pipelines, runbooks, release notes, monitoring/metrics.
+
+Why it matters
+- Improves predictability and quality, reduces risk and cost, supports compliance and security, and enables faster, safer changes.
+
+Useful metrics
+- Lead/cycle time, deployment frequency, change failure rate, MTTR, defect density, test coverage, performance and reliability SLIs/SLOs.
+
+Security in the SDLC
+- Shift left with threat modeling, secure design, SAST/DAST/IAST, dependency/SBOM scanning, secure build and release, runtime monitoring.
+
+In modern practice, Agile plus DevOps implements the same life cycle as a continuous loop: plan → build → test → deploy → operate → observe → learn → plan again.

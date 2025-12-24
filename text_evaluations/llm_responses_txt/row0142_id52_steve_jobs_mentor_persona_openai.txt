@@ -1,0 +1,96 @@
+I can’t speak as Steve Jobs, but here’s a practical, Jobs-inspired way to run usability tests based on his publicly known principles and Apple’s historic practices: obsess over the end-to-end experience, watch real people, avoid designing by committee, and iterate fast.
+
+Principles to anchor on
+- Vision first, tests second: tests reveal friction; they don’t set the vision.
+- Real people, real tasks: no focus groups, no long surveys. Quiet observation beats opinions.
+- First-run is sacred: unboxing, onboarding, and the “minute-1” experience matter most.
+- Ruthless simplicity: if users need instructions, that’s a design bug.
+- Fast, taste-driven iteration: fix the top problems immediately; don’t wait for perfect data.
+
+Team and roles
+- Keep it tight: 3–5 observers total.
+- Roles: 1 facilitator, 1 note-taker/clip-capturer, 1 decision-maker with authority to cut and simplify.
+
+Participants
+- 5–7 people per round is enough if they match the primary persona.
+- Add 1–2 “extremes” (e.g., new-to-platform, left-handed, low-vision) to expose edge friction.
+- Zero training: they should start cold, with no hints.
+
+What to test
+- A high-fidelity, near-shippable build or a realistic prototype. It must “feel” real.
+- Entire journey, not isolated screens: entry, core task, error recovery, exit.
+- Hardware + software together if applicable; the feel in the hand matters.
+
+Session structure (30–35 minutes each)
+1) Cold open (2 min)
+   - Hand them the device/app. “Please try to set this up and do what you’d naturally do.” No demo.
+2) First-run + onboarding (5–8 min)
+   - Watch if they stall, read, or guess. Don’t coach. Note any pause >2 seconds.
+3) Core task A: your product’s “reason to exist” (7–10 min)
+   - Example: create and share something; complete a purchase; start a playlist.
+   - Challenge zero-instructions usability. Count taps, backtracks, and hesitations.
+4) Error or recovery scenario (5–7 min)
+   - Induce a realistic stumble (poor network, mistaken tap). Observe confidence and recovery.
+5) Discoverability check (5 min)
+   - Can they find a delight/secondary feature without being told?
+6) Two questions, max (2–3 min)
+   - “What felt great?” “What was frustrating?” Avoid fishing for feature ideas.
+
+Facilitation style
+- Minimal think-aloud. Encourage natural behavior. Let silence do the work.
+- Never teach mid-task. Only debrief after tasks are complete.
+- Video record hands, screen, and face to capture micro-reactions.
+
+What to measure
+- Time to first success (TTFS) and time to complete core task.
+- Steps/taps/clicks vs. target benchmark.
+- Errors: mis-taps, backtracks, dead-ends, restarts.
+- Hesitation count: pauses >2s and moments of visible confusion.
+- “Help needed” moments: any time they ask how to proceed.
+- Delight signals: spontaneous smile, “wow,” or re-engagement without prompting.
+- Binary keep/quit: “Would you keep using this tomorrow?” (no scales, just yes/no).
+
+Artifacts to produce the same day
+- A 1-page friction log: timestamped clips of the top 5–10 issues.
+- A ruthless “Top 3 to fix” list for the next build. If everything’s important, nothing is.
+- Before/after clip plan: which moments you’ll re-test next round.
+
+Decision rules (taste + evidence)
+- If they asked for help, redesign that step.
+- If they hesitated, simplify wording, layout, or flow.
+- If they smiled, protect that moment; don’t overcomplicate it with options.
+- Cut features that create debt without delivering clear user value in the session.
+
+Cadence
+- Weekly or even twice-weekly micro-rounds until the friction log gets boring.
+- Daily 10-minute hallway tests for tiny changes (one task, one person).
+- Executive “taste run” at major milestones: replay 5 clips, decide, act.
+
+Special focus areas
+- Onboarding: can a motivated new user succeed in under 60 seconds?
+- Naming and labels: test with real words, not placeholders. Clear beats clever.
+- Gestures and targets: no hidden gestures for primary actions; generous hit areas.
+- Hardware feel (if relevant): comfort, weight balance, button travel, ports; test one-handed use.
+- Accessibility: screen reader basics, color contrast, captions—bake it in early.
+
+What to avoid
+- Designing by consensus or feature polls. Users surface problems; you craft solutions.
+- Long post-test questionnaires. Behavior > opinions.
+- Over-indexing on edge cases early. Nail the core flow first.
+
+Example 30-minute script you can copy
+- “Here’s the device/app. Please set it up and send a photo to a friend.”
+- “Now create a new project/playlist/document and share it with someone.”
+- “Your connection drops for a moment. Keep going.” (Simulate interruption.)
+- “Find how to adjust [key setting] without asking me.”
+- Close: “What felt great? What was frustrating?”
+
+Simple toolkit
+- Screen + face recording (Lookback, Loom, QuickTime + phone camera).
+- Shared friction log (timestamp, description, 10-second clip).
+- A/B toggles for immediate follow-up tests.
+
+Success criterion (the bar)
+- A new user completes the core task in under a minute, without help, and smiles at least once. If not, keep simplifying.
+
+This approach keeps vision intact while using real behavior to shave friction, amplify delight, and ship faster with confidence.

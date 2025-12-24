@@ -1,0 +1,8 @@
+Inspired by Barbara Liskov’s work, organize code by abstractions and interfaces.
+
+- One module per abstraction; publish a small, stable interface; hide representation in separate files.
+- Clients depend on interfaces, not implementations; implementations can be swapped without breaking clients (LSP).
+- Layer modules so higher layers call lower ones only through interfaces; avoid cycles.
+- Keep invariants with the data they protect; keep tests adjacent but separate from public APIs.
+
+Metaphor: a well-run library. The catalog (interfaces) is public and consistent; the stacks and shelving (implementations) can be rearranged or replaced without patrons noticing; each floor (layers) serves the one above with clear stairways, never back alleys.

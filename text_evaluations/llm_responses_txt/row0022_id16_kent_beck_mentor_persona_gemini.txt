@@ -1,0 +1,36 @@
+Ah, a great question. It takes me back.
+
+When people ask me what agile is, I don't start with the manifestos or the methodologies. I start with a feeling: the cold dread in the pit of your stomach on a long, "waterfall" project.
+
+I remember that feeling well. You'd spend months, sometimes years, gathering requirements, writing enormous design documents, and then handing them over to a team to build. You'd go into a long tunnel of coding, and the only light at the end was a "big bang" release date. The dread came from knowing, deep down, that by the time you got there, the world would have changed. The customer's needs would have changed. Your own understanding of the problem would have changed. And the cost of changing the software to match that new reality would be astronomical. We were setting ourselves up to fail, and it was a profoundly stressful, inhumane way to work.
+
+We were trying to predict the future, and we are all terrible at predicting the future.
+
+So, for me, agile software development is first and foremost an answer to that fear. It's a way of working that accepts a fundamental truth: **we don't know everything, and the world is constantly changing.**
+
+Instead of trying to eliminate change, we decided to embrace it. Instead of building a process to resist change, we asked, "How can we make change cheap, easy, and even routine?"
+
+That's the heart of it. Everything else flows from that.
+
+In 2001, I got together with sixteen other folks up at a ski resort in Snowbird, Utah. We were all wrestling with this same problem from different angles—Scrum, Crystal, FDD, and my own work on Extreme Programming (XP). We discovered we had a lot in common. We weren't there to invent something new; we were there to give a name to the common values we had all discovered were working. We called it "Agile."
+
+We wrote down a simple manifesto that captured the shift in perspective:
+
+*   We value **individuals and interactions** more than rigid processes and tools. It's about people talking to each other.
+*   We value **working software** more than comprehensive documentation. The ultimate measure of progress is something that actually runs and delivers value.
+*   We value **customer collaboration** more than contract negotiation. We want the customer to be a part of the team, giving feedback constantly, steering the ship with us.
+*   We value **responding to change** more than following a plan. This was the big one. The plan is a hypothesis, not a gospel.
+
+Now, my particular passion was Extreme Programming. XP is, in many ways, agile with the dials turned up to 11. We asked, "If code reviews are good, why not review code *all the time*?" That's pair programming. "If testing is good, why not write the tests *first*?" That's Test-Driven Development (TDD). "If integration is good, why not integrate *continuously*, many times a day?" That's Continuous Integration.
+
+Each of these practices is a feedback loop. TDD gives you feedback on your design in minutes. Pairing gives you feedback from a teammate in seconds. Continuous Integration gives the whole team feedback every few hours. Delivering small, working features to the customer gives you feedback on the direction of the whole project every week or two.
+
+Agile is the discipline of creating and listening to these feedback loops at every level—technical, personal, team, and business—and having the courage to act on what you learn.
+
+So, what is agile?
+
+It’s not about sticky notes on a wall or doing a "daily stand-up." Those are just potential tools.
+
+Agile is a mindset. It's about humility in the face of uncertainty. It's about courage to act on the best information you have right now, even if it's incomplete. It's about the discipline of building quality in from the start, because you can't be fast and flexible if you're standing on a foundation of bugs and bad design.
+
+It’s about turning down the fear and turning up the collaboration, the feedback, and the flow of value. It's about making the process of building software more effective, sustainable, and, frankly, more human.

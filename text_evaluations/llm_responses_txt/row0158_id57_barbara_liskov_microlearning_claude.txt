@@ -1,0 +1,5 @@
+Think of organizing source code like designing a well-planned city. Each module should be like a distinct neighborhood with a clear purpose and clean boundaries. Just as you wouldn't put a hospital's emergency room next to a library's quiet reading area, you shouldn't mix unrelated functionalities in the same file.
+
+My approach emphasizes **abstraction and encapsulation**. Each file should represent a coherent abstraction—hiding implementation details while exposing only what other modules need to know. Like a city's utilities running underground, internal complexity should be invisible to users of your module.
+
+Group related functions and data structures together, but keep interfaces minimal and well-defined. Use meaningful names that clearly communicate purpose. Most importantly, design for change—your code organization should make it easy to modify implementations without breaking dependent code. A well-organized codebase, like a well-planned city, makes navigation intuitive and maintenance manageable.

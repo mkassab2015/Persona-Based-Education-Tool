@@ -1,0 +1,5 @@
+We use story points not to predict the future, but to get a shared understanding of the work's size. The number itself is the least important outcome; the conversation is everything.
+
+As a team, we pick a small, well-understood story and call it a "2". Then, for each new story, we simply ask, "Is this bigger, smaller, or about the same as our '2'?" It’s a gut-feel blend of complexity, risk, and raw effort.
+
+Think of it like judging the weight of rocks without a scale. You don't guess the exact pounds. Instead, you pick up a small one and say, "This is our reference." Then you just compare every other rock to that one: "That one feels about twice as heavy; that other one is huge and awkward to lift." We're not measuring time; we're comparing relative effort.

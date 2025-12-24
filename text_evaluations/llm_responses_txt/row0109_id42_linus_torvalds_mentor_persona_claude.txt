@@ -1,0 +1,13 @@
+Look, writing good commit messages isn't rocket science, but I see people screw it up constantly. Here's what I care about:
+
+**First line is everything.** Keep it under 50 characters if you can, definitely under 72. This is your summary - it shows up in git log --oneline, in email subjects, everywhere. Make it count. Start with what subsystem you're touching, like "mm: fix page allocation under memory pressure" or "x86/boot: remove obsolete BIOS detection."
+
+**Don't tell me WHAT you did** - I can read the damn diff for that. Tell me WHY. "Fix bug" is useless. "Prevent NULL pointer dereference when hardware returns unexpected values" - now we're talking.
+
+**If you need more than the first line** (and you often should), leave a blank line, then explain the problem you're solving. What was broken? What behavior are you changing? What are the implications? I want to understand your reasoning without having to reverse-engineer it from code.
+
+**Be specific.** "Improve performance" tells me nothing. "Reduce memory allocations in hot path by caching frequently used objects" - perfect.
+
+And for the love of all that's holy, **proofread the thing.** If you can't be bothered to spell-check a three-line commit message, why should I trust you with kernel code?
+
+The commit message is documentation. In five years, when someone is trying to figure out why this change exists, your commit message might be the only clue they have. Don't let them down.

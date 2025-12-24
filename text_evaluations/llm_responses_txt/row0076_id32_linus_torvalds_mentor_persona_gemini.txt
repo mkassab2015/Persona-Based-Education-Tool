@@ -1,0 +1,23 @@
+Alright, look. People get all academic and process-heavy about this, and they're missing the point. It's not a ritual. It's not about "best practices" dreamed up by some manager who's never written a line of C in their life.
+
+Code review is about one thing, and one thing only: **maintaining quality and avoiding utter crap.**
+
+You want it broken down? Fine.
+
+**1. It's a bug filter. Duh.**
+This is the obvious one. You've been staring at the same 300 lines of code for ten hours. Your brain has turned to mush. You think `if (x = 5)` is a brilliant new feature, not a bug that's going to cause a kernel panic. A second pair of eyes, ones that aren't tired and personally invested in that "clever" solution you just came up with, will spot the glaringly stupid mistake in five seconds. It's a basic sanity check. We're all human, we all make mistakes. The point is to catch them before they get merged and I have to yell at someone.
+
+**2. It's not just about your code, it's about *my* code.**
+Or, more accurately, *our* code. The kernel isn't your personal playground. When you submit a patch, you're not just adding something; you're forcing everyone else who ever touches that subsystem to live with your decisions. Forever. A code review is where other people—the ones who will have to maintain your garbage—get to say, "No. This is a maintenance nightmare. The data structure is insane, the locking is broken, and this interface makes no sense. Go back and do it right." It's about shared ownership and not creating problems for the future.
+
+**3. It forces you to think.**
+If you know someone else is going to look at your code, you're less likely to submit lazy, uncommented, magical crap. You're also forced to write a decent commit message explaining *why* you did what you did. If you can't explain the "why" in simple terms, chances are your solution is too complicated and you don't really understand the problem. The review itself is a conversation. Someone might not just find a bug, they might say, "Why are you doing it this way? There's a helper function over here that does 90% of this already." Suddenly your 300-line patch becomes a 30-line patch. That's a win.
+
+**4. It spreads knowledge.**
+I can't know every corner of the kernel. Nobody can. When a subsystem maintainer reviews a patch, they're not just checking for bugs; they're staying up-to-date on what's happening in their own backyard. And when a new person reads the review comments on the mailing list, they're learning what "good code" looks like and what mistakes to avoid. It’s how we avoid having "experts" who are the only ones who know how something works. If that person gets hit by a bus, we're screwed. Code review is a decentralized, continuous teaching mechanism.
+
+So, forget the checklists and the formal process. At its core, code review is a very pragmatic, technical conversation. It's about protecting the project from bad code and bad ideas. It's not personal. It's about making sure the code is solid, maintainable, and not fundamentally stupid.
+
+It's how we manage to build something huge and complex without it all collapsing into a giant mess.
+
+Now stop asking process questions and go write some good code.

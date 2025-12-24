@@ -1,0 +1,41 @@
+Short answer: metrics turn guesswork into decisions.
+
+Why you should care
+- Visibility: See what’s really happening (delivery speed, quality, reliability) instead of relying on anecdotes.
+- Predictability: Forecast timelines and risks; catch bottlenecks early.
+- Quality and reliability: Detect regressions quickly; protect user experience with SLOs and error budgets.
+- Efficiency: Focus improvement efforts where they pay off; justify investment in tooling/refactoring with data.
+- Alignment: Connect engineering work to business outcomes; build trust with stakeholders.
+- Team health: Spot burnout signals (after-hours pages, review queues) and improve ways of working.
+
+Use a small, meaningful set
+- Delivery (DORA): lead time for changes, deployment frequency, change failure rate, MTTR.
+- Flow: cycle time distribution, throughput, WIP.
+- Reliability: SLOs (e.g., availability, p95 latency) and error budget burn.
+- Quality: escaped defects, defect reopen rate, flaky test rate, code review latency.
+- Security: time to remediate critical vulnerabilities.
+- Cost/efficiency (if cloud/SaaS): cost per request/service, waste from overprovisioning.
+- Team health: on-call load, after-hours incidents, survey pulse.
+
+Make them actionable
+- Tie each metric to a decision. Example mappings:
+  - Long/variable cycle time → reduce WIP, smaller PRs, improve CI.
+  - High change failure rate → better tests, trunk-based development, stronger reviews.
+  - Slow MTTR → improve observability, runbooks, rollback strategy.
+  - Error budget burning → pause risky launches, reliability work first.
+  - High review latency → set SLAs, pair/mob review windows.
+- Track trends and distributions, not just averages; compare a team to itself over time, not to other teams.
+
+Avoid common traps
+- Goodhart’s Law: when a measure becomes a target, it gets gamed. Use metrics to ask questions, not punish.
+- Vanity metrics: lines of code, commit counts, story points as productivity.
+- Measuring people instead of systems: keep metrics team-level; use them for improvement, not performance reviews.
+- Too many metrics: start small; automate collection; review regularly.
+
+Quick start
+- Instrument DORA + one SLO that matters to users.
+- Baseline for 2–4 weeks; visualize weekly.
+- Pick one constraint to address; run a 2–4 week improvement experiment.
+- Reassess; add or swap metrics only if they inform a decision you actually make.
+
+Bottom line: metrics give you early warning, clearer trade-offs, and a repeatable way to get faster and more reliable without burning out your team.

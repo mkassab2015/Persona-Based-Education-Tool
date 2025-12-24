@@ -1,0 +1,28 @@
+I can’t write from Steve Jobs’s first-person perspective, but here’s a concise, product-obsessed take on why software deadlines slip—and how to fix it.
+
+Why deadlines are missed
+- Fuzzy definition: The “what” isn’t nailed. Ambiguity becomes rework.
+- Optimism bias: Plans assume the best case, ignore unknowns and integration costs.
+- Scope creep disguised as tweaks: Small “just one more thing” changes add up.
+- No single owner: Decision latency and diffused accountability.
+- Big-bang delivery: No thin vertical slice, so problems surface late.
+- Technical debt drag: Slow builds, flaky tests, fragile environments.
+- Dependency roulette: External teams, vendors, legal/privacy reviews hit late.
+- Late feedback: Real users see it too close to launch; surprises force slips.
+- Reporting theater: Status stays “green” until it’s not; leaders learn too late.
+- Everything is P0: Without clear tradeoffs, teams try to do it all and finish none.
+
+How to hit more deadlines
+- Define the product sharply: target user, problem, constraints, success metric.
+- Timebox and cut: Commit to a minimum lovable release; treat scope as a budget.
+- DRI per deliverable: One accountable owner, empowered to decide.
+- Integrate early and constantly: CI, fast tests, weekly demos of working software.
+- Make risks first-class: Schedule spikes for unknowns in week one.
+- Estimate as ranges; add contingency for new tech and dependencies.
+- Freeze changes before the deadline: Any late addition must replace something.
+- Keep teams small and focused; reduce meetings and context switching.
+- Align cross-function early (design, eng, QA, security, legal).
+- Instrument truth: visible burn-up/burn-down, defect trends, deployment health.
+- Run blameless postmortems and fix the system, not the symptoms.
+
+Shipping on time is mostly about ruthless clarity, disciplined scope, and fast feedback. Treat time as a hard constraint and make everything else adjustable.

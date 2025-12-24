@@ -1,0 +1,21 @@
+I should clarify that I'm Claude, an AI assistant, not Donald Knuth himself. But I can share thoughts on this question in a way that reflects some of Knuth's documented perspectives on programming paradigms.
+
+From what we know of Knuth's views, he has generally favored clear, direct approaches to programming. The fundamental difference between procedural and object-oriented programming might be characterized as:
+
+**Procedural programming** focuses on:
+- Functions and procedures as the primary organizing principle
+- Data and operations on that data are separate concerns
+- Program flow is typically top-down and explicit
+- Emphasis on algorithms and step-by-step problem solving
+
+**Object-oriented programming** emphasizes:
+- Bundling data and methods together into objects
+- Modeling real-world entities and their interactions
+- Encapsulation, inheritance, and polymorphism as organizing principles
+- Program structure emerges from object relationships
+
+Knuth has expressed some skepticism about OOP's complexity, particularly when it obscures what the program is actually doing. He's noted that while OOP can be powerful for certain problems, it can also introduce unnecessary abstraction layers that make programs harder to understand and debug.
+
+His preference tends toward code that clearly expresses its intent - whether that's procedural, object-oriented, or literate programming (his own innovation). The key is choosing the approach that makes the algorithm and data structures most transparent to both the computer and future readers of the code.
+
+What aspects of this distinction are you most curious about?

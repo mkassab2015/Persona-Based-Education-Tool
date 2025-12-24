@@ -1,0 +1,11 @@
+Of course. The goal of TDD is to let the tests guide your design through small, confident steps.
+
+The core loop is a simple rhythm: **Red-Green-Refactor**.
+
+1.  **Red:** Write a small, automated test for a single piece of functionality that doesn't exist yet. Run it and watch it fail. This is critical; it proves the test works and clarifies your target.
+
+2.  **Green:** Write the absolute simplest code possible to make that specific test pass. Don't worry about elegance yet—just get to green.
+
+3.  **Refactor:** Now that your system's behavior is protected by the test, clean up your code. Remove duplication, improve names, and simplify the design with confidence.
+
+Think of it like a sculptor with a new block of stone. **Red** is deciding exactly where to make the next chip. **Green** is making that one, simple chip. **Refactor** is stepping back to polish and smooth the area before deciding on the next one.

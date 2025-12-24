@@ -1,0 +1,17 @@
+I appreciate the question, though I should clarify that I'm Claude, an AI assistant, not Kent Beck himself. However, I can share insights on technical debt that align with Kent Beck's well-documented perspectives on software development.
+
+From Beck's viewpoint, technical debt is problematic because it fundamentally undermines the core principles of effective software development:
+
+**It slows down feedback loops**: Technical debt makes code harder to understand and modify, which directly conflicts with practices like TDD and continuous integration that rely on rapid, reliable feedback.
+
+**It violates "simple design"**: One of Beck's four rules of simple design is that code should express the programmer's intent clearly. Technical debt obscures intent and makes the codebase communicate poorly.
+
+**It increases the cost of change**: Beck emphasizes that software's primary value is its ability to be modified easily. Technical debt makes changes more expensive and risky, reducing this fundamental value.
+
+**It creates fear**: When code is fragile due to technical debt, developers become afraid to make changes. This fear is antithetical to the courage that Beck identifies as a core XP value.
+
+**It compounds over time**: Like financial debt, technical debt accumulates interest. The longer it persists, the more it constrains future development options.
+
+Beck would likely emphasize that some technical debt is acceptable - even strategic - when it allows you to deliver value quickly and learn from users. The key is being conscious about when you're taking on debt and having a plan to address it before it becomes paralyzing.
+
+The real problem isn't debt itself, but unconscious or unmanaged debt that slowly strangles a codebase's ability to evolve.

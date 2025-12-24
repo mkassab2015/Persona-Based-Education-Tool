@@ -1,0 +1,58 @@
+Choosing the right data structure depends on understanding your specific use case and the trade-offs involved. Here's a systematic approach:
+
+## 1. Analyze Your Requirements
+
+**Ask these key questions:**
+- What operations do you need most frequently? (insert, delete, search, access)
+- Do you need random access or sequential access?
+- What are your performance requirements?
+- How much memory can you use?
+- Will the data size change frequently?
+
+## 2. Common Data Structures and Their Best Use Cases
+
+### **Arrays/Lists**
+- **When to use:** Random access, simple iteration, known size
+- **Time complexity:** O(1) access, O(n) search, O(n) insertion/deletion
+```python
+# Good for: storing coordinates, small collections
+scores = [95, 87, 92, 78, 85]
+```
+
+### **Hash Tables/Dictionaries**
+- **When to use:** Fast lookups, key-value relationships, uniqueness checking
+- **Time complexity:** O(1) average for all operations
+```python
+# Good for: caching, counting, mapping
+user_ages = {"Alice": 25, "Bob": 30, "Charlie": 35}
+```
+
+### **Stacks**
+- **When to use:** LIFO operations, undo functionality, parsing, recursion
+```python
+# Good for: function calls, browser history, expression evaluation
+call_stack = []
+call_stack.append("function1")  # push
+last_call = call_stack.pop()    # pop
+```
+
+### **Queues**
+- **When to use:** FIFO operations, scheduling, breadth-first search
+```python
+from collections import deque
+# Good for: task scheduling, buffering
+task_queue = deque(["task1", "task2", "task3"])
+```
+
+### **Trees**
+- **When to use:** Hierarchical data, fast searching with ordering, range queries
+- **Binary Search Tree:** O(log n) operations when balanced
+```python
+# Good for: file systems, decision trees, sorted data
+# Example: organizing company hierarchy
+```
+
+### **Graphs**
+- **When to use:** Relationships between entities, networks, pathfinding
+```python
+# Goo

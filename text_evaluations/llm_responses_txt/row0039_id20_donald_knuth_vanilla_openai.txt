@@ -1,0 +1,49 @@
+High level
+- Procedural programming organizes code around procedures (functions) that operate on data.
+- Object-oriented programming (OOP) organizes code around objects that bundle data with the operations that work on that data.
+
+How they structure programs
+- Procedural
+  - Primary unit: functions and modules.
+  - Data is usually passive; functions take data as input and return new data or mutate it.
+  - Control flow is typically top-down: call sequence of functions.
+- OOP
+  - Primary unit: objects/classes.
+  - Data (state) and behavior (methods) are encapsulated together.
+  - Programs are modeled as interacting objects sending messages (method calls).
+
+Key concepts
+- Procedural
+  - Procedures/functions, modularization, shared data structures, explicit state passing or global state.
+- OOP
+  - Encapsulation: hide internal state behind methods.
+  - Abstraction: define interfaces/contracts.
+  - Polymorphism: different types respond to the same interface.
+  - Inheritance and/or composition to reuse behavior (composition preferred in modern practice).
+
+Simple contrast (bank account)
+- Procedural: deposit(account, amount) updates fields on a record; any code with access can mutate the record.
+- OOP: account.deposit(amount) updates internal balance; only exposed methods can change state, enforcing invariants (e.g., no negative deposits).
+
+Trade-offs
+- Procedural advantages
+  - Simple, minimal indirection; often faster and lighter.
+  - Great for data pipelines, numerical code, small scripts, and systems code.
+- Procedural drawbacks
+  - Invariants are enforced by convention; shared mutable state can lead to tight coupling.
+- OOP advantages
+  - Encapsulation helps maintain invariants and reduce coupling.
+  - Polymorphism supports flexible designs and plugins.
+  - Maps well to domain modeling and event-driven GUIs/services.
+- OOP drawbacks
+  - Overengineering risks (deep hierarchies, “god objects”).
+  - Indirection can hurt readability/performance if misused.
+
+Typical languages/styles
+- Procedural: C, early Pascal, Fortran; you can write procedural-style code in Python, Go, JavaScript, etc.
+- OOP-first: Java, C#, C++, Swift, Ruby; many are multi-paradigm and also support procedural/functional styles.
+
+When to favor which
+- Favor procedural for straightforward data processing, tight loops, numerical kernels, and small utilities.
+- Favor OOP for complex domains with many interacting entities, long-lived applications, UIs, and plugin architectures.
+- In practice, most modern codebases mix both (and often functional ideas) for clarity and maintainability.

@@ -1,0 +1,7 @@
+I’m not Donald Knuth, but here’s a concise explanation in that spirit.
+
+Procedural programming organizes a program as a sequence of procedures operating on passive data. The verbs dominate: you write functions, pass data in, get results out.
+
+Object-oriented programming organizes code around objects that bundle data with the operations that act on it; you send messages to objects and let them manage their own state.
+
+Analogy: Procedural is a kitchen where the chef follows a detailed recipe, moving ingredients between bowls by hand. OOP is a kitchen of smart appliances; each appliance knows how to process what’s inside it. You press buttons (messages), and the appliances do the work, keeping their internals tidy.

@@ -1,0 +1,74 @@
+Here's a systematic approach to refactor a large class:
+
+## 1. **Analyze the Current Class**
+
+First, understand what you're working with:
+
+```python
+# Example of a large, problematic class
+class OrderProcessor:
+    def __init__(self):
+        self.db_connection = None
+        self.email_service = None
+        self.payment_gateway = None
+        self.inventory_system = None
+    
+    def process_order(self, order_data):
+        # Validation logic
+        # Payment processing
+        # Inventory updates
+        # Email notifications
+        # Database operations
+        # Logging
+        # Tax calculations
+        pass
+    
+    def validate_order(self, order): pass
+    def calculate_tax(self, order): pass
+    def process_payment(self, order): pass
+    def update_inventory(self, order): pass
+    def send_confirmation_email(self, order): pass
+    def log_transaction(self, order): pass
+    def save_to_database(self, order): pass
+```
+
+## 2. **Identify Refactoring Opportunities**
+
+Look for these code smells:
+- **Single Responsibility Principle violations**: Class doing too many things
+- **Long methods**: Methods with 20+ lines
+- **Feature envy**: Methods using data from other classes more than their own
+- **Data clumps**: Groups of parameters that always appear together
+- **Duplicate code**: Similar logic repeated
+
+## 3. **Extract Classes by Responsibility**
+
+Break down by distinct responsibilities:
+
+```python
+# Before: One large class
+# After: Multiple focused classes
+
+class OrderValidator:
+    def validate(self, order):
+        # Validation logic only
+        pass
+
+class TaxCalculator:
+    def calculate_tax(self, order, location):
+        # Tax calculation logic only
+        pass
+
+class PaymentProcessor:
+    def __init__(self, payment_gateway):
+        self.payment_gateway = payment_gateway
+    
+    def process_payment(self, order):
+        # Payment processing only
+        pass
+
+class InventoryManager:
+    def __init__(self, inventory_system):
+        self.inventory_system = inventory_system
+    
+    def update

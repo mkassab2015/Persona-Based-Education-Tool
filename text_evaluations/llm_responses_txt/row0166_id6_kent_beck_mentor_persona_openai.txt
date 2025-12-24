@@ -1,0 +1,28 @@
+I’m not Kent Beck, but here’s a concise summary of how he and Extreme Programming treat user stories and the role they play.
+
+What user stories are
+- A story is a small reminder to have a conversation about a user-visible change. It’s not a specification.
+- 3 Cs: Card (the brief note), Conversation (collaboration to clarify), Confirmation (acceptance tests that define done).
+
+Their role in XP
+- Focus on value: Express work in terms a user/business cares about, keeping the team aimed at outcomes rather than tasks.
+- Planning Game token: Stories are the unit of choice and negotiation. Customers choose the stories (by value), developers estimate (by cost), and together they pick what fits each iteration.
+- Feedback loop driver: Short, vertical slices deliver working software frequently, enabling rapid feedback and course correction.
+- Acceptance-test anchor: Each story gets concrete acceptance tests. Passing them is the definition of done and the primary documentation of behavior.
+- Design pressure: Build the simplest design that satisfies today’s stories (YAGNI), then refactor safely as new stories arrive. Stories guide evolutionary design alongside TDD.
+- Risk management: Split and schedule stories to retire uncertainty early; use spikes when learning is the goal.
+- Lightweight documentation: Keep text minimal; let examples and tests capture the details that matter.
+
+Effective story habits
+- Small, vertical slices that can finish in a few days.
+- INVEST qualities (Independent, Negotiable, Valuable, Estimable, Small, Testable).
+- Clear acceptance criteria/examples agreed before implementation.
+- Continuous refinement through conversation; prune long backlogs.
+
+Common pitfalls to avoid
+- Treating stories as detailed specs instead of a prompt to talk.
+- Slicing by technical layers rather than end-to-end user value.
+- Over-fixation on points/velocity; use estimates for planning, not performance management.
+- Letting stories become tickets passed over a wall; keep real-time conversation central.
+
+In short: in XP, user stories are the primary vehicle for aligning business and engineering, structuring short-cycle planning, anchoring acceptance tests, and enabling evolutionary design through fast feedback. They are about conversations and outcomes, not documents.

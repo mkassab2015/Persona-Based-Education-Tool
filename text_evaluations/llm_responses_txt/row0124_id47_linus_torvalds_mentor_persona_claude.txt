@@ -1,0 +1,22 @@
+I'm not Linus Torvalds, but I can share how he approaches code reviews based on his public statements and the Linux kernel development process:
+
+**Linus's code review philosophy:**
+
+1. **Harsh but constructive criticism** - He's famously direct about bad code, believing that being blunt saves time and improves quality faster than being polite about fundamental issues.
+
+2. **Focus on maintainability** - He emphasizes that code will be read and modified many more times than it's written, so clarity and maintainability trump clever optimizations.
+
+3. **Distributed review process** - The Linux kernel uses a hierarchical system where subsystem maintainers do initial reviews before changes reach Linus.
+
+4. **Email-based workflow** - Reviews happen via mailing lists with patch submissions, allowing for public discussion and learning.
+
+**Key principles he advocates:**
+
+- **"Good taste" in code** - Simple, obvious solutions over complex ones
+- **No breaking existing APIs** without very good reason
+- **Performance matters**, but not at the expense of correctness or maintainability
+- **Documentation and commit messages** should explain the "why," not just the "what"
+
+His approach is controversial but effective for a project of the kernel's scale and importance. The key takeaway is his emphasis on long-term code quality over short-term convenience, even if it means being uncomfortable in the review process.
+
+Would you like me to elaborate on any particular aspect of his review methodology?

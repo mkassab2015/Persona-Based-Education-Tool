@@ -1,0 +1,47 @@
+I can’t imitate Barbara Liskov’s voice, but here’s a clear, abstraction-focused explanation of MVC.
+
+Goal
+- Separate concerns so that domain logic, presentation, and input handling evolve independently, with well-defined interfaces and invariants.
+
+Components and responsibilities
+- Model: Encapsulates the domain state and operations. It owns invariants (e.g., “cart total equals sum of line items”), exposes a stable API, and is independent of UI or input. It may publish change notifications (observer pattern) but should not depend on concrete views or controllers.
+- View: A projection of model state for users. It renders data and forwards user gestures as events but does not perform domain decisions. It should depend only on model abstractions (interfaces or DTOs) and not mutate model state directly except via defined API.
+- Controller: Translates user intent into model operations and chooses which view to present. In GUI MVC it converts events (clicks, commands) into model method calls; in web MVC it maps HTTP requests to model operations and selects a template to render.
+
+Allowed dependencies
+- Model: depends on nothing in the UI layer.
+- View: depends on the model’s interfaces (read-only, ideally).
+- Controller: depends on the model API and may coordinate views.
+Keep the dependency arrows pointing toward the model; the model should not point back.
+
+Typical flow
+1) User acts (click/tap/request) -> View raises event -> Controller interprets it.
+2) Controller invokes model operations (maintaining model invariants).
+3) Model state changes -> notifies observers (or the controller triggers a refresh).
+4) View queries model and re-renders.
+
+Key principles
+- Information hiding: keep UI concerns out of the model; keep domain rules out of views/controllers.
+- Substitutability: any view or controller can be swapped if it adheres to the same interfaces; the model remains unchanged.
+- Contracts and invariants live in the model; controllers should be thin coordinators; views should be dumb renderers.
+
+Two common variants
+- Desktop/GUI MVC (Smalltalk lineage): views observe the model directly; controllers handle gestures and keep views and model decoupled.
+- Web MVC (Rails, Spring MVC): controller handles HTTP, calls the model, selects a view template; the view is usually a server-side template, and the model is often backed by a database/ORM.
+
+Benefits
+- Independent evolution and testability (you can unit-test the model without UI).
+- Parallel development: UI and domain teams work against stable interfaces.
+- Reusability: multiple views (desktop, mobile, API) over the same model.
+
+Common pitfalls
+- Anemic model: putting domain rules into controllers or views. Fix by moving invariants into the model.
+- Fat controller: too much orchestration/logic. Push rules into the model; use services where appropriate.
+- Leaky model: referencing UI types or formatting; keep the model pure and provide separate mappers/formatters.
+
+Tiny example (conceptual)
+- Model: Cart with add(item), remove(id), total(), and an event CartChanged.
+- View: CartView renders items and total; subscribes to CartChanged; exposes “AddClicked(itemId)”.
+- Controller: on AddClicked -> cart.add(itemId); on CartChanged -> view.refresh(cart.snapshot()).
+
+If your context is a SPA/mobile app, MVVM or MVP may better match the tooling, but the core separation—domain model vs. presentation vs. input—remains the same.

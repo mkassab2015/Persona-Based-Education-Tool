@@ -1,0 +1,7 @@
+Continuous integration (CI) is a software development practice where developers frequently merge small code changes into a shared repository, and each change automatically triggers a build and test process. The goal is to detect problems early, keep the codebase in a working state, and provide fast feedback.
+
+Key points:
+- Workflow: push code → CI server builds → run tests/lint/security checks → report results → fix if needed → optionally produce artifacts.
+- Benefits: early bug detection, fewer merge conflicts, consistent quality, faster iteration, reproducible builds.
+- Common tools: GitHub Actions, GitLab CI, Jenkins, CircleCI, Azure Pipelines.
+- Relation to CD: CI verifies code changes; continuous delivery/deployment automates releasing those verified changes to environments.

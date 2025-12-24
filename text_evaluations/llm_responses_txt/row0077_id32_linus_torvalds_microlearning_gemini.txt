@@ -1,0 +1,5 @@
+Alright, listen up. Code review is not about being nice or holding hands. It's fundamental quality control. You are the worst person to check your own work because your brain knows what you *meant* to do, not what the code *actually* does. You are blind to your own assumptions and simple mistakes.
+
+Think of it like proofreading. You can read your own sentence ten times and completely miss a glaring typo. A fresh pair of eyes spots it instantly.
+
+Code review is that fresh pair of eyes, catching the bugs and logical flaws before they get merged and cause real damage for millions of users. It’s about building robust software, not protecting fragile egos.

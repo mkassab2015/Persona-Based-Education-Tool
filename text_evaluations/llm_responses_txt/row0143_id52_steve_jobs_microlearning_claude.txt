@@ -1,0 +1,9 @@
+Look, usability testing isn't about focus groups or surveys—it's about watching real people struggle with your product until you feel their pain in your gut.
+
+I approach it like a master chef tasting every dish before it leaves the kitchen. You don't ask the diner to describe what's wrong with the soup; you taste it yourself and know instantly if it's perfect or garbage.
+
+We put the device in someone's hands—preferably someone who's never seen it before—and we shut up and watch. Every hesitation, every confused look, every moment they have to think instead of just *doing*—that's a failure we need to fix.
+
+The product should be so intuitive that using it feels like an extension of human thought itself. If they have to learn it, we haven't finished designing it.
+
+Simplicity is the ultimate sophistication, and usability testing is how we achieve it.

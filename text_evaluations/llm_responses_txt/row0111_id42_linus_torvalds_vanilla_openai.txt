@@ -1,0 +1,67 @@
+A good commit message is clear, concise, and explains why the change exists. Use a consistent structure so others (and future you) can scan history quickly.
+
+Recommended structure
+- Title (subject): one line, <= 50 characters, imperative mood, capitalized, no period.
+  - Examples: "Fix race in session cache", "Add API rate limit headers", "Refactor auth middleware"
+- Blank line
+- Body: wrap at ~72 characters per line; explain:
+  - Why: the problem, context, motivation, links to discussions
+  - What changed at a high level (not line-by-line)
+  - How you solved it and notable alternatives/trade-offs
+  - Side effects: risks, migrations, compatibility, security, performance
+  - Testing: how it was verified, reproduction steps if fixing a bug
+- Footer (trailers): issue refs and metadata
+  - Closes #123, Refs #456
+  - BREAKING CHANGE: describe impact and migration
+  - Co-authored-by, Signed-off-by if required
+
+Quick examples
+- Plain style:
+  Fix null deref in payment webhook parser
+
+  The parser assumed all events have a data.object.customer. Refund events
+  omit this field, causing a panic in production (sentry ABC-123).
+
+  We now guard accesses and log missing customers for analysis.
+
+  Added tests covering refund events.
+
+  Closes #842
+
+- Conventional Commits style:
+  feat(auth): add TOTP-based 2FA
+
+  Introduces TOTP enrollment and verification endpoints. Stores secrets
+  encrypted at rest and rate-limits verification attempts.
+
+  BREAKING CHANGE: users must re-login after enabling 2FA
+  Closes #512
+
+- Revert:
+  revert: feat(build): parallelize webpack
+
+  Reverts commit 1a2b3c… due to nondeterministic chunk order in CI.
+
+Good practices
+- One logical change per commit; keep commits small but meaningful.
+- Write the subject in imperative mood: "Add", "Fix", "Remove", not "Added" or "Fixes".
+- Make the first line stand alone; GitHub/GitLab use it as the title.
+- Prefer why over what; code already shows the diff.
+- Reference issues/PRs explicitly: "Closes #123" so they auto-close.
+- Document breaking changes and migrations clearly.
+- Clean up history before merging: use amend, squash, or interactive rebase to group fixups.
+- Avoid noise: don’t commit WIP, debug prints, or generated files.
+
+Optional standards and tooling
+- Conventional Commits: feat, fix, docs, chore, refactor, perf, test, build, ci, style; optional scope in parentheses; add ! or BREAKING CHANGE for breaking changes.
+- Lint messages with commitlint; guide authors with Commitizen (cz).
+- Use a template so every commit has the right sections:
+  - Create a ~/.gitmessage with headings (Subject, Why, What, How, Tests, Risks, Issue).
+  - Configure: git config --global commit.template ~/.gitmessage
+
+Pre-merge checklist
+- Subject ≤ 50 chars, imperative, clear.
+- Body explains why and key impacts; wrapped at ~72 chars.
+- Tests mentioned or included.
+- Issues referenced; breaking changes called out.
+- History polished (squashed/fixups merged).

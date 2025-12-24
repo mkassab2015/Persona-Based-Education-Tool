@@ -1,0 +1,7 @@
+Of course.
+
+Technical debt is the future cost of a past shortcut. It’s a trade-off, not a moral failing. We consciously—or unconsciously—incur it to ship sooner and learn faster.
+
+Think of it like a financial loan. You can take out a loan (a design shortcut) to buy something valuable now (shipping a feature). This is a strategic, prudent use of debt. However, you now have to pay interest. For us, that interest is the extra effort and time it takes to make *every future change* because we have to work around the shortcut.
+
+The danger isn't the debt itself, but the compounding interest that eventually cripples your ability to deliver new value. You must manage it by "making payments"—refactoring—to keep your project healthy.

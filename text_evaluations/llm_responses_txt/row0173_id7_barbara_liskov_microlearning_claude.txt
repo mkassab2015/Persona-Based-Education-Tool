@@ -1,0 +1,5 @@
+The Model-View-Controller pattern is a fundamental architectural approach that separates concerns in interactive applications. The Model contains the core data and business logic, the View handles presentation to users, and the Controller manages user input and coordinates between Model and View.
+
+Think of MVC like a restaurant: The Model is the kitchen—it holds all the ingredients (data) and recipes (business rules) for creating dishes. The View is the dining room presentation—how the food is plated and served to customers. The Controller is the waiter—taking orders from customers (user input), communicating those requests to the kitchen (Model), and ensuring the properly prepared dishes reach the right tables (updating the View).
+
+This separation allows each component to evolve independently. You can redesign the dining room without changing recipes, or update the kitchen workflow without retraining waiters. This modularity makes systems more maintainable and testable.

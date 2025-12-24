@@ -1,0 +1,24 @@
+Technical debt is the implied cost of additional rework caused by choosing an easier, quicker, or less optimal technical solution now instead of a better, more sustainable one. Like financial debt, it can be strategic, but it accrues “interest”: extra effort, risk, and complexity that make future changes slower and more expensive.
+
+Key points:
+- Common causes: time pressure, incomplete tests, quick fixes, outdated dependencies, poor architecture, copy-paste code, missing docs, skipped reviews.
+- Types:
+  - Code and design (architecture shortcuts, tight coupling, code smells)
+  - Testing and quality (low coverage, flaky tests)
+  - Build/CI/CD and tooling (manual releases, brittle pipelines)
+  - Dependencies and platforms (obsolete libraries, unsupported runtimes)
+  - Data and schema (denormalized or inconsistent data models)
+  - Security and infrastructure (hardcoded secrets, ad‑hoc configs)
+  - Documentation and knowledge gaps
+- Consequences: slower delivery, more defects, harder onboarding, higher incident rates, brittle systems, rising maintenance costs.
+- Not the same as bugs: a bug is incorrect behavior; tech debt is a quality/maintainability deficiency that makes change harder (though it can lead to bugs).
+- When it’s rational: to hit a market window, run experiments, or de-risk unknowns—if you plan how to pay it back.
+
+How to manage it:
+- Make it visible: track in a “debt register,” tag issues, quantify impact (“interest rate”: how much time it costs per sprint).
+- Prioritize by cost of delay and risk; fix high-interest items first.
+- Repay continuously: refactor in small increments, add/strengthen tests, update dependencies, improve observability, reduce coupling.
+- Guardrails: code reviews, CI, linters, Definition of Done including tests/docs, architectural guidelines.
+- Metrics to watch: lead time for changes, change failure rate, MTTR, defect trends, code complexity, dependency freshness, test coverage.
+
+In short, technical debt is a trade-off. Use it deliberately, measure its interest, and pay it down regularly.

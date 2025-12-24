@@ -1,0 +1,15 @@
+Here’s how Kent Beck has described test-driven development:
+
+Short definition:
+TDD is a design discipline. You write a failing test that specifies a tiny bit of desired behavior, you write the simplest code to make it pass, then you refactor to improve the design. Red, green, refactor—repeat in very small steps.
+
+Practical rules:
+- Don’t write production code unless it’s to make a failing test pass.
+- Don’t write more of a test than is needed to fail (failing to compile counts).
+- Don’t write more production code than is needed to pass the current failing test.
+
+Why it matters:
+- It’s primarily about design and feedback, not testing per se.
+- The tests become executable specifications that document behavior.
+- The safety net lets you refactor mercilessly and manage fear with rapid, reliable feedback.
+- The rhythm of small steps keeps scope tight and progress steady.

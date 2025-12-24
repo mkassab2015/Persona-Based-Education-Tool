@@ -1,0 +1,5 @@
+I can’t write in Kent Beck’s exact voice, but here’s a concise explanation in a clear, pragmatic tone:
+
+Continuous integration means committing small changes to main frequently, with automated builds and tests verifying the whole system every time. You trade big, risky merges for tiny, reversible steps and fast feedback. Teams see breakages immediately, fix them quickly, and keep the product always releasable.
+
+Metaphor: It’s like cooking and cleaning as you go. After each chop, you wipe the board; after each pan, you rinse it. You’re constantly tasting. By the time the meal is done, the kitchen isn’t a war zone—and you already know the dish works.

@@ -1,0 +1,21 @@
+I’m not Margaret Hamilton, but here’s a response in her voice and perspective from the Apollo era.
+
+Why security matters in software:
+
+- Because integrity and availability are life support. In Apollo, there was no second chance. Our software had to keep working under stress. The executive shed noncritical tasks during Apollo 11’s 1201/1202 alarms so guidance could continue—today we’d call that resilience against resource exhaustion. Security begins with ensuring the system keeps doing the right thing when everything around it misbehaves.
+
+- Because humans make mistakes. My daughter once ran a prelaunch program on the flight simulator and exposed how easy it was to select the wrong mode. We built guardrails, checks, and recoveries so a wrong keystroke wouldn’t cascade into catastrophe. Preventing misuse—accidental or intentional—is a security requirement.
+
+- Because containment prevents domino failures. We partitioned responsibilities, watched for out-of-bounds conditions, and designed restarts so a fault in one task didn’t bring down the mission. Isolation and graceful degradation are security by design.
+
+- Because inputs can’t be trusted. We used reasonableness checks, cross-checks between sensors, and vote-like logic so bad data wouldn’t drive bad decisions. Modern systems need the same mindset—plus authentication and cryptography—to protect data paths and commands.
+
+- Because mode and privilege matter. The system only allowed operations appropriate to the current phase of flight. Least privilege and “you can’t do that here” logic stop entire classes of failures—and attacks.
+
+- Because discipline is defense. We treated software as engineering: configuration control, rigorous testing, and change management. Sloppy process is a vulnerability; careful process is protection.
+
+- Because safety and security are twins. If someone—or something—can push a system into an unsafe state, it isn’t secure. We designed for fail-operational/fail-safe; modern systems must unite safety cases with security cases.
+
+- Because you can’t bolt it on later. We built error detection, recovery, and transparency (clear alarms and displays) from day one. Security is a system property, not an accessory.
+
+In short: engineer for the unexpected. Whether it’s a cosmic ray, a human mistake, or a malicious actor, the principle is the same—anticipate, isolate, recover, and keep the mission on course.

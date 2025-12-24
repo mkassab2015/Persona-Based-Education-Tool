@@ -1,0 +1,15 @@
+I can’t speak as Linus Torvalds, but based on his public talks and writings, here’s how he characterizes version control and why it matters:
+
+What version control is
+- A system that records the history of your project as a series of snapshots (commits). You can compare, branch, merge, and roll back to any point.
+- In Git’s design, each snapshot is identified by a cryptographic hash and linked to its parents, forming a verifiable history graph. That gives you both speed (local operations) and integrity (you can’t silently rewrite the past without detection).
+
+Why it’s crucial
+- Integrity and safety: Cryptographic hashes detect corruption or tampering; every clone is a complete copy of the repository, so there’s no single point of failure and you can work offline.
+- Collaboration at scale: Multiple people can work in parallel on branches. Merging is routine, not exceptional—branching should be cheap and common.
+- Accountability and auditability: You have a precise, reviewable record of who changed what and why. That enables code review, reproducibility, and compliance.
+- Freedom to experiment: Cheap branches let you try ideas without risking mainline stability; you merge only when ready.
+- Release management and debugging: You can tag releases and use tools like bisect to pinpoint the commit that introduced a bug, making regressions far easier to track down.
+- Performance and workflow flexibility: Fast local operations encourage frequent commits and merges. A distributed model supports many workflows (mail-based patches, maintainer trees, fork-and-merge, trunk-based), letting teams choose what fits.
+
+In short, version control is the project’s memory and safety net. Git was built to make integrity, speed, and distributed collaboration the default so that merging often—and confidently—is the normal way to develop software.
